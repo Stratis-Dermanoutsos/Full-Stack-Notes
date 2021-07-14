@@ -1,14 +1,15 @@
 # 100 DAYS OF CODE
 
-This is a challenge and way for me to give my all and acquire practical knowledge and skills. The goal is to complete the TODO list in the [GOALS](./README.md#GOALS) section.
+This is a challenge and way for me to acquire practical knowledge and skills.
 
-Hopefully, by the end of this challenge, I will have the skills to get a job and know what I am doing!
+The goal is to complete the TODO list in the [GOALS](./README.md#GOALS) section.
+
+Hopefully, by the end of this challenge, I will have the skills to be competitive at what I do and get more job offers!
 
 ## RULES
 
-- Consecutive days of coding/studying.
-- No cheating preferably.
-- If cheat day, make 2 things the next day.
+- Consecutive days of coding/studying
+- Learn/practice new things everyday
 - Upload progress on GitHub
 
 ## GOALS

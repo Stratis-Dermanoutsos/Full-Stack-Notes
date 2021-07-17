@@ -25,7 +25,7 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
         - [x] ***JavaScript***
       - [ ] Framework
         - [x] ***Tailwind CSS***
-        - [ ] ***SASS***
+        - [x] ***SASS***
         - [ ] ***React JS***
       - [x] Version Control System (***Git*** & ***Github***)
       - [ ] Package Manager (***NPM***)
@@ -110,3 +110,133 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
 | inheritance | class Subclass : Baseclass | var subclass = { [[Prototype]]: baseclass } |
 | accessors | \<type> X { get {return x;} set {x = value;} } | get X() { return x; }, set X(value) { x = value; } |
 | regular expressions | Regex reg = new Regex(@"^\w") | /^\w/ |
+
+### 3
+
+- ***SASS*** means ***Syntactically Awesome StyleSheets***
+- ***Variables***
+
+      $red = hsl(0, 100%, 50%);
+- ***Nesting***, used to avoid repeating the same classes names
+
+      // CSS
+      button a {
+        font-weight: bold;
+      }
+
+      button.danger {
+        color: red;
+      }
+
+
+      // SCSS
+      button {
+        a {
+          font-weight: bold;
+        }
+
+        .danger {
+          color: red;
+        }
+      }
+  or for ***pseudo classes*** and ***pseudo elements***
+
+      // CSS
+      button:hover { }
+
+      button:focus { }
+
+
+      // SCSS
+      button {
+        &:focus { }
+        &:hover { }
+      }
+- ***Mixins***
+
+      // CSS
+      .card {
+        display: flex;
+        flex-direction: column;
+        background: gray;
+      }
+
+      .aside {
+        display: flex;
+        flex-direction: column;
+        background: gray;
+      }
+
+
+      // SCSS
+      @mixin flex-column {
+        display: flex;
+        flex-direction: column;
+        background: gray;
+      }
+
+      .card {
+        @include flex-column;
+      }
+
+      .aside {
+        @include flex-column;
+      }
+  They can also take arguments
+
+      @mixin flex-column($color) {
+        display: flex;
+        flex-direction: column;
+        background: $color;
+      }
+
+      .card {
+        @include flex-column(gray);
+      }
+- ***if-else*** statements
+
+      @if $theme == 'light' {
+        background-color: $light-bg;
+      } @else {
+        background-color: $dark-bg;
+      }
+- ***foreach*** loops
+
+      $sizes: 40px, 50px, 80px;
+
+      @each $size in $sizes { }
+
+- ***functions***
+
+      @function sum($numbers) {
+        $sum = 0;
+
+        @each $number in $numbers {
+          $sum: $sum + $number;
+        }
+
+        return $sum;
+      }
+
+- Color adjustments
+
+      $base-color: green;
+
+      .card {
+        background: lighten($base-color, 25%);
+        color: darken($base-color, 25%);
+      }
+
+### 4
+
+Today, I just worked on a frontend project to practice on ***SASS***.
+
+I kinda love how easy it is to get into and to learn too.
+
+I think I am making good progress.
+
+### 5
+
+Practiced more on ***SASS***. Enough to actually feel like I know how to use it.
+
+It is actually a great tool and I can't wait to use it on bigger projects.

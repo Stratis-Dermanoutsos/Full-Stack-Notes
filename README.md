@@ -26,11 +26,11 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
       - [ ] Framework
         - [x] ***Tailwind CSS***
         - [x] ***SASS***
-        - [ ] ***React JS***
+        - [ ] ***React***
       - [x] Version Control System (***Git*** & ***Github***)
-      - [ ] Package Manager (***NPM***)
+      - [x] Package Manager (***NPM***)
       - [ ] Module Bundler (***Webpack***)
-      - [ ] Extras for ***React JS***
+      - [ ] Extras for ***React***
         - [ ] ***NextJS***
         - [ ] ***Redux***
     - [ ] Backend
@@ -60,7 +60,9 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
 
 ## Days - Knowledge gained
 
-### 1
+Disclaimer: Days that are missing were spent with practice on a technology mentioned in the near previous ones.
+
+### 1 HTTP
 
 - ***HTTP*** means ***HyperText Transfer Protocol***
 - ***HTTP***, as a request-response protocol, gives users a way to interact with web resources such as HTML files by transmitting hypertext messages between clients and servers
@@ -78,7 +80,7 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
 - I made basic ***API*** in ***C#***
   - Project is called ***BirthdayAPI***
 
-### 2
+### 2 JavaScript
 
 - Basics of ***JavaScript*** (from ***[Speaking JavaScript](http://speakingjs.com)***)
 - ***obj.propKey = value*** and ***obj['propKey'] = value*** are equal
@@ -111,7 +113,7 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
 | accessors | \<type> X { get {return x;} set {x = value;} } | get X() { return x; }, set X(value) { x = value; } |
 | regular expressions | Regex reg = new Regex(@"^\w") | /^\w/ |
 
-### 3
+### 3 SASS
 
 - ***SASS*** means ***Syntactically Awesome StyleSheets***
 - ***Variables***
@@ -227,16 +229,53 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
         color: darken($base-color, 25%);
       }
 
-### 4
+### 6 NPM
 
-Today, I just worked on a frontend project to practice on ***SASS***.
+To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
 
-I kinda love how easy it is to get into and to learn too.
+- Install
+  - without arguments
 
-I think I am making good progress.
+        npm i       # option 1
+        npm install # option 2
+    Running **npm install** without arguments installs modules defined in the dependencies section of the **package.json** file.
+  - with arguments
 
-### 5
+        npm install <package>             # install specified package
+        npm install <package1> <package2> # install multiple packages
+        npm install <package>@<version>   # install specified version of package
+  - Options
+    - (with ***--global***)
 
-Practiced more on ***SASS***. Enough to actually feel like I know how to use it.
+          npm install -g       # option 1
+          npm install --global # option 2
+      When run with **--global** or **-g**, **npm install** installs the package globally. This means the package is installed in two places. The first is at the root directory where **package.json** is defined. The second is the global node_modules folder on the user system.
+    - (with ***--save***)
 
-It is actually a great tool and I can't wait to use it on bigger projects.
+          npm install <package> -S     # option 1
+          npm install <package> --save # option 2
+      When run with **--save**, **npm install** modifies the **package.json** file to include the specified package as a dependency. In this case, the express package will be added as a dependency to **package.json**.
+    - (with ***--save-dev***)
+
+      The **--save-dev** flag specifies that the package should be added to the devDependencies section of the **package.json** rather than the dependencies section.
+    - (with ***--production***)
+
+          npm install -p           # option 1
+          npm install --production # option 2
+      The **--production** flag specifies to exclude devDependencies from the install. This means any dependency listed under the devDependencies section of package.json won't get installed when this flag is present.
+- Uninstall
+
+      npm (-g) un <package>
+      npm (-g) uninstall <package>
+- List installed packages
+
+      npm list -g --depth=0 # global
+      npm list              # local
+- Update (global) packages
+
+      npm up (-g) <package1> <package2> <package3>     # option 1
+      npm update (-g) <package1> <package2> <package3> # option 2
+- Update ***NPM***
+
+      npm install -g npm@latest # multiplatform
+      npm-windows-upgrade       # for windows

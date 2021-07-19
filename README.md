@@ -279,3 +279,109 @@ To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
 
       npm install -g npm@latest # multiplatform
       npm-windows-upgrade       # for windows
+
+### 7 React
+
+- Install
+
+      npm install -g create-react-app
+- Create React project
+
+      create-react-app <project-directory> # general syntax
+      create-react-app .                   # inside current directory
+- Commands
+  - Start the development server
+
+        npm start
+  - Bundle the app into static files for production
+
+        npm run build
+  - Start the test runner
+
+        npm test
+  - Remove this tool and copy build dependencies, configuration files and scripts into the app directory
+
+        npm run eject
+    Once you run this, there is no turning back!
+- ***JSX***
+
+  ***JSX*** is a syntax extension for ***JavaScript***. It was written to be used by ***React*** and looks a lot like ***HTML***. Given ***JSX*** is not valid ***JavaScript***, web browsers cant read it directly.
+
+  ***JSX*** is an inline markup that looks like ***HTML*** and gets transformed to ***JavaScript***. A ***JSX*** expression starts with an ***HTML***-like open tag, and ends with the corresponding closing tag. ***JSX*** tags support the ***XML*** self close syntax so you can optionally leave the closing tag off.
+
+  For example,
+
+      return (
+        <div>
+          <h1>Hello!</h1>
+          <h2>Good to see you here.</h2>
+        </div>
+      );
+- ***useState*** hook
+
+      import { useState } from 'react';
+
+      const [todos, setTodos] = useState([]);
+  It is used so React re-renders things when the state is changed.
+  For example, if we add a todo using
+
+      setTodos([...todos, { id, name }]);
+  react will re-render our app and include the new todo in the todos list.
+
+- Example of app using 3 files
+  - App.js
+
+        import React, { useState, useRef } from 'react';
+        import TodoList from './TodoList';
+
+        function App() {
+          const [todos, setTodos] = useState([]);
+
+          const todoNameRef = useRef();
+          let currentId = 0;
+
+          function addTodo() {
+            const name = todoNameRef.current.value;
+            if (name === '') return;
+
+            const id = ++currentId;
+            setTodos([...todos, { id, name }]);
+            todoNameRef.current.value = '';
+          }
+
+          return (
+            <>
+              <TodoList todos={todos} />
+              <input ref={todoNameRef} type="text" placeholder="Add a todo" />
+              <button onClick={addTodo}>Add todo</button>
+            </>
+          );
+        }
+
+        export default App;
+  - TodoList.js
+
+        import React from 'react'
+        import Todo from './Todo';
+
+        export default function TodoList({ todos }) {
+            return (
+                todos.map(todo => {
+                    return <Todo key={todo.id} todo={todo} />
+                })
+            )
+        }
+  - Todo.js
+
+        import React from 'react'
+
+        export default function Todo({ todo }) {
+            return (
+                <div>
+                    <label>
+                        <input type="checkbox" checked={todo.complete} />
+                        {todo.name}
+                    </label>
+                </div>
+            )
+        }

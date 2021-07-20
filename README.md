@@ -333,53 +333,80 @@ To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
 
         import React, { useState, useRef } from 'react';
         import TodoList from './TodoList';
+        import { uniqueId } from 'lodash';
 
         function App() {
-          const [todos, setTodos] = useState([]);
+            /* This is a state variable, using the 'useState' hook.
+            It is used so React re-renders things when the state is changed. */
+            const [todos, setTodos] = useState([]);
 
-          const todoNameRef = useRef();
-          let currentId = 0;
+            /* The 'useRef' hook allows us to reference elements inside our HTML.
+            Notice the ref tag inside our input elements. */
+            const todoNameRef = useRef();
 
-          function addTodo() {
-            const name = todoNameRef.current.value;
-            if (name === '') return;
+            /* This function is called by a Todo item when its checkbox element is clicked. */
+            function toggleTodo(id) {
+                const newTodos = [...todos];
+                const todo = newTodos.find(todo => todo.id === id);
+                todo.complete = !todo.complete;
+                setTodos(newTodos);
+            }
 
-            const id = ++currentId;
-            setTodos([...todos, { id, name }]);
-            todoNameRef.current.value = '';
-          }
+            function handleAddTodo() {
+                const name = todoNameRef.current.value; // Current value of the input field.
+                if (name === '') return; // If the input field is empty, do nothing.
 
-          return (
-            <>
-              <TodoList todos={todos} />
-              <input ref={todoNameRef} type="text" placeholder="Add a todo" />
-              <button onClick={addTodo}>Add todo</button>
-            </>
-          );
+                setTodos([...todos, { id: uniqueId(), name: name }]); // Add the new todo to the list.
+                todoNameRef.current.value = ''; // Reset the input field.
+            }
+
+            /* Remove all elements that are complete.
+            This can be achieved by filtering our list and keeping only non-completed tasks */
+            function handleDeleteCompleted() {
+                const newTodos = todos.filter(todo => !todo.complete);
+                setTodos(newTodos);
+            }
+
+            // Render the app.
+            return (
+                <>
+                    <TodoList todos={todos} toggleTodo={toggleTodo} /> {/* Renders the todos list */}
+                    <input ref={todoNameRef} type="text" placeholder="Add a todo" />
+                    <button onClick={handleAddTodo}>Add todo</button>
+                    <button onClick={handleDeleteCompleted}>Clear completed</button>
+                </>
+            );
         }
 
         export default App;
   - TodoList.js
 
-        import React from 'react'
+        import React from 'react';
         import Todo from './Todo';
 
-        export default function TodoList({ todos }) {
+        /* Takes a list of todos and for each todo, 
+        it returns a Todo component with the todo's text and id. */
+        export default function TodoList({ todos, toggleTodo }) {
             return (
                 todos.map(todo => {
-                    return <Todo key={todo.id} todo={todo} />
+                    return <Todo key={todo.id} todo={todo} toggleTodo={toggleTodo} />
                 })
-            )
+            );
         }
   - Todo.js
 
-        import React from 'react'
+        import React from 'react';
 
-        export default function Todo({ todo }) {
+        /* Takes the todo and returns its name along with a checkbox */
+        export default function Todo({ todo, toggleTodo }) {
+            function handleTodoClick() {
+                toggleTodo(todo.id);
+            }
+
             return (
                 <div>
                     <label>
-                        <input type="checkbox" checked={todo.complete} />
+                        <input type="checkbox" checked={!!todo.complete} onChange={handleTodoClick} />
                         {todo.name}
                     </label>
                 </div>

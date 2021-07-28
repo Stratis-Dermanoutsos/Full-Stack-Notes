@@ -229,6 +229,19 @@ Disclaimer: Days that are missing were spent with practice on a technology menti
         color: darken($base-color, 25%);
       }
 
+- Inline SVG color through variable
+
+      $color: #FFF;
+
+      @function hex_to_rgb($hex) {
+        @return "rgb("+red($hex)+","+green($hex)+","+blue($hex)+")";
+      }
+
+      $svg1: url('data:image/svg+xml;utf8,<svg ...fill="#{$color}".../></svg>');
+      $svg2: url('data:image/svg+xml;utf8,<svg ...fill="#{hex_to_rgb($color)}".../></svg>');
+  Why this is useful? Cause sometimes ***SVG***s will be needed inside your ***SCSS*** and this is the easiest and most efficient way to change their color.
+  Notice the use of function. Mozilla does not support ***HEX*** values so we convert the value to ***RGB***.
+
 ### 6 NPM
 
 To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
@@ -279,6 +292,10 @@ To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
 
       npm install -g npm@latest # multiplatform
       npm-windows-upgrade       # for windows
+- Fix issues (for example, when you move a project to another machine)
+
+      npm audit fix
+      npm audit fix --force
 
 ### 7 React
 

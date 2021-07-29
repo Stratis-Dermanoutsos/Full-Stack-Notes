@@ -325,7 +325,7 @@ To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
     Once you run this, there is no turning back!
 - ***JSX***
 
-  ***JSX*** is a syntax extension for ***JavaScript***. It was written to be used by ***React*** and looks a lot like ***HTML***. Given ***JSX*** is not valid ***JavaScript***, web browsers cant read it directly.
+  ***JSX*** is a syntax extension for ***JavaScript***. It was written to be used by ***React*** and looks a lot like ***HTML***. Given ***JSX*** is not valid ***JavaScript***, web browsers can't read it directly.
 
   ***JSX*** is an inline markup that looks like ***HTML*** and gets transformed to ***JavaScript***. A ***JSX*** expression starts with an ***HTML***-like open tag, and ends with the corresponding closing tag. ***JSX*** tags support the ***XML*** self close syntax so you can optionally leave the closing tag off.
 
@@ -572,3 +572,10 @@ To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
                 </div>
             )
         }
+- Images
+
+      import logo from './images/logo.png';
+      .
+      .
+      .
+        <img src={logo} alt="logo" />

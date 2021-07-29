@@ -23,15 +23,16 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
         - [x] ***HTML***
         - [x] ***CSS***
         - [x] ***JavaScript***
-      - [ ] Framework
+      - [ ] Frameworks/Libraries
         - [x] ***Tailwind CSS***
         - [x] ***SASS***
         - [ ] ***React***
+        - [ ] ***Bootstrap***
+        - [ ] ***jQuery***
       - [x] Version Control System (***Git*** & ***Github***)
       - [x] Package Manager (***NPM***)
       - [ ] Module Bundler (***Webpack***)
       - [ ] Extras for ***React***
-        - [ ] ***NextJS***
         - [ ] ***Redux***
     - [ ] Backend
       - [x] ***C#***
@@ -60,7 +61,9 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
 
 ## Days - Knowledge gained
 
-Disclaimer: Days that are missing were spent with practice on a technology mentioned in the near previous ones.
+Days that are missing were spent with practice on a technology mentioned in the near previous ones.
+
+Tools I already know and use won't appear here.
 
 ### 1 HTTP
 

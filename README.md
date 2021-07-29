@@ -727,7 +727,7 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
           new BundleAnalyzerPlugin()
         ],
     inside the section.
-  -When you build, you should see this screen
+  - When you build, you should see this screen
 
     ![webpack-bundle-analyzer](./Images/webpack-bundle-analyzer.png)
 - Setup local web server

@@ -57,15 +57,15 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
         - [ ] Caching Server
         - [ ] Firewall
   - [ ] Algorithms
-    - [ ] Search
-      - [ ] Linear
-      - [ ] Binary
-      - [ ] Exponential
-      - [ ] Binary Recursive
+    - [x] Search
+      - [x] Linear
+      - [x] Binary
+      - [x] Exponential
+      - [x] Binary Recursive
     - [ ] Sort
-      - [ ] Bubble
-      - [ ] Counting
-      - [ ] Selection
+      - [x] Bubble
+      - [x] Counting
+      - [x] Selection
       - [ ] Merge
       - [ ] Quick
     - [ ] BST
@@ -823,3 +823,13 @@ A list of both free and paid resources that I have used and seemed very useful t
 ### C\#
 
 - [Udemy course by Denis Panjuta](https://www.udemy.com/share/101vEs2@Pm5KfWJSSVIKdkRKBkhOVD5uY1c=/)
+
+### Algorithms
+
+- [GeeksForGeeks](https://www.geeksforgeeks.org/fundamentals-of-algorithms/)
+- [my GitHub repository](https://github.com/Stratis-Dermanoutsos/Algorithms-C-Sharp/)
+
+### Data Structures
+
+- [GeeksForGeeks](https://www.geeksforgeeks.org/data-structures/)
+- [my GitHub repository](https://github.com/Stratis-Dermanoutsos/Data-Structures-C-Sharp/)

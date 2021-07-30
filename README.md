@@ -34,12 +34,12 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
       - [x] Module Bundler (***Webpack***)
     - [ ] Backend
       - [x] ***C#***
+      - [ ] ***MVC*** structure
       - [ ] ***ASP.NET***
       - [ ] Process management
       - [ ] Threads & Concurrency
-      - [ ] Basic Networking Concepts
-        - [ ] Server-Client
-        - [ ] APIs
+      - [ ] Server-Client
+      - [ ] APIs
       - [ ] Databases
         - [x] ***MySQL***
         - [x] ***SQLite***
@@ -56,7 +56,34 @@ Hopefully, by the end of this challenge, I will have the skills to be competitiv
         - [ ] Load Balancer
         - [ ] Caching Server
         - [ ] Firewall
-  - [ ] ***MAUI***
+  - [ ] Algorithms
+    - [ ] Search
+      - [ ] Linear
+      - [ ] Binary
+      - [ ] Exponential
+      - [ ] Binary Recursive
+    - [ ] Sort
+      - [ ] Bubble
+      - [ ] Counting
+      - [ ] Selection
+      - [ ] Merge
+      - [ ] Quick
+    - [ ] BST
+      - [ ] Inverse
+      - [ ] Traversals
+        - [ ] Inorder
+        - [ ] Preorder
+        - [ ] Postorder
+        - [ ] Level order
+  - [ ] Data Structures
+    - [ ] Binary Search Tree
+    - [ ] Heap
+    - [ ] AVL Tree
+    - [ ] Singly Linked List
+    - [ ] Doubly Linked List
+    - [ ] Queue
+    - [ ] Priority Queue
+    - [ ] Stack
 
 ## Days - Knowledge gained
 

@@ -606,9 +606,7 @@ To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
       .
         <img src={logo} alt="logo" />
 
-## 17 Module bundlers & Webpack
-
-### Module bundlers
+### 17 Module bundlers
 
 A module bundler is a tool that takes pieces of JavaScript and their dependencies and bundles them into a single file.
 
@@ -618,7 +616,7 @@ However, things are a lot more complicated nowadays for a complete website to be
 
 A module bundler, basically, bundles all the assets used together.
 
-### Webpack
+### 17 Webpack
 
 For test,
 

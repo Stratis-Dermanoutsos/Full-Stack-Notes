@@ -322,8 +322,13 @@ To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
       npm install -g create-react-app
 - Create React project
 
+      # after installation
       create-react-app <project-directory> # general syntax
       create-react-app .                   # inside current directory
+
+      # without installation (better as it always uses the latest version)
+      npx create-react-app <project-directory> # general syntax
+      npx create-react-app .                   # inside current directory
 - Commands
   - Start the development server
 

@@ -72,8 +72,8 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [ ] Heap
   - [ ] AVL Tree
   - [x] Singly Linked List
-  - [ ] Doubly Linked List
-  - [ ] Circular Linked List
+  - [x] Doubly Linked List
+  - [x] Circular Linked List
   - [ ] Queue
   - [ ] Priority Queue
   - [ ] Stack
@@ -867,7 +867,37 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
 
   ![Selection Sort](./Images/Selection-Sort.png)
 
-## Resources
+### Data Structures
+
+- ***Singly Linked List***
+
+  ***Singly Linked List*** is basically a one-way chain of nodes.
+
+  The list has a '*Head*' node that serves as its first of the chain.
+
+  Each node has a value and a pointer "pointing" to the next node.
+
+  ![Singly Linked List](./Images/Singly-Linked-List.png)
+- ***Doubly Linked List***
+
+  ***Doubly Linked List*** is similar to the ***Singly Linked List*** with a few additions.
+
+  Each node has an extra pointer that "points" to the previous node too.
+
+  The list itself, instead of a reference to the '*Head*' node, also has one for the '*Tail*' node of the list, the last.
+
+  This type of ***Linked List*** can be traversed either starting from the '*Head*' or the '*Tail*' node.
+
+  ![Doubly Linked List](./Images/Doubly-Linked-List.png)
+- ***Circular Linked List***
+
+  ***Circular Linked List*** is similar to the ***Singly Linked List*** with 1 basic change.
+
+  The last node of this ***Linked List*** always points to the '*Head*' creating an endless chain.
+
+  ![Circular Linked List](./Images/Circular-Linked-List.png)
+
+## RESOURCES
 
 A list of both free and paid resources that I have used and seemed very useful to me.
 

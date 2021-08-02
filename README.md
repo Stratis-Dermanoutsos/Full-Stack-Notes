@@ -887,7 +887,8 @@ A list of both free and paid resources that I have used and seemed very useful t
 ### Tailwind CSS
 
 - [Tailwind CSS documentation](https://tailwindcss.com/docs)
-- [Tailwind CSS cheat sheet](https://nerdcave.com/tailwind-cheat-sheet)
+- [Tailwind CSS cheat sheet 1](https://umeshmk.github.io/Tailwindcss-cheatsheet/)
+- [Tailwind CSS cheat sheet 2](https://nerdcave.com/tailwind-cheat-sheet)
 
 ### SASS
 

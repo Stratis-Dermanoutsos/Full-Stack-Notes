@@ -1,97 +1,87 @@
-# 100 DAYS OF CODE
+# Full-Stack Developer stack 2021
 
-This is a challenge and way for me to acquire practical knowledge and skills.
+This is a repository holding information and resources for everyone interested in becoming a FullStack Web Developer in 2021.
 
-The goal is to complete the TODO list in the [GOALS](./README.md#GOALS) section.
+As you can see, this stack is a bit biased as I chose ***React*** for Frontend and ***ASP.NET*** for Backend specifically.
 
-Hopefully, by the end of this challenge, I will have the skills to be competitive at what I do and get more job offers!
+Of course, there are other ***JS*** frameworks/libraries and other backend languages and are all appreciated.
 
-## RULES
+## TECH STACK
 
-- Consecutive days of coding/studying
-- Learn/practice new things everyday
-- Upload progress on GitHub
+- [ ] Fullstack web development
+  - [ ] Frontend
+    - [x] Basics
+      - [x] ***HTML***
+      - [x] ***CSS***
+      - [x] ***JavaScript***
+    - [ ] Frameworks/Libraries
+      - [x] ***Tailwind CSS***
+      - [x] ***SASS***
+      - [ ] ***Bootstrap***
+      - [x] ***React***
+      - [ ] ***Redux***
+      - [ ] ***jQuery***
+    - [x] Version Control System (***Git*** & ***Github***)
+    - [x] Package Manager (***NPM***)
+    - [x] Module Bundler (***Webpack***)
+  - [ ] Backend
+    - [x] ***HTTP***
+    - [x] ***C#***
+    - [ ] ***MVC*** structure
+    - [ ] Process management
+    - [ ] Threads & Concurrency
+    - [ ] Server-Client
+    - [ ] APIs
+    - [ ] ***ASP.NET***
+    - [ ] Databases
+      - [x] ***MySQL***
+      - [x] ***SQLite***
+      - [x] ***PostgreSQL***
+      - [ ] ***MongoDB***
+    - [ ] CI/CD Tools
+      - [ ] ***Jenkins***
+      - [ ] ***GitLab***
+    - [ ] Cloud Providers
+      - [ ] ***AWS***
+      - [ ] ***Azure***
+    - [ ] Learn concept and how to setup
+      - [ ] Reverse and Forward proxy
+      - [ ] Load Balancer
+      - [ ] Caching Server
+      - [ ] Firewall
+- [ ] Algorithms
+  - [x] Search
+    - [x] Linear
+    - [x] Binary
+    - [x] Exponential
+    - [x] Binary Recursive
+  - [ ] Sort
+    - [x] Bubble
+    - [x] Counting
+    - [x] Selection
+    - [ ] Merge
+    - [ ] Quick
+  - [ ] BST
+    - [ ] Inverse
+    - [ ] Traversals
+      - [ ] Inorder
+      - [ ] Preorder
+      - [ ] Postorder
+      - [ ] Level order
+- [ ] Data Structures
+  - [ ] Binary Search Tree
+  - [ ] Heap
+  - [ ] AVL Tree
+  - [x] Singly Linked List
+  - [ ] Doubly Linked List
+  - [ ] Circular Linked List
+  - [ ] Queue
+  - [ ] Priority Queue
+  - [ ] Stack
 
-## GOALS
+## PERSONAL NOTES
 
-- Learn
-  - [x] ***HTTP***
-  - [ ] Fullstack web development
-    - [ ] Frontend
-      - [x] Basics
-        - [x] ***HTML***
-        - [x] ***CSS***
-        - [x] ***JavaScript***
-      - [ ] Frameworks/Libraries
-        - [x] ***Tailwind CSS***
-        - [x] ***SASS***
-        - [ ] ***Bootstrap***
-        - [x] ***React***
-        - [ ] ***Redux***
-        - [ ] ***jQuery***
-      - [x] Version Control System (***Git*** & ***Github***)
-      - [x] Package Manager (***NPM***)
-      - [x] Module Bundler (***Webpack***)
-    - [ ] Backend
-      - [x] ***C#***
-      - [ ] ***MVC*** structure
-      - [ ] ***ASP.NET***
-      - [ ] Process management
-      - [ ] Threads & Concurrency
-      - [ ] Server-Client
-      - [ ] APIs
-      - [ ] Databases
-        - [x] ***MySQL***
-        - [x] ***SQLite***
-        - [x] ***PostgreSQL***
-        - [ ] ***MongoDB***
-      - [ ] CI/CD Tools
-        - [ ] ***Jenkins***
-        - [ ] ***GitLab***
-      - [ ] Cloud Providers
-        - [ ] ***AWS***
-        - [ ] ***Azure***
-      - [ ] Learn concept and how to setup
-        - [ ] Reverse and Forward proxy
-        - [ ] Load Balancer
-        - [ ] Caching Server
-        - [ ] Firewall
-  - [ ] Algorithms
-    - [x] Search
-      - [x] Linear
-      - [x] Binary
-      - [x] Exponential
-      - [x] Binary Recursive
-    - [ ] Sort
-      - [x] Bubble
-      - [x] Counting
-      - [x] Selection
-      - [ ] Merge
-      - [ ] Quick
-    - [ ] BST
-      - [ ] Inverse
-      - [ ] Traversals
-        - [ ] Inorder
-        - [ ] Preorder
-        - [ ] Postorder
-        - [ ] Level order
-  - [ ] Data Structures
-    - [ ] Binary Search Tree
-    - [ ] Heap
-    - [ ] AVL Tree
-    - [ ] Singly Linked List
-    - [ ] Doubly Linked List
-    - [ ] Queue
-    - [ ] Priority Queue
-    - [ ] Stack
-
-## Days - Knowledge gained
-
-Days that are missing were spent with practice on a technology mentioned in the near previous ones.
-
-Tools I already know and use won't appear here. However, I will probably include some sources I used to learn them in the past.
-
-### 1 HTTP
+### HTTP
 
 - ***HTTP*** means ***HyperText Transfer Protocol***
 - ***HTTP***, as a request-response protocol, gives users a way to interact with web resources such as HTML files by transmitting hypertext messages between clients and servers
@@ -109,7 +99,7 @@ Tools I already know and use won't appear here. However, I will probably include
 - I made basic ***API*** in ***C#***
   - Project is called ***BirthdayAPI***
 
-### 2 JavaScript
+### JavaScript
 
 - Basics of ***JavaScript*** (from ***[Speaking JavaScript](http://speakingjs.com)***)
 - ***obj.propKey = value*** and ***obj['propKey'] = value*** are equal
@@ -142,7 +132,7 @@ Tools I already know and use won't appear here. However, I will probably include
 | accessors | \<type> X { get {return x;} set {x = value;} } | get X() { return x; }, set X(value) { x = value; } |
 | regular expressions | Regex reg = new Regex(@"^\w") | /^\w/ |
 
-### 3 SASS
+### SASS
 
 - ***SASS*** means ***Syntactically Awesome StyleSheets***
 - ***Variables***
@@ -271,7 +261,7 @@ Tools I already know and use won't appear here. However, I will probably include
   Why this is useful? Cause sometimes ***SVG***s will be needed inside your ***SCSS*** and this is the easiest and most efficient way to change their color.
   Notice the use of function. Mozilla does not support ***HEX*** values so we convert the value to ***RGB***.
 
-### 6 NPM
+### NPM
 
 To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
 
@@ -326,7 +316,7 @@ To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
       npm audit fix
       npm audit fix --force
 
-### 7 React
+### React
 
 - Install
 
@@ -606,7 +596,7 @@ To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
       .
         <img src={logo} alt="logo" />
 
-### 17 Module bundlers
+### Module bundlers
 
 A module bundler is a tool that takes pieces of JavaScript and their dependencies and bundles them into a single file.
 
@@ -616,7 +606,7 @@ However, things are a lot more complicated nowadays for a complete website to be
 
 A module bundler, basically, bundles all the assets used together.
 
-### 17 Webpack
+### Webpack
 
 For test,
 
@@ -774,7 +764,7 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
         npm run dev
     inside the terminal
 
-## Sources
+## Resources
 
 A list of both free and paid resources that I have used and seemed very useful to me.
 

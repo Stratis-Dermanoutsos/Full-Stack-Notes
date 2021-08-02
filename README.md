@@ -8,47 +8,46 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 
 ## TECH STACK
 
-- [ ] Fullstack web development
-  - [ ] Frontend
-    - [x] Basics
-      - [x] ***HTML***
-      - [x] ***CSS***
-      - [x] ***JavaScript***
-    - [ ] Frameworks/Libraries
-      - [x] ***Tailwind CSS***
-      - [x] ***SASS***
-      - [ ] ***Bootstrap***
-      - [x] ***React***
-      - [ ] ***Redux***
-      - [ ] ***jQuery***
-    - [x] Version Control System (***Git*** & ***Github***)
-    - [x] Package Manager (***NPM***)
-    - [x] Module Bundler (***Webpack***)
-  - [ ] Backend
-    - [x] ***HTTP***
-    - [x] ***C#***
-    - [ ] ***MVC*** structure
-    - [ ] Process management
-    - [ ] Threads & Concurrency
-    - [ ] Server-Client
-    - [ ] APIs
-    - [ ] ***ASP.NET***
-    - [ ] Databases
-      - [x] ***MySQL***
-      - [x] ***SQLite***
-      - [x] ***PostgreSQL***
-      - [ ] ***MongoDB***
-    - [ ] CI/CD Tools
-      - [ ] ***Jenkins***
-      - [ ] ***GitLab***
-    - [ ] Cloud Providers
-      - [ ] ***AWS***
-      - [ ] ***Azure***
-    - [ ] Learn concept and how to setup
-      - [ ] Reverse and Forward proxy
-      - [ ] Load Balancer
-      - [ ] Caching Server
-      - [ ] Firewall
+- [ ] Frontend
+  - [x] Basics
+    - [x] ***HTML***
+    - [x] ***CSS***
+    - [x] ***JavaScript***
+  - [ ] Frameworks/Libraries
+    - [x] ***Tailwind CSS***
+    - [x] ***SASS***
+    - [ ] ***Bootstrap***
+    - [x] ***React***
+    - [ ] ***Redux***
+    - [ ] ***jQuery***
+  - [x] Version Control System (***Git*** & ***Github***)
+  - [x] Package Manager (***NPM***)
+  - [x] Module Bundler (***Webpack***)
+- [ ] Backend
+  - [x] ***HTTP***
+  - [x] ***C#***
+  - [ ] ***MVC*** structure
+  - [ ] Process management
+  - [ ] Threads & Concurrency
+  - [ ] Server-Client
+  - [ ] APIs
+  - [ ] ***ASP.NET***
+  - [ ] Databases
+    - [x] ***MySQL***
+    - [x] ***SQLite***
+    - [x] ***PostgreSQL***
+    - [ ] ***MongoDB***
+  - [ ] CI/CD Tools
+    - [ ] ***Jenkins***
+    - [ ] ***GitLab***
+  - [ ] Cloud Providers
+    - [ ] ***AWS***
+    - [ ] ***Azure***
+  - [ ] Learn concept and how to setup
+    - [ ] Reverse and Forward proxy
+    - [ ] Load Balancer
+    - [ ] Caching Server
+    - [ ] Firewall
 - [ ] Algorithms
   - [x] Search
     - [x] Linear

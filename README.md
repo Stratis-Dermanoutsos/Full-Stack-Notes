@@ -74,7 +74,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [x] Singly Linked List
   - [x] Doubly Linked List
   - [x] Circular Linked List
-  - [ ] Queue
+  - [x] Queue
   - [ ] Priority Queue
   - [ ] Stack
 
@@ -901,6 +901,29 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
   The last node of this ***Linked List*** always points to the '*Head*' creating an endless chain.
 
   ![Circular Linked List](./Images/Circular-Linked-List.png)
+
+- ***Queue***
+
+  ***Queue*** is a linear structure which follows a particular order in which the operations are performed. The order is **F**irst **I**n **F**irst **O**ut (**FIFO**).  
+
+  A good example of queue is any queue of consumers for a resource where the consumer that came first is served first.
+
+  Operations:
+
+  - Front
+
+    Get the front element of the queue
+  - Rear
+
+    Get the rear element of the queue
+  - Enqueue
+
+    Add an element to the rear of the queue
+  - Dequeue
+
+    Remove the front element of the queue
+
+  ![Queue](./Images/Queue.jpg)
 
 ## RESOURCES
 

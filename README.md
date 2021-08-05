@@ -16,7 +16,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [ ] Frameworks/Libraries
     - [x] ***Tailwind CSS***
     - [x] ***SASS***
-    - [ ] ***Bootstrap***
+    - [x] ***Bootstrap***
     - [x] ***React***
     - [ ] ***Redux***
     - [ ] ***jQuery***
@@ -260,60 +260,39 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   Why this is useful? Cause sometimes ***SVG***s will be needed inside your ***SCSS*** and this is the easiest and most efficient way to change their color.
   Notice the use of function. Mozilla does not support ***HEX*** values so we convert the value to ***RGB***.
 
-### NPM
+### Bootstrap
 
-To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
+***Bootstrap*** is a framework used for building responsive, mobile-first sites.
 
-- Install
-  - without arguments
+To use ***Bootstrap***, you can either
 
-        npm i       # option 1
-        npm install # option 2
-    Running **npm install** without arguments installs modules defined in the dependencies section of the **package.json** file.
-  - with arguments
+- download the [Source Files](https://getbootstrap.com/docs/5.1/getting-started/download/) or
+- use **jsDelivr**
 
-        npm install <package>             # install specified package
-        npm install <package1> <package2> # install multiple packages
-        npm install <package>@<version>   # install specified version of package
-  - Options
-    - (with ***--global***)
+  To do this, simple paste
 
-          npm install -g       # option 1
-          npm install --global # option 2
-      When run with **--global** or **-g**, **npm install** installs the package globally. This means the package is installed in two places. The first is at the root directory where **package.json** is defined. The second is the global node_modules folder on the user system.
-    - (with ***--save***)
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  inside the *\<head>* element of your ***HTML*** and
 
-          npm install <package> -S     # option 1
-          npm install <package> --save # option 2
-      When run with **--save**, **npm install** modifies the **package.json** file to include the specified package as a dependency. In this case, the express package will be added as a dependency to **package.json**.
-    - (with ***--save-dev***)
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+  right before the *\</body>* tag.
 
-      The **--save-dev** flag specifies that the package should be added to the devDependencies section of the **package.json** rather than the dependencies section.
-    - (with ***--production***)
+  Notice, the versions of the scripts are
+  - bootstrap@5.1.0
+  - popperjs/core@2.9.3
 
-          npm install -p           # option 1
-          npm install --production # option 2
-      The **--production** flag specifies to exclude devDependencies from the install. This means any dependency listed under the devDependencies section of package.json won't get installed when this flag is present.
-- Uninstall
+  Be careful to update them, in case this is outdated.
 
-      npm (-g) un <package>
-      npm (-g) uninstall <package>
-- List installed packages
+***Bootstrap*** requires the use of the HTML5 doctype.
 
-      npm list -g --depth=0 # global
-      npm list              # local
-- Update (global) packages
+    <!doctype html>
+    <html lang="en">
+      ...
+    </html>
+***Bootstrap*** is developed mobile first, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using ***CSS*** media queries. To ensure proper rendering and touch zooming for all devices, add the responsive viewport meta tag to your *\<head>*.
 
-      npm up (-g) <package1> <package2> <package3>     # option 1
-      npm update (-g) <package1> <package2> <package3> # option 2
-- Update ***NPM***
-
-      npm install -g npm@latest # multiplatform
-      npm-windows-upgrade       # for windows
-- Fix issues (for example, when you move a project to another machine)
-
-      npm audit fix
-      npm audit fix --force
+Basically, ***Bootstrap*** uses pre-defined classes that you asign to each element from within your ***HTML*** code. In this aspect, it is similar to ***Tailwind CSS*** but their use cases may differ.
 
 ### React
 
@@ -599,6 +578,61 @@ To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
       .
       .
         <img src={logo} alt="logo" />
+
+### NPM
+
+To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
+
+- Install
+  - without arguments
+
+        npm i       # option 1
+        npm install # option 2
+    Running **npm install** without arguments installs modules defined in the dependencies section of the **package.json** file.
+  - with arguments
+
+        npm install <package>             # install specified package
+        npm install <package1> <package2> # install multiple packages
+        npm install <package>@<version>   # install specified version of package
+  - Options
+    - (with ***--global***)
+
+          npm install -g       # option 1
+          npm install --global # option 2
+      When run with **--global** or **-g**, **npm install** installs the package globally. This means the package is installed in two places. The first is at the root directory where **package.json** is defined. The second is the global node_modules folder on the user system.
+    - (with ***--save***)
+
+          npm install <package> -S     # option 1
+          npm install <package> --save # option 2
+      When run with **--save**, **npm install** modifies the **package.json** file to include the specified package as a dependency. In this case, the express package will be added as a dependency to **package.json**.
+    - (with ***--save-dev***)
+
+      The **--save-dev** flag specifies that the package should be added to the devDependencies section of the **package.json** rather than the dependencies section.
+    - (with ***--production***)
+
+          npm install -p           # option 1
+          npm install --production # option 2
+      The **--production** flag specifies to exclude devDependencies from the install. This means any dependency listed under the devDependencies section of package.json won't get installed when this flag is present.
+- Uninstall
+
+      npm (-g) un <package>
+      npm (-g) uninstall <package>
+- List installed packages
+
+      npm list -g --depth=0 # global
+      npm list              # local
+- Update (global) packages
+
+      npm up (-g) <package1> <package2> <package3>     # option 1
+      npm update (-g) <package1> <package2> <package3> # option 2
+- Update ***NPM***
+
+      npm install -g npm@latest # multiplatform
+      npm-windows-upgrade       # for windows
+- Fix issues (for example, when you move a project to another machine)
+
+      npm audit fix
+      npm audit fix --force
 
 ### Module bundlers
 
@@ -974,6 +1008,10 @@ A list of both free and paid resources that I have used and seemed very useful t
 ### SASS
 
 - [Fireship video](https://youtu.be/akDIJa0AP5c)
+
+### Bootstrap
+
+- [Bootstrap documentation](https://getbootstrap.com/docs/)
 
 ### React
 

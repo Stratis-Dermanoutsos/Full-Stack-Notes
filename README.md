@@ -76,7 +76,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [x] Circular Linked List
   - [x] Queue
   - [ ] Priority Queue
-  - [ ] Stack
+  - [x] Stack
 
 ## PERSONAL NOTES
 
@@ -924,6 +924,29 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
     Remove the front element of the queue
 
   ![Queue](./Images/Queue.jpg)
+
+- ***Stack***
+
+  ***Stack*** is a linear structure which follows a particular order in which the operations are performed. The order is **L**ast **I**n **F**irst **O**ut (**LIFO**).  
+
+  A good example of stack can be a stack of plates in a canteen. The last plate to go to the stack is the first one to get removed, to either be used or washed.
+
+  Operations:
+
+  - Push
+
+    Adds an item in the stack
+  - Pop
+
+    Removes an item from the stack
+  - Top
+
+    Returns top element of stack
+  - isEmpty
+
+    Returns true if stack is empty, else false
+
+  ![Stack](./Images/Stack.png)
 
 ## RESOURCES
 

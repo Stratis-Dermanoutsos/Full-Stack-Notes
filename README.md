@@ -294,6 +294,8 @@ To use ***Bootstrap***, you can either
 
 Basically, ***Bootstrap*** uses pre-defined classes that you asign to each element from within your ***HTML*** code. In this aspect, it is similar to ***Tailwind CSS*** but their use cases may differ.
 
+[Use ***Bootstrap*** with ***React***](https://www.creative-tim.com/blog/web-design/how-to-use-bootstrap-with-reactjs/).
+
 ### React
 
 - Install

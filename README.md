@@ -1,6 +1,6 @@
 # Full-Stack Developer stack 2021
 
-This is a repository holding information and resources for everyone interested in becoming a FullStack Web Developer in 2021.
+This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer in 2021.
 
 As you can see, this stack is a bit biased as I chose ***React*** for Frontend and ***ASP.NET*** for Backend specifically.
 
@@ -91,27 +91,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 
 ## PERSONAL NOTES
 
-### HTTP
-
-***HTTP*** means **HyperText Transfer Protocol**.
-
-As a request-response protocol, ***HTTP*** gives users a way to interact with web resources such as HTML files by transmitting hypertext messages between clients and servers.
-
-***HTTP*** is a method for encoding and transporting information between a client (such as a web browser) and a web server.
-
-***HTTP*** requests are:
-
-- ***CONNECT***: The ***CONNECT*** method establishes a tunnel to the server identified by the target resource.
-- ***DELETE***: The ***DELETE*** method deletes the specified resource.
-- ***GET***: The ***GET*** method requests a representation of the specified resource. Requests using ***GET*** should only retrieve data.
-- ***HEAD***: The ***HEAD*** method asks for a response identical to that of a ***GET*** request, but without the response body.
-- ***OPTIONS***: The ***OPTIONS*** method is used to describe the communication options for the target resource.
-- ***PATCH***: The ***PATCH*** method is used to apply partial modifications to a resource.
-- ***POST***: The ***POST*** method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
-- ***PUT***: The ***PUT*** method replaces all current representations of the target resource with the request payload.
-- ***TRACE***: The ***TRACE*** method performs a message loop-back test along the path to the target resource.
-
-### HTML
+### HTML - notes
 
 - Form and Validations
 
@@ -141,10 +121,10 @@ As a request-response protocol, ***HTTP*** gives users a way to interact with we
     - **protect ourselves**. There are many ways that malicious users can misuse unprotected forms to damage the application.
 
     **Different types of client-side validation**:
-    - **Built-in form validation** uses ***HTML5*** form validation features, which we've discussed in many places throughout this module. This validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as **JavaScript validation**.
-    - **JavaScript validation** is coded using JavaScript. This validation is completely customizable, but you need to create it all (or use a library).
+    - **Built-in form validation** uses ***HTML5*** form validation features. This validation generally doesn't require much ***JavaScript***. Built-in form validation has better performance than ***JavaScript***, but it is not as customizable as **JavaScript validation**.
+    - **JavaScript validation** is coded using ***JavaScript***. This validation is completely customizable, but you need to create it all (or use a library).
 
-    **Using built-in form validation**:
+    **Using built-in form validation attributes**:
     - ***required***: Specifies whether a form field needs to be filled in before the form can be submitted.
     - ***minlength*** and ***maxlength***: Specifies the minimum and maximum length of strings.
     - ***min*** and ***max***: Specifies the minimum and maximum values of numerical input types.
@@ -159,7 +139,7 @@ As a request-response protocol, ***HTTP*** gives users a way to interact with we
 
   ![HTML Semantic](./Images/HTML_semantic.gif)
 
-### JavaScript
+### JavaScript - notes
 
 - Basics of ***JavaScript*** (from ***[Speaking JavaScript](http://speakingjs.com)***)
 - ***obj.propKey = value*** and ***obj['propKey'] = value*** are equal
@@ -173,7 +153,8 @@ As a request-response protocol, ***HTTP*** gives users a way to interact with we
   - doesn't handle umlauts and accents well
 
         > 'b' > 'ä' // false
-- ***C#*** vs ***JavaScript*** (only notable differences/similarities as I am used to writing code in ***C#***)
+
+***C#*** vs ***JavaScript*** (only notable differences/similarities as I am used to writing code in ***C#***)
 
 |  | C#      | JavaScript |
 | ----------- | ----------- | ----------- |
@@ -192,7 +173,7 @@ As a request-response protocol, ***HTTP*** gives users a way to interact with we
 | accessors | \<type> X { get {return x;} set {x = value;} } | get X() { return x; }, set X(value) { x = value; } |
 | regular expressions | Regex reg = new Regex(@"^\w") | /^\w/ |
 
-### SASS
+### SASS - notes
 
 - ***SASS*** means ***Syntactically Awesome StyleSheets***
 - ***Variables***
@@ -321,7 +302,7 @@ As a request-response protocol, ***HTTP*** gives users a way to interact with we
   Why this is useful? Cause sometimes ***SVG***s will be needed inside your ***SCSS*** and this is the easiest and most efficient way to change their color.
   Notice the use of function. Mozilla does not support ***HEX*** values so we convert the value to ***RGB***.
 
-### Bootstrap
+### Bootstrap - notes
 
 ***Bootstrap*** is a framework used for building responsive, mobile-first sites.
 
@@ -357,7 +338,7 @@ Basically, ***Bootstrap*** uses pre-defined classes that you asign to each eleme
 
 [Use ***Bootstrap*** with ***React***](https://www.creative-tim.com/blog/web-design/how-to-use-bootstrap-with-reactjs/).
 
-### React
+### React - notes
 
 - Install
 
@@ -642,7 +623,7 @@ Basically, ***Bootstrap*** uses pre-defined classes that you asign to each eleme
       .
         <img src={logo} alt="logo" />
 
-### NPM
+### NPM - notes
 
 To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
 
@@ -697,7 +678,7 @@ To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
       npm audit fix
       npm audit fix --force
 
-### Module bundlers
+### Module bundlers - notes
 
 A module bundler is a tool that takes pieces of JavaScript and their dependencies and bundles them into a single file.
 
@@ -707,7 +688,7 @@ However, things are a lot more complicated nowadays for a complete website to be
 
 A module bundler, basically, bundles all the assets used together.
 
-### Webpack
+### Webpack - notes
 
 For test,
 
@@ -865,7 +846,27 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
         npm run dev
     inside the terminal
 
-### Search Algorithms
+### HTTP - notes
+
+***HTTP*** means **HyperText Transfer Protocol**.
+
+As a request-response protocol, ***HTTP*** gives users a way to interact with web resources such as HTML files by transmitting hypertext messages between clients and servers.
+
+***HTTP*** is a method for encoding and transporting information between a client (such as a web browser) and a web server.
+
+***HTTP*** requests are:
+
+- ***CONNECT***: The ***CONNECT*** method establishes a tunnel to the server identified by the target resource.
+- ***DELETE***: The ***DELETE*** method deletes the specified resource.
+- ***GET***: The ***GET*** method requests a representation of the specified resource. Requests using ***GET*** should only retrieve data.
+- ***HEAD***: The ***HEAD*** method asks for a response identical to that of a ***GET*** request, but without the response body.
+- ***OPTIONS***: The ***OPTIONS*** method is used to describe the communication options for the target resource.
+- ***PATCH***: The ***PATCH*** method is used to apply partial modifications to a resource.
+- ***POST***: The ***POST*** method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
+- ***PUT***: The ***PUT*** method replaces all current representations of the target resource with the request payload.
+- ***TRACE***: The ***TRACE*** method performs a message loop-back test along the path to the target resource.
+
+### Search Algorithms - notes
 
 - ***Linear Search***
 
@@ -927,7 +928,7 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
 
   ![Jump Search](./Images/Jump-Search.jpg)
 
-### Sort Algorithms
+### Sort Algorithms - notes
 
 - ***Bubble Sort***
 
@@ -969,7 +970,7 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
 
   ![Selection Sort](./Images/Selection-Sort.png)
 
-### Data Structures
+### Data Structures - notes
 
 - ***Singly Linked List***
 
@@ -1049,64 +1050,64 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
 
 A list of both free and paid resources that I have used and seemed very useful to me.
 
-### HTML
+### HTML - resources
 
 - [w3schools](https://www.w3schools.com/html/default.asp)
 - [Form and Validations](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
 
-### CSS
+### CSS - resources
 
 - [w3schools](https://www.w3schools.com/css/default.asp)
 
-### JavaScript
+### JavaScript - resources
 
 - [Speaking JavaScript book](http://speakingjs.com)
 - [w3schools](https://www.w3schools.com/js/default.asp)
 
-### Tailwind CSS
+### Tailwind CSS - resources
 
 - [Tailwind CSS documentation](https://tailwindcss.com/docs)
 - [Tailwind CSS cheat sheet 1](https://umeshmk.github.io/Tailwindcss-cheatsheet/)
 - [Tailwind CSS cheat sheet 2](https://nerdcave.com/tailwind-cheat-sheet)
 
-### SASS
+### SASS - resources
 
 - [Fireship video](https://youtu.be/akDIJa0AP5c)
 
-### Bootstrap
+### Bootstrap - resources
 
 - [Bootstrap documentation](https://getbootstrap.com/docs/)
 
-### React
+### React - resources
 
 - [Fireship video (explanation)](https://youtu.be/Tn6-PIqc4UM)
 - [Web Dev Simplified video (introduction)](https://youtu.be/hQAHSlTtcmY)
 - [Fireship video (hooks)](https://youtu.be/TNhaISOUy6Q)
 
-### Git
+### Git - resources
 
 - [Udemy course by Jad Khalili](https://www.udemy.com/share/101tpK2@PkdjVEtSSVIKdkRKBmJNfj4=/)
 - [w3schools](https://www.w3schools.com/git/default.asp)
 
-### NPM
+### NPM - resources
 
 - [NPM documentation](https://docs.npmjs.com)
 
-### Module Bundlers & Webpack
+### Module Bundlers & Webpack - resources
 
 - [Fireship video](https://youtu.be/5IG4UmULyoA)
 - [webpack-bundle-analyzer documentation](https://www.npmjs.com/package/webpack-bundle-analyzer)
 
-### C\#
+### C\# - resources
 
 - [Udemy course by Denis Panjuta](https://www.udemy.com/share/101vEs2@Pm5KfWJSSVIKdkRKBkhOVD5uY1c=/)
 
-### Algorithms
+### Algorithms - resources
 
 - [GeeksForGeeks](https://www.geeksforgeeks.org/fundamentals-of-algorithms/)
 - [my GitHub repository](https://github.com/Stratis-Dermanoutsos/Algorithms-C-Sharp/)
 
-### Data Structures
+### Data Structures - resources
 
 - [GeeksForGeeks](https://www.geeksforgeeks.org/data-structures/)
 - [my GitHub repository](https://github.com/Stratis-Dermanoutsos/Data-Structures-C-Sharp/)

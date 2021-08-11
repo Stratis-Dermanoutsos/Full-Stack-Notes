@@ -11,7 +11,12 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 - [ ] Frontend
   - [x] Basics
     - [x] ***HTML***
-    - [x] ***CSS***
+      - [x] Form and Validations
+      - [x] Semantic and non-semantic ***HTML***
+    - [ ] ***CSS***
+      - [ ] Positions
+      - [ ] Display (flex, grid)
+      - [ ] Responsive design
     - [x] ***JavaScript***
   - [ ] Frameworks/Libraries
     - [x] ***Tailwind CSS***
@@ -78,25 +83,81 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [ ] Priority Queue
   - [x] Stack
 
+## GOAL PROJECTS
+
+- [ ] Blog
+- [ ] e-Commerce webapp
+- [ ] Responsive, mobile-first portfolio page
+
 ## PERSONAL NOTES
 
 ### HTTP
 
-- ***HTTP*** means ***HyperText Transfer Protocol***
-- ***HTTP***, as a request-response protocol, gives users a way to interact with web resources such as HTML files by transmitting hypertext messages between clients and servers
-- ***HTTP*** is a method for encoding and transporting information between a client (such as a web browser) and a web server
-- ***HTTP*** requests are:
-  - ***CONNECT***: The ***CONNECT*** method establishes a tunnel to the server identified by the target resource.
-  - ***DELETE***: The ***DELETE*** method deletes the specified resource.
-  - ***GET***: The ***GET*** method requests a representation of the specified resource. Requests using ***GET*** should only retrieve data.
-  - ***HEAD***: The ***HEAD*** method asks for a response identical to that of a ***GET*** request, but without the response body.
-  - ***OPTIONS***: The ***OPTIONS*** method is used to describe the communication options for the target resource.
-  - ***PATCH***: The ***PATCH*** method is used to apply partial modifications to a resource.
-  - ***POST***: The ***POST*** method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
-  - ***PUT***: The ***PUT*** method replaces all current representations of the target resource with the request payload.
-  - ***TRACE***: The ***TRACE*** method performs a message loop-back test along the path to the target resource.
-- I made basic ***API*** in ***C#***
-  - Project is called ***BirthdayAPI***
+***HTTP*** means **HyperText Transfer Protocol**.
+
+As a request-response protocol, ***HTTP*** gives users a way to interact with web resources such as HTML files by transmitting hypertext messages between clients and servers.
+
+***HTTP*** is a method for encoding and transporting information between a client (such as a web browser) and a web server.
+
+***HTTP*** requests are:
+
+- ***CONNECT***: The ***CONNECT*** method establishes a tunnel to the server identified by the target resource.
+- ***DELETE***: The ***DELETE*** method deletes the specified resource.
+- ***GET***: The ***GET*** method requests a representation of the specified resource. Requests using ***GET*** should only retrieve data.
+- ***HEAD***: The ***HEAD*** method asks for a response identical to that of a ***GET*** request, but without the response body.
+- ***OPTIONS***: The ***OPTIONS*** method is used to describe the communication options for the target resource.
+- ***PATCH***: The ***PATCH*** method is used to apply partial modifications to a resource.
+- ***POST***: The ***POST*** method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
+- ***PUT***: The ***PUT*** method replaces all current representations of the target resource with the request payload.
+- ***TRACE***: The ***TRACE*** method performs a message loop-back test along the path to the target resource.
+
+### HTML
+
+- Form and Validations
+
+  - Forms
+
+    A form in ***HTML5*** is declared with the tag *\<form>* and consists of every element that is found before the closing tag *\</form>*.
+
+    The \<form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.
+
+    To declare any of these inputs, we use the input element, *\<input>*.
+    For the type of the input, we simple declare it inside the tag with the attribute **type**.
+
+    For example, *\<input type="text">*.
+  - Validations
+
+    Go to any popular site with a registration form, and you will notice that they provide feedback when you don't enter your data in the format they are expecting. You'll get messages such as:
+    - "This field is required" (You can't leave this field blank).
+    - "Please enter your phone number in the format xxx-xxxx" (A specific data format is required for it to be considered valid).
+    - "Please enter a valid email address" (the data you entered is not in the right format).
+    - "Your password needs to be between 8 and 30 characters long and contain one uppercase letter, one symbol, and a number." (A very specific data format is required for your data).
+
+    This is called **form validation**. When you enter data, the browser and/or the web server will check to see that the data is in the correct format and within the constraints set by the application. Validation done in the browser is called **client-side** validation, while validation done on the server is called **server-side** validation.
+
+    We want to
+    - **get the right data, in the right format**. Our applications won't work properly if our users' data is stored in the wrong format, is incorrect, or is omitted altogether.
+    - **protect our users' data**. Forcing our users to enter secure passwords makes it easier to protect their account information.
+    - **protect ourselves**. There are many ways that malicious users can misuse unprotected forms to damage the application.
+
+    **Different types of client-side validation**:
+    - **Built-in form validation** uses ***HTML5*** form validation features, which we've discussed in many places throughout this module. This validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as **JavaScript validation**.
+    - **JavaScript validation** is coded using JavaScript. This validation is completely customizable, but you need to create it all (or use a library).
+
+    **Using built-in form validation**:
+    - ***required***: Specifies whether a form field needs to be filled in before the form can be submitted.
+    - ***minlength*** and ***maxlength***: Specifies the minimum and maximum length of strings.
+    - ***min*** and ***max***: Specifies the minimum and maximum values of numerical input types.
+    - ***type***: Specifies whether the data needs to be a number, an email address, or some other specific preset type.
+    - ***pattern***: Specifies a regular expression that defines a pattern the entered data needs to follow.
+- Semantic and non-semantic ***HTML***
+
+  A Semantic element clearly describes its meaning to both the browser and the developer.
+
+  - non-semantic elements: *\<div>*, *\<span>*
+  - semantic elements: *\<article>*, *\<footer>*, *\<form>*, *\<header>*, etc
+
+  ![HTML Semantic](./Images/HTML_semantic.gif)
 
 ### JavaScript
 
@@ -284,7 +345,7 @@ To use ***Bootstrap***, you can either
 
   Be careful to update them, in case this is outdated.
 
-***Bootstrap*** requires the use of the HTML5 doctype.
+***Bootstrap*** requires the use of the ***HTML5*** doctype.
 
     <!doctype html>
     <html lang="en">
@@ -991,6 +1052,7 @@ A list of both free and paid resources that I have used and seemed very useful t
 ### HTML
 
 - [w3schools](https://www.w3schools.com/html/default.asp)
+- [Form and Validations](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
 
 ### CSS
 

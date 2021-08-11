@@ -23,6 +23,10 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [x] ***SASS***
     - [x] ***Bootstrap***
     - [x] ***React***
+
+      Other options may be:
+      - ***Angular***
+      - ***Vue***
     - [ ] ***Redux***
     - [ ] ***jQuery***
   - [x] Version Control System (***Git*** & ***Github***)
@@ -35,8 +39,14 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [ ] Process management
   - [ ] Threads & Concurrency
   - [ ] Server-Client
-  - [ ] APIs
-  - [ ] ***ASP.NET***
+  - [ ] ***API***s
+  - [ ] ***ASP .NET*** (***C#***)
+
+    Other options may be:
+    - ***Spring Boot*** (***JAVA***)
+    - ***Django*** (***Python***)
+    - ***Ruby on Rails*** (***Ruby***)
+    - ***Flask*** (***Python***)
   - [ ] Databases
     - [x] ***MySQL***
     - [x] ***SQLite***

@@ -22,12 +22,10 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [x] ***Tailwind CSS***
     - [x] ***SASS***
     - [x] ***Bootstrap***
-    - [x] ***React***
-
-      Other options may be:
+    - [x] ***React*** or
       - ***Angular***
       - ***Vue***
-    - [ ] ***Redux***
+    - [ ] ***Redux*** (for ***React***)
     - [ ] ***jQuery***
   - [x] Version Control System (***Git*** & ***Github***)
   - [x] Package Manager (***NPM***)
@@ -40,9 +38,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [ ] Threads & Concurrency
   - [ ] Server-Client
   - [ ] ***API***s
-  - [ ] ***ASP .NET*** (***C#***)
-
-    Other options may be:
+  - [ ] ***ASP .NET*** (***C#***) or
     - ***Spring Boot*** (***JAVA***)
     - ***Django*** (***Python***)
     - ***Ruby on Rails*** (***Ruby***)

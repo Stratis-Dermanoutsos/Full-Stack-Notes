@@ -27,7 +27,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
       - ***Angular***
       - ***Vue***
     - [ ] ***Redux*** (for ***React***)
-    - [ ] ***jQuery***
+    - [x] ***jQuery***
   - [x] Package Manager (***NPM***)
   - [x] Module Bundler (***Webpack***)
 - [x] Version Control System (***Git*** & ***Github***)
@@ -761,6 +761,65 @@ Basically, ***Bootstrap*** uses pre-defined classes that you asign to each eleme
       .
         <img src={logo} alt="logo" />
 
+### jQuery - notes
+
+- Add ***jQuery*** to Your Web Pages
+  - Download ***[jQuery](https://jquery.com/download/)*** by running
+
+        npm install jquery
+    and use by inclusing the '*jquery-\<version>.min.js*' file inside the *\<head>* element.
+
+        <head>
+          <script src="jquery-<version>.min.js"></script>
+        </head>
+  - ***jQuery*** CDN
+
+        <head>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/<version>/jquery.min.js"></script>
+        </head>
+- Basic syntax
+
+      $(selector).action()
+  For example,
+
+      $(this).hide()    // hides the current element
+      $("p").hide()     // hides all <p> elements
+      $(".test").hide() // hides all elements with class="test"
+      $("#test").hide() // hides the element with id="test"
+
+      /* When any button is pressed, all <p> elements will be hidden */
+      $(document).ready(function() {
+        $("button").click(function() {
+          $("p").hide();
+        });
+      });
+- Selectors
+
+  They work quite like ***CSS***.
+  - *\<p>* elements
+
+        $("p")
+  - element with *id="test"* (' *#* ')
+
+        $("#test")
+  - elements with *class="test"* (' *.* ')
+
+        $(".test")
+- Events
+
+  | Mouse Events | Keyboard Events | Form Events | Document/Window Events |
+  | ----------- | ----------- | ----------- | ----------- |
+  | click | keypress | submit | load |
+  | dblclick | keydown | change | resize |
+  | mouseenter | keyup | focus | scroll |
+  | mouseleave |  | blur | unload |
+
+  For example, do something when any paragraph (*\<p>*) elementh is clicked
+
+      $("p").click(function(){
+        // action goes here!!
+      });
+
 ### NPM - notes
 
 To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
@@ -1271,10 +1330,10 @@ A list of both free and paid resources that I have used and seemed very useful t
 - [Web Dev Simplified video (introduction)](https://youtu.be/hQAHSlTtcmY)
 - [Fireship video (hooks)](https://youtu.be/TNhaISOUy6Q)
 
-### Git - resources
+### jQuery - resources
 
-- [Udemy course by Jad Khalili](https://www.udemy.com/share/101tpK2@PkdjVEtSSVIKdkRKBmJNfj4=/)
-- [w3schools](https://www.w3schools.com/git/default.asp)
+- [w3schools](https://www.w3schools.com/jquery/default.asp)
+- [jQuery API documentation](https://api.jquery.com)
 
 ### NPM - resources
 
@@ -1284,6 +1343,11 @@ A list of both free and paid resources that I have used and seemed very useful t
 
 - [Fireship video](https://youtu.be/5IG4UmULyoA)
 - [webpack-bundle-analyzer documentation](https://www.npmjs.com/package/webpack-bundle-analyzer)
+
+### Git - resources
+
+- [Udemy course by Jad Khalili](https://www.udemy.com/share/101tpK2@PkdjVEtSSVIKdkRKBmJNfj4=/)
+- [w3schools](https://www.w3schools.com/git/default.asp)
 
 ### C\# - resources
 

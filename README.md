@@ -28,9 +28,9 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
       - ***Vue***
     - [ ] ***Redux*** (for ***React***)
     - [ ] ***jQuery***
-  - [x] Version Control System (***Git*** & ***Github***)
   - [x] Package Manager (***NPM***)
   - [x] Module Bundler (***Webpack***)
+- [x] Version Control System (***Git*** & ***Github***)
 - [ ] Backend
   - [x] ***HTTP***
   - [x] ***C#***
@@ -248,17 +248,49 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 
 ### JavaScript - notes
 
+Unique traits
+
 - ***obj.propKey = value*** and ***obj['propKey'] = value*** are equal
 - if ***1 = 0001***, then ***~1 = 1110***
 - ***'abc'.charAt(1)*** and  ***'abc'[1]*** are equal, tho some older browsers don't support the latter
-- Comparing strings
-  - is case-sensitive
+- Numeric Separators are useful to make large numbers more readable
 
-        > 'B' > 'A' // true
-        > 'B' > 'a' // false
-  - doesn't handle umlauts and accents well
+      let a = 986382528 // not readable
+      let a = 986_382_528 // readable
+- Logical OR can be used for falsy values
 
-        > 'b' > 'ä' // false
+      const var = a || b; // If a is falsy, we set var equal to b
+- Nullish Coalescing
+
+      const var = a ?? b; // Only if a is null or undefined, we set var equal to b
+  Falsy values are kept.
+
+Comparing strings
+
+- is case-sensitive
+
+      > 'B' > 'A' // true
+      > 'B' > 'a' // false
+- doesn't handle umlauts and accents well
+
+      > 'b' > 'ä' // false
+
+Useful code snippets
+
+- Remove duplicate values from array
+
+      const arr = [ 1, 2, 3, 2, 4, 4, 1, 5, 6 ];
+      const uniqueArr = [...new Set(arr)]; // = [ 1, 2, 3, 4, 5, 6 ]
+- Filter out falsy values
+
+      const arr = [ 1, null, undefined, 0, 2, "", 4 ];
+      const nonFalsy = array.filter(Boolean); // = [ 1, 2, 4 ]
+- Swap two variables with array destructuring
+
+      let a = 6;
+      let b = 9;
+
+      [ a, b ] = [ b, a ];
 
 ***C#*** vs ***JavaScript*** (only notable differences/similarities as I am used to writing code in ***C#***)
 
@@ -951,6 +983,53 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
 
         npm run dev
     inside the terminal
+
+### Git - notes
+
+- Initialize a repository
+
+      git init
+- Clone a remote repository
+
+      git clone <remoteUrl>
+- Stage files for commit
+
+      git add <relativePathToFile> <relativePathToDirectory>
+- Commit files
+
+      git commit -m "Line 1 description" -m "Line 2 description"
+- Add a remote repository
+
+      git remote add <remoteName> <remoteUrl>
+- Fetch remote changes
+
+      git fetch <remoteName>
+- Fetch and merges remote changes
+
+      git pull <remoteName> <remoteBranch>
+- Reset your local branch
+
+      git reset [--hard]
+- Create a new local branch
+
+      git checkout -b <newBranch/Name>
+      # or
+      git switch -c <newBranch/Name>
+- Push a local branch to a remote repository
+
+      git push # current branch
+      git push -u <remoteName> <branchName> # any branch
+      git push --force # overwrite all changes
+- Stash your uncommitted changes
+
+      git stash [pop|drop]
+- Rename a branch
+
+      git branch -m <oldBranchName> <newBranchName> # local
+      git branch -m <remoteName> :<oldBranchName> <newBranchName> # remote
+- Show a commit log
+
+      git log
 
 ### HTTP - notes
 

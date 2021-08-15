@@ -269,11 +269,11 @@ Comparing strings
 
 - is case-sensitive
 
-      > 'B' > 'A' // true
-      > 'B' > 'a' // false
+      'B' > 'A' // true
+      'B' > 'a' // false
 - doesn't handle umlauts and accents well
 
-      > 'b' > 'ä' // false
+      'b' > 'ä' // false
 
 Useful code snippets
 

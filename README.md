@@ -10,30 +10,30 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 
 - [ ] Frontend
   - [x] Basics
-    - [x] ***HTML***
+    - [x] ***HTML*** ([notes](#html---notes) and [resources](#html---resources))
       - [x] Form and Validations
       - [x] Semantic and non-semantic ***HTML***
-    - [x] ***CSS***
+    - [x] ***CSS*** ([notes](#css---notes) and [resources](#css---resources))
       - [x] Prefixes
       - [x] Positions
       - [x] Display (**Flex**, **Grid**)
       - [x] Responsive design
-    - [x] ***JavaScript***
+    - [x] ***JavaScript*** ([notes](#javascript---notes) and [resources](#javascript---resources))
   - [ ] Frameworks/Libraries
-    - [x] ***Tailwind CSS***
-    - [x] ***SASS***
-    - [x] ***Bootstrap***
-    - [x] ***React*** or
+    - [x] ***Tailwind CSS*** ([resources](#tailwind-css---resources))
+    - [x] ***SASS*** ([notes](#sass---notes) and [resources](#sass---resources))
+    - [x] ***Bootstrap*** ([notes](#bootstrap---notes) and [resources](#bootstrap---resources))
+    - [x] ***React*** ([notes](#react---notes) and [resources](#react---resources)) or
       - ***Angular***
       - ***Vue***
-    - [ ] ***Redux*** (for ***React***)
-    - [x] ***jQuery***
-  - [x] Package Manager (***NPM***)
-  - [x] Module Bundler (***Webpack***)
-- [x] Version Control System (***Git*** & ***Github***)
+    - [ ] ***Redux*** (for ***React***) ([notes](#redux---notes) and [resources](#redux---resources))
+    - [x] ***jQuery*** ([notes](#jquery---notes) and [resources](#jquery---resources))
+  - [x] Package Manager (***NPM***) ([notes](#npm---notes) and [resources](#npm---resources))
+  - [x] Module Bundler (***Webpack***) ([notes](#module-bundlers---notes) and [resources](#module-bundlers--webpack---resources))
+- [x] Version Control System (***Git*** & ***Github***) ([notes](#git---notes) and [resources](#git---resources))
 - [ ] Backend
-  - [x] ***HTTP***
-  - [x] ***C#***
+  - [x] ***HTTP*** ([notes](#http---notes))
+  - [x] ***C#*** ([resources](#c---resources))
   - [ ] ***MVC*** structure
   - [ ] Process management
   - [ ] Threads & Concurrency
@@ -46,9 +46,9 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - ***Ruby on Rails*** (***Ruby***)
     - ***Flask*** (***Python***)
   - [ ] Databases
-    - [x] ***MySQL***
-    - [x] ***SQLite***
-    - [x] ***PostgreSQL***
+    - [ ] ***MySQL***
+    - [ ] ***SQLite***
+    - [ ] ***PostgreSQL***
     - [ ] ***MongoDB***
   - [ ] CI/CD Tools
     - [ ] ***Jenkins***
@@ -61,13 +61,13 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [ ] Load Balancer
     - [ ] Caching Server
     - [ ] Firewall
-- [ ] Algorithms
-  - [x] Search
+- [ ] Algorithms ([resources](#algorithms---resources))
+  - [x] Search ([notes](#search-algorithms---notes))
     - [x] Linear
     - [x] Binary
     - [x] Exponential
     - [x] Jump
-  - [ ] Sort
+  - [ ] Sort ([notes](#sort-algorithms---notes))
     - [x] Bubble
     - [x] Counting
     - [x] Selection
@@ -80,7 +80,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
       - [ ] Preorder
       - [ ] Postorder
       - [ ] Level order
-- [ ] Data Structures
+- [ ] Data Structures ([notes](#data-structures---notes) and [resources](#data-structures---resources))
   - [ ] Binary Search Tree
   - [ ] Heap
   - [ ] AVL Tree
@@ -829,7 +829,6 @@ Installation
 
       npm install react-redux
       npm install --save-dev redux-devtools
-  Unlike Redux itself, many packages in the Redux ecosystem don't provide UMD builds, so we recommend using CommonJS module bundlers like [Webpack](#webpack---notes) for the most comfortable development experience.
 
 Create a React Redux App
 

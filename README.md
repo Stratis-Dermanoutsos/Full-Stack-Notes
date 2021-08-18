@@ -35,7 +35,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [x] ***HTTP*** ([notes](#http---notes))
   - [x] ***C#*** ([resources](#c---resources))
   - [x] ***MVC*** architecture ([notes](#mvc-architecture---notes) and [resources](#mvc-architecture---resources))
-  - [ ] Process management
+  - [x] Process management ([resources](#process-management---resources))
   - [ ] Threads & Concurrency
   - [ ] Server-Client
   - [ ] ***API***s
@@ -81,7 +81,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
       - [ ] Postorder
       - [ ] Level order
 - [ ] Data Structures ([notes](#data-structures---notes) and [resources](#data-structures---resources))
-  - [ ] Binary Search Tree
+  - [x] Binary Search Tree
   - [ ] Heap
   - [ ] AVL Tree
   - [x] Singly Linked List
@@ -1333,6 +1333,35 @@ Disadvantages of ***MVC***
 
 ### Data Structures - notes
 
+- ***Binary Search Tree***
+
+  ***Binary Search Tree*** is a node-based binary tree data structure.
+
+  Properties:
+  - The left subtree of a node contains only nodes with values lesser than the node’s value
+  - The right subtree of a node contains only nodes with values greater than the node’s value
+  - The left and right subtrees must each be a ***Binary Search Tree***
+  - There must be no duplicate nodes
+  - A ***Binary Search Tree*** with height *H* may have *N* nodes where
+
+        H ≤ N ≤ 2ᴴ - 1
+  - **Inorder** traversal of ***Binary Search Tree*** always produces sorted output
+  - We can construct a ***Binary Search Tree*** with only **Preorder** or **Postorder** or **Level Order** traversal
+  - We can always get **Inorder** traversal by sorting another given traversal
+  - The longest path of a ***Binary Search Tree*** is equal to the Tree's height
+
+  Nodes:
+  - The top node of a ***Binary Search Tree*** is called '*Root*'
+  - A node with at least 1 '*Child*' node is called '*Parent*'
+  - When it has no '*Children*' nodes, a node is called '*Leaf*'
+  - '*Children*' nodes with the same '*Parent*' can be called '*Siblings*'
+
+  A ***Binary Search Tree*** can be displayed by a graph (as shown below) or by traversing it.
+
+  Possible traversals are **Inorder**, **Preorder**, **Postorder** and **Level Order**. (For more on these, look at the ***Algorithms*** section)
+
+  ![Binary Search Tree](./Images/Binary-Search-Tree.png)
+
 - ***Singly Linked List***
 
   ***Singly Linked List*** is basically a one-way chain of nodes.
@@ -1478,6 +1507,10 @@ A list of both free and paid resources that I have used and seemed very useful t
 ### MVC architecture - resources
 
 - [Article by Zanfina Svirca](https://towardsdatascience.com/everything-you-need-to-know-about-mvc-architecture-3c827930b4c1)
+
+### Process management - resources
+
+- [Wiki](https://en.wikipedia.org/wiki/Process_management_(computing))
 
 ### Algorithms - resources
 

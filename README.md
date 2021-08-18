@@ -1429,6 +1429,7 @@ A list of both free and paid resources that I have used and seemed very useful t
 
 ### C\# - resources
 
+- [C# documentation](https://docs.microsoft.com/en-us/dotnet/csharp/)
 - [Udemy course by Denis Panjuta](https://www.udemy.com/share/101vEs2@Pm5KfWJSSVIKdkRKBkhOVD5uY1c=/)
 
 ### Algorithms - resources

@@ -264,6 +264,13 @@ Unique traits
 
       const var = a ?? b; // Only if a is null or undefined, we set var equal to b
   Falsy values are kept.
+- Grab last item of an array
+
+      const arr = ["item1", "item2", "item3", "item4", "item5"];
+
+      const firstItem = arr[0];
+      const lastItem = arr.at(-1); // const lastItem = arr[arr.length - 1];
+      const secondToLast = arr.at(-2); // const lastItem = arr[arr.length - 2];
 
 Comparing strings
 
@@ -291,6 +298,25 @@ Useful code snippets
       let b = 9;
 
       [ a, b ] = [ b, a ];
+- Destructure function parameters, making code more readable
+
+      // DON'T DO THIS
+      const myFunction = (one, two, three) => {
+        // code
+      };
+
+      myFunction(1, 2, 3);
+
+      // DO THIS
+      const myFunction = ({one, two, three}) => {
+        // code
+      };
+
+      myFunction({
+        one: 1,
+        two: 2,
+        three: 3
+      });
 
 ***C#*** vs ***JavaScript*** (only notable differences/similarities as I am used to writing code in ***C#***)
 
@@ -760,6 +786,8 @@ Basically, ***Bootstrap*** uses pre-defined classes that you asign to each eleme
       .
       .
         <img src={logo} alt="logo" />
+
+### Redux - notes
 
 ### jQuery - notes
 

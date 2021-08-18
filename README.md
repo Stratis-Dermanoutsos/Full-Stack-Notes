@@ -73,10 +73,10 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [x] Selection
     - [ ] Merge
     - [ ] Quick
-  - [ ] BST
+  - [ ] BST ([notes](#bst-algorithms---notes))
     - [ ] Inverse
     - [ ] Traversals
-      - [ ] Inorder
+      - [x] Inorder
       - [ ] Preorder
       - [ ] Postorder
       - [ ] Level order
@@ -1331,6 +1331,17 @@ Disadvantages of ***MVC***
 
   ![Selection Sort](./Images/Selection-Sort.png)
 
+### BST Algorithms - notes
+
+- Traversals
+  - Inorder
+
+    Time Complexity: *O(n)*
+
+    The **Inorder** traversal of a ***Binary Search Tree*** always returns the nodes in a sorted order
+
+    ![BST Inorder Traversal](./Images/BST-Inorder-Traversal.png)
+
 ### Data Structures - notes
 
 - ***Binary Search Tree***
@@ -1348,7 +1359,7 @@ Disadvantages of ***MVC***
   - **Inorder** traversal of ***Binary Search Tree*** always produces sorted output
   - We can construct a ***Binary Search Tree*** with only **Preorder** or **Postorder** or **Level Order** traversal
   - We can always get **Inorder** traversal by sorting another given traversal
-  - The longest path of a ***Binary Search Tree*** is equal to the Tree's height
+  - The longest path's length of a ***Binary Search Tree*** is equal to the Tree's height
 
   Nodes:
   - The top node of a ***Binary Search Tree*** is called '*Root*'

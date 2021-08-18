@@ -816,6 +816,26 @@ Basically, ***Bootstrap*** uses pre-defined classes that you asign to each eleme
 
 ### Redux - notes
 
+Installation
+
+- ***Redux Toolkit***
+
+      npm install @reduxjs/toolkit
+  Redux Toolkit includes the Redux core, as well as other key packages we feel are essential for building Redux applications (such as Redux Thunk and Reselect).
+- ***Redux Core***
+
+      npm install redux
+- ***Complementary Packages***
+
+      npm install react-redux
+      npm install --save-dev redux-devtools
+  Unlike Redux itself, many packages in the Redux ecosystem don't provide UMD builds, so we recommend using CommonJS module bundlers like [Webpack](#webpack---notes) for the most comfortable development experience.
+
+Create a React Redux App
+
+    npx create-react-app <project-directory> --template redux // with NPX
+    create-react-app <project-directory> --template redux // with create-react-app CLI
+
 ### jQuery - notes
 
 - Add ***jQuery*** to Your Web Pages
@@ -1386,6 +1406,8 @@ A list of both free and paid resources that I have used and seemed very useful t
 - [Fireship video (hooks)](https://youtu.be/TNhaISOUy6Q)
 
 ### Redux - resources
+
+- [Redux documentation](https://redux.js.org/introduction)
 
 ### jQuery - resources
 

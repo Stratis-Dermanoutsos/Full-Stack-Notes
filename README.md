@@ -1,4 +1,4 @@
-# Full-Stack Developer stack 2021
+# Become a Full-Stack Developer in 2021
 
 This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer in 2021.
 
@@ -42,6 +42,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [ ] ***ASP .NET*** (***C#***) or
     - ***Spring Boot*** (***JAVA***)
     - ***Django*** (***Python***)
+    - ***Laravel*** (***PHP***)
     - ***Ruby on Rails*** (***Ruby***)
     - ***Flask*** (***Python***)
   - [ ] Databases
@@ -90,11 +91,37 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [ ] Priority Queue
   - [x] Stack
 
+## PRACTICE PROJECTS
+
+- Frontend-only pages
+  - Landing page
+  - Login page
+  - Portfolio
+- Web applications without backend
+  - Calculator
+  - Quiz app
+  - Random quote generator
+  - Todo app
+- Backend-only applications
+  - API with access to a database
+  - Authorization model based on Login credentials
+  - Integrations with any 3rd party APIs
+  - Inventory system management for a user
+  - Server-Client login application
+  - User management system (Store user details, login, edit user etc)
+- Fully Stacked web applications
+  - Blog page
+  - Chat app
+  - Notes app
+  - Survey form
+  - Todo app
+  - eCommerce webapp
+
 ## GOAL PROJECTS
 
 - [ ] Blog
-- [ ] e-Commerce webapp
-- [ ] Responsive, mobile-first portfolio page
+- [ ] eCommerce
+- [ ] Portfolio
 
 ## PERSONAL NOTES
 
@@ -1357,6 +1384,8 @@ A list of both free and paid resources that I have used and seemed very useful t
 - [Fireship video (explanation)](https://youtu.be/Tn6-PIqc4UM)
 - [Web Dev Simplified video (introduction)](https://youtu.be/hQAHSlTtcmY)
 - [Fireship video (hooks)](https://youtu.be/TNhaISOUy6Q)
+
+### Redux - resources
 
 ### jQuery - resources
 

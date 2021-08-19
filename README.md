@@ -34,10 +34,10 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 - [ ] Backend
   - [x] ***HTTP*** ([notes](#http---notes))
   - [x] ***C#*** ([resources](#c---resources)) or
-    - JAVA
-    - Python
-    - PHP
-    - Ruby
+    - ***JAVA***
+    - ***Python***
+    - ***PHP***
+    - ***Ruby***
   - [x] ***MVC*** architecture ([notes](#mvc-architecture---notes) and [resources](#mvc-architecture---resources))
   - [x] Process management ([resources](#process-management---resources))
   - [ ] Threads & Concurrency

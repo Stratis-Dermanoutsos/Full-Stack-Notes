@@ -2,7 +2,7 @@
 
 This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer in 2021.
 
-As you can see, this stack is a bit biased as I chose ***React*** for Frontend and ***ASP.NET*** for Backend specifically.
+As you can see, this stack is a bit biased as I chose ***React*** for Frontend and ***ASP .NET*** for Backend specifically.
 
 Of course, there are other ***JS*** frameworks/libraries and other backend languages and are all appreciated.
 
@@ -78,12 +78,12 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [ ] Merge
     - [ ] Quick
   - [ ] BST ([notes](#bst-algorithms---notes))
-    - [ ] Inverse
-    - [ ] Traversals
+    - [x] Traversals
+      - [x] Preorder
       - [x] Inorder
-      - [ ] Preorder
-      - [ ] Postorder
-      - [ ] Level order
+      - [x] Postorder
+      - [x] Level order
+    - [ ] Inverse
 - [ ] Data Structures ([notes](#data-structures---notes) and [resources](#data-structures---resources))
   - [x] Binary Search Tree
   - [ ] Heap
@@ -1338,13 +1338,48 @@ Disadvantages of ***MVC***
 ### BST Algorithms - notes
 
 - Traversals
-  - Inorder
+  - **Preorder**
 
-    Time Complexity: *O(n)*
+    How it works:
+    1. Visit the root
+    2. Traverse the left subtree
+    3. Traverse the right subtree
 
-    The **Inorder** traversal of a ***Binary Search Tree*** always returns the nodes in a sorted order
+    ![BST Preorder Traversal](./Images/BST-Preorder-Traversal.png)
+  - **Inorder**
+
+    The **Inorder** traversal of a ***Binary Search Tree*** always returns the nodes in a sorted order.
+
+    How it works:
+    1. Traverse the left subtree
+    2. Visit the root
+    3. Traverse the right subtree
 
     ![BST Inorder Traversal](./Images/BST-Inorder-Traversal.png)
+  - **Postorder**
+
+    How it works:
+    1. Traverse the left subtree
+    2. Traverse the right subtree
+    3. Visit the root
+
+    ![BST Postorder Traversal](./Images/BST-Postorder-Traversal.png)
+
+  Notice how, in the previous 3 traversals, the root changes priority.
+  
+  It starts *1*st in **Preorder**, then *2*nd in **Inorder** and *3*rd in **Postorder**.
+
+  - **Level order**
+
+    **Level order** traversal of a tree is *Breadth-First* traversal for the tree.
+
+    How it works:
+    1. Start from level 0 (root)
+    2. Print that level
+    3. Continue to the lower one
+    4. Repeat from step 2
+
+    ![BST Level Order Traversal](./Images/BST-Level-Order-Traversal.png)
 
 ### Data Structures - notes
 
@@ -1373,7 +1408,7 @@ Disadvantages of ***MVC***
 
   A ***Binary Search Tree*** can be displayed by a graph (as shown below) or by traversing it.
 
-  Possible traversals are **Inorder**, **Preorder**, **Postorder** and **Level Order**. (For more on these, look at the ***Algorithms*** section)
+  Possible traversals are **Preorder**, **Inorder**, **Postorder** and **Level Order**. (For more on these, look at the ***Algorithms*** section)
 
   ![Binary Search Tree](./Images/Binary-Search-Tree.png)
 - ***Singly Linked List***
@@ -1535,3 +1570,5 @@ A list of both free and paid resources that I have used and seemed very useful t
 
 - [GeeksForGeeks](https://www.geeksforgeeks.org/data-structures/)
 - [my GitHub repository](https://github.com/Stratis-Dermanoutsos/Data-Structures-C-Sharp/)
+
+[Jump to top](#become-a-full-stack-developer-in-2021)

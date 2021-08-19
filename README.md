@@ -77,13 +77,6 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [x] Selection
     - [ ] Merge
     - [ ] Quick
-  - [ ] BST ([notes](#bst-algorithms---notes))
-    - [x] Traversals
-      - [x] Preorder
-      - [x] Inorder
-      - [x] Postorder
-      - [x] Level order
-    - [ ] Inverse
 - [ ] Data Structures ([notes](#data-structures---notes) and [resources](#data-structures---resources))
   - [x] Binary Search Tree
   - [ ] Heap
@@ -1335,9 +1328,38 @@ Disadvantages of ***MVC***
 
   ![Selection Sort](./Images/Selection-Sort.png)
 
-### BST Algorithms - notes
+### Data Structures - notes
 
-- Traversals
+- ***Binary Search Tree***
+
+  ***Binary Search Tree*** is a node-based binary tree data structure.
+
+  Properties:
+  - The left subtree of a node contains only nodes with values lesser than the node’s value
+  - The right subtree of a node contains only nodes with values greater than the node’s value
+  - The left and right subtrees must each be a ***Binary Search Tree***
+  - There must be no duplicate nodes
+  - A ***Binary Search Tree*** with height *H* may have *N* nodes where
+
+        H ≤ N ≤ 2ᴴ - 1
+  - **Inorder** traversal of ***Binary Search Tree*** always produces sorted output
+  - We can construct a ***Binary Search Tree*** with only **Preorder** or **Postorder** or **Level Order** traversal
+  - We can always get **Inorder** traversal by sorting another given traversal
+  - The longest path's length of a ***Binary Search Tree*** is equal to the Tree's height
+
+  Nodes:
+  - The top node of a ***Binary Search Tree*** is called '*Root*'
+  - A node with at least 1 '*Child*' node is called '*Parent*'
+  - When it has no '*Children*' nodes, a node is called '*Leaf*'
+  - '*Children*' nodes with the same '*Parent*' can be called '*Siblings*'
+
+  A ***Binary Search Tree*** can be displayed by a graph (as shown below) or by traversing it.
+
+  ![Binary Search Tree](./Images/Binary-Search-Tree.png)
+
+  Traversing the ***Binary Search Tree***
+
+  Possible traversals are **Preorder**, **Inorder**, **Postorder** and **Level Order**.
   - **Preorder**
 
     How it works:
@@ -1367,7 +1389,7 @@ Disadvantages of ***MVC***
 
   Notice how, in the previous 3 traversals, the root changes priority.
   
-  It starts *1*st in **Preorder**, then *2*nd in **Inorder** and *3*rd in **Postorder**.
+  It starts as *1*st in **Preorder**, then *2*nd in **Inorder** and *3*rd in **Postorder**.
 
   - **Level order**
 
@@ -1381,36 +1403,21 @@ Disadvantages of ***MVC***
 
     ![BST Level Order Traversal](./Images/BST-Level-Order-Traversal.png)
 
-### Data Structures - notes
+  Invert a ***BST***
 
-- ***Binary Search Tree***
+  The goal is simple:
+  - In a ***BST***, smaller elements go to the left, bigger elements go to the right
+  - To invert the ***BST***, we place bigger elements to the left and smaller to the right
 
-  ***Binary Search Tree*** is a node-based binary tree data structure.
+  To achieve this, we simply have to do
 
-  Properties:
-  - The left subtree of a node contains only nodes with values lesser than the node’s value
-  - The right subtree of a node contains only nodes with values greater than the node’s value
-  - The left and right subtrees must each be a ***Binary Search Tree***
-  - There must be no duplicate nodes
-  - A ***Binary Search Tree*** with height *H* may have *N* nodes where
+      // C# code
+      Node temp = parent.Right;
+      parent.Right = parent.Left;
+      parent.Left = temp;
+  for every '*Parent*' node of the ***Binary Search Tree***.
 
-        H ≤ N ≤ 2ᴴ - 1
-  - **Inorder** traversal of ***Binary Search Tree*** always produces sorted output
-  - We can construct a ***Binary Search Tree*** with only **Preorder** or **Postorder** or **Level Order** traversal
-  - We can always get **Inorder** traversal by sorting another given traversal
-  - The longest path's length of a ***Binary Search Tree*** is equal to the Tree's height
-
-  Nodes:
-  - The top node of a ***Binary Search Tree*** is called '*Root*'
-  - A node with at least 1 '*Child*' node is called '*Parent*'
-  - When it has no '*Children*' nodes, a node is called '*Leaf*'
-  - '*Children*' nodes with the same '*Parent*' can be called '*Siblings*'
-
-  A ***Binary Search Tree*** can be displayed by a graph (as shown below) or by traversing it.
-
-  Possible traversals are **Preorder**, **Inorder**, **Postorder** and **Level Order**. (For more on these, look at the ***Algorithms*** section)
-
-  ![Binary Search Tree](./Images/Binary-Search-Tree.png)
+  ![Inverted Binary Search Tree](./Images/Inverted-Binary-Search-Tree.png)
 - ***Singly Linked List***
 
   ***Singly Linked List*** is basically a one-way chain of nodes.

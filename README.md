@@ -40,7 +40,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - ***Ruby***
   - [x] ***MVC*** architecture ([notes](#mvc-architecture---notes) and [resources](#mvc-architecture---resources))
   - [x] Process management ([resources](#process-management---resources))
-  - [ ] Threads & Concurrency
+  - [x]  Threads & Concurrency ([notes](#threads--concurrency---notes) and [resources](#threads--concurrency---resources))
   - [ ] Server-Client
   - [ ] ***API***s
   - [ ] ***ASP .NET*** (***C#***) or
@@ -1224,6 +1224,19 @@ Disadvantages of ***MVC***
 - Not suitable for small applications
 - The inefficiency of data access in view
 
+### Threads & Concurrency - notes
+
+A ***thread*** is a program that runs in the same **address space** with other ***threads***.
+
+***Threading*** allows for processes to run in parallel *(but not really)* in the same **address space**.
+
+Example for the use of ***threads***:
+
+    Let's say we have a text editor.
+    Had we used only 1 thread, it would be impossible to take input from the keyboard as the editor auto-saves our changes.
+    Just using independent processes would not solve this issue as each process would belong to a different address space.
+Thankfully, ***C#*** is said to have excellent multithreading capabilities.
+
 ### Search Algorithms - notes
 
 - ***Linear Search***
@@ -1567,6 +1580,10 @@ A list of both free and paid resources that I have used and seemed very useful t
 ### Process management - resources
 
 - [Wiki](https://en.wikipedia.org/wiki/Process_management_(computing))
+
+### Threads & Concurrency - resources
+
+- [Applied Programming notes](https://applied-programming.github.io/Operating-Systems-Notes/3-Threads-and-Concurrency/)
 
 ### Algorithms - resources
 

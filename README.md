@@ -33,7 +33,11 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 - [x] Version Control System (***Git*** & ***Github***) ([notes](#git---notes) and [resources](#git---resources))
 - [ ] Backend
   - [x] ***HTTP*** ([notes](#http---notes))
-  - [x] ***C#*** ([resources](#c---resources))
+  - [x] ***C#*** ([resources](#c---resources)) or
+    - JAVA
+    - Python
+    - PHP
+    - Ruby
   - [x] ***MVC*** architecture ([notes](#mvc-architecture---notes) and [resources](#mvc-architecture---resources))
   - [x] Process management ([resources](#process-management---resources))
   - [ ] Threads & Concurrency
@@ -1372,7 +1376,6 @@ Disadvantages of ***MVC***
   Possible traversals are **Inorder**, **Preorder**, **Postorder** and **Level Order**. (For more on these, look at the ***Algorithms*** section)
 
   ![Binary Search Tree](./Images/Binary-Search-Tree.png)
-
 - ***Singly Linked List***
 
   ***Singly Linked List*** is basically a one-way chain of nodes.
@@ -1403,7 +1406,7 @@ Disadvantages of ***MVC***
 
 - ***Queue***
 
-  ***Queue*** is a linear structure which follows a particular order in which the operations are performed. The order is **F**irst **I**n **F**irst **O**ut (**FIFO**).  
+  ***Queue*** is a linear structure which follows a particular order in which the operations are performed. The order is **F**irst **I**n **F**irst **O**ut (**FIFO**).
 
   A good example of queue is any queue of consumers for a resource where the consumer that came first is served first.
 
@@ -1426,7 +1429,7 @@ Disadvantages of ***MVC***
 
 - ***Stack***
 
-  ***Stack*** is a linear structure which follows a particular order in which the operations are performed. The order is **L**ast **I**n **F**irst **O**ut (**LIFO**).  
+  ***Stack*** is a linear structure which follows a particular order in which the operations are performed. The order is **L**ast **I**n **F**irst **O**ut (**LIFO**).
 
   A good example of stack can be a stack of plates in a canteen. The last plate to go to the stack is the first one to get removed, to either be used or washed.
 

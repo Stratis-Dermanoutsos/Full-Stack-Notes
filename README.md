@@ -26,7 +26,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [x] ***React*** ([notes](#react---notes) and [resources](#react---resources)) or
       - ***Angular***
       - ***Vue***
-    - [ ] ***Next.js***
+    - [ ] ***Next.js*** (for ***React***)
     - [ ] ***Redux*** (for ***React***) ([notes](#redux---notes) and [resources](#redux---resources))
     - [x] ***jQuery*** ([notes](#jquery---notes) and [resources](#jquery---resources))
   - [x] Package Manager (***NPM***) ([notes](#npm---notes) and [resources](#npm---resources))

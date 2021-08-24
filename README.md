@@ -1421,7 +1421,7 @@ Thankfully, ***C#*** is said to have excellent multithreading capabilities.
   | table | collection |
   | row | document |
 
-  Important commands:
+  Basic commands:
   - Show ***databases***
 
         show dbs;

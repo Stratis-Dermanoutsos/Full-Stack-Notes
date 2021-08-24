@@ -1448,9 +1448,13 @@ Thankfully, ***C#*** is said to have excellent multithreading capabilities.
   - Show data
 
         db.<collection>.find();
+  - Update data
+
+        db.<collection>.update({<query>}, {<update>}[, {<options>}]);
+        db.collection2.update({ name: 'Mitsos' }, {name: 'Mitsos', age: 23, height: 1.50}); // Where name = 'Mitsos', set age to 23 and height to 1.50
   - Remove data
 
-        db.<collection>.remove({<query>, [justOne: <true|false>]});
+        db.<collection>.remove({<query>}, [justOne: <true|false>]);
 
         // Examples
         db.collection2.remove({}) // Remove all data from collection2
@@ -1818,17 +1822,21 @@ A list of both free and paid resources that I have used and seemed very useful t
 - MySQL
   - [MySQL documentation](https://dev.mysql.com/doc/)
   - [MySQL cheat sheet](http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm)
+  - [C# and MySQL (ZetCode)](https://zetcode.com/csharp/mysql/)
 - SQLite
   - [SQLite documentation](https://www.sqlite.org/docs.html)
   - [SQLite cheat sheet](https://www.sqlitetutorial.net/sqlite-cheat-sheet/)
+  - [C# and SQLite (ZetCode)](https://zetcode.com/csharp/sqlite/)
 - PostgreSQL
   - [PostgreSQL documentation](https://www.postgresql.org/docs/)
   - [PostgreSQL cheat sheet](https://postgrescheatsheet.com)
+  - [C# and PostgreSQL (ZetCode)](https://zetcode.com/csharp/postgresql/)
 - MongoDB
   - [MongoDB documentation](https://docs.mongodb.com)
   - [MongoDB Cheat Sheet](https://www.mongodb.com/developer/quickstart/cheat-sheet/)
   - [Simplilearn video (tutorial)](https://youtu.be/lBBtq3Oawqw)
-  - [C# and MongoDB](https://www.mongodb.com/blog/post/quick-start-c-sharp-and-mongodb-starting-and-setup)
+  - [C# and MongoDB (Official)](https://www.mongodb.com/blog/post/quick-start-c-sharp-and-mongodb-starting-and-setup)
+  - [C# and MongoDB (ZetCode)](https://zetcode.com/csharp/mongodb/)
 
 ### Algorithms - resources
 

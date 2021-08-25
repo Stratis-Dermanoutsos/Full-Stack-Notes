@@ -34,7 +34,6 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [x] Module Bundler (***Webpack***) ([notes](#module-bundlers---notes) and [resources](#module-bundlers--webpack---resources))
 - [x] Version Control System (***Git*** & ***Github***) ([notes](#git---notes) and [resources](#git---resources))
 - [ ] Backend
-  - [x] ***HTTP*** ([notes](#http---notes))
   - [x] ***C#*** ([resources](#c---resources)) or
     - ***JAVA***
     - ***Python***
@@ -43,8 +42,8 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [x] ***MVC*** architecture ([notes](#mvc-architecture---notes) and [resources](#mvc-architecture---resources))
   - [x] Process management ([resources](#process-management---resources))
   - [x]  Threads & Concurrency ([notes](#threads--concurrency---notes) and [resources](#threads--concurrency---resources))
-  - [ ] Server-Client
-  - [ ] ***API***s
+  - [x] ***HTTP*** ([notes](#http---notes))
+  - [x] ***API*** ([notes](#api---notes) and [resources](#api---resources))
   - [ ] ***ASP .NET*** (***C#***) or
     - ***Spring Boot*** (***JAVA***)
     - ***Django*** (***Python***)
@@ -1245,47 +1244,27 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
 
       git log
 
-### HTTP - notes
-
-***HTTP*** means **HyperText Transfer Protocol**.
-
-As a request-response protocol, ***HTTP*** gives users a way to interact with web resources such as HTML files by transmitting hypertext messages between clients and servers.
-
-***HTTP*** is a method for encoding and transporting information between a client (such as a web browser) and a web server.
-
-***HTTP*** requests are:
-
-- ***CONNECT***: The ***CONNECT*** method establishes a tunnel to the server identified by the target resource.
-- ***DELETE***: The ***DELETE*** method deletes the specified resource.
-- ***GET***: The ***GET*** method requests a representation of the specified resource. Requests using ***GET*** should only retrieve data.
-- ***HEAD***: The ***HEAD*** method asks for a response identical to that of a ***GET*** request, but without the response body.
-- ***OPTIONS***: The ***OPTIONS*** method is used to describe the communication options for the target resource.
-- ***PATCH***: The ***PATCH*** method is used to apply partial modifications to a resource.
-- ***POST***: The ***POST*** method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
-- ***PUT***: The ***PUT*** method replaces all current representations of the target resource with the request payload.
-- ***TRACE***: The ***TRACE*** method performs a message loop-back test along the path to the target resource.
-
 ### MVC architecture - notes
 
-***MVC*** is known as an architectural pattern, which embodies three parts **Model**, **View** and **Controller**. To be more exact it divides the application into three logical parts: the **model**, the **view** and the **controller**.
+***MVC*** is known as an architectural pattern, which embodies three parts ***M*odel**, ***V*iew** and ***C*ontroller**. To be more exact it divides the application into three logical parts: the **model**, the **view** and the **controller**.
 
 It has three main components:
 
-- **Model**
+- ***M*odel**
 
   It is responsible for maintaining data. The **model** is actually connected to the database. Adding or retrieving data is done in the **model** component.
 
   It responds to the **controller** requests because the **controller** doesn't access the database by itself. The **model** communicates with the database and then gives the needed data to the **controller**.
 
   Note: the **model** never communicates with the **view** directly.
-- **View**
+- ***V*iew**
 
   Data representation is done by the **view** component. It actually generates **UI** (**U**ser **I**nterface) for the user. So, at web applications think of the **view** component as the ***HTML*** and ***CSS***.
 
   **Views** are created by the data which is collected by the **model** component. However, the data itself is not fetched directly from the **model** component but through the **controller**.
 
   Note: the **view** only communicates with the **controller**.
-- **Controller**
+- ***C*ontroller**
 
   The **controller** is the component that enables the interconnection between the **view** and the **model** so it acts as an intermediary.
 
@@ -1321,31 +1300,152 @@ Example for the use of ***threads***:
     Just using independent processes would not solve this issue as each process would belong to a different address space.
 Thankfully, ***C#*** is said to have excellent multithreading capabilities.
 
+### HTTP - notes
+
+***HTTP*** means ***H*yper*T*ext *T*ransfer *P*rotocol**.
+
+As a request-response protocol, ***HTTP*** gives users a way to interact with web resources such as ***HTML*** files by transmitting hypertext messages between clients and servers.
+
+***HTTP*** is a method for encoding and transporting information between a client (such as a web browser) and a web server.
+
+***HTTP*** requests are:
+
+- **CONNECT**: The **CONNECT** method establishes a tunnel to the server identified by the target resource.
+- **DELETE**: The **DELETE** method deletes the specified resource.
+- **GET**: The **GET** method requests a representation of the specified resource. Requests using **GET** should only retrieve data.
+- **HEAD**: The **HEAD** method asks for a response identical to that of a ***GET*** request, but without the response body.
+- **OPTIONS**: The **OPTIONS** method is used to describe the communication options for the target resource.
+- **PATCH**: The **PATCH** method is used to apply partial modifications to a resource.
+- **POST**: The **POST** method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
+- **PUT**: The **PUT** method replaces all current representations of the target resource with the request payload.
+- **TRACE**: The **TRACE** method performs a message loop-back test along the path to the target resource.
+
+### API - notes
+
+***API*** is the acronym for ***A*pplication *P*rogramming *I*nterface**, which is a software intermediary that allows two applications to talk to each other. Each time you use an app like Facebook, send a message, or check the weather on your phone, you’re using an ***API***.
+
+***API*** is a general set of protocols and is deployed over the software to help it interact with some other software.
+
+Public ***API*** usually require an ***API* key**. An ***API* key** is a simple *encrypted string* that identifies an application without any principal. They are useful for accessing *public data* anonymously, and are used to associate ***API*** requests with your project for quota and billing.
+
+There are many types of ***API***:
+
+- **REST**
+- **SOAP**
+- **GraphQL** and more...
+
+To keep this short and more to the point, most jobs require **REST**ful ***API***.
+
+**REST**ful ***API*** is only geared towards web applications and mostly deals with ***HTTP*** requests and responses.
+
+Basically, users send requests and the ***API*** then replies with a response.
+
+Each ***API*** response consists of:
+
+- Status code (eg. **200**)
+
+  A status code falls into levels:
+  - **2\*\***
+
+    Everything went well.
+  - **4\*\***
+
+    Something went wrong.
+  - **5\*\***
+
+    There was a server failure.
+- Response Headers
+
+  They contain information about the server.
+- Response Body
+
+  It contains the data, which is usually formatted in *JSON*.
+
+Pactical ***API***:
+
+- Create an ***API*** (***C#***)
+
+  Use the **dotnet CLI** (at the time of writing, I am using ***dotnet 3.1 LTS***) to create a ***ASP .NET* Core Web *API***
+
+      dotnet new webapi
+  Run with
+
+      dotnet run
+  and, inside your browser, visit [localhost/WeatherForecast](https://localhost:5001/WeatherForecast).
+  You should see text similar to
+
+      [
+        {"date":"2021-08-26T20:37:19.0099349+03:00","temperatureC":8,"temperatureF":46,"summary":"Warm"},
+        {"date":"2021-08-27T20:37:19.0102424+03:00","temperatureC":13,"temperatureF":55,"summary":"Scorching"},
+        {"date":"2021-08-28T20:37:19.0102465+03:00","temperatureC":23,"temperatureF":73,"summary":"Balmy"},
+        {"date":"2021-08-29T20:37:19.0102471+03:00","temperatureC":-8,"temperatureF":18,"summary":"Scorching"},
+        {"date":"2021-08-30T20:37:19.0102476+03:00","temperatureC":-3,"temperatureF":27,"summary":"Bracing"}
+      ]
+  This is our data provided by the API.
+
+  In the template's code you can notice 2 files:
+  - **WeatherForecast.cs**
+
+    This is the class that describes the objects returned from our ***API***.
+  - **WeatherForecastController.cs**
+
+    This is our controller that, in the template, generates several objects of type **WeatherForecast** with random values and is called when we visit the above link.
+
+    Notice that every time we visit the link, we call the **WeatherForecastController**. In other words, we send a request and it generates a different response every time the link is visited.
+
+    Pay attention to the *[ApiController]* and *[HttpGet]* attributes above the **WeatherForecastController** class and its **Get()** method respectively. They are important as:
+    - *[ApiController]* indicates that a type and all derived types are used to serve ***HTTP API*** responses.
+    - *[HttpGet]* identifies an action that supports the ***HTTP* GET** method.
+
+    These make the ***API*** work as it does.
+
+- Access data through ***API*** (***JavaScript***)
+
+  ***JavaScript*** (and, by extension, ***TypeScript***) has a number of ways to access and work with ***API***.
+
+  The most popular ones are:
+  - **XMLHttpRequest**
+  - **Fetch**
+
+  Differences:
+  - **Fetch** makes it easier to make *asynchronous* requests.
+  - **Fetch** handles responses better.
+  - The **Fetch *API*** uses *Promises*, hence avoiding callback hell.
+
+  Basically, **Fetch** is a better alternative to **XMLHttpRequest**.
+
+  A simple example of getting data in *JSON* format
+
+      const action = async () => {
+        const response = await fetch('<URI>');
+        const data = await response.json(); //extract JSON from the HTTP response
+      }
+
 ### Databases - notes
 
 - ***Databases***' types
 
   There are many types of ***Databases*** but the 2 main ones are:
-  - **Relational** ***databases*** (eg. ***MySQL***, ***PostgreSQL***, ***SQLite***)
-  - **NoSQL** ***databases*** (eg. ***MongoDB***)
-- **Relational** ***databases***
+  - **Relational *databases*** (eg. ***MySQL***, ***PostgreSQL***, ***SQLite***)
+  - **NoSQL *databases*** (eg. ***MongoDB***)
+- **Relational *databases***
 
   The name comes from the way that data is stored in multiple, related tables. Within the tables, data is stored in rows and columns.
 
-  **Relational** ***databases*** use ***SQL*** to read, create, update and delete data.
+  **Relational *databases*** use ***SQL*** to read, create, update and delete data.
 
   What is ***SQL***?
 
-  ***SQL*** stands for ***S***tructured ***Q***uery ***L***anguage, as it is the special purpose language for querying data in **Relational** ***Databases***.
+  ***SQL*** stands for ***S*tructured *Q*uery *L*anguage**, as it is the special purpose language for querying data in **Relational *Databases***.
 
   ***MySQL***, ***PostgreSQL***, ***SQLite*** all use ***SQL*** for querying with slight syntax differences.
-- **NoSQL** ***databases***
+- **NoSQL *databases***
 
-  **NoSQL** is a broad category that includes any ***database*** that doesn’t use SQL as its primary data access language. These types of ***databases*** are also sometimes referred to as *non-relational* ***databases***.
+  **NoSQL** is a broad category that includes any ***database*** that doesn’t use SQL as its primary data access language. These types of ***databases*** are also sometimes referred to as *non-relational **databases***.
 
   Unlike in relational ***databases***, data in a **NoSQL** ***database*** doesn’t have to conform to a pre-defined schema, so these types of ***databases*** are great for organizations seeking to store unstructured or semi-structured data.
 
-  One advantage of **NoSQL** ***databases*** is that developers can make changes to the ***database*** on the fly, without affecting applications that are using the ***database***.
+  One advantage of **NoSQL *databases*** is that developers can make changes to the ***database*** on the fly, without affecting applications that are using the ***database***.
 - Basic ***SQL*** commands
   - *Get* data
 
@@ -1369,10 +1469,10 @@ Thankfully, ***C#*** is said to have excellent multithreading capabilities.
         // all columns
         INSERT INTO <table>
         VALUES (<value1>, <value2>, <value3>, ...);
-  - *Create* ***database***
+  - *Create **database***
 
         CREATE DATABASE <database>;
-  - *Delete* ***database***
+  - *Delete **database***
 
         DROP DATABASE <database>;
   - *Create* table
@@ -1388,7 +1488,7 @@ Thankfully, ***C#*** is said to have excellent multithreading capabilities.
   - *Delete* table
 
         DROP DATABASE <table>;
-- ***SQL*** **JOIN**s
+- ***SQL* JOIN**s
 
   As the name implies, **relational** ***databases*** have related data. In other words, we can join our tables to present these related data together.
   - (**INNER**) **JOIN**
@@ -1731,7 +1831,19 @@ Thankfully, ***C#*** is said to have excellent multithreading capabilities.
 
 ## RESOURCES
 
-A list of both free and paid resources that I have used and seemed very useful to me.
+FAQ
+
+- Are there only free or paid resources are included as well?
+
+  Every resource/material, be it book, article or video, that I used has been included.
+- Why these particular resources?
+
+  The resources I have mentioned are by no means the absolute best that everyone should use. They are the ones I used to study and learn the technologies I have mentioned above and helped **ME** a lot.
+
+  Of course, everyone can find and use their own sources are study materials and references.
+- Do I gain anything from mentioning some particular sources?
+
+  Of course not. Everything on this list exists for the sole purpose of helping myself and others.
 
 ### HTML - resources
 
@@ -1802,6 +1914,8 @@ A list of both free and paid resources that I have used and seemed very useful t
 ### C\# - resources
 
 - [C# documentation](https://docs.microsoft.com/en-us/dotnet/csharp/)
+- [dotnet SDK](https://docs.microsoft.com/en-us/dotnet/core/sdk)
+- [dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/)
 - [Udemy course by Denis Panjuta](https://www.udemy.com/share/101vEs2@Pm5KfWJSSVIKdkRKBkhOVD5uY1c=/)
 
 ### MVC architecture - resources
@@ -1815,6 +1929,11 @@ A list of both free and paid resources that I have used and seemed very useful t
 ### Threads & Concurrency - resources
 
 - [Applied Programming notes](https://applied-programming.github.io/Operating-Systems-Notes/3-Threads-and-Concurrency/)
+
+### API - resources
+
+- [Fireship video](https://youtu.be/-MTSQjw5DrM)
+- [RapidAPI](https://rapidapi.com/hub)
 
 ### Databases - resources
 

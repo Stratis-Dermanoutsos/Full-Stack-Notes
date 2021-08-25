@@ -1933,7 +1933,7 @@ FAQ
 ### API - resources
 
 - [Fireship video](https://youtu.be/-MTSQjw5DrM)
-- [RapidAPI](https://rapidapi.com/hub)
+- [RapidAPI](https://docs.rapidapi.com)
 
 ### Databases - resources
 

@@ -342,6 +342,21 @@ Useful code snippets
         two: 2,
         three: 3
       });
+- Short circuit Evaluation
+  - *AND*
+
+        if (condition)
+          doAction();
+
+        // is equal to
+        condition && doAction();
+  - *OR*
+
+        if (!condition)
+          doAction();
+
+        // is equal to
+        condition || doAction();
 
 ***C#*** vs ***JavaScript*** (only notable differences/similarities as I am used to writing code in ***C#***)
 

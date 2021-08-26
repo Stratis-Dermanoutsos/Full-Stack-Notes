@@ -1846,20 +1846,6 @@ Pactical ***API***:
 
 ## RESOURCES
 
-FAQ
-
-- Are there only free or paid resources are included as well?
-
-  Every resource/material, be it book, article or video, that I used has been included.
-- Why these particular resources?
-
-  The resources I have mentioned are by no means the absolute best that everyone should use. They are the ones I used to study and learn the technologies I have mentioned above and helped **ME** a lot.
-
-  Of course, everyone can find and use their own sources are study materials and references.
-- Do I gain anything from mentioning some particular sources?
-
-  Of course not. Everything on this list exists for the sole purpose of helping myself and others.
-
 ### HTML - resources
 
 - [w3schools](https://www.w3schools.com/html/default.asp)

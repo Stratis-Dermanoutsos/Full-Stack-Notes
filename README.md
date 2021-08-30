@@ -23,7 +23,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
       - ***Angular***
       - ***Vue***
     - [ ] ***Next.js*** (for ***React***)
-    - [ ] ***[Redux](./Frontend/JavaScript/Frameworks/Redux/#redux)***
+    - [ ] ***[Redux](./Frontend/JavaScript/Frameworks/Redux/#redux)*** (for ***React***)
 - [x] ***[NPM](./NPM/#npm)***
 - [x] ***[Webpack](./Webpack/#webpack)***
 - [x] ***[Git](./Git/#git)***

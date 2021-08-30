@@ -1,4 +1,4 @@
-# Become a Full-Stack Developer in 2021
+# Full-Stack Roadmap 2021
 
 This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer in 2021.
 
@@ -19,7 +19,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
       - [x] Display (**Flex**, **Grid**)
       - [x] Responsive design
     - [x] ***JavaScript*** ([notes](#javascript---notes) and [resources](#javascript---resources))
-    - [x] ***TypeScript*** ([notes](#typescript---notes) and [resources](#typescript---resources))
+  - [x] ***TypeScript*** ([notes](#typescript---notes) and [resources](#typescript---resources))
   - [ ] Frameworks/Libraries
     - [x] ***Tailwind CSS*** ([resources](#tailwind-css---resources))
     - [x] ***SASS*** ([notes](#sass---notes) and [resources](#sass---resources))

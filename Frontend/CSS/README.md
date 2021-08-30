@@ -109,4 +109,4 @@
 - [A Complete Guide to Flexbox by CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [A Complete Guide to Grid by CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
-[HOME](../../) or [Back to top](#css)
+[HOME](../..) or [Back to top](#css)

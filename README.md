@@ -8,13 +8,13 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 
 ## TECH STACK
 
-- [ ] Frontend
+- [x] Frontend
   - [x] Basics
     - [x] ***[HTML](./Frontend/HTML/#html)***
     - [x] ***[CSS](./Frontend/CSS/#css)***
     - [x] ***[JavaScript](./Frontend/JavaScript/#javascript)***
   - [x] ***[TypeScript](./Frontend/TypeScript/#typescript)***
-  - [ ] Frameworks/Libraries
+  - [x] Frameworks/Libraries
     - [x] ***[Tailwind CSS](./Frontend/CSS/Frameworks/Tailwind-CSS/#tailwind-css---resources)***
     - [x] ***[SASS](./Frontend/CSS/Preprocessors/SASS/#sass)***
     - [x] ***[Bootstrap](./Frontend/CSS/Frameworks/Bootstrap/#bootstrap)***
@@ -22,31 +22,30 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [x] ***[React](./Frontend/JavaScript/Frameworks/React/#react)*** or
       - ***Angular***
       - ***Vue***
-    - [ ] ***Next.js*** (for ***React***)
-    - [ ] ***[Redux](./Frontend/JavaScript/Frameworks/Redux/#redux)*** (for ***React***)
 - [x] ***[NPM](./NPM/#npm)***
 - [x] ***[Webpack](./Webpack/#webpack)***
 - [x] ***[Git](./Git/#git)***
 - [ ] Backend
-  - [x] ***[C#](./Backend/Cs/#c)*** or
-    - ***JAVA***
-    - ***Python***
-    - ***PHP***
-    - ***Ruby***
-  - [x] ***[MVC](./Backend/MVC/#mvc)***
-  - [x] ***[Process management && Threads & Concurrency](./Backend/Threads-and-Concurrency/#threads--concurrency)***
+  - [x] Basics
+    - [x] ***[C#](./Backend/Cs/#c)*** or
+      - ***JAVA***
+      - ***Python***
+      - ***PHP***
+      - ***Ruby***
+    - [x] ***[Databases](./Backend/Databases/#databases)***
+      - [x] ***MySQL***
+      - [x] ***SQLite***
+      - [x] ***PostgreSQL***
+      - [x] ***MongoDB***
+    - [x] ***[Process management && Threads & Concurrency](./Backend/Threads-and-Concurrency/#threads--concurrency)***
+    - [x] ***[MVC](./Backend/MVC/#mvc)***
   - [x] ***[API](./Backend/API/#api)***
-  - [ ] ***ASP .NET*** (***C#***) or
+  - [ ] ***[ASP.NET](./Backend/ASPNET/#asp-net)*** (***C#***) or
     - ***Spring Boot*** (***JAVA***)
     - ***Django*** (***Python***)
     - ***Laravel*** (***PHP***)
     - ***Ruby on Rails*** (***Ruby***)
     - ***Flask*** (***Python***)
-  - [x] ***[Databases](./Backend/Databases/#databases)***
-    - [x] ***MySQL***
-    - [x] ***SQLite***
-    - [x] ***PostgreSQL***
-    - [x] ***MongoDB***
   - [ ] CI/CD Tools
     - [ ] ***Jenkins***
     - [ ] ***GitLab***

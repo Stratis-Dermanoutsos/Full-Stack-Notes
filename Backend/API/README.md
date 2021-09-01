@@ -128,5 +128,6 @@ Pactical ***API***:
 
 - [Fireship video](https://youtu.be/-MTSQjw5DrM)
 - [RapidAPI](https://docs.rapidapi.com)
+- [Nick Chapsas video (.NET Minimal API)](https://youtu.be/eRJFNGIsJEo)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#api)

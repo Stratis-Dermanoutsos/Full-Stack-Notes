@@ -88,9 +88,10 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - Portfolio
 - Web applications without backend
   - Calculator
+  - Integrations with any 3rd party APIs
+  - Markdown editor
   - Quiz app
   - Random quote generator
-  - Integrations with any 3rd party APIs
   - Todo app
 - Backend-only applications
   - API with access to a database

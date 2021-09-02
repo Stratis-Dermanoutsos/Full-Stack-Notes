@@ -68,7 +68,7 @@ Pactical ***API***:
 
 - Create an ***API*** (***C#***)
 
-  Use the **dotnet CLI** (at the time of writing, I am using ***dotnet 3.1 LTS***) to create a ***ASP .NET* Core Web *API***
+  Use the **dotnet CLI** (at the time of writing, I am using ***dotnet 3.1 LTS***) to create a ***ASP .NET* Core** Web *API***
 
       dotnet new webapi
   Run with

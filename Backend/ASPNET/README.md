@@ -5,7 +5,11 @@
 
 ## ASP .NET - Notes
 
-Create and run your first ***ASP .NET*** project:
+Well, by default, when we say ***ASP .NET***, we mean ***ASP .NET* Core**.
+
+### ASP .NET MVC
+
+Create and run your first ***ASP .NET MVC*** project:
 
     # create the project
     dotnet new mvc
@@ -17,7 +21,7 @@ What the default generated project contains:
 
 - The **Program.cs** and **Startup.cs** files
 
-  These files set up the web server and ***ASP .NET*** Core pipeline.
+  These files set up the web server and ***ASP .NET* Core** pipeline.
 - The ***M*odels**, ***V*iews**, and ***C*ontrollers** directories
 
   This project type is based on the ***MVC*** architecture.
@@ -26,16 +30,16 @@ What the default generated project contains:
   It contains *static* assets like ***CSS***, ***JavaScript*** and image files. Files in **wwwroot** will be served as *static* content, and can be bundled and minified automatically.
 - The **appsettings.json** file
 
-  It contains configuration settings ***ASP .NET*** Core will load on startup. You can use this to store database connection strings or other things that you don't want to hard-code.
+  It contains configuration settings ***ASP .NET* Core** will load on startup. You can use this to store database connection strings or other things that you don't want to hard-code.
 
 More specifics:
 
-- Routes that are handled by ***C*ontrollers** are called actions, and are represented by methods in the ***C*ontroller** class. For example, the **HomeController** includes three action methods (**Index**, **About**, and **Contact**) which are mapped by ***ASP .NET*** Core to these route URLs:
+- Routes that are handled by ***C*ontrollers** are called actions, and are represented by methods in the ***C*ontroller** class. For example, the **HomeController** includes three action methods (**Index**, **About**, and **Contact**) which are mapped by ***ASP .NET* Core** to these route URLs:
 
       localhost:5000/Home->          Index()
       localhost:5000/Home/About->    About()
       localhost:5000/Home/Contact -> Contact()
-- ***V*iews** in ***ASP .NET*** Core are built using the Razor templating language, which combines ***HTML*** and ***C#***.
+- ***V*iews** in ***ASP .NET* Core** are built using the Razor templating language, which combines ***HTML*** and ***C#***.
 
   Most view code is just ***HTML***, with the occasional ***C#*** statement added in to pull data out of the ***V*iew *M*odel** and turn it into text or ***HTML***.
 
@@ -70,11 +74,71 @@ More specifics:
 
       <label for="Movie_Title"></label>     # .html
 
+### ASP .NET Web API
+
+Web ***API*** (***A*pplication *P*rogramming *I*nterface**) is a set of subroutine definitions with the scope of managing data between clients and servers. Building ***API***s over ***HTTP*** protocol allows third-party apps to interact with a server thanks to the application protocol.
+
+Create and run your first ***ASP .NET API*** project:
+
+    # create the project
+    dotnet new webapi
+
+    # run the project
+    dotnet run
+
+What the default generated project contains:
+
+- The **Program.cs** and **Startup.cs** files
+
+  These files set up the web server and ***ASP .NET* Core** pipeline.
+- A **WeatherForecast** class
+
+  This is our ***M*odel** which describes the data.
+- A ***C*ontrollers** directory holding the **WeatherForecastController**
+
+  This ***C*ontroller** is responsible for generating data based on our ***M*odel** and returning it in *JSON* every time we visit the link below .
+
+Now, if you visit
+
+    https://localhost:5001/weatherforecast
+you'll be presented with data in *JSON* format.
+
+For example,
+
+    [{"date":"2021-09-03T11:58:42.4461568+03:00","temperatureC":13,"temperatureF":55,"summary":"Cool"},{"date":"2021-09-04T11:58:42.4466036+03:00","temperatureC":-7,"temperatureF":20,"summary":"Balmy"},{"date":"2021-09-05T11:58:42.4466101+03:00","temperatureC":31,"temperatureF":87,"summary":"Hot"},{"date":"2021-09-06T11:58:42.4466109+03:00","temperatureC":-3,"temperatureF":27,"summary":"Warm"},{"date":"2021-09-07T11:58:42.4466115+03:00","temperatureC":15,"temperatureF":58,"summary":"Hot"}]
+
+### Important terms
+
+- **Dependency injection**
+
+  One of the biggest new features of ***ASP .NET* Core** is the inclusion of a way to handle dependencies directly inside the base library.
+
+  - This has three major benefits:
+    - Developers no longer have an excuse not to use it; whereas before it was basically left to their conscience.
+    - You don't need to use third-party libraries.
+    - All the application frameworks and middleware components rely on this central configuration, so there is no need to configure **Dependency injection** in different places and different ways, as was needed before.
+  - What is **Dependency injection**?
+
+    In order to be easy to maintain, systems are usually made of many classes, each of them with very specific responsibilities. For example, if you want to build a system that sends emails, you might have the main entry point of the system and one class that is responsible for formatting text and then one that is responsible for actually sending the email.
+
+    The problem with this approach is that, if references to these additional classes are kept directly inside the entry point, it becomes impossible to change the implementation of the helper class without touching the main class.
+
+    This is where **Dependency injection**, usually referred to as **DI**, comes in to play. Instead of directly instantiating the lower-level classes, the high-level modules receive the instances from the outside, typically as parameters of their constructors.
+  - Configuring **Dependency injection** in ***ASP .NET* Core**
+
+    It all happens in the ConfigureServices method.
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+          //Here goes the configuration
+        }
+
 ## ASP .NET - Resources
 
 - [ASP .NET documentation](https://docs.microsoft.com/en-us/aspnet/) --> [Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/)
 - [dotnet SDK](https://docs.microsoft.com/en-us/dotnet/core/sdk)
 - [dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/)
+- [ASP .NET Core Succinctly book](https://www.syncfusion.com/succinctly-free-ebooks/asp-net-core-succinctly)
 - [The Little ASP.NET Core Book (2018)](https://s3.amazonaws.com/recaffeinate-files/LittleAspNetCoreBook.pdf)
 - [w3schools](https://www.w3schools.com/asp/default.asp)
 

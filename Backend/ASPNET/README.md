@@ -109,6 +109,27 @@ For example,
 
 ### Important terms
 
+- **Entity Framework**
+
+  **Entity Framework Core**, knows as **O**bject **R**elational **M**apper (**ORM**) was created by Microsoft to enable developers to work abstractly with their database.
+
+  To use **Entity Framework Core**, 3 NuGet packages are needed:
+  - Microsoft.EntityFrameworkCore
+  - Microsoft.EntityFrameworkCore.SqlServer
+  - Microsoft.EntityFrameworkCore.Tools
+
+  To install the **CLI** tool
+
+      dotnet tool install --global dotnet-ef
+  To update it
+
+      dotnet tool update --global dotnet-ef
+  To use it on a project
+
+      dotnet add package Microsoft.EntityFrameworkCore.Design
+  Verify installation
+
+      dotnet ef
 - **Dependency injection**
 
   One of the biggest new features of ***ASP .NET* Core** is the inclusion of a way to handle dependencies directly inside the base library.
@@ -136,10 +157,15 @@ For example,
 ## ASP .NET - Resources
 
 - [ASP .NET documentation](https://docs.microsoft.com/en-us/aspnet/) --> [Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/)
-- [dotnet SDK](https://docs.microsoft.com/en-us/dotnet/core/sdk)
-- [dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/)
+- [Entity Framework Core documentation](https://docs.microsoft.com/en-us/ef/core/)
+- [dotnet SDK documentation](https://docs.microsoft.com/en-us/dotnet/core/sdk)
+- [dotnet CLI documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/)
 - [ASP .NET Core Succinctly book](https://www.syncfusion.com/succinctly-free-ebooks/asp-net-core-succinctly)
+- [ASP .NET Core 3.1 Succinctly book](https://www.syncfusion.com/succinctly-free-ebooks/asp-net-core-3-1-succinctly)
 - [The Little ASP.NET Core Book (2018)](https://s3.amazonaws.com/recaffeinate-files/LittleAspNetCoreBook.pdf)
 - [w3schools](https://www.w3schools.com/asp/default.asp)
+- [JetBrains on Razor Pages](https://www.jetbrains.com/dotnet/guide/tutorials/basics/razor-pages/)
+- [JetBrains on Entity Framework](https://www.jetbrains.com/dotnet/guide/tutorials/basics/entity-framework-core/)
+- [AspNetCore-Developer-Roadmap repository](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#asp-net)

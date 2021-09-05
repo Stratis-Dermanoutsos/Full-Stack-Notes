@@ -40,7 +40,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [x] ***[Process management && Threads & Concurrency](./Backend/Threads-and-Concurrency/#threads--concurrency)***
     - [x] ***[MVC](./Backend/MVC/#mvc)***
   - [x] ***[API](./Backend/API/#api)***
-  - [ ] ***[ASP.NET](./Backend/ASPNET/#asp-net)*** (***C#***) or
+  - [x] ***[ASP.NET](./Backend/ASPNET/#asp-net)*** (***C#***) or
     - ***Spring Boot*** (***JAVA***)
     - ***Django*** (***Python***)
     - ***Laravel*** (***PHP***)

@@ -5,6 +5,38 @@
 
 ## CSS - Notes
 
+- There are 4 main ways to include ***CSS*** in ***HTML***:
+  - Inline
+
+        <p style="font-size: 16px;">Hello World!</p>
+  - *\<style>* tag
+
+        <p>Hello World!</p>
+
+        <style>
+          p {
+            font-size: 16px;
+          }
+        </style>
+  - Link to external ***CSS*** file
+
+        <link rel="stylesheet" href="<relative file path>">
+    The ***CSS*** file:
+
+        p {
+          font-size: 16px;
+        }
+  - Import external ***CSS*** file inside *\<style>* tag
+
+        <style>
+          @import url("<relative file path>");
+        </style>
+    The ***CSS*** file:
+
+        p {
+          font-size: 16px;
+        }
+
 - Prefixes
 
   Prefixes are used to add CSS features, knowing that each browser will support them.

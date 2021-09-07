@@ -5,7 +5,85 @@
 
 ## ASP .NET - Notes
 
-Well, by default, when we say ***ASP .NET***, we mean ***ASP .NET* Core**.
+Well, by default, when we will focus on ***ASP .NET* Core**.
+
+### dotnet CLI
+
+<ins>This section can be skipped if you don't use the Terminal.</ins>
+
+Before you run the
+
+    dotnet new ...
+command, you can specify the version of **dotnet** to use by:
+
+- Create a folder to be the root of your project, where you are going to run the above command
+- While in that folder, run
+
+      dotnet new globaljson
+- Run
+
+      dotnet --list-sdks
+  to see the downloaded versions in your system
+- Replace the value of *"version"* inside the *global.json* file with EXACTLY the one you want to use
+- Run
+
+      dotnet --version
+  to make sure the change has been applied
+- Run
+
+      dotnet new ...
+
+### ASP .NET Razor Pages
+
+***Razor Pages*** is a less complex than ***[MVC](#asp-net-mvc)***.
+
+However, instead of the ***M*odels**, ***V*iews**, and ***C*ontrollers** that make ***MVC***, ***Razor Pages*** have 2 parts:
+
+- Razor Page (Similar to ***V*iew**)
+- Page Model (Contains all the non-***V*iew** code)
+
+Everything that can be done with ***MVC*** can also be done with ***Razor Pages***.
+
+Create and run your first ***ASP .NET Razor Pages*** project:
+
+    # create the project
+    dotnet new webapp
+
+    # run the project
+    dotnet run
+
+What the default generated project contains:
+
+- The **Program.cs** and **Startup.cs** files
+
+  These files set up the web server and ***ASP .NET* Core** pipeline.
+- The **wwwroot** directory
+
+  It contains *static* assets like ***CSS***, ***JavaScript*** and image files. Files in **wwwroot** will be served as *static* content, and can be bundled and minified automatically.
+- The **appsettings.json** file
+
+  It contains configuration settings ***ASP .NET* Core** will load on startup. You can use this to store database connection strings or other things that you don't want to hard-code.
+- The **launchSettings.json** property file
+
+  This is basically the configuration file for when the project is run.
+- The **Pages** directory
+
+  This folder contains all of our pages (*\*.cshtml*) files and their respective ***M*odels** (*\*.cshtml.cs*).
+
+Routing in Razor Pages
+
+- Routing in ***ASP .NET Razor Pages*** maps *URL*s to *Physical file* on disk
+
+  | URL | Maps to |
+  | --- | --- |
+  | www.domain.com | /Pages/Index.cshtml |
+  | www.domain.com/index | /Pages/Index.cshtml |
+  | www.domain.com/account | /Pages/Account.cshtml |
+  | www.domain.com/account | /Pages/Account/Index.cshtml |
+  | www.domain.com/randomname/account | /Pages/RandomName/Account.cshtml |
+
+- ***Razor Pages*** needs a *root* folder
+- *Index.cshtml* is the default document
 
 ### ASP .NET MVC
 
@@ -52,27 +130,6 @@ More specifics:
 - As mentioned above, to edit the ***CSS*** or anything *static*, you must go to
 
       wwwroot/css/site.css
-
-- **Tag Helpers**:
-
-  For example, *asp-for*
-
-  Let's say we have this ***C#*** class:
-
-      public class Movie
-      {
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public decimal Price { get; set; }
-      }
-  Razor markup to access it in the page:
-
-      <label asp-for="Movie.Title"></label> # .cshtml
-  which generates
-
-      <label for="Movie_Title"></label>     # .html
 
 ### ASP .NET Web API
 
@@ -134,6 +191,8 @@ For example,
 
   One of the biggest new features of ***ASP .NET* Core** is the inclusion of a way to handle dependencies directly inside the base library.
 
+  In fact, ***ASP .NET* Core** is designed to support **Dependency injection**.
+
   - This has three major benefits:
     - Developers no longer have an excuse not to use it; whereas before it was basically left to their conscience.
     - You don't need to use third-party libraries.
@@ -154,15 +213,49 @@ For example,
           //Here goes the configuration
         }
 
+- **Tag Helpers**
+
+  They enable Server-Side code to create and render ***HTML*** elements in ***Razor*** files.
+
+  For example, *asp-for*
+
+  Let's say we have this ***C#*** class:
+
+      public class Movie
+      {
+        public int ID { get; set; }
+        public string Title { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public string Genre { get; set; }
+        public decimal Price { get; set; }
+      }
+  ***Razor*** markup to access it in the page:
+
+      <label asp-for="Movie.Title"></label> # .cshtml
+  which generates
+
+      <label for="Movie_Title"></label>     # .html
+  **Tag Helper** VS **HTML Helper**
+
+      @* HTML helper *@
+      @Html.DisplayFor(model => model.Books.FirstOrDefault().Author)
+
+      @* Tag helper *@
+      <label asp-for="Books.FirstOrDefault().Author"></label>
+  To make an \<a> element that redirects to the Index page using *asp-page*
+
+      <a asp-page="/Index">Index</a>
+
 ## ASP .NET - Resources
 
-- [ASP .NET documentation](https://docs.microsoft.com/en-us/aspnet/) --> [Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/)
+- [ASP .NET documentation](https://docs.microsoft.com/en-us/aspnet/) ==> [Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/)
 - [Entity Framework Core documentation](https://docs.microsoft.com/en-us/ef/core/)
 - [dotnet SDK documentation](https://docs.microsoft.com/en-us/dotnet/core/sdk)
 - [dotnet CLI documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/)
 - [ASP .NET Core Succinctly book](https://www.syncfusion.com/succinctly-free-ebooks/asp-net-core-succinctly)
 - [ASP .NET Core 3.1 Succinctly book](https://www.syncfusion.com/succinctly-free-ebooks/asp-net-core-3-1-succinctly)
 - [The Little ASP.NET Core Book (2018)](https://s3.amazonaws.com/recaffeinate-files/LittleAspNetCoreBook.pdf)
+- [ASP.NET Core 3.1 - Full Course for Beginners video by freeCodeCamp.org](https://youtu.be/C5cnZ-gZy2I)
 - [w3schools](https://www.w3schools.com/asp/default.asp)
 - [JetBrains on Razor Pages](https://www.jetbrains.com/dotnet/guide/tutorials/basics/razor-pages/)
 - [JetBrains on Entity Framework](https://www.jetbrains.com/dotnet/guide/tutorials/basics/entity-framework-core/)

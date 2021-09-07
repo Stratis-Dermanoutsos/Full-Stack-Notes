@@ -37,6 +37,33 @@ To use ***Bootstrap***, you can either
 
 Basically, ***Bootstrap*** uses pre-defined classes that you asign to each element from within your ***HTML*** code. In this aspect, it is similar to ***Tailwind CSS*** but their use cases may differ.
 
+### Spacing between columns
+
+- No offset
+
+      <div class="row">
+        <div class="border border-dark col-4 py-5"></div>
+        <div class="border border-dark col-8 py-5"></div>
+      </div>
+- Offset
+
+      <div class="row">
+        <div class="border border-dark col-4 py-5"></div>
+        <div class="border border-dark col-7 offset-1 py-5"></div>
+      </div>
+- Nesting
+
+      <div class="row">
+        <div class="col-4">
+          <div class="border border-dark col-12 py-5"></div>
+        </div>
+        <div class="col-8">
+          <div class="border border-dark col-12 py-5"></div>
+        </div>
+      </div>
+
+![Bootstrap column spacing](../../../../Images/Bootstrap-Column-Spacing.png)
+
 ## Bootstrap - Resources
 
 - [Bootstrap documentation](https://getbootstrap.com/docs/)

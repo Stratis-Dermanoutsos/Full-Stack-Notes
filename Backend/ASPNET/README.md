@@ -11,27 +11,54 @@ Well, by default, when we will focus on ***ASP .NET* Core**.
 
 <ins>This section can be skipped if you don't use the Terminal.</ins>
 
-Before you run the
-
-    dotnet new ...
-command, you can specify the version of **dotnet** to use by:
-
-- Create a folder to be the root of your project, where you are going to run the above command
-- While in that folder, run
-
-      dotnet new globaljson
-- Run
+- List your dotnet SDKs
 
       dotnet --list-sdks
-  to see the downloaded versions in your system
-- Replace the value of *"version"* inside the *global.json* file with EXACTLY the one you want to use
-- Run
+- Create project
 
-      dotnet --version
-  to make sure the change has been applied
-- Run
+      dotnet new <projectType>
+- Add package reference to your project
+
+      dotnet add package <package>
+- Remove package
+
+      dotnet remove package <package>
+- Restore dependencies
+
+      dotnet restore
+- Build and run project
+
+      dotnet run
+  This command, depending on the type of project, requires the respective *runtime* program.
+
+      dotnet --list-runtimes
+  to view your currently installed *runtimes*.
+- For more
+
+      dotnet -h
+- Choose version of ***.NET***
+
+  Before you run the
 
       dotnet new ...
+  command, you can specify the version of **dotnet** to use by:
+
+  - Create a folder to be the root of your project, where you are going to run the above command
+  - While in that folder, run
+
+        dotnet new globaljson
+  - Run
+
+        dotnet --list-sdks
+    to see the downloaded versions in your system
+  - Replace the value of *"version"* inside the *global.json* file with EXACTLY the one you want to use
+  - Run
+
+        dotnet --version
+    to make sure the change has been applied
+  - Run
+
+        dotnet new ...
 
 ### ASP .NET Razor Pages
 
@@ -70,7 +97,7 @@ What the default generated project contains:
 
   This folder contains all of our pages (*\*.cshtml*) files and their respective ***M*odels** (*\*.cshtml.cs*).
 
-Routing in Razor Pages
+#### Routing in Razor Pages
 
 - Routing in ***ASP .NET Razor Pages*** maps *URL*s to *Physical file* on disk
 
@@ -81,9 +108,103 @@ Routing in Razor Pages
   | www.domain.com/account | /Pages/Account.cshtml |
   | www.domain.com/account | /Pages/Account/Index.cshtml |
   | www.domain.com/randomname/account | /Pages/RandomName/Account.cshtml |
-
 - ***Razor Pages*** needs a *root* folder
 - *Index.cshtml* is the default document
+
+#### Create a simple Page to display Cars (see [Entity Framework](#entity-framework) for Model)
+
+- Add this to the **Pages/Shared/_Layout.cshtml** file, after the other navbar links
+
+      <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-page="/CarList/Index">Cars</a>
+      </li>
+- Create a **CarList** directory inside the **Pages** one and now we'll make the following files there:
+  - **Index.cshtml**
+
+        @page
+        @model AspnetExample.Pages.CarList.IndexModel
+
+        <form method="post">
+          <table class="table table-striped border">
+            @* Add the table head *@
+            <tr class="table-secondary">
+              <th>
+                <label asp-for="Cars.FirstOrDefault().LicensePlate"></label>
+              </th>
+              <th>
+                <label asp-for="Cars.FirstOrDefault().Make"></label>
+              </th>
+              <th>
+                <label asp-for="Cars.FirstOrDefault().Model"></label>
+              </th>
+              <th></th>
+            </tr>
+            @* Display our cars *@
+            @foreach (var car in Model.Cars) {
+              <tr>
+                <td>
+                  @Html.DisplayFor(model => car.LicensePlate)
+                </td>
+                <td>
+                  @Html.DisplayFor(model => car.Make)
+                </td>
+                <td>
+                  @Html.DisplayFor(model => car.Model)
+                </td>
+                <td>
+                  <button asp-page-handler="Delete" asp-route-id="@car.LicensePlate" onclick="return confirm('Are you sure you want to delete car: `@car.Make`?')" class="btn btn-danger btn-sm">Delete</button>
+                  @* Go to the Edit page, passing Car's LicensePlate as parameter *@
+                  <a asp-page="Edit" asp-route-id="@car.LicensePlate" class="btn btn-success btn-sm text-white">Edit</a>
+                </td>
+              </tr>
+            }
+          </table>
+        </form>
+  - **Index.cshtml.cs**
+
+        using System;
+        using System.Collections.Generic;
+        using System.Linq;
+        using System.Threading.Tasks;
+        using Microsoft.AspNetCore.Mvc;
+        using Microsoft.AspNetCore.Mvc.RazorPages;
+        using Microsoft.EntityFrameworkCore;
+        using AspnetExample.Model;
+
+        namespace AspnetExample.Pages.CarList
+        {
+          public class IndexModel : PageModel
+          {
+            private readonly ApplicationDbContext _db;
+
+            // We get the database context using Dependency Injection
+            public IndexModel(ApplicationDbContext db)
+            {
+              _db = db;
+            }
+
+            public IEnumerable<Car> Cars { get; set; }
+
+            public async Task OnGet()
+            {
+              Cars = await _db.Car.ToListAsync();
+            }
+
+            public async Task<IActionResult> OnPostDelete(int licensePlate)
+            {
+              var car = await _db.Car.FindAsync(licensePlate);
+
+              if (car == null)
+                return NotFound();
+
+              _db.Car.Remove(car);
+              await _db.SaveChangesAsync();
+
+              return RedirectToPage("Index");
+            }
+          }
+        }
+  With the logic existing above, it is easy to write **Razor Pages** to *Create* and *Edit* cars in the database
 
 ### ASP .NET MVC
 
@@ -166,85 +287,149 @@ For example,
 
 ### Important terms
 
-- **Entity Framework**
+#### Dependency injection
 
-  **Entity Framework Core**, knows as **O**bject **R**elational **M**apper (**ORM**) was created by Microsoft to enable developers to work abstractly with their database.
+One of the biggest new features of ***ASP .NET* Core** is the inclusion of a way to handle dependencies directly inside the base library.
 
-  To use **Entity Framework Core**, 3 NuGet packages are needed:
-  - Microsoft.EntityFrameworkCore
-  - Microsoft.EntityFrameworkCore.SqlServer
-  - Microsoft.EntityFrameworkCore.Tools
+In fact, ***ASP .NET* Core** is designed to support **Dependency injection**.
 
-  To install the **CLI** tool
+- This has three major benefits:
+  - Developers no longer have an excuse not to use it; whereas before it was basically left to their conscience.
+  - You don't need to use third-party libraries.
+  - All the application frameworks and middleware components rely on this central configuration, so there is no need to configure **Dependency injection** in different places and different ways, as was needed before.
+- What is **Dependency injection**?
+
+  In order to be easy to maintain, systems are usually made of many classes, each of them with very specific responsibilities. For example, if you want to build a system that sends emails, you might have the main entry point of the system and one class that is responsible for formatting text and then one that is responsible for actually sending the email.
+
+  The problem with this approach is that, if references to these additional classes are kept directly inside the entry point, it becomes impossible to change the implementation of the helper class without touching the main class.
+
+  This is where **Dependency injection**, usually referred to as **DI**, comes in to play. Instead of directly instantiating the lower-level classes, the high-level modules receive the instances from the outside, typically as parameters of their constructors.
+- Configuring **Dependency injection** in ***ASP .NET* Core**
+
+  It all happens in the ConfigureServices method.
+
+      public void ConfigureServices(IServiceCollection services)
+      {
+        //Here goes the configuration
+      }
+
+#### Entity Framework
+
+**Entity Framework Core**, knows as **O**bject **R**elational **M**apper (**ORM**) was created by Microsoft to enable developers to work abstractly with their database.
+
+To use **Entity Framework Core**, 3 NuGet packages are needed:
+
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.\<SQLtool>
+- Microsoft.EntityFrameworkCore.Tools
+
+To install the **CLI** tool
+
+    dotnet tool install --global dotnet-ef
+To update it
+
+    dotnet tool update --global dotnet-ef
+To use it on a project
+
+    dotnet add package Microsoft.EntityFrameworkCore.Design
+Verify installation
+
+    dotnet ef
+Example of adding a database (***SQLite*** for the sake of ease)
+
+- Install the necessary tools
 
       dotnet tool install --global dotnet-ef
-  To update it
+      dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+- Create a *\<file>.db* database using ***SQLite***
+- Go to the project's *appsettings.json* file and add
 
-      dotnet tool update --global dotnet-ef
-  To use it on a project
+      "ConnectionStrings": {
+        "DefaultConnection" : "Data Source=<file>.db;"
+      }
+- Create a class inside the ***M*odels** folder
+
+  We'll name it **Car** for this example
+
+      using System.ComponentModel.DataAnnotations;
+
+      namespace AspnetExample.Models
+      {
+        public class Car
+        {
+          [Key] // Automatically set the primary key
+          public int LicensePlate { get; set; }
+
+          [Required] // Cannot be null
+          public string Make { get; set; }
+
+          public string Model { get; set; }
+        }
+      }
+- Create the *ApplicationDbContext* class inside the ***M*odels** folder
+
+  The file should look like this
+
+      using Microsoft.EntityFrameworkCore;
+
+      namespace AspnetExample.Models
+      {
+        public class ApplicationDbContext : DbContext
+        {
+          // Empty constructor but the parameter is needed for Dependency Injection
+          public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+          {
+
+          }
+
+          // Entry used to add data to the database
+          public DbSet<Car> Car { get; set; }
+        }
+      }
+- Go to **Startup.cs** inside the *ConfigureServices* method and add
+
+      services.AddDbContext<ApplicationDbContext>(option=> option.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+- Run
 
       dotnet add package Microsoft.EntityFrameworkCore.Design
-  Verify installation
+      dotnet ef migrations add AddCarToDb
+  Notice that, now, there is a **\<numbers>_AddCarToDb.cs** file in the **Migrations** folder.
+- Update the database and schema by running
 
-      dotnet ef
-- **Dependency injection**
+      dotnet ef database update
 
-  One of the biggest new features of ***ASP .NET* Core** is the inclusion of a way to handle dependencies directly inside the base library.
+#### Tag Helpers
 
-  In fact, ***ASP .NET* Core** is designed to support **Dependency injection**.
+They enable Server-Side code to create and render ***HTML*** elements in ***Razor*** files.
 
-  - This has three major benefits:
-    - Developers no longer have an excuse not to use it; whereas before it was basically left to their conscience.
-    - You don't need to use third-party libraries.
-    - All the application frameworks and middleware components rely on this central configuration, so there is no need to configure **Dependency injection** in different places and different ways, as was needed before.
-  - What is **Dependency injection**?
+For example, *asp-for*
 
-    In order to be easy to maintain, systems are usually made of many classes, each of them with very specific responsibilities. For example, if you want to build a system that sends emails, you might have the main entry point of the system and one class that is responsible for formatting text and then one that is responsible for actually sending the email.
+Let's say we have this ***C#*** class:
 
-    The problem with this approach is that, if references to these additional classes are kept directly inside the entry point, it becomes impossible to change the implementation of the helper class without touching the main class.
+    public class Movie
+    {
+      public int ID { get; set; }
+      public string Title { get; set; }
+      public DateTime ReleaseDate { get; set; }
+      public string Genre { get; set; }
+      public decimal Price { get; set; }
+    }
+***Razor*** markup to access it in the page:
 
-    This is where **Dependency injection**, usually referred to as **DI**, comes in to play. Instead of directly instantiating the lower-level classes, the high-level modules receive the instances from the outside, typically as parameters of their constructors.
-  - Configuring **Dependency injection** in ***ASP .NET* Core**
+    <label asp-for="Movie.Title"></label> # .cshtml
+which generates
 
-    It all happens in the ConfigureServices method.
+    <label for="Movie_Title"></label>     # .html
+**Tag Helper** VS **HTML Helper**
 
-        public void ConfigureServices(IServiceCollection services)
-        {
-          //Here goes the configuration
-        }
+    @* HTML helper *@
+    @Html.DisplayFor(model => model.Cars.FirstOrDefault().Make)
 
-- **Tag Helpers**
+    @* Tag helper *@
+    <label asp-for="Cars.FirstOrDefault().Make"></label>
+To make an \<a> element that redirects to the Index page using *asp-page*
 
-  They enable Server-Side code to create and render ***HTML*** elements in ***Razor*** files.
-
-  For example, *asp-for*
-
-  Let's say we have this ***C#*** class:
-
-      public class Movie
-      {
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public decimal Price { get; set; }
-      }
-  ***Razor*** markup to access it in the page:
-
-      <label asp-for="Movie.Title"></label> # .cshtml
-  which generates
-
-      <label for="Movie_Title"></label>     # .html
-  **Tag Helper** VS **HTML Helper**
-
-      @* HTML helper *@
-      @Html.DisplayFor(model => model.Books.FirstOrDefault().Author)
-
-      @* Tag helper *@
-      <label asp-for="Books.FirstOrDefault().Author"></label>
-  To make an \<a> element that redirects to the Index page using *asp-page*
-
-      <a asp-page="/Index">Index</a>
+    <a asp-page="/Index">Index</a>
 
 ## ASP .NET - Resources
 

@@ -11,7 +11,7 @@ As a request-response protocol, ***HTTP*** gives users a way to interact with we
 
 ***HTTP*** is a method for encoding and transporting information between a client (such as a web browser) and a web server.
 
-***HTTP*** requests are:
+### Common HTTP requests
 
 - **CONNECT**: The **CONNECT** method establishes a tunnel to the server identified by the target resource.
 - **DELETE**: The **DELETE** method deletes the specified resource.
@@ -22,6 +22,22 @@ As a request-response protocol, ***HTTP*** gives users a way to interact with we
 - **POST**: The **POST** method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
 - **PUT**: The **PUT** method replaces all current representations of the target resource with the request payload.
 - **TRACE**: The **TRACE** method performs a message loop-back test along the path to the target resource.
+
+### HTTP Status Codes
+
+- **2XX**
+  - **200**: Everything is good. Successful request!
+  - **201**: New resource was created.
+  - **204**: Everything is good. Nothing to return!
+- **3XX**
+  - **304**: Resource is same. Use cached version.
+- **4XX**
+  - **400**: Bad request. Invalid URL/syntax.
+  - **401**: Invalid/wrong credentials.
+  - **403**: Athenticated user but does not have permission.
+  - **404**: Not found. Resource could not be accessed by the server.
+- **5xx**
+  - **500**: Unexpected internal server error.
 
 ## API - Notes
 
@@ -64,7 +80,7 @@ Each ***API*** response consists of:
 
   It contains the data, which is usually formatted in *JSON*.
 
-Pactical ***API***:
+### Pactical API
 
 - Create an ***API*** (***C#***)
 

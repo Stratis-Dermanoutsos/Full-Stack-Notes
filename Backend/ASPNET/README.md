@@ -433,18 +433,23 @@ To make an \<a> element that redirects to the Index page using *asp-page*
 
 ## ASP .NET - Resources
 
-- [ASP .NET documentation](https://docs.microsoft.com/en-us/aspnet/) ==> [Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/)
+- [ASP .NET documentation](https://docs.microsoft.com/en-us/aspnet/)
+- [Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/)
 - [Entity Framework Core documentation](https://docs.microsoft.com/en-us/ef/core/)
+- [Claims](https://docs.microsoft.com/en-us/dotnet/api/system.security.claims)
 - [dotnet SDK documentation](https://docs.microsoft.com/en-us/dotnet/core/sdk)
 - [dotnet CLI documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/)
 - [ASP .NET Core Succinctly book](https://www.syncfusion.com/succinctly-free-ebooks/asp-net-core-succinctly)
 - [ASP .NET Core 3.1 Succinctly book](https://www.syncfusion.com/succinctly-free-ebooks/asp-net-core-3-1-succinctly)
 - [The Little ASP.NET Core Book (2018)](https://s3.amazonaws.com/recaffeinate-files/LittleAspNetCoreBook.pdf)
 - [ASP.NET Core 3.1 - Full Course for Beginners video by freeCodeCamp.org](https://youtu.be/C5cnZ-gZy2I)
+- [ASP.NET Core MVC Course (.NET 5) by freeCodeCamp.org](https://youtu.be/Pi46L7UYP8I)
+- [ASP.NET Core 5.0 MVC Course by tutorialsEU](https://youtu.be/DqD-NJf7-OM)
 - [w3schools](https://www.w3schools.com/asp/default.asp)
 - [JetBrains on Razor Pages](https://www.jetbrains.com/dotnet/guide/tutorials/basics/razor-pages/)
 - [JetBrains on Entity Framework](https://www.jetbrains.com/dotnet/guide/tutorials/basics/entity-framework-core/)
 - [AspNetCore-Developer-Roadmap repository](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap)
 - [ASP.NET Core - Authentication & Authorization video tutorial by Raw Coding](https://www.youtube.com/playlist?list=PLOeFnOV9YBa7dnrjpOG6lMpcyd7Wn7E8V)
+- [Simple Login guide by c-sharpcorner](https://www.c-sharpcorner.com/article/asp-net-core-razor-pages-simple-login-using-entity-framework-database-first-app/)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#asp-net)

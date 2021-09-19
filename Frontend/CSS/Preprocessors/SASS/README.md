@@ -5,7 +5,8 @@
 
 ## SASS - Notes
 
-- ***SASS*** means ***Syntactically Awesome StyleSheets***
+***SASS*** means ***Syntactically Awesome StyleSheets***
+
 - ***Variables***
 
       $red = hsl(0, 100%, 50%);
@@ -97,7 +98,6 @@
       $sizes: 40px, 50px, 80px;
 
       @each $size in $sizes { }
-
 - ***functions***
 
       @function sum($numbers) {
@@ -110,6 +110,8 @@
         return $sum;
       }
 
+### Extras
+
 - Color adjustments
 
       $base-color: green;
@@ -118,7 +120,6 @@
         background: lighten($base-color, 25%);
         color: darken($base-color, 25%);
       }
-
 - Inline SVG color through variable
 
       $color: #FFF;
@@ -131,6 +132,11 @@
       $svg2: url('data:image/svg+xml;utf8,<svg ...fill="#{hex_to_rgb($color)}".../></svg>');
   Why this is useful? Cause sometimes ***SVG***s will be needed inside your ***SCSS*** and this is the easiest and most efficient way to change their color.
   Notice the use of function. Mozilla does not support ***HEX*** values so we convert the value to ***RGB***.
+- Convert *px* to *em* values
+
+      function to-em($px) {
+        return ($px / 16) + em;
+      }
 
 ## SASS - Resources
 

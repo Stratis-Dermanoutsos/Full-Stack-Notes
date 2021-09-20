@@ -7,6 +7,8 @@
 
 To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
 
+### Commands
+
 - Install
   - without arguments
 

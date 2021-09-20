@@ -5,143 +5,153 @@
 
 ## Databases - Notes
 
-- ***Databases***' types
+### Databases types
 
-  There are many types of ***Databases*** but the 2 main ones are:
-  - **Relational *databases*** (eg. ***MySQL***, ***PostgreSQL***, ***SQLite***)
-  - **NoSQL *databases*** (eg. ***MongoDB***)
-- **Relational *databases***
+There are many types of ***Databases*** but the 2 main ones are:
 
-  The name comes from the way that data is stored in multiple, related tables. Within the tables, data is stored in rows and columns.
+- **Relational *databases*** (eg. ***MySQL***, ***PostgreSQL***, ***SQLite***)
+- **NoSQL *databases*** (eg. ***MongoDB***)
 
-  **Relational *databases*** use ***SQL*** to read, create, update and delete data.
+### Relational databases
 
-  What is ***SQL***?
+The name comes from the way that data is stored in multiple, related tables. Within the tables, data is stored in rows and columns.
 
-  ***SQL*** stands for ***S*tructured *Q*uery *L*anguage**, as it is the special purpose language for querying data in **Relational *Databases***.
+**Relational *databases*** use ***SQL*** to read, create, update and delete data.
 
-  ***MySQL***, ***PostgreSQL***, ***SQLite*** all use ***SQL*** for querying with slight syntax differences.
-- **NoSQL *databases***
+What is ***SQL***?
 
-  **NoSQL** is a broad category that includes any ***database*** that doesn’t use SQL as its primary data access language. These types of ***databases*** are also sometimes referred to as *non-relational **databases***.
+***SQL*** stands for ***S*tructured *Q*uery *L*anguage**, as it is the special purpose language for querying data in **Relational *Databases***.
 
-  Unlike in relational ***databases***, data in a **NoSQL** ***database*** doesn’t have to conform to a pre-defined schema, so these types of ***databases*** are great for organizations seeking to store unstructured or semi-structured data.
+***MySQL***, ***PostgreSQL***, ***SQLite*** all use ***SQL*** for querying with slight syntax differences.
 
-  One advantage of **NoSQL *databases*** is that developers can make changes to the ***database*** on the fly, without affecting applications that are using the ***database***.
-- Basic ***SQL*** commands
-  - *Get* data
+#### Basic SQL commands
 
-        SELECT * FROM <table>;
-        SELECT <column> FROM <table>;
-        SELECT <column1>, <column2> FROM <table>;
-  - *Update* data
+- *Get* data
 
-        UPDATE <table>
-        SET <column1> = <value1>, <column2> = <value2>, ...
-        WHERE <condition>;
-  - *Delete* data
+      SELECT * FROM <table>;
+      SELECT <column> FROM <table>;
+      SELECT <column1>, <column2> FROM <table>;
+- *Update* data
 
-        DELETE FROM <table> WHERE <condition>;
-  - *Insert* data
+      UPDATE <table>
+      SET <column1> = <value1>, <column2> = <value2>, ...
+      WHERE <condition>;
+- *Delete* data
 
-        // specific columns
-        INSERT INTO <table> (<column1>, <column2>, <column3>, ...)
-        VALUES (<value1>, <value2>, <value3>, ...);
+      DELETE FROM <table> WHERE <condition>;
+- *Insert* data
 
-        // all columns
-        INSERT INTO <table>
-        VALUES (<value1>, <value2>, <value3>, ...);
-  - *Create **database***
+      // specific columns
+      INSERT INTO <table> (<column1>, <column2>, <column3>, ...)
+      VALUES (<value1>, <value2>, <value3>, ...);
 
-        CREATE DATABASE <database>;
-  - *Delete **database***
+      // all columns
+      INSERT INTO <table>
+      VALUES (<value1>, <value2>, <value3>, ...);
+- *Create **database***
 
-        DROP DATABASE <database>;
-  - *Create* table
+      CREATE DATABASE <database>;
+- *Delete **database***
 
-        CREATE TABLE <table>;
-  - *Modify* table
+      DROP DATABASE <database>;
+- *Create* table
 
-        ALTER TABLE <table>
-        ADD <column> <datatype>;
+      CREATE TABLE <table>;
+- *Modify* table
 
-        ALTER TABLE <table>
-        DROP COLUMN <column>;
-  - *Delete* table
+      ALTER TABLE <table>
+      ADD <column> <datatype>;
 
-        DROP DATABASE <table>;
-- ***SQL* JOIN**s
+      ALTER TABLE <table>
+      DROP COLUMN <column>;
+- *Delete* table
 
-  As the name implies, **relational** ***databases*** have related data. In other words, we can join our tables to present these related data together.
-  - (**INNER**) **JOIN**
+      DROP DATABASE <table>;
 
-    Returns records that have matching values in both tables.
-  - **LEFT** (**OUTER**) **JOIN**
+#### SQL JOIN
 
-    Returns all records from the left table, and the matched records from the right table.
-  - **RIGHT** (**OUTER**) **JOIN**
+As the name implies, **relational** ***databases*** have related data. In other words, we can join our tables to present these related data together.
 
-    Returns all records from the right table, and the matched records from the left table.
-  - **FULL** (**OUTER**) **JOIN**
+- (**INNER**) **JOIN**
 
-    Returns all records when there is a match in either left or right table.
-- ***MongoDB***
+  Returns records that have matching values in both tables.
+- **LEFT** (**OUTER**) **JOIN**
 
-  Characteristics:
-  - *Document-oriented*
-  - ***NoSQL***
-  - *General Purpose*
-  - *Flexible* (It offers the ability to make changes quickly and easily)
-  - *Scalable*
-  - *Secure* (Authentication and Authorization with a ***MongoDB*** are needed)
-  - *JSON* (Data is stored in documents, in a key-value pairs format)
+  Returns all records from the left table, and the matched records from the right table.
+- **RIGHT** (**OUTER**) **JOIN**
 
-  Basic concepts/terminology:
-  | SQL | NoSQL |
-  | ----- | ----- |
-  | database | database |
-  | table | collection |
-  | row | document |
+  Returns all records from the right table, and the matched records from the left table.
+- **FULL** (**OUTER**) **JOIN**
 
-  Basic commands:
-  - Show ***databases***
+  Returns all records when there is a match in either left or right table.
 
-        show dbs;
-  - Choose ***database*** to work on (it creates one, if it does not exist)
+### NoSQL databases
 
-        use <name>;
-        use testdb1; // example
-    Notice that the newly created ***database*** is not shown in the list generated by the previous command yet. To solve this, simply create a **Collection**.
-  - Show currently working ***database***
+**NoSQL** is a broad category that includes any ***database*** that doesn’t use SQL as its primary data access language. These types of ***databases*** are also sometimes referred to as *non-relational **databases***.
 
-        db;
-  - Create new **collection**
+Unlike in relational ***databases***, data in a **NoSQL** ***database*** doesn’t have to conform to a pre-defined schema, so these types of ***databases*** are great for organizations seeking to store unstructured or semi-structured data.
 
-        db.createCollection('<name>');
-        db.createCollection('collection1'); // example
-  - Show **collections**
+One advantage of **NoSQL *databases*** is that developers can make changes to the ***database*** on the fly, without affecting applications that are using the ***database***.
 
-        show collections;
-  - Insert data to **collection**
+#### MongoDB
 
-        db.<collection>.insert({<key>: '<value>', ...});
-        db.collection2.insert({name: 'Stratis'}); // example
-    If the specified **collection** does not exist, it is automatically created. (NOT recommended)
-  - Show data
+Characteristics:
 
-        db.<collection>.find();
-  - Update data
+- *Document-oriented*
+- ***NoSQL***
+- *General Purpose*
+- *Flexible* (It offers the ability to make changes quickly and easily)
+- *Scalable*
+- *Secure* (Authentication and Authorization with a ***MongoDB*** are needed)
+- *JSON* (Data is stored in documents, in a key-value pairs format)
 
-        db.<collection>.update({<query>}, {<update>}[, {<options>}]);
-        db.collection2.update({ name: 'Mitsos' }, {name: 'Mitsos', age: 23, height: 1.50}); // Where name = 'Mitsos', set age to 23 and height to 1.50
-  - Remove data
+Basic concepts/terminology:
+| SQL | NoSQL |
+| ----- | ----- |
+| database | database |
+| table | collection |
+| row | document |
 
-        db.<collection>.remove({<query>}, [justOne: <true|false>]);
+Basic commands:
 
-        // Examples
-        db.collection2.remove({}) // Remove all data from collection2
-        db.collection2.remove( { age: { $gt: 10 } } ) // Remove all the documents from collection2 where age is greater than 10
-        db.collection2.remove( { age: { $gt: 10 } }, true ) // Remove the first document from collection2 where age is greater than 10
+- Show ***databases***
+
+      show dbs;
+- Choose ***database*** to work on (it creates one, if it does not exist)
+
+      use <name>;
+      use testdb1; // example
+  Notice that the newly created ***database*** is not shown in the list generated by the previous command yet. To solve this, simply create a **Collection**.
+- Show currently working ***database***
+
+      db;
+- Create new **collection**
+
+      db.createCollection('<name>');
+      db.createCollection('collection1'); // example
+- Show **collections**
+
+      show collections;
+- Insert data to **collection**
+
+      db.<collection>.insert({<key>: '<value>', ...});
+      db.collection2.insert({name: 'Stratis'}); // example
+  If the specified **collection** does not exist, it is automatically created. (NOT recommended)
+- Show data
+
+      db.<collection>.find();
+- Update data
+
+      db.<collection>.update({<query>}, {<update>}[, {<options>}]);
+      db.collection2.update({ name: 'Mitsos' }, {name: 'Mitsos', age: 23, height: 1.50}); // Where name = 'Mitsos', set age to 23 and height to 1.50
+- Remove data
+
+      db.<collection>.remove({<query>}, [justOne: <true|false>]);
+
+      // Examples
+      db.collection2.remove({}) // Remove all data from collection2
+      db.collection2.remove( { age: { $gt: 10 } } ) // Remove all the documents from collection2 where age is greater than 10
+      db.collection2.remove( { age: { $gt: 10 } }, true ) // Remove the first document from collection2 where age is greater than 10
 
 ## Databases - Resources
 

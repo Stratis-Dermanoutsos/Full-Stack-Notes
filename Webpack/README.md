@@ -83,93 +83,101 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
       };
   More options, for example, **output**
 
-        const path = require('path');
+      const path = require('path');
 
-        module.exports = {
+      module.exports = {
+        entry: './src/index.js',
+        output: {
+          filename: 'awesome.js',
+          path: path.resolve(__dirname, 'dist'),
+        },
+      };
+
+### Include SASS
+
+- Inside the ***src*** folder, create a file ***style.scss*** and paste your desired or even random ***SCSS*** code
+
+      $text: orange;
+      $bg: black;
+
+      body {
+        color: $text;
+        background: $bg;
+      }
+- Include it in the ***index.js*** file
+
+      import './style.scss';
+
+Now, notice that if you try to build with
+
+    npm run build
+an error will occure. That's because we do not have a loader for our ***SASS***.
+
+To solve this, simply open a terminal in the project's folder and type
+
+    npm install --save-dev css-loader style-loader sass-loader sass
+
+- Include the modules in the ***webpack.config.js*** file, inside the *"module.exports"* section. The end result should look like this
+
+      const path = require('path');
+
+      module.exports = {
           entry: './src/index.js',
           output: {
-            filename: 'awesome.js',
-            path: path.resolve(__dirname, 'dist'),
+              filename: 'main.js',
+              path: path.resolve(__dirname, 'dist'),
           },
-        };
-- Include ***SASS***
-  - Inside the ***src*** folder, create a file ***style.scss*** and paste your desired or even random ***SCSS*** code
+          module: {
+              rules: [
+                  {
+                      test: /\.scss$/,
+                      use: [
+                          'style-loader',
+                          'css-loader',
+                          'sass-loader',
+                      ],
+                  },
+              ],
+          },
+      };
 
-        $text: orange;
-        $bg: black;
+### Analyze bundle (using plugins)
 
-        body {
-          color: $text;
-          background: $bg;
-        }
-  - Include it in the ***index.js*** file
+- Open a terminal in the project's folder and type
 
-        import './style.scss';
-  Now, notice that if you try to build with
+      npm install --save-dev webpack-bundle-analyzer
+- Paste
 
-      npm run build
-  an error will occure. That's because we do not have a loader for our ***SASS***.
+      const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+  in the ***webpack.config.js*** file, outside of the *"module.exports"* section and
 
-  To solve this, simply open a terminal in the project's folder and type
+      plugins: [
+        new BundleAnalyzerPlugin()
+      ],
+  inside the section.
+- When you build, you should see this screen
 
-      npm install --save-dev css-loader style-loader sass-loader sass
-  - Include the modules in the ***webpack.config.js*** file, inside the *"module.exports"* section. The end result should look like this
+  ![webpack-bundle-analyzer](../Images/webpack-bundle-analyzer.png)
 
-        const path = require('path');
+### Setup local web server
 
-        module.exports = {
-            entry: './src/index.js',
-            output: {
-                filename: 'main.js',
-                path: path.resolve(__dirname, 'dist'),
-            },
-            module: {
-                rules: [
-                    {
-                        test: /\.scss$/,
-                        use: [
-                            'style-loader',
-                            'css-loader',
-                            'sass-loader',
-                        ],
-                    },
-                ],
-            },
-        };
-- Analyze bundle (using **plugins**)
-  - Open a terminal in the project's folder and type
+- Open a terminal in the project's folder and type
 
-        npm install --save-dev webpack-bundle-analyzer
-  - Paste
+      npm install --save-dev webpack-dev-server
+- In the ***webpack.config.js*** file, outside of the *"module.exports"* section, paste
 
-        const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-    in the ***webpack.config.js*** file, outside of the *"module.exports"* section and
+      devServer: {
+        contentBase: path.join(__dirname, 'public'),
+        port: 9000
+      },
+- Open the ***package.json*** file and paste
 
-        plugins: [
-          new BundleAnalyzerPlugin()
-        ],
-    inside the section.
-  - When you build, you should see this screen
+      "dev": "webpack serve"
+  inside the *"scripts"* section
+- Start server by typing
 
-    ![webpack-bundle-analyzer](../Images/webpack-bundle-analyzer.png)
-- Setup local web server
-  - Open a terminal in the project's folder and type
-
-        npm install --save-dev webpack-dev-server
-  - In the ***webpack.config.js*** file, outside of the *"module.exports"* section, paste
-
-        devServer: {
-          contentBase: path.join(__dirname, 'public'),
-          port: 9000
-        },
-  - Open the ***package.json*** file and paste
-
-        "dev": "webpack serve"
-    inside the *"scripts"* section
-  - Start server by typing
-
-        npm run dev
-    inside the terminal
+      npm run dev
+  inside the terminal
 
 ## Webpack - Resources
 

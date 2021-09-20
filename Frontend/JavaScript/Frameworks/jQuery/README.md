@@ -5,62 +5,68 @@
 
 ## jQuery - Notes
 
-- Add ***jQuery*** to Your Web Pages
-  - Download ***[jQuery](https://jquery.com/download/)*** by running
+### Add jQuery to Your Web Pages
 
-        npm install jquery
-    and use by inclusing the '*jquery-\<version>.min.js*' file inside the *\<head>* element.
+- Download ***[jQuery](https://jquery.com/download/)*** by running
 
-        <head>
-          <script src="jquery-<version>.min.js"></script>
-        </head>
-  - ***jQuery*** CDN
+      npm install jquery
+  and use by inclusing the '*jquery-\<version>.min.js*' file inside the *\<head>* element.
 
-        <head>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/<version>/jquery.min.js"></script>
-        </head>
-- Basic syntax
+      <head>
+        <script src="jquery-<version>.min.js"></script>
+      </head>
 
-      $(selector).action()
-  For example,
+- ***jQuery*** CDN
 
-      $(this).hide()    // hides the current element
-      $("p").hide()     // hides all <p> elements
-      $(".test").hide() // hides all elements with class="test"
-      $("#test").hide() // hides the element with id="test"
+      <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/<version>/jquery.min.js"></script>
+      </head>
 
-      /* When any button is pressed, all <p> elements will be hidden */
-      $(document).ready(function() {
-        $("button").click(function() {
-          $("p").hide();
-        });
+### Basic syntax
+
+    $(selector).action()
+For example,
+
+    $(this).hide()    // hides the current element
+    $("p").hide()     // hides all <p> elements
+    $(".test").hide() // hides all elements with class="test"
+    $("#test").hide() // hides the element with id="test"
+
+    /* When any button is pressed, all <p> elements will be hidden */
+    $(document).ready(function() {
+      $("button").click(function() {
+        $("p").hide();
       });
-- Selectors
+    });
 
-  They work quite like ***CSS***.
-  - *\<p>* elements
+### Selectors
 
-        $("p")
-  - element with *id="test"* (' *#* ')
+They work quite like ***CSS***.
 
-        $("#test")
-  - elements with *class="test"* (' *.* ')
+- *\<p>* elements
 
-        $(".test")
-- Events
+      $("p")
+- element with *id="test"* (' *#* ')
 
-  | Mouse Events | Keyboard Events | Form Events | Document/Window Events |
-  | ----------- | ----------- | ----------- | ----------- |
-  | click | keypress | submit | load |
-  | dblclick | keydown | change | resize |
-  | mouseenter | keyup | focus | scroll |
-  | mouseleave |  | blur | unload |
+      $("#test")
+- elements with *class="test"* (' *.* ')
 
-  For example, do something when any paragraph (*\<p>*) elementh is clicked
+      $(".test")
 
-      $("p").click(function(){
-        // action goes here!!
-      });
+### Events
+
+| Mouse Events | Keyboard Events | Form Events | Document/Window Events |
+| ----------- | ----------- | ----------- | ----------- |
+| click | keypress | submit | load |
+| dblclick | keydown | change | resize |
+| mouseenter | keyup | focus | scroll |
+| mouseleave |  | blur | unload |
+
+For example, do something when any paragraph (*\<p>*) elementh is clicked
+
+    $("p").click(function(){
+      // action goes here!!
+    });
 
 ## jQuery - Resources
 

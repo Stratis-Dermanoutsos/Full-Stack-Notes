@@ -16,74 +16,76 @@ However, ***TypeScript*** works more like a compiled language. In other words, y
 
 In fact, the way a program written in ***TypeScript*** works is through compilation to vanilla ***JavaScript*** using *tsc*. (***TypeScript*** *Compiler*)
 
-Main additions:
+### Variables
 
-- Variables
+    // JavaScript
+    let var = 3;
 
-      // JavaScript
-      let var = 3;
+    // TypeScript
+    let var = 3;         // It automatically is declared as 'number'
+    let var: any = 3;    // Can be any type and even change between them
+    let var: number = 3; // We manually declare it as 'number'
+Notice how
 
-      // TypeScript
-      let var = 3;         // It automatically is declared as 'number'
-      let var: any = 3;    // Can be any type and even change between them
-      let var: number = 3; // We manually declare it as 'number'
-  Notice how
+    let var;
+and
 
-      let var;
-  and
+    let var: any;
+are equal in ***TypeScript***.
 
-      let var: any;
-  are equal in ***TypeScript***.
-- Interfaces
+### Interfaces
 
-      interface Car {
-        make: string;
-        hp: number;
+    interface Car {
+      make: string;
+      hp: number;
 
-        [key: string]: any; // additional properties
-      }
+      [key: string]: any; // additional properties
+    }
 
-      const rio: Car = {
-        make: 'Kia',
-        hp: 104
-      }
+    const rio: Car = {
+      make: 'Kia',
+      hp: 104
+    }
 
-      // This would throw error without the additional property in the 'Car' interface
-      const accent: Car = {
-        make: 'Hyundai',
-        hp: 105,
-        goodLooking: false
-      }
-- Arrays
+    // This would throw error without the additional property in the 'Car' interface
+    const accent: Car = {
+      make: 'Hyundai',
+      hp: 105,
+      goodLooking: false
+    }
 
-      const arr: string[] = [];
+### Arrays
 
-      arr.push('idk, it's just a string'); // OK
-      arr.push(1);                         // Error
-  but
+    const arr: string[] = [];
 
-      type MyList = [number?, string?]
+    arr.push('idk, it's just a string'); // OK
+    arr.push(1);                         // Error
+but
 
-      const arr: MyList = [];
+    type MyList = [number?, string?]
 
-      arr.push('idk, it's just a string'); // OK
-      arr.push(1);                         // OK
-- Tuples
+    const arr: MyList = [];
 
-      // Declare a tuple type
-      let x: [string, number];
+    arr.push('idk, it's just a string'); // OK
+    arr.push(1);                         // OK
 
-      // Initialize it
-      x = ["hello", 10]; // OK
-      x = [10, "hello"]; // Error
-- Generics
+### Tuples
 
-      class Item<T> {
-        constructor(public value: T) {}
-      }
+    // Declare a tuple type
+    let x: [string, number];
 
-      let x: Item<number>;
-      let y = new Item(3);
+    // Initialize it
+    x = ["hello", 10]; // OK
+    x = [10, "hello"]; // Error
+
+### Generics
+
+    class Item<T> {
+      constructor(public value: T) {}
+    }
+
+    let x: Item<number>;
+    let y = new Item(3);
 
 ## TypeScript - Resources
 

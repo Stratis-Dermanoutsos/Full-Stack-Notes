@@ -47,7 +47,6 @@ Possible traversals are **Preorder**, **Inorder**, **Postorder** and **Level Ord
   3. Traverse the right subtree
 
   ![BST Preorder Traversal](../Images/BST-Preorder-Traversal.png)
-
 - **Inorder**
 
   The **Inorder** traversal of a ***Binary Search Tree*** always returns the nodes in a sorted order.
@@ -59,7 +58,6 @@ Possible traversals are **Preorder**, **Inorder**, **Postorder** and **Level Ord
   3. Traverse the right subtree
 
   ![BST Inorder Traversal](../Images/BST-Inorder-Traversal.png)
-
 - **Postorder**
 
   How it works:

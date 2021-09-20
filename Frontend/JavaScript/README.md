@@ -5,7 +5,7 @@
 
 ## JavaScript - Notes
 
-Unique traits
+### Unique traits
 
 - ***obj.propKey = value*** and ***obj['propKey'] = value*** are equal
 - if ***1 = 0001***, then ***~1 = 1110***
@@ -29,7 +29,7 @@ Unique traits
       const lastItem = arr.at(-1); // const lastItem = arr[arr.length - 1];
       const secondToLast = arr.at(-2); // const lastItem = arr[arr.length - 2];
 
-Comparing strings
+### Comparing strings
 
 - is case-sensitive
 
@@ -39,7 +39,7 @@ Comparing strings
 
       'b' > 'ä' // false
 
-Useful code snippets
+### Useful code snippets
 
 - Remove duplicate values from array
 
@@ -90,7 +90,7 @@ Useful code snippets
         // is equal to
         condition || doAction();
 
-***C#*** vs ***JavaScript*** (only notable differences/similarities as I am used to writing code in ***C#***)
+### C# vs JavaScript
 
 |  | C#      | JavaScript |
 | ----------- | ----------- | ----------- |

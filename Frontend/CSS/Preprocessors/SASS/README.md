@@ -7,108 +7,113 @@
 
 ***SASS*** means ***Syntactically Awesome StyleSheets***
 
-- ***Variables***
+### Variables
 
-      $red = hsl(0, 100%, 50%);
-- ***Nesting***, used to avoid repeating the same classes names
+    $red = hsl(0, 100%, 50%);
 
-      // CSS
-      button a {
+### Nesting
+
+    // CSS
+    button a {
+      font-weight: bold;
+    }
+
+    button.danger {
+      color: red;
+    }
+
+
+    // SCSS
+    button {
+      a {
         font-weight: bold;
       }
 
-      button.danger {
+      .danger {
         color: red;
       }
+    }
+or for ***pseudo classes*** and ***pseudo elements***
+
+    // CSS
+    button:hover { }
+
+    button:focus { }
 
 
-      // SCSS
-      button {
-        a {
-          font-weight: bold;
-        }
+    // SCSS
+    button {
+      &:focus { }
+      &:hover { }
+    }
 
-        .danger {
-          color: red;
-        }
+### Mixins
+
+    // CSS
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: gray;
+    }
+
+    .aside {
+      display: flex;
+      flex-direction: column;
+      background: gray;
+    }
+
+
+    // SCSS
+    @mixin flex-column {
+      display: flex;
+      flex-direction: column;
+      background: gray;
+    }
+
+    .card {
+      @include flex-column;
+    }
+
+    .aside {
+      @include flex-column;
+    }
+They can also take arguments
+
+    @mixin flex-column($color) {
+      display: flex;
+      flex-direction: column;
+      background: $color;
+    }
+
+    .card {
+      @include flex-column(gray);
+    }
+
+### if-else statements
+
+    @if $theme == 'light' {
+      background-color: $light-bg;
+    } @else {
+      background-color: $dark-bg;
+    }
+
+### foreach loops
+
+    $sizes: 40px, 50px, 80px;
+
+    @each $size in $sizes { }
+
+### functions
+
+    @function sum($numbers) {
+      $sum = 0;
+
+      @each $number in $numbers {
+        $sum: $sum + $number;
       }
-  or for ***pseudo classes*** and ***pseudo elements***
 
-      // CSS
-      button:hover { }
-
-      button:focus { }
-
-
-      // SCSS
-      button {
-        &:focus { }
-        &:hover { }
-      }
-- ***Mixins***
-
-      // CSS
-      .card {
-        display: flex;
-        flex-direction: column;
-        background: gray;
-      }
-
-      .aside {
-        display: flex;
-        flex-direction: column;
-        background: gray;
-      }
-
-
-      // SCSS
-      @mixin flex-column {
-        display: flex;
-        flex-direction: column;
-        background: gray;
-      }
-
-      .card {
-        @include flex-column;
-      }
-
-      .aside {
-        @include flex-column;
-      }
-  They can also take arguments
-
-      @mixin flex-column($color) {
-        display: flex;
-        flex-direction: column;
-        background: $color;
-      }
-
-      .card {
-        @include flex-column(gray);
-      }
-- ***if-else*** statements
-
-      @if $theme == 'light' {
-        background-color: $light-bg;
-      } @else {
-        background-color: $dark-bg;
-      }
-- ***foreach*** loops
-
-      $sizes: 40px, 50px, 80px;
-
-      @each $size in $sizes { }
-- ***functions***
-
-      @function sum($numbers) {
-        $sum = 0;
-
-        @each $number in $numbers {
-          $sum: $sum + $number;
-        }
-
-        return $sum;
-      }
+      return $sum;
+    }
 
 ### Extras
 

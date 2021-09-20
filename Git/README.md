@@ -5,7 +5,7 @@
 
 ## Git - Notes
 
-Useful commands:
+### Useful commands
 
 - Initialize a repository
 

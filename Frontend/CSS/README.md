@@ -38,6 +38,41 @@
         font-size: 16px;
       }
 
+### Specificity
+
+**Specificity** is a weight that is applied to a given ***CSS*** declaration, determined by the number of each selector type in the matching selector.
+
+#### Selector Types
+
+1. Least specific
+    - **Type** selectors ( *p* )
+    - **pseudo-elements** ( *::before* )
+2. Somewhat specific
+    - **Class** selectors ( *.link* )
+    - **attributes** selectors ( *\[type="text"]* )
+    - **pseudo-classes** ( *:hover* )
+3. Very specific
+    - **ID** selectors ( *#name* )
+
+#### Exceptions
+
+- *!important*
+
+  When an *!important* rule is used on a style declaration, this declaration overrides any other declarations. Using *!important*, is bad practice and should be avoided because it makes debugging more difficult.
+
+  Some simple rules:
+
+  - Look for a way to use specificity before even considering *!important*
+  - Only use *!important* on page-specific ***CSS*** that overrides foreign ***CSS*** (from external libraries, like Bootstrap)
+  - Never use *!important* when you're writing a plugin/mashup
+  - Don't use *!important* on site-wide ***CSS***
+- *:is()* and *:not()*
+
+  The matches-any pseudo-class *:is()* and the negation pseudo-class *:not()* are not considered a pseudo-class in the **specificity** calculation.
+- *:where()*
+
+  The pseudo-class *:where()*  always has its **specificity** replaced with zero.
+
 ### Prefixes
 
 Prefixes are used to add CSS features, knowing that each browser will support them.

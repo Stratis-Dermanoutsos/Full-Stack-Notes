@@ -1,7 +1,7 @@
 # API
 
-- **[Notes](#api---notes)**
-- **[Resources](#api---resources)**
+- [**Notes**](#api---notes)
+- [**Resources**](#api---resources)
 
 ## HTTP
 

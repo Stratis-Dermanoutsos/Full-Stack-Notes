@@ -1,7 +1,7 @@
 # Databases
 
-- **[Notes](#databases---notes)**
-- **[Resources](#databases---resources)**
+- [**Notes**](#databases---notes)
+- [**Resources**](#databases---resources)
 
 ## Databases - Notes
 

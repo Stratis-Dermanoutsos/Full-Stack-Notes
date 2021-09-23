@@ -1,7 +1,7 @@
 # Algorithms
 
-- **[Notes](#algorithms---notes)**
-- **[Resources](#algorithms---resources)**
+- [**Notes**](#algorithms---notes)
+- [**Resources**](#algorithms---resources)
 
 ## Algorithms - Notes
 

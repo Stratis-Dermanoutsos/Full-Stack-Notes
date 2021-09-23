@@ -1,7 +1,7 @@
 # HTML
 
-- **[Notes](#html---notes)**
-- **[Resources](#html---resources)**
+- [**Notes**](#html---notes)
+- [**Resources**](#html---resources)
 
 ## HTML - Notes
 

@@ -1,7 +1,7 @@
 # MVC
 
-- **[Notes](#mvc---notes)**
-- **[Resources](#mvc---resources)**
+- [**Notes**](#mvc---notes)
+- [**Resources**](#mvc---resources)
 
 ## MVC - Notes
 

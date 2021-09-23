@@ -1,7 +1,7 @@
 # JavaScript
 
-- **[Notes](#javascript---notes)**
-- **[Resources](#javascript---resources)**
+- [**Notes**](#javascript---notes)
+- [**Resources**](#javascript---resources)
 
 ## JavaScript - Notes
 

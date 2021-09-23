@@ -10,54 +10,56 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 
 - [x] Frontend
   - [x] Basics
-    - [x] ***[HTML](./Frontend/HTML/#html)***
-    - [x] ***[CSS](./Frontend/CSS/#css)***
-    - [x] ***[JavaScript](./Frontend/JavaScript/#javascript)***
-  - [x] ***[TypeScript](./Frontend/TypeScript/#typescript)***
+    - [x] [***HTML***](./Frontend/HTML/#html)
+    - [x] [***CSS***](./Frontend/CSS/#css)
+    - [x] [***JavaScript***](./Frontend/JavaScript/#javascript)
+  - [x] [***TypeScript***](./Frontend/TypeScript/#typescript)
   - [x] Frameworks/Libraries
-    - [x] ***[Tailwind CSS](./Frontend/CSS/Frameworks/Tailwind-CSS/#tailwind-css---resources)***
-    - [x] ***[SASS](./Frontend/CSS/Preprocessors/SASS/#sass)***
-    - [x] ***[Bootstrap](./Frontend/CSS/Frameworks/Bootstrap/#bootstrap)***
-    - [x] ***[jQuery](./Frontend/JavaScript/Frameworks/jQuery/#jquery)***
-    - [x] ***[React](./Frontend/JavaScript/Frameworks/React/#react)*** or
+    - [x] [***Tailwind CSS***](./Frontend/CSS/Frameworks/Tailwind-CSS/#tailwind-css---resources)
+    - [x] [***SASS***](./Frontend/CSS/Preprocessors/SASS/#sass)
+    - [x] [***Bootstrap***](./Frontend/CSS/Frameworks/Bootstrap/#bootstrap)
+    - [x] [***jQuery***](./Frontend/JavaScript/Frameworks/jQuery/#jquery)
+    - [x] [***React***](./Frontend/JavaScript/Frameworks/React/#react) or
       - ***Angular***
       - ***Vue***
-- [x] ***[NPM](./NPM/#npm)***
-- [x] ***[Webpack](./Webpack/#webpack)***
-- [x] ***[Git](./Git/#git)***
+      - ***Svelte***
+- [x] [***NPM***](./NPM/#npm)
+- [x] [***Webpack***](./Webpack/#webpack)
+- [x] [***Git***](./Git/#git)
 - [ ] Backend
   - [x] Basics
-    - [x] ***[C#](./Backend/Cs/#c)*** or
+    - [x] [***C#***](./Backend/Cs/#c) or
       - ***JAVA***
       - ***Python***
       - ***PHP***
       - ***Ruby***
-    - [x] ***[Databases](./Backend/Databases/#databases)***
+    - [x] [***Databases***](./Backend/Databases/#databases)
       - [x] ***MySQL***
       - [x] ***SQLite***
       - [x] ***PostgreSQL***
       - [x] ***MongoDB***
-    - [x] ***[Process management && Threads & Concurrency](./Backend/Threads-and-Concurrency/#threads--concurrency)***
-    - [x] ***[MVC](./Backend/MVC/#mvc)***
-  - [x] ***[API](./Backend/API/#api)***
-  - [x] ***[ASP.NET](./Backend/ASPNET/#asp-net)*** (***C#***) or
+  - [x] [***Process management && Threads & Concurrency***](./Backend/Threads-and-Concurrency/#threads--concurrency)
+  - [x] [***MVC***](./Backend/MVC/#mvc)
+  - [x] [***API***](./Backend/API/#api)
+  - [x] [***ASP.NET***](./Backend/ASPNET/#asp-net) (***C#***) or
     - ***Spring Boot*** (***JAVA***)
     - ***Django*** (***Python***)
     - ***Laravel*** (***PHP***)
     - ***Ruby on Rails*** (***Ruby***)
     - ***Flask*** (***Python***)
-  - [ ] CI/CD Tools
-    - [ ] ***Jenkins***
-    - [ ] ***GitLab***
-  - [ ] Cloud Providers
-    - [ ] ***AWS***
-    - [ ] ***Azure***
   - [ ] Learn concept and how to setup
     - [ ] Reverse and Forward proxy
     - [ ] Load Balancer
     - [ ] Caching Server
     - [ ] Firewall
-- [ ] ***[Algorithms](./Algorithms/#algorithms)***
+- [ ] DevOps
+  - [ ] [CI/CD Tools](./DevOps/CI-CD-Tools/#ci-cd-tools)
+    - [ ] [***Jenkins***](./DevOps/CI-CD-Tools/Jenkins/#jenkins)
+    - [ ] [***Github Actions***](./DevOps/CI-CD-Tools/Github-Actions/#github-actions)
+  - [ ] Cloud Providers
+    - [ ] ***AWS***
+    - [ ] ***Azure***
+- [ ] [***Algorithms***](./Algorithms/#algorithms)
   - [x] Search
     - [x] Linear
     - [x] Binary
@@ -69,7 +71,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [x] Selection
     - [ ] Merge
     - [ ] Quick
-- [ ] ***[Data Structures](./Data-Structures/#data-structures)***
+- [ ] [***Data Structures***](./Data-Structures/#data-structures)
   - [x] Binary Search Tree
   - [ ] Heap
   - [ ] AVL Tree
@@ -101,6 +103,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - User management system (Store user details, login, edit user etc)
 - Fully Stacked web applications
   - Blog page
+  - Book store app
   - Chat app
   - Notes app
   - Survey form

@@ -1,7 +1,7 @@
 # SASS
 
-- **[Notes](#sass---notes)**
-- **[Resources](#sass---resources)**
+- [**Notes**](#sass---notes)
+- [**Resources**](#sass---resources)
 
 ## SASS - Notes
 

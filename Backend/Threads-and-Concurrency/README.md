@@ -1,7 +1,7 @@
 # Threads & Concurrency
 
-- **[Notes](#threads--concurrency---notes)**
-- **[Resources](#threads--concurrency---resources)**
+- [**Notes**](#threads--concurrency---notes)
+- [**Resources**](#threads--concurrency---resources)
 
 ## Threads & Concurrency - Notes
 

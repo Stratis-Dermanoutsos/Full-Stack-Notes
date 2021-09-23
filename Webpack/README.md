@@ -1,7 +1,7 @@
 # Webpack
 
-- **[Notes](#webpack---notes)**
-- **[Resources](#webpack---resources)**
+- [**Notes**](#webpack---notes)
+- [**Resources**](#webpack---resources)
 
 ## Module bundlers
 

@@ -1,13 +1,13 @@
 # jQuery
 
-- **[Notes](#jquery---notes)**
-- **[Resources](#jquery---resources)**
+- [**Notes**](#jquery---notes)
+- [**Resources**](#jquery---resources)
 
 ## jQuery - Notes
 
 ### Add jQuery to Your Web Pages
 
-- Download ***[jQuery](https://jquery.com/download/)*** by running
+- Download [***jQuery***](https://jquery.com/download/) by running
 
       npm install jquery
   and use by inclusing the '*jquery-\<version>.min.js*' file inside the *\<head>* element.

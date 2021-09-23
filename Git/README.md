@@ -1,7 +1,7 @@
 # Git
 
-- **[Notes](#git---notes)**
-- **[Resources](#git---resources)**
+- [**Notes**](#git---notes)
+- [**Resources**](#git---resources)
 
 ## Git - Notes
 

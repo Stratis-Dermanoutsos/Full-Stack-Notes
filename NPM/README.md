@@ -1,11 +1,11 @@
 # NPM
 
-- **[Notes](#npm---notes)**
-- **[Resources](#npm---resources)**
+- [**Notes**](#npm---notes)
+- [**Resources**](#npm---resources)
 
 ## NPM - Notes
 
-To install ***NPM***, simply install ***[Node.js](https://nodejs.org)***.
+To install ***NPM***, simply install [***Node.js](https://nodejs.org).
 
 ### Commands
 

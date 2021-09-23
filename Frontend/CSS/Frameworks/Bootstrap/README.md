@@ -1,7 +1,7 @@
 # Bootstrap
 
-- **[Notes](#bootstrap---notes)**
-- **[Resources](#bootstrap---resources)**
+- [**Notes**](#bootstrap---notes)
+- [**Resources**](#bootstrap---resources)
 
 ## Bootstrap - Notes
 

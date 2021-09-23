@@ -1,7 +1,7 @@
 # Data Structures
 
-- **[Notes](#data-structures---notes)**
-- **[Resources](#data-structures---resources)**
+- [**Notes**](#data-structures---notes)
+- [**Resources**](#data-structures---resources)
 
 ## Data Structures - Notes
 

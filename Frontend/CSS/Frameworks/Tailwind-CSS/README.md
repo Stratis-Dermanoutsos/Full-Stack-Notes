@@ -1,6 +1,6 @@
 # Tailwind CSS
 
-- **[Resources](#tailwind-css---resources)**
+- [**Resources**](#tailwind-css---resources)
 
 ## Tailwind CSS - Resources
 

@@ -1,6 +1,6 @@
 # C\#
 
-- **[Resources](#c---resources)**
+- [**Resources**](#c---resources)
 
 ## C# - Resources
 

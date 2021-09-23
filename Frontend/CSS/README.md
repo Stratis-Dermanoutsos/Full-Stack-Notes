@@ -1,7 +1,7 @@
 # CSS
 
-- **[Notes](#css---notes)**
-- **[Resources](#css---resources)**
+- [**Notes**](#css---notes)
+- [**Resources**](#css---resources)
 
 ## CSS - Notes
 

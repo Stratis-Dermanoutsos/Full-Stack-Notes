@@ -1,7 +1,7 @@
 # TypeScript
 
-- **[Notes](#typescript---notes)**
-- **[Resources](#typescript---resources)**
+- [**Notes**](#typescript---notes)
+- [**Resources**](#typescript---resources)
 
 ## TypeScript - Notes
 

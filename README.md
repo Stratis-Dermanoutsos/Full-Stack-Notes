@@ -112,8 +112,9 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 
 ## GOAL PROJECTS
 
+- [ ] Scheduler/Calendar application
 - [ ] Blog
-- [ ] eCommerce
+- [ ] eCommerce application
 - [ ] Workout progress application
 - [x] [Portfolio](https://stratis-dermanoutsos.github.io/portfolio/)
 

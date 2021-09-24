@@ -55,7 +55,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 - [ ] DevOps
   - [ ] [CI/CD Tools](./DevOps/CI-CD-Tools/#ci-cd-tools)
     - [ ] [***Jenkins***](./DevOps/CI-CD-Tools/Jenkins/#jenkins)
-    - [ ] [***Github Actions***](./DevOps/CI-CD-Tools/Github-Actions/#github-actions)
+    - [x] [***Github Actions***](./DevOps/CI-CD-Tools/Github-Actions/#github-actions)
   - [ ] Cloud Providers
     - [ ] ***AWS***
     - [ ] ***Azure***

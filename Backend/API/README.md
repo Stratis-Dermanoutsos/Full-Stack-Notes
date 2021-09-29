@@ -142,6 +142,7 @@ Each ***API*** response consists of:
 
 ## API - Resources
 
+- [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 - [Fireship video](https://youtu.be/-MTSQjw5DrM)
 - [RapidAPI](https://docs.rapidapi.com)
 - [Nick Chapsas video (.NET Minimal API)](https://youtu.be/eRJFNGIsJEo)

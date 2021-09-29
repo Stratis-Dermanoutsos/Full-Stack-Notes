@@ -26,7 +26,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 - [x] [***NPM***](./NPM/#npm)
 - [x] [***Webpack***](./Webpack/#webpack)
 - [x] [***Git***](./Git/#git)
-- [ ] Backend
+- [x] Backend
   - [x] Basics
     - [x] [***C#***](./Backend/Cs/#c) or
       - ***JAVA***
@@ -47,11 +47,11 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - ***Laravel*** (***PHP***)
     - ***Ruby on Rails*** (***Ruby***)
     - ***Flask*** (***Python***)
-  - [ ] Learn concept and how to setup
-    - [ ] Reverse and Forward proxy
-    - [ ] Load Balancer
-    - [ ] Caching Server
-    - [ ] Firewall
+  - [x] [Learn concept and how to setup](./Backend/Concepts/#concepts)
+    - [x] Reverse and Forward proxy
+    - [x] Load Balancer
+    - [x] Caching Server
+    - [x] Firewall
 - [ ] DevOps
   - [ ] [CI/CD Tools](./DevOps/CI-CD-Tools/#ci-cd-tools)
     - [ ] [***Jenkins***](./DevOps/CI-CD-Tools/Jenkins/#jenkins)

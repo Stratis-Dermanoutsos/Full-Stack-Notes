@@ -74,7 +74,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 - [ ] [***Data Structures***](./Data-Structures/#data-structures)
   - [x] Binary Search Tree
   - [ ] Heap
-  - [ ] AVL Tree
+  - [x] AVL Tree
   - [x] Singly Linked List
   - [x] Doubly Linked List
   - [x] Circular Linked List

@@ -55,6 +55,7 @@
 ## Git - Resources
 
 - [Udemy course by Jad Khalili](https://www.udemy.com/share/101tpK2@PkdjVEtSSVIKdkRKBmJNfj4=/)
+- [Git for Professionals Tutorial by freeCodeCamp.org](https://youtu.be/Uszj_k0DGsg)
 - [w3schools](https://www.w3schools.com/git/default.asp)
 - [Connect git to GitHub](https://kbroman.org/github_tutorial/pages/first_time.html)
 

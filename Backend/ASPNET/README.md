@@ -1,7 +1,7 @@
 # ASP .NET
 
-- **[Notes](#asp-net---notes)**
-- **[Resources](#asp-net---resources)**
+- [**Notes**](#asp-net---notes)
+- [**Resources**](#asp-net---resources)
 
 ## ASP .NET - Notes
 
@@ -62,7 +62,7 @@ Well, by default, when we will focus on ***ASP .NET* Core**.
 
 ### ASP .NET Razor Pages
 
-***Razor Pages*** is a less complex than ***[MVC](#asp-net-mvc)***.
+***Razor Pages*** is a less complex than [***MVC***](#asp-net-mvc).
 
 However, instead of the ***M*odels**, ***V*iews**, and ***C*ontrollers** that make ***MVC***, ***Razor Pages*** have 2 parts:
 

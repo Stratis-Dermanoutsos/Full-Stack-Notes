@@ -48,10 +48,10 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - ***Ruby on Rails*** (***Ruby***)
     - ***Flask*** (***Python***)
   - [x] [Learn concept and how to setup](./Backend/Concepts/#concepts)
-    - [x] Reverse and Forward proxy
-    - [x] Load Balancer
-    - [x] Caching Server
-    - [x] Firewall
+    - [x] [***Reverse and Forward proxy***](./Backend/Concepts/#proxy)
+    - [x] [***Load Balancer***](./Backend/Concepts/#load-balancer)
+    - [x] [***Caching Server***](./Backend/Concepts/#caching-server)
+    - [x] [***Firewall***](./Backend/Concepts/#firewall)
 - [ ] DevOps
   - [ ] [CI/CD Tools](./DevOps/CI-CD-Tools/#ci-cd-tools)
     - [ ] [***Jenkins***](./DevOps/CI-CD-Tools/Jenkins/#jenkins)

@@ -34,7 +34,7 @@ A ***Binary Search Tree*** can be displayed by a graph (as shown below) or by tr
 
 ![Binary Search Tree](../Images/Binary-Search-Tree.png)
 
-Traversing the ***Binary Search Tree***
+#### Traversing the Binary Search Tree
 
 Possible traversals are **Preorder**, **Inorder**, **Postorder** and **Level Order**.
 
@@ -85,7 +85,7 @@ It starts as *1*st in **Preorder**, then *2*nd in **Inorder** and *3*rd in **Pos
 
   ![BST Level Order Traversal](../Images/BST-Level-Order-Traversal.png)
 
-Invert a ***BST***
+#### Invert a BST
 
 The goal is simple:
 
@@ -101,6 +101,50 @@ To achieve this, we simply have to do
 for every '*Parent*' node of the ***Binary Search Tree***.
 
 ![Inverted Binary Search Tree](../Images/Inverted-Binary-Search-Tree.png)
+
+### AVL Tree
+
+An ***Adelson-Velsky and Landis Tree***, or ***AVL Tree*** for short, is a <ins>self-balancing</ins> ***Binary Search Tree***.
+
+Since this is true, it can be traversed in the same way as a ***BST***.
+
+#### Balance Factor
+
+This is achieved through certain rotations that keep the ***AVL Tree*** balanced. Insertions and deletions may require the tree to be rebalanced by one or more rotations.
+
+In general, in a **Binary Tree**, the **Balance Factor** of a node `X` is defined to be the height difference of the 2 child sub-trees.
+
+    BF(X) = Height(LeftSubtree(X)) - Height(RightSubtree(X))
+
+If every node `X`'s **Balance Factor** is -1, 0, or 1 (`BF(X)∈{-1,0,1},∀ X`) then our tree is defined as ***AVL Tree***.
+
+A node `X` with
+
+- `BF(X) < 0` is called "*left-heavy*"
+- `BF(X) > 0` is called "*right-heavy*"
+- `BF(X) = 0` is called "*balanced*"
+
+#### Rebalancing
+
+During insert and delete operations a (temporary) height difference of 2 may arise, which means that the parent sub-tree has to be "*rebalanced*".
+
+Let `X` be the node that has a (temporary) balance factor of −2 or +2. Its left or right subtree was modified. Let `Z` be the child with the biggest height.
+
+There are four possible variants of the violation:
+
+- **Right Right** => `Z` is a *right* child of its parent `X` and `BF(Z) ≥ 0`
+- **Left Left** => `Z` is a *left* child of its parent `X` and `BF(Z) ≤ 0`
+- **Right Left** => `Z` is a *right* child of its parent `X` and `BF(Z) < 0`
+- **Left Right** => `Z` is a *left* child of its parent `X` and `BF(Z) > 0`
+
+The rebalancing is performed differently:
+
+- **Right Right** => `X` is rebalanced with a simple rotation `rotate_Left`
+- **Left Left** => `X` is rebalanced with a simple rotation `rotate_Right`
+- **Right Left** => `X` is rebalanced with a double rotation `rotate_RightLeft`
+- **Left Right** => `X` is rebalanced with a double rotation `rotate_LeftRight`
+
+![AVL Tree](../Images/AVL-Tree.png)
 
 ### Singly Linked List
 

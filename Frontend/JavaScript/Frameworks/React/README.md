@@ -215,5 +215,12 @@ There are more hooks, but I kept it simple and focused to the common ones.
 - [Fireship video (explanation)](https://youtu.be/Tn6-PIqc4UM)
 - [Web Dev Simplified video (introduction)](https://youtu.be/hQAHSlTtcmY)
 - [Fireship video (hooks)](https://youtu.be/TNhaISOUy6Q)
+- Best UI Frameworks/Libraries for React
+  - [Ant Design](https://ant.design)
+  - [Semantic UI](https://semantic-ui.com)
+  - [Material-UI](https://mui.com)
+  - [React-Bootstrap](https://react-bootstrap.github.io)
+  - [Atomize](https://atomizecode.com)
+  - [Blueprint](https://blueprintjs.com)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#react)

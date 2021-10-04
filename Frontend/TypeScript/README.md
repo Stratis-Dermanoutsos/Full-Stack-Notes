@@ -16,6 +16,101 @@ However, ***TypeScript*** works more like a compiled language. In other words, y
 
 In fact, the way a program written in ***TypeScript*** works is through compilation to vanilla ***JavaScript*** using *tsc*. (***TypeScript*** *Compiler*)
 
+### Classes - OOP
+
+#### Declaration
+
+    class Point {
+      x: number = 3;
+      y: number;
+    }
+
+#### Instantiation
+
+    const pt = new Point();
+
+#### Value assignment
+
+    // outside of class
+    pt.x = 0;
+    pt.y = 0;
+    pt.x = "3"; // error
+
+    // inside of class
+    this.x = 0;
+
+#### Constructor
+
+    class Point {
+      x: number = 1;
+      y: number = 1;
+
+      constructor() {
+        // code
+      }
+
+      // Normal signature with defaults
+      constructor(x = 0, y = 0) {
+        this.x = x;
+        this.y = y;
+      }
+
+      // Overloads
+      constructor(x: number, y: string);
+      constructor(s: string);
+      constructor(xs: any, y?: any) {}
+    }
+
+#### readonly
+
+Readonly fields are only assignable on declaration or inside the constructor.
+
+    class Person {
+      readonly name: string = "Stratis"; // correct
+
+      constructor() {
+        this.name = "Stratos"; // correct
+      }
+
+      changeName() {
+        this.name = "Strat Strat"; // error
+      }
+    }
+
+    const p = new Person();
+    p.name = "Strat"; // error
+
+#### Inheritage
+
+Just as in ***JavaScript***, if you have a base class, you’ll need to call `super();` in your constructor body *BEFORE* using any `this.` members.
+
+    class Base {
+      i = 2;
+    }
+
+    class Derived extends Base {
+      constructor() {
+        super();
+        this.i = 3;
+      }
+    }
+
+#### Getters / Setters
+
+    class C {
+      _length = 0; // member variable
+
+      // getter
+      get length() {
+        return this._length;
+      }
+
+      // setter
+      set length(value) {
+        this._length = value;
+      }
+    }
+
 ### Variables
 
     // JavaScript

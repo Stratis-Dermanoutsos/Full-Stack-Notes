@@ -5,7 +5,7 @@
 
 ## CSS - Notes
 
-### There are 4 main ways to include CSS in HTML
+### Include CSS in HTML
 
 - Inline
 
@@ -37,6 +37,8 @@
       p {
         font-size: 16px;
       }
+
+Note that, if you have 2 or more external stylesheets in your ***HTML***, the one linked last is more *`!important`* than the one(s) above it.
 
 ### Specificity
 

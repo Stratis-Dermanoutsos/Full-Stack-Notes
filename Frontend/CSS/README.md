@@ -176,6 +176,19 @@ There are some basic steps to follow in order to make a website resposive.
 
   If the '*width*' property is set to a percentage and the '*height*' is set to '*auto*', the image will be responsive.
 
+### Code snippets
+
+- Custom cursor
+
+      element {
+        cursor: url("/path"), auto;
+      }
+- Zoom image on hover
+
+      img:hover {
+        transform: scale(1.1);
+      }
+
 ## CSS - Resources
 
 - [w3schools](https://www.w3schools.com/css/default.asp)

@@ -85,6 +85,21 @@ As the name implies, **relational** ***databases*** have related data. In other 
 
   Returns all records when there is a match in either left or right table.
 
+#### Useful snippets
+
+- Functional index
+
+      SELECT * FROM user WHERE LOWER(email) = 'example@gmail.com';
+
+      // PostgreSQL
+      CREATE INDEX email_lower ON user (LOWER(email));
+
+      // MySQL
+      CREATE INDEX email_lower ON user ((LOWER(email)));
+  Now, the same expression will be
+
+      SELECT * FROM user WHERE email_lower = 'example@gmail.com';
+
 ### NoSQL databases
 
 **NoSQL** is a broad category that includes any ***database*** that doesn’t use SQL as its primary data access language. These types of ***databases*** are also sometimes referred to as *non-relational **databases***.

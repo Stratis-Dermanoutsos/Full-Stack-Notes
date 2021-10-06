@@ -147,4 +147,4 @@ They can also take arguments
 
 - [Fireship video](https://youtu.be/akDIJa0AP5c)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#sass)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#sass)

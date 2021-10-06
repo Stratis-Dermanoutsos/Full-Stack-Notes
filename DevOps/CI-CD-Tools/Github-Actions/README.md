@@ -182,4 +182,4 @@ I will take note of the procedure of the course to be able to look back at it fo
 - [awesome-actions repository](https://github.com/sdras/awesome-actions)
 - [Github Actions Tutorial video by Fireship](https://youtu.be/eB0nUzAI7M8)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#github-actions)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#github-actions)

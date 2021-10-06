@@ -184,4 +184,4 @@ To solve this, simply open a terminal in the project's folder and type
 - [Fireship video](https://youtu.be/5IG4UmULyoA)
 - [webpack-bundle-analyzer documentation](https://www.npmjs.com/package/webpack-bundle-analyzer)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#webpack)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#webpack)

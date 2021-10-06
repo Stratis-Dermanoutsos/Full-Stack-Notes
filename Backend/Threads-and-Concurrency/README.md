@@ -24,4 +24,4 @@ Thankfully, ***C#*** is said to have excellent multithreading capabilities.
 
 - [Applied Programming notes](https://applied-programming.github.io/Operating-Systems-Notes/3-Threads-and-Concurrency/)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#threads--concurrency)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#threads--concurrency)

@@ -37,4 +37,4 @@ With ***Continuous Deployment***, there is no *Release Day* anymore. Developers 
 - [Fuel Growth CI/CD book](https://about.gitlab.com/resources/ebook-fuel-growth-cicd/)
 - [Continuous Integration vs. Continuous Delivery vs. Continuous Deployment by Sten Pittet](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#ci-cd)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#ci-cd)

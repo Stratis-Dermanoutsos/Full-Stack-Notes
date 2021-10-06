@@ -59,4 +59,4 @@
 - [w3schools](https://www.w3schools.com/git/default.asp)
 - [Connect git to GitHub](https://kbroman.org/github_tutorial/pages/first_time.html)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#git)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#git)

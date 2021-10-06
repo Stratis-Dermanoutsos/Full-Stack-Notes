@@ -70,4 +70,4 @@ Basically, ***Bootstrap*** uses pre-defined classes that you asign to each eleme
 - [react-bootstrap documentation](https://react-bootstrap.github.io/getting-started/introduction/)
 - [Use Bootstrap with React](https://www.creative-tim.com/blog/web-design/how-to-use-bootstrap-with-reactjs/)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#bootstrap)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#bootstrap)

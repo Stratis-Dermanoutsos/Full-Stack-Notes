@@ -50,4 +50,4 @@
 
 - [Article by Zanfina Svirca](https://towardsdatascience.com/everything-you-need-to-know-about-mvc-architecture-3c827930b4c1)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#mvc)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#mvc)

@@ -223,4 +223,4 @@ There are more hooks, but I kept it simple and focused to the common ones.
   - [Atomize](https://atomizecode.com)
   - [Blueprint](https://blueprintjs.com)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#react)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#react)

@@ -64,4 +64,4 @@ To install ***NPM***, simply install [***Node.js](https://nodejs.org).
 
 - [NPM documentation](https://docs.npmjs.com)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#npm)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#npm)

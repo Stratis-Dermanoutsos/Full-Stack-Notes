@@ -445,9 +445,9 @@ To make an \<a> element that redirects to the Index page using *asp-page*
   - [w3schools](https://www.w3schools.com/asp/default.asp)
   - [AspNetCore-Developer-Roadmap repository](https://github.com/MoienTajik/AspNetCore-Developer-Roadmap)
 - Specifics
-  - [Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/)
+  - [Tag Helpers documentation](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/)
   - [Entity Framework Core documentation](https://docs.microsoft.com/en-us/ef/core/)
-  - [Claims](https://docs.microsoft.com/en-us/dotnet/api/system.security.claims)
+  - [Claims documentation](https://docs.microsoft.com/en-us/dotnet/api/system.security.claims)
   - [JetBrains on Entity Framework](https://www.jetbrains.com/dotnet/guide/tutorials/basics/entity-framework-core/)
   - [ASP.NET Core - Authentication & Authorization video tutorial by Raw Coding](https://www.youtube.com/playlist?list=PLOeFnOV9YBa7dnrjpOG6lMpcyd7Wn7E8V)
   - [Simple Login guide by c-sharpcorner](https://www.c-sharpcorner.com/article/asp-net-core-razor-pages-simple-login-using-entity-framework-database-first-app/)

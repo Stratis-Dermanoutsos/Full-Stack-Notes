@@ -112,6 +112,7 @@
 ## JavaScript - Resources
 
 - [Speaking JavaScript book](http://speakingjs.com)
+- [clean-code-javascript repository](https://github.com/ryanmcdermott/clean-code-javascript)
 - [w3schools](https://www.w3schools.com/js/default.asp)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#javascript)

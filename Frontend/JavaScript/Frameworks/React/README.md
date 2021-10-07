@@ -215,6 +215,7 @@ There are more hooks, but I kept it simple and focused to the common ones.
 - [Fireship video (explanation)](https://youtu.be/Tn6-PIqc4UM)
 - [Web Dev Simplified video (introduction)](https://youtu.be/hQAHSlTtcmY)
 - [Fireship video (hooks)](https://youtu.be/TNhaISOUy6Q)
+- [Routing in React](https://reactrouter.com/web/guides/quick-start)
 - Best UI Frameworks/Libraries for React
   - [Ant Design](https://ant.design)
   - [Semantic UI](https://semantic-ui.com)

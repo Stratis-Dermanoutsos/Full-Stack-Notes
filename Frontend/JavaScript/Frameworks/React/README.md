@@ -216,6 +216,7 @@ There are more hooks, but I kept it simple and focused to the common ones.
 - [Web Dev Simplified video (introduction)](https://youtu.be/hQAHSlTtcmY)
 - [Fireship video (hooks)](https://youtu.be/TNhaISOUy6Q)
 - [Routing in React](https://reactrouter.com/web/guides/quick-start)
+- [URL parameters and query strings in React](https://betterprogramming.pub/using-url-parameters-and-query-strings-with-react-router-fffdcea7a8e9)
 - Best UI Frameworks/Libraries for React
   - [Ant Design](https://ant.design)
   - [Semantic UI](https://semantic-ui.com)

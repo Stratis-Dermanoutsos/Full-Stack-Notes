@@ -57,6 +57,16 @@ A Semantic element clearly describes its meaning to both the browser and the dev
 
 ![HTML Semantic](../../Images/HTML-Semantic.gif)
 
+### Useful tags/attributes
+
+- **no translate** attribute
+
+      translate="no"
+      
+      //Example
+      <p translate="no">Company</p>
+  This can be very useful to prevent your brand's name from being translated to something else.
+
 ## HTML - Resources
 
 - [w3schools](https://www.w3schools.com/html/default.asp)

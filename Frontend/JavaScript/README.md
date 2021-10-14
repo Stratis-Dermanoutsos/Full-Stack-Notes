@@ -90,6 +90,64 @@
         // is equal to
         condition || doAction();
 
+### Asynchronous code
+
+There are 2 main ways:
+
+- `async / await`
+
+      async function doSomethingAsynchronous() {
+        // logic
+      }
+
+      const doSomethingAsynchronous = async () => {
+        // logic
+      };
+- `then`
+
+      const doSomethingAsynchronous = new Promise((resolve, reject) => {
+        // logic
+      });
+
+      doSomethingAsynchronous.then((value) => {
+        // logic
+      });
+
+Generally it is best to use error handling for both cases.
+
+For the sake of this example, we'll take a simple promise
+
+    const greeting = new Promise((resolve, reject) => {
+      resolve("Hello!");
+    });
+
+- `async / await`, with `try / catch / finally`
+
+      async function doSomethingAsynchronous() {
+        try {
+          const value = await greeting;
+          console.log("The Promise is resolved!", value);
+        } catch (e) {
+          console.error("The Promise is rejected!", error);
+        } finally {
+          console.log(
+            "The Promise is settled, meaning it has been resolved or rejected."
+          );
+        }
+      }
+- `then / catch`
+
+      greeting
+        .then((value) => {
+          console.log("The Promise is resolved!", value);
+        })
+        .catch((error) => {
+          console.error("The Promise is rejected!", error);
+        })
+        .finally(() => {
+          console.log("The Promise is settled, meaning it has been resolved or rejected.");
+        });
+
 ### C# vs JavaScript
 
 |  | C#      | JavaScript |

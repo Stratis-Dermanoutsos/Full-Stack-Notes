@@ -13,6 +13,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [x] [***HTML***](./Frontend/HTML/#html)
     - [x] [***CSS***](./Frontend/CSS/#css)
     - [x] [***JavaScript***](./Frontend/JavaScript/#javascript)
+  - [x] [***NPM***](./Frontend/NPM/#npm)
   - [x] [***TypeScript***](./Frontend/TypeScript/#typescript)
   - [x] Frameworks/Libraries
     - [x] [***Tailwind CSS***](./Frontend/CSS/Frameworks/Tailwind-CSS/#tailwind-css---resources)
@@ -23,8 +24,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
       - ***Angular***
       - ***Vue***
       - ***Svelte***
-- [x] [***NPM***](./NPM/#npm)
-- [x] [***Webpack***](./Webpack/#webpack)
+  - [x] [***Webpack***](./Frontend/Webpack/#webpack)
 - [x] [***Git***](./Git/#git)
 - [x] Backend
   - [x] Basics

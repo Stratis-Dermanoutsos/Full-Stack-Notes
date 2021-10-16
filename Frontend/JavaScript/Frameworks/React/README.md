@@ -210,6 +210,34 @@ There are more hooks, but I kept it simple and focused to the common ones.
     .
       <img src={logo} alt="logo" />
 
+### Snippets
+
+#### Object of React Components
+
+This will serve as a simple library of components.
+
+They can be defined inside a single file, let's say *Timeline.js*.
+
+    const Percentage = () => <div>This is a Percentage component.</div>
+    const Progress = () => <div>This is a Progress component.</div>
+    const Calendar = () => <div>This is a Calendar component.</div>
+
+    const Timeline = {
+      Percentage,
+      Progress,
+      Calendar
+    }
+
+    export default Timeline;
+
+Now, to call them, simply do
+
+    import Timeline from 'Timeline';
+
+    <Timeline.Percentage  />
+    <Timeline.Progress  />
+    <Timeline.Calender />
+
 ## React - Resources
 
 - [Fireship video (explanation)](https://youtu.be/Tn6-PIqc4UM)

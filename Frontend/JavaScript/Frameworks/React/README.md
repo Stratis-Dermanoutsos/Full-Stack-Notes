@@ -63,7 +63,7 @@ Basically, hooks are functions that generally start with the word '*use*'.
 
 <ins>Basic rule</ins>: ***Only call them at the top level of a function***!
 
-- ***useState()
+- ***useState()***
 
       import { useState } from 'react';
   Its purpose is to handle reactive data. Any data that changes is called *state*.
@@ -74,7 +74,7 @@ Basically, hooks are functions that generally start with the word '*use*'.
           - 'setCount' is called setter.
           - inside the parentheses, we define the default state.
             In this example, we set 'count' equal to 0. */
-- ***useEffect()
+- ***useEffect()***
 
       import { useEffect } from 'react';
   It exists to handle the lifecycle of a component.
@@ -103,7 +103,7 @@ Basically, hooks are functions that generally start with the word '*use*'.
       useEffect(() => {
         fetch('foo').then(() => setLoaded(true))
       }, [count])
-- ***useContext()
+- ***useContext()***
 
       import { useContext } from 'react';
   It allows the developer to work with ***React***'s context API. In other words, share data without passing props.
@@ -130,8 +130,8 @@ Basically, hooks are functions that generally start with the word '*use*'.
       }
   In the code above, when the mood value changes inside parent, it changes in the 'MoodEmoji' component too.
 
-  The ***useContext() hook is a cleaner version of a 'Consumer' component.
-- ***useRef()
+  The ***useContext()*** hook is a cleaner version of a 'Consumer' component.
+- ***useRef()***
 
       import { useRef } from 'react';
   It's used to grab a value that changes but does not re-render the UI.
@@ -158,7 +158,7 @@ Basically, hooks are functions that generally start with the word '*use*'.
           <button ref={myBtn}></button>
         );
       }
-- ***useReducer()
+- ***useReducer()***
 
       import { useReducer } from 'react';
   It is basically a different way to manage state
@@ -185,7 +185,7 @@ Basically, hooks are functions that generally start with the word '*use*'.
           </>
         );
       }
-- ***useMemo()
+- ***useMemo()***
 
       import { useMemo } from 'react';
   It is used to optimize computation cost for improved performance.

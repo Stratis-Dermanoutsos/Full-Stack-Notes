@@ -210,7 +210,7 @@ There are more hooks, but I kept it simple and focused to the common ones.
     .
       <img src={logo} alt="logo" />
 
-### Snippets
+### Make your life easier
 
 #### Object of React Components
 
@@ -237,6 +237,28 @@ Now, to call them, simply do
     <Timeline.Percentage  />
     <Timeline.Progress  />
     <Timeline.Calender />
+
+#### Short import paths
+
+This is a very common problem when working with ***React***:
+
+    import module from '../../models/car';
+It'd be much better looking if it was something like:
+
+    import module from 'models/car';
+To achieve this, simple add the following line inside the `compilerOptions` in your **jsconfig.json** or **tsconfig.json**. (depending on whether you use ***JavaScript*** or ***TypeScript*** respectively)
+
+    'baseUrl': 'src',
+It will look something like this:
+
+    {
+      "compilerOptions": {
+        "baseUrl": "src",
+        .
+        .
+        .
+      }
+    }
 
 ## React - Resources
 

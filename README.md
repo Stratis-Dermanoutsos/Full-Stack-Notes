@@ -121,4 +121,4 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 - [ ] Workout progress application
 - [x] [Portfolio](https://stratis-dermanoutsos.github.io/portfolio/)
 
-[JUMP TO TOP](#full-stack-roadmap-2021)
+[⬆ JUMP TO TOP](#full-stack-roadmap-2021)

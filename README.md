@@ -8,14 +8,14 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 
 ## TECH STACK
 
-- [x] Frontend
+- [ ] Frontend
   - [x] Basics
     - [x] [***HTML***](./Frontend/HTML/#html)
     - [x] [***CSS***](./Frontend/CSS/#css)
     - [x] [***JavaScript***](./Frontend/JavaScript/#javascript)
   - [x] [***NPM***](./Frontend/NPM/#npm)
   - [x] [***TypeScript***](./Frontend/TypeScript/#typescript)
-  - [x] Frameworks/Libraries
+  - [ ] Frameworks/Libraries
     - [x] [***Tailwind CSS***](./Frontend/CSS/Frameworks/Tailwind-CSS/#tailwind-css---resources)
     - [x] [***SASS***](./Frontend/CSS/Preprocessors/SASS/#sass)
     - [x] [***Bootstrap***](./Frontend/CSS/Frameworks/Bootstrap/#bootstrap)
@@ -24,6 +24,9 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
       - ***Angular***
       - ***Vue***
       - ***Svelte***
+    - [ ] State management for ***React*** (1 of the options)
+      - [***Redux***](./Frontend/JavaScript/Frameworks/React/Redux/#redux)
+      - ***Recoil***
   - [x] [***Webpack***](./Frontend/Webpack/#webpack)
 - [x] [***Git***](./Git/#git)
 - [x] Backend

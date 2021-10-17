@@ -68,10 +68,111 @@ It is possible to create multiple **stores**, this is against the pattern that *
 
 The values to be stored in it are completely up to the developer and they can be nested as much as needed.
 
+### Setup example
+
+A convenient ***Redux*** file tree is
+
+    redux/
+    |- actions/
+    |  |- actions.js
+    |- reducers/
+    |  |- reducers.js
+    |- store/
+    |  |- store.js
+
+#### actions.js
+
+    // Declare the actions
+    export const ADD_CAR = 'ADD_CAR';
+    export const REMOVE_CAR = 'REMOVE_CAR';
+
+    // Define the actions
+    export function addCar(make, model) {
+      return { type: ADD_CAR, make: make, model: model };
+    }
+
+    export function removeCar(licensePlate) {
+      return { type: REMOVE_CAR, licensePlate: licensePlate };
+    }
+
+#### reducers.js
+
+    // Get the actions we defined
+    import { ADD_CAR, REMOVE_CAR } from 'redux/actions/actions';
+
+    // Set the initial state
+    const initialState = {
+      cars: [],
+    };
+
+    // Handle the state using the main reducer
+    function rootReducer(state = initialState, action) {
+      switch (action.type) {
+        case ADD_CAR:
+          return {
+            cars: [
+              ...state.cars,
+              {
+                make: action.make,
+                model: action.model,
+              },
+            ],
+          };
+        case REMOVE_CAR:
+          return {
+            cars: state.cars.filter((car, index) => index !== action.licensePlate),
+          };
+        default:
+          return state;
+      }
+    }
+
+    export default rootReducer;
+
+#### store.js
+
+    import { createStore } from 'redux';
+    import rootReducer from 'redux/reducers/reducers';
+
+    export default createStore(
+      rootReducer,
+      undefined,
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    );
+
+#### Use in your React file
+
+    import { useDispatch, shallowEqual, useSelector } from 'react-redux';
+    import { removeCar } from 'redux/actions/actions';
+
+    function AllCars() {
+      const cars = useSelector((state) => state.cars, shallowEqual);
+      const dispatch = useDispatch();
+
+      function handleRemoveCar(id) {
+        dispatch(removeCar(id));
+      }
+
+      const carsItems = cars.map((car, index) => {
+        <div key={index}>
+          {car.make} {car.model} -> {car.licensePlate}
+          <button onClick={() => handleRemoveCar(car.licensePlate)}>X</button>
+        </div>
+      });
+    }
+
+    return (
+      <div>
+        {carsItems}
+      </div>
+    );
+
+    export default AllCars;
+
 ## Redux - Resources
 
 - [Redux documentation](https://redux.js.org/introduction/getting-started)
 - [Redux repository](https://github.com/reduxjs/redux)
 - [Introduction to Redux](https://javascript.plainenglish.io/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [Back to top](#redux)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#redux)

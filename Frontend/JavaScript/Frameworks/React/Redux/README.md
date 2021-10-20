@@ -11,6 +11,14 @@ Big applications have big application states and managing them gets more and mor
 
 ***Redux*** follows a pattern called “*Single Source Of Truth*”, which means that we have only one place (called **Store**) where we store the only state for the whole application.
 
+To create a `react-redux` project:
+
+    # Redux + JavaScript template
+    npx create-react-app my-app --template redux
+
+    # Redux + TypeScript template
+    npx create-react-app my-app --template redux-typescript
+
 ***Redux*** has 3 main parts:
 
 - [**Actions**](#actions)
@@ -70,7 +78,7 @@ The values to be stored in it are completely up to the developer and they can be
 
 ### Setup example
 
-A convenient ***Redux*** file tree is
+A convenient ***Redux*** file tree setup is
 
     redux/
     |- actions/
@@ -79,95 +87,6 @@ A convenient ***Redux*** file tree is
     |  |- reducers.js
     |- store/
     |  |- store.js
-
-#### actions.js
-
-    // Declare the actions
-    export const ADD_CAR = 'ADD_CAR';
-    export const REMOVE_CAR = 'REMOVE_CAR';
-
-    // Define the actions
-    export function addCar(make, model) {
-      return { type: ADD_CAR, make: make, model: model };
-    }
-
-    export function removeCar(licensePlate) {
-      return { type: REMOVE_CAR, licensePlate: licensePlate };
-    }
-
-#### reducers.js
-
-    // Get the actions we defined
-    import { ADD_CAR, REMOVE_CAR } from 'redux/actions/actions';
-
-    // Set the initial state
-    const initialState = {
-      cars: [],
-    };
-
-    // Handle the state using the main reducer
-    function rootReducer(state = initialState, action) {
-      switch (action.type) {
-        case ADD_CAR:
-          return {
-            cars: [
-              ...state.cars,
-              {
-                make: action.make,
-                model: action.model,
-              },
-            ],
-          };
-        case REMOVE_CAR:
-          return {
-            cars: state.cars.filter((car, index) => index !== action.licensePlate),
-          };
-        default:
-          return state;
-      }
-    }
-
-    export default rootReducer;
-
-#### store.js
-
-    import { createStore } from 'redux';
-    import rootReducer from 'redux/reducers/reducers';
-
-    export default createStore(
-      rootReducer,
-      undefined,
-      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    );
-
-#### Use in your React file
-
-    import { useDispatch, shallowEqual, useSelector } from 'react-redux';
-    import { removeCar } from 'redux/actions/actions';
-
-    function AllCars() {
-      const cars = useSelector((state) => state.cars, shallowEqual);
-      const dispatch = useDispatch();
-
-      function handleRemoveCar(id) {
-        dispatch(removeCar(id));
-      }
-
-      const carsItems = cars.map((car, index) => {
-        <div key={index}>
-          {car.make} {car.model} -> {car.licensePlate}
-          <button onClick={() => handleRemoveCar(car.licensePlate)}>X</button>
-        </div>
-      });
-    }
-
-    return (
-      <div>
-        {carsItems}
-      </div>
-    );
-
-    export default AllCars;
 
 ## Redux - Resources
 

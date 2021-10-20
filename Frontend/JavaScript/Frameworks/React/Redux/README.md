@@ -91,7 +91,9 @@ A convenient ***Redux*** file tree setup is
 ## Redux - Resources
 
 - [Redux documentation](https://redux.js.org/introduction/getting-started)
+- [Redux CDN](https://cdnjs.com/libraries/redux)
 - [Redux repository](https://github.com/reduxjs/redux)
+- [Full Redux tutorial in 5 minutes by freeCodeCamp.org](https://youtu.be/oD3miHerQbY)
 - [Introduction to Redux](https://javascript.plainenglish.io/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#redux)

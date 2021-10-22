@@ -93,6 +93,7 @@ A convenient ***Redux*** file tree setup is
 - [Redux documentation](https://redux.js.org/introduction/getting-started)
 - [Redux CDN](https://cdnjs.com/libraries/redux)
 - [Redux repository](https://github.com/reduxjs/redux)
+- [Use Redux in Your React TypeScript App](https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/)
 - [Full Redux tutorial in 5 minutes by freeCodeCamp.org](https://youtu.be/oD3miHerQbY)
 - [Introduction to Redux](https://javascript.plainenglish.io/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6)
 

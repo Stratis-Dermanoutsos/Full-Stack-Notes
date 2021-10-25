@@ -180,16 +180,31 @@ There are some basic steps to follow in order to make a website resposive.
 
 ### Code snippets
 
-- Custom cursor
+#### Custom cursor
 
-      element {
-        cursor: url("/path"), auto;
-      }
-- Zoom image on hover
+    element {
+      cursor: url("/path"), auto;
+    }
 
-      img:hover {
-        transform: scale(1.1);
-      }
+#### Zoom image on hover
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+#### Center anything
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+#### Smooth scrolling
+
+    html {
+      scroll-behavior: smooth;
+    }
 
 ## CSS - Resources
 

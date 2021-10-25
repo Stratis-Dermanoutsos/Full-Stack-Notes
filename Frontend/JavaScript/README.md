@@ -148,6 +148,20 @@ For the sake of this example, we'll take a simple promise
           console.log("The Promise is settled, meaning it has been resolved or rejected.");
         });
 
+### Required arguments
+
+Make a function that, when assigned to a parameter, throws an error saying it is required.
+
+    const required = (param) => {
+      throw new Error(`Parameter '${param}' is a required.`);
+    };
+
+    const myFunction = (argument = required('argument')) => {
+      // code
+    };
+
+Now, when anyone calls `myFunction` without assigning a value to the `param` argument, it throws an error.
+
 ### C# vs JavaScript
 
 |  | C#      | JavaScript |

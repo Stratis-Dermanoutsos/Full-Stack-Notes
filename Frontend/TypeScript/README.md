@@ -182,6 +182,33 @@ but
     let x: Item<number>;
     let y = new Item(3);
 
+### Snippets
+
+#### Objects as Maps
+
+    interface Object {
+      val: string;
+    }
+
+    type ObjectAsMap = {
+      [key: string]: Object;
+    };
+
+    const objects: ObjectAsMap = {
+      t: {
+        val: 'hello'
+      },
+      te: {
+        val: 'hello2'
+      },
+      test: {
+        val: 'hello3'
+      }
+    };
+Now you can use *arbitrary strings* to look up a value.
+
+    const firstElement = objects['te'];
+
 ## TypeScript - Resources
 
 - [TypeScript documentation](https://www.typescriptlang.org/docs/)

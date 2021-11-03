@@ -32,7 +32,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
 - [x] Backend
   - [x] Basics
     - [x] [***C#***](./Backend/Cs/#c) or
-      - ***JAVA***
+      - ***Java***
       - ***Python***
       - ***PHP***
       - ***Ruby***
@@ -45,7 +45,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [x] [***MVC***](./Backend/MVC/#mvc)
   - [x] [***API***](./Backend/API/#api)
   - [x] [***ASP.NET***](./Backend/ASPNET/#asp-net) (***C#***) or
-    - ***Spring Boot*** (***JAVA***)
+    - ***Spring Boot*** (***Java***)
     - ***Django*** (***Python***)
     - ***Laravel*** (***PHP***)
     - ***Ruby on Rails*** (***Ruby***)

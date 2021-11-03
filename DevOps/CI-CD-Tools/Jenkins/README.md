@@ -5,11 +5,11 @@
 
 ## Jenkins - Notes
 
-***Jenkins*** is an open source ***Continuous Integration*** tool written in ***JAVA***.
+***Jenkins*** is an open source ***Continuous Integration*** tool written in ***Java***.
 
-***Jenkins*** is used by teams of all sizes, for projects in a wide variety of languages and technologies, including ***.NET***, ***Ruby***, ***PHP*** and more, as well as ***JAVA***.
+***Jenkins*** is used by teams of all sizes, for projects in a wide variety of languages and technologies, including ***.NET***, ***Ruby***, ***PHP*** and more, as well as ***Java***.
 
-<ins>Note</ins>: To install and use Jenkins you have to make sure ***JAVA*** is installed in your system.
+<ins>Note</ins>: To install and use Jenkins you have to make sure ***Java*** is installed in your system.
 
 At the heart of the ***Jenkins*** build process are **Build jobs**. Simply put, you can think of a ***Jenkins* build job** as a particular task or step in your build process. This may involve simply *compiling your source code* and *running your unit tests*.
 

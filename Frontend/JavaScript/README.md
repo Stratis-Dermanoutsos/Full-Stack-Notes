@@ -89,6 +89,10 @@
 
         // is equal to
         condition || doAction();
+- Convert result of division to integer
+
+      const a = 23 / 10     // = 2.3
+      const b = 23 / 10 | 0 // = 2
 
 ### Asynchronous code
 

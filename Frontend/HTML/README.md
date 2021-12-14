@@ -69,6 +69,7 @@ A Semantic element clearly describes its meaning to both the browser and the dev
 
 ## HTML - Resources
 
+- [HTML in 100 seconds by Fireship](https://youtu.be/ok-plXXHlWw)
 - [w3schools](https://www.w3schools.com/html/default.asp)
 - [Form and Validations](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
 - [Web Dev Simplified video (forms)](https://youtu.be/fNcJuPIZ2WE)

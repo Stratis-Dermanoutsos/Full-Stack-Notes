@@ -211,5 +211,6 @@ There are some basic steps to follow in order to make a website resposive.
 - [w3schools](https://www.w3schools.com/css/default.asp)
 - [A Complete Guide to Flexbox by CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [A Complete Guide to Grid by CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Aspect Ratio with CSS](https://www.w3schools.com/howto/howto_css_aspect_ratio.asp)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#css)

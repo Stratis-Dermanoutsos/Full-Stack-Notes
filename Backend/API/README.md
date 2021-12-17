@@ -146,5 +146,9 @@ Each ***API*** response consists of:
 - [Fireship video](https://youtu.be/-MTSQjw5DrM)
 - [RapidAPI](https://docs.rapidapi.com)
 - [Nick Chapsas video (.NET Minimal API)](https://youtu.be/eRJFNGIsJEo)
+- [Authentication and Authorization, tweet by RapidAPI](https://twitter.com/Rapid_API/status/1463190771448885255)
+- [Authentication and Authorization by devoteam](https://nl.devoteam.com/expert-view/authentication-and-authorization-to-secure-apis/)
+- [Make secure .NET Microservices and Web Applications](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/secure-net-microservices-web-applications/)
+- [Five tips for building a standout API, tweet by RapidAPI](https://twitter.com/Rapid_API/status/1462752410103910407)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#api)

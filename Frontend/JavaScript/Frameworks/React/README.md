@@ -267,6 +267,7 @@ It will look something like this:
 - [Fireship video (hooks)](https://youtu.be/TNhaISOUy6Q)
 - [Routing in React](https://reactrouter.com/web/guides/quick-start)
 - [URL parameters and query strings in React](https://betterprogramming.pub/using-url-parameters-and-query-strings-with-react-router-fffdcea7a8e9)
+- [React with TypeScript Cheatsheet](https://blog.bitsrc.io/react-with-typescript-cheatsheet-9dd891dc5bfe)
 - [*useful-custom-react-hooks* repository by Web Dev Simplified](https://github.com/WebDevSimplified/useful-custom-react-hooks)
 - Best UI Frameworks/Libraries for React
   - [Ant Design](https://ant.design)

@@ -208,9 +208,11 @@ There are some basic steps to follow in order to make a website resposive.
 
 ## CSS - Resources
 
+- [CSS in 100 Seconds by Fireship](https://youtu.be/OEV8gMkCHXQ)
 - [w3schools](https://www.w3schools.com/css/default.asp)
 - [A Complete Guide to Flexbox by CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [A Complete Guide to Grid by CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Aspect Ratio with CSS](https://www.w3schools.com/howto/howto_css_aspect_ratio.asp)
+- [20 CSS Generator Tools, tweet by @mdjunaidap](https://twitter.com/mdjunaidap/status/1454742211589918731)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#css)

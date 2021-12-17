@@ -4,6 +4,7 @@
 
 ## C# - Resources
 
+- [C# in 100 Seconds by Fireship](https://youtu.be/ravLFzIguCM)
 - [C# documentation](https://docs.microsoft.com/en-us/dotnet/csharp/)
 - [dotnet SDK](https://docs.microsoft.com/en-us/dotnet/core/sdk)
 - [dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/)

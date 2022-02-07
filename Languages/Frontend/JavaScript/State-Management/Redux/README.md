@@ -13,11 +13,13 @@ Big applications have big application states and managing them gets more and mor
 
 To create a `react-redux` project:
 
-    # Redux + JavaScript template
-    npx create-react-app my-app --template redux
+```bash
+# Redux + JavaScript template
+npx create-react-app my-app --template redux
 
-    # Redux + TypeScript template
-    npx create-react-app my-app --template redux-typescript
+# Redux + TypeScript template
+npx create-react-app my-app --template redux-typescript
+```
 
 ***Redux*** has 3 main parts:
 
@@ -35,7 +37,10 @@ We just send (dispatch) them to τhe **store** instance whenever we want to upda
 
 Example **action**:
 
-    { type: ADD_NOTE, title: 'Some Title', content: 'This is an action object' }
+```javascript
+{ type: ADD_NOTE, title: 'Some Title', content: 'This is an action object' }
+```
+
 This **action** in activated when the user clicks the "*Add Note*" button and informs the **store** that we want to add a new Note.
 
 #### Action Creators
@@ -44,9 +49,11 @@ They are functions that generate and return plain ***JavaScript*** objects.
 
 The above **action** can be written as
 
-    function addNote(title, content) {
-      return { type: ADD_NOTE, title: title, content: content };
-    }
+```javascript
+function addNote(title, content) {
+    return { type: ADD_NOTE, title: title, content: content };
+}
+```
 
 ### Reducers
 
@@ -61,7 +68,10 @@ The **reducer** function takes two parameters:
 
 It returns the new app state.
 
+```javascript
     (previousState, action) => newState
+```
+
 To deal with **reducer** complexity, we chunk them down in multiple, simpler **reducers** and later, we combine them with a ***Redux*** helper function called `combineReducers`.
 
 The main reducer is conventionally called “*Root Reducer*”.
@@ -80,13 +90,15 @@ The values to be stored in it are completely up to the developer and they can be
 
 A convenient ***Redux*** file tree setup is
 
-    redux/
-    |- actions/
-    |  |- actions.js
-    |- reducers/
-    |  |- reducers.js
-    |- store/
-    |  |- store.js
+```json
+redux/
+|- actions/
+|  |- actions.js
+|- reducers/
+|  |- reducers.js
+|- store/
+|  |- store.js
+```
 
 ## Redux - Resources
 

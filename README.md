@@ -2,67 +2,86 @@
 
 This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer in 2021.
 
-As you can see, this stack is a bit biased as I chose ***React*** for Frontend and ***ASP .NET*** for Backend specifically.
+As you can see, the [Tech Stack section](#tech-stack) includes many different technologies. However, I have included notes and resources for only those I have personally worked with and learnt myself.
 
-Of course, there are other ***JS*** frameworks/libraries and other backend languages and are all appreciated.
+Everyone who reads this is welcome to and should choose their own tools/technologies to master.
 
 ## TECH STACK
 
-- [x] Frontend
-  - [x] Basics
-    - [x] [***HTML***](./Frontend/HTML/#html)
-    - [x] [***CSS***](./Frontend/CSS/#css)
-    - [x] [***JavaScript***](./Frontend/JavaScript/#javascript)
-  - [x] [***NPM***](./Frontend/NPM/#npm)
-  - [x] [***TypeScript***](./Frontend/TypeScript/#typescript)
-  - [x] Frameworks/Libraries
-    - [x] [***Tailwind CSS***](./Frontend/CSS/Frameworks/Tailwind-CSS/#tailwind-css---resources)
-    - [x] [***SASS***](./Frontend/CSS/Preprocessors/SASS/#sass)
+### Frontend technologies
+
+- [x] [***HTML***](./Frontend/HTML/#html)
+- [x] [***CSS***](./Frontend/CSS/#css)
+  - Frameworks
     - [x] [***Bootstrap***](./Frontend/CSS/Frameworks/Bootstrap/#bootstrap)
-    - [x] [***jQuery***](./Frontend/JavaScript/Frameworks/jQuery/#jquery)
-    - [x] [***React***](./Frontend/JavaScript/Frameworks/React/#react) or
-      - ***Angular***
-      - ***Vue***
-      - ***Svelte***
-    - [x] State management for ***React*** (1 of the options)
-      - [***Redux***](./Frontend/JavaScript/Frameworks/React/Redux/#redux)
-      - ***Recoil***
-  - [x] [***Webpack***](./Frontend/Webpack/#webpack)
-- [x] [***Git***](./Git/#git)
-- [x] Backend
-  - [x] Basics
-    - [x] [***C#***](./Backend/Cs/#c) or
-      - ***Java***
-      - ***Python***
-      - ***PHP***
-      - ***Ruby***
-    - [x] [***Databases***](./Backend/Databases/#databases)
-      - [x] ***MySQL***
-      - [x] ***SQLite***
-      - [x] ***PostgreSQL***
-      - [x] ***MongoDB***
-  - [x] [***Process management && Threads & Concurrency***](./Backend/Threads-and-Concurrency/#threads--concurrency)
-  - [x] [***MVC***](./Backend/MVC/#mvc)
-  - [x] [***API***](./Backend/API/#api)
-  - [x] [***ASP.NET***](./Backend/ASPNET/#asp-net) (***C#***) or
-    - ***Spring Boot*** (***Java***)
-    - ***Django*** (***Python***)
-    - ***Laravel*** (***PHP***)
-    - ***Ruby on Rails*** (***Ruby***)
-    - ***Flask*** (***Python***)
-  - [x] [Learn concept and how to setup](./Backend/Concepts/#concepts)
-    - [x] [***Reverse and Forward proxy***](./Backend/Concepts/#proxy)
-    - [x] [***Load Balancer***](./Backend/Concepts/#load-balancer)
-    - [x] [***Caching Server***](./Backend/Concepts/#caching-server)
-    - [x] [***Firewall***](./Backend/Concepts/#firewall)
-- [ ] DevOps
-  - [ ] [CI/CD Tools](./DevOps/CI-CD-Tools/#ci-cd-tools)
-    - [ ] [***Jenkins***](./DevOps/CI-CD-Tools/Jenkins/#jenkins)
-    - [x] [***Github Actions***](./DevOps/CI-CD-Tools/Github-Actions/#github-actions)
-  - [ ] Cloud Providers
-    - [ ] ***AWS***
-    - [ ] ***Azure***
-- [ ] [***Algorithms***](./Algorithms/#algorithms)
+    - [x] [***Tailwind CSS***](./Frontend/CSS/Frameworks/Tailwind-CSS/#tailwind-css)
+  - Preprocessors
+    - [x] [***SASS***](./Frontend/CSS/Preprocessors/SASS/#sass)
+    - [ ] ***LESS***
+    - [ ] ***Stylus***
+- [***Design***](./Frontend/Design/#design)
+
+### Programming languages
+
+#### Backend
+
+- [x] [***C#***](./Languages/Backend/Cs/#c)
+  - [x] [***ASP.NET***](./Languages/Backend/Cs/ASPNET/#asp-net)
+- [x] [***Java***](./Languages/Backend/Java/#java)
+  - [ ] ***Spring Boot***
+- [ ] ***PHP***
+  - [ ] ***Laravel***
+- [ ] ***Python***
+  - [ ] ***Django***
+  - [ ] ***Flask***
+- [ ] ***Ruby***
+  - [ ] ***Ruby on Rails***
+
+#### Frontend
+
+- [x] [***JavaScript***](./Languages/Frontend/JavaScript/#javascript)
+  - [ ] ***Angular***
+  - [x] [***Ext***](./Languages/Frontend/JavaScript/Ext/#ext)
+  - [x] [***jQuery***](./Languages/Frontend/JavaScript/jQuery/#jquery)
+  - [x] [***React***](./Languages/Frontend/JavaScript/React/#react)
+  - [ ] ***Svelte***
+  - [ ] ***Vue***
+  - State management
+    - [ ] ***MobX***
+    - [ ] ***Recoil***
+    - [x] [***Redux***](./Languages/Frontend/JavaScript/State-Management/Redux/#redux)
+- [x] [***TypeScript***](./Languages/Frontend/TypeScript/#typescript)
+
+### Databases
+
+- [x] [***SQL***](./Databases/#databases)
+  - [x] ***MySQL***
+  - [x] ***PostgreSQL***
+  - [x] ***SQLite***
+- [x] [***NoSQL***](./Databases/#databases)
+  - [x] ***MongoDB***
+
+### Tools
+
+- [x] [***Git***](./Tools/Git/#git)
+- [x] [***NPM***](./Tools/NPM/#npm)
+- [x] [***Webpack***](./Tools/Webpack/#webpack)
+
+### [DevOps](./DevOps/#devops)
+
+- [x] [***CI/CD***](./DevOps/CI-CD/#ci-cd)
+  - [x] [***Github Actions***](./DevOps/CI-CD/Github-Actions/#github-actions)
+  - [x] [***Jenkins***](./DevOps/CI-CD/Jenkins/#jenkins)
+
+### Cloud
+
+- [ ] ***Github Pages***
+- [ ] ***AWS***
+- [ ] ***Azure***
+
+### Knowledge
+
+- [ ] [***Algorithms***](./Knowledge/Algorithms/#algorithms)
   - [x] Search
     - [x] Linear
     - [x] Binary
@@ -74,7 +93,7 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
     - [x] Selection
     - [ ] Merge
     - [ ] Quick
-- [ ] [***Data Structures***](./Data-Structures/#data-structures)
+- [ ] [***Data Structures***](./Knowledge/Data-Structures/#data-structures)
   - [x] Binary Search Tree
   - [ ] Heap
   - [x] AVL Tree
@@ -84,41 +103,55 @@ Of course, there are other ***JS*** frameworks/libraries and other backend langu
   - [x] Queue
   - [ ] Priority Queue
   - [x] Stack
+- [x] [***API***](./Knowledge/API/#api)
+- [ ] Architectures
+  - [x] [***MVC***](./Knowledge/Architectures/MVC/#mvc)
+  - [ ] ***MVVM***
+- [x] [***Process management && Threads & Concurrency***](./Knowledge/Threads-and-Concurrency/#threads--concurrency)
+- [x] [***Reverse and Forward proxy***](./Knowledge/Concepts/#proxy)
+- [x] [***Load Balancer***](./Knowledge/Concepts/#load-balancer)
+- [x] [***Caching Server***](./Knowledge/Concepts/#caching-server)
+- [x] [***Firewall***](./Knowledge/Concepts/#firewall)
 
-## PRACTICE PROJECTS
+## PROJECT IDEAS
 
-- Frontend-only pages
+- Frontend pages
   - Landing page
   - Login page
   - Portfolio
 - Web applications without backend
   - Calculator
   - Integrations with any 3rd party APIs
+    - Chatbot
+    - Food Recipes
+    - Jokes/Quote generator
+    - Movies/series library
+    - Spell checker
+    - Travel application
   - Markdown editor
-  - Quiz app
-  - Random quote generator
-  - Todo app
-- Backend-only applications
+  - Quiz game
+  - Todo list
+- Backend applications
   - API with access to a database
   - Authorization model based on Login credentials
   - Inventory system management for a user
+  - JWT authorization
   - Server-Client login application
-  - User management system (Store user details, login, edit user etc)
-- Fully Stacked web applications
-  - Blog page
-  - Book store app
-  - Chat app
-  - Notes app
+  - User management system
+- Full-Stack web applications
+  - Blog
+  - Book store page
+  - Chat application
+  - eCommerce / e-shop
+  - Movies/series library
+  - Notes management
   - Survey form
-  - Todo app
-  - eCommerce webapp
+  - Todo list
 
-## GOAL PROJECTS
+## GOAL
 
-- [ ] Scheduler/Calendar application
-- [ ] Blog
-- [ ] eCommerce application
-- [ ] Workout progress application
-- [x] [Portfolio](https://stratis-dermanoutsos.github.io/portfolio/)
+There is no real goal to this. As a developer, there is nothing better than constant acquisition of knowledge.
+
+In my personal, biased opinion, the only goal for a developer should be to acquire the **knowledge**, **skills** and **tools** to build any ***application*** / ***project*** / ***tool*** they can think of.
 
 [⬆ JUMP TO TOP](#full-stack-roadmap-2021)

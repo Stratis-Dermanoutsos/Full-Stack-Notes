@@ -27,11 +27,6 @@ In other words, on top of automated testing, you have an automated release proce
 
 With ***Continuous Deployment***, there is no *Release Day* anymore. Developers can focus on building software, and they see their work go live minutes after they've finished working on it.
 
-### Popular Tools
-
-- [***Jenkins***](./Jenkins/#jenkins)
-- [***Github Actions***](./Github-Actions/#github-actions)
-
 ## CI-CD - Resources
 
 - [Fuel Growth CI/CD book](https://about.gitlab.com/resources/ebook-fuel-growth-cicd/)

@@ -120,13 +120,6 @@ Characteristics:
 - *Secure* (Authentication and Authorization with a ***MongoDB*** are needed)
 - *JSON* (Data is stored in documents, in a key-value pairs format)
 
-Basic concepts/terminology:
-| SQL | NoSQL |
-| ----- | ----- |
-| database | database |
-| table | collection |
-| row | document |
-
 Basic commands:
 
 - Show ***databases***
@@ -167,6 +160,14 @@ Basic commands:
       db.collection2.remove({}) // Remove all data from collection2
       db.collection2.remove( { age: { $gt: 10 } } ) // Remove all the documents from collection2 where age is greater than 10
       db.collection2.remove( { age: { $gt: 10 } }, true ) // Remove the first document from collection2 where age is greater than 10
+
+### Basic terminology
+
+| SQL | NoSQL |
+| ----- | ----- |
+| database | database |
+| table | collection |
+| row | document |
 
 ## Databases - Resources
 

@@ -269,10 +269,11 @@ It will look something like this:
 - [URL parameters and query strings in React](https://betterprogramming.pub/using-url-parameters-and-query-strings-with-react-router-fffdcea7a8e9)
 - [React with TypeScript Cheatsheet](https://blog.bitsrc.io/react-with-typescript-cheatsheet-9dd891dc5bfe)
 - [*useful-custom-react-hooks* repository by Web Dev Simplified](https://github.com/WebDevSimplified/useful-custom-react-hooks)
-- Best UI Frameworks/Libraries for React
+- Best Component Libraries for React
   - [Ant Design](https://ant.design)
   - [Semantic UI](https://semantic-ui.com)
   - [Material-UI](https://mui.com)
+  - [NextUI](https://nextui.org)
   - [React-Bootstrap](https://react-bootstrap.github.io)
   - [Atomize](https://atomizecode.com)
   - [Blueprint](https://blueprintjs.com)

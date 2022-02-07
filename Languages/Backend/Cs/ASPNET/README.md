@@ -252,6 +252,63 @@ More specifics:
 
       wwwroot/css/site.css
 
+#### Create simple Model, View and Controller to display Cars (see [Entity Framework](#entity-framework) for Model)
+
+- Add this to the **Views/Shared/_Layout.cshtml** file, after the other navbar links
+
+      <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Cars" asp-action="Index">Car List</a>
+      </li>
+- Create a **CarsController.cs** with the following code
+
+      using System;
+      using System.Collections.Generic;
+      using System.Linq;
+      using System.Threading.Tasks;
+      using Microsoft.AspNetCore.Mvc;
+      using Microsoft.EntityFrameworkCore;
+      using AspnetExample.Models;
+
+      namespace AspnetExample.Controllers
+      {
+        public class CarsController : Controller
+        {
+          private readonly ApplicationDbContext _db;
+
+          [BindProperty]
+          public Car Car { get; set; }
+
+          public CarsController(ApplicationDbContext db)
+          {
+            _db = db;
+          }
+
+          public IActionResult Index()
+          {
+            return View();
+          }
+
+          [HttpGet]
+          public async Task<IActionResult> GetAll()
+          {
+            return Json(new { data = await _db.Cars.ToListAsync() });
+          }
+
+          [HttpDelete]
+          public async Task<IActionResult> Delete(int licensePlate)
+          {
+            var carFromDb = await _db.Books.FirstOrDefaultAsync(u => u.LicensePlate == licensePlate);
+            if (carFromDb == null)
+              return Json(new { success = false, message = "Error while Deleting" });
+
+            _db.Cars.Remove(carFromDb);
+            await _db.SaveChangesAsync();
+            return Json(new { success = true, message = "Delete successful" });
+          }
+        }
+      }
+- Create a **Cars** directory inside the **Views** one and now we'll make the following files there:
+
 ### ASP .NET Web API
 
 Web ***API*** (***A*pplication *P*rogramming *I*nterface**) is a set of subroutine definitions with the scope of managing data between clients and servers. Building ***API***s over ***HTTP*** protocol allows third-party apps to interact with a server thanks to the application protocol.

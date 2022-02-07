@@ -73,4 +73,4 @@ For example, do something when any paragraph (*\<p>*) elementh is clicked
 - [w3schools](https://www.w3schools.com/jquery/default.asp)
 - [jQuery API documentation](https://api.jquery.com)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#jquery)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#jquery)

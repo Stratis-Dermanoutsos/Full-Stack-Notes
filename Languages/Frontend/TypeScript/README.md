@@ -216,4 +216,4 @@ Now you can use *arbitrary strings* to look up a value.
 - [Fireship video (explanation)](https://youtu.be/zQnBQ4tB3ZA)
 - [Fireship video (introduction)](https://youtu.be/ahCwqrYpIuM)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#typescript)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#typescript)

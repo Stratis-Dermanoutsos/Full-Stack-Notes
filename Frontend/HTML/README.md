@@ -74,4 +74,4 @@ A Semantic element clearly describes its meaning to both the browser and the dev
 - [Form and Validations](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
 - [Web Dev Simplified video (forms)](https://youtu.be/fNcJuPIZ2WE)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#html)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#html)

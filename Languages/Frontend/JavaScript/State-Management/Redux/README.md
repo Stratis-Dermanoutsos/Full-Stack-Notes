@@ -109,4 +109,4 @@ redux/
 - [Full Redux tutorial in 5 minutes by freeCodeCamp.org](https://youtu.be/oD3miHerQbY)
 - [Introduction to Redux](https://javascript.plainenglish.io/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#redux)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#redux)

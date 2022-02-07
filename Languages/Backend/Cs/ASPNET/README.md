@@ -516,4 +516,4 @@ To make an \<a> element that redirects to the Index page using *asp-page*
   - [Create ASP.NET Core application with React Typescript by Syncfusion](https://www.syncfusion.com/kb/12375/how-to-create-asp-net-core-application-with-react-typescript-web-application-as-front-end)
   - [Desktop application with ASP.NET Core, React and Typescript](https://itnext.io/write-a-desktop-app-with-react-typescript-asp-net-core-and-webview2-3a15daef4d64)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#asp-net)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#asp-net)

@@ -9,4 +9,4 @@
 - [Helpful Figma plugins](https://www.instagram.com/p/CWOQi0hPv9o/)
 - [Font flipper](https://fontflipper.com/)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#design)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#design)

@@ -191,4 +191,4 @@ Now, when anyone calls `myFunction` without assigning a value to the `param` arg
 - [clean-code-javascript repository](https://github.com/ryanmcdermott/clean-code-javascript)
 - [w3schools](https://www.w3schools.com/js/default.asp)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#javascript)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#javascript)

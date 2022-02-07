@@ -1,6 +1,6 @@
-# Full-Stack Roadmap 2021
+# Full-Stack Notes
 
-This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer in 2021.
+This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer.
 
 As you can see, the [Tech Stack section](#tech-stack) includes many different technologies. However, I have included notes and resources for only those I have personally worked with and learnt myself.
 
@@ -154,4 +154,4 @@ There is no real goal to this. As a developer, there is nothing better than cons
 
 In my personal, biased opinion, the only goal for a developer should be to acquire the **knowledge**, **skills** and **tools** to build any ***application*** / ***project*** / ***tool*** they can think of.
 
-[⬆ JUMP TO TOP](#full-stack-roadmap-2021)
+[⬆ JUMP TO TOP](#full-stack-notes)

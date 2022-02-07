@@ -215,4 +215,4 @@ There are some basic steps to follow in order to make a website resposive.
 - [Aspect Ratio with CSS](https://www.w3schools.com/howto/howto_css_aspect_ratio.asp)
 - [20 CSS Generator Tools, tweet by @mdjunaidap](https://twitter.com/mdjunaidap/status/1454742211589918731)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#css)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#css)

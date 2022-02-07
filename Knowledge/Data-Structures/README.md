@@ -227,4 +227,4 @@ Operations:
 - [GeeksForGeeks](https://www.geeksforgeeks.org/data-structures/)
 - [my GitHub repository](https://github.com/Stratis-Dermanoutsos/Data-Structures-C-Sharp/)
 
-[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-2021#full-stack-roadmap-2021) or [⬆ Back to top](#data-structures)
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#data-structures)

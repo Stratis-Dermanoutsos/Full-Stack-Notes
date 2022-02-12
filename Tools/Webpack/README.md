@@ -157,7 +157,7 @@ To solve this, simply open a terminal in the project's folder and type
   inside the section.
 - When you build, you should see this screen
 
-  ![webpack-bundle-analyzer](../Images/webpack-bundle-analyzer.png)
+  ![webpack-bundle-analyzer](/Images/webpack-bundle-analyzer.png)
 
 ### Setup local web server
 

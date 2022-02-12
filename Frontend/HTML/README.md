@@ -55,7 +55,7 @@ A Semantic element clearly describes its meaning to both the browser and the dev
 - non-semantic elements: *\<div>*, *\<span>*
 - semantic elements: *\<article>*, *\<footer>*, *\<form>*, *\<header>*, etc
 
-![HTML Semantic](../../Images/HTML-Semantic.gif)
+![HTML Semantic](/Images/HTML-Semantic.gif)
 
 ### Useful tags/attributes
 

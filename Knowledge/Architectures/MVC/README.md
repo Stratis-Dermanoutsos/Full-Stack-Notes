@@ -31,7 +31,7 @@
 
   <ins>Note</ins>: **views** and **models** cannot communicate directly.
 
-![MVC architecture](../../Images/MVC.png)
+![MVC architecture](/Images/MVC.png)
 
 ### Advantages of MVC
 

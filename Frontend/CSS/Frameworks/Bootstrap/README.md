@@ -62,7 +62,7 @@ Basically, ***Bootstrap*** uses pre-defined classes that you asign to each eleme
         </div>
       </div>
 
-![Bootstrap column spacing](../../../../Images/Bootstrap-Column-Spacing.png)
+![Bootstrap column spacing](/Images/Bootstrap-Column-Spacing.png)
 
 ## Bootstrap - Resources
 

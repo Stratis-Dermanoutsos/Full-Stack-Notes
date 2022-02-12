@@ -129,7 +129,7 @@ Possible values are:
       position: sticky;
   A *sticky* element toggles between *relative* and *fixed*, depending on the scroll position. It is positioned *relative* until a given offset position is met in the viewport. Then, it 'sticks' in place (like an element with the *fixed* value)
 
-![CSS Positions](../../Images/CSS-Positions.png)
+![CSS Positions](/Images/CSS-Positions.png)
 
 ### Responsive design
 

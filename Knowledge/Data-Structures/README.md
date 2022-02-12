@@ -32,7 +32,7 @@ Nodes:
 
 A ***Binary Search Tree*** can be displayed by a graph (as shown below) or by traversing it.
 
-![Binary Search Tree](../Images/Binary-Search-Tree.png)
+![Binary Search Tree](/Images/Binary-Search-Tree.png)
 
 #### Traversing the Binary Search Tree
 
@@ -46,7 +46,7 @@ Possible traversals are **Preorder**, **Inorder**, **Postorder** and **Level Ord
   2. Traverse the left subtree
   3. Traverse the right subtree
 
-  ![BST Preorder Traversal](../Images/BST-Preorder-Traversal.png)
+  ![BST Preorder Traversal](/Images/BST-Preorder-Traversal.png)
 - **Inorder**
 
   The **Inorder** traversal of a ***Binary Search Tree*** always returns the nodes in a sorted order.
@@ -57,7 +57,7 @@ Possible traversals are **Preorder**, **Inorder**, **Postorder** and **Level Ord
   2. Visit the root
   3. Traverse the right subtree
 
-  ![BST Inorder Traversal](../Images/BST-Inorder-Traversal.png)
+  ![BST Inorder Traversal](/Images/BST-Inorder-Traversal.png)
 - **Postorder**
 
   How it works:
@@ -66,7 +66,7 @@ Possible traversals are **Preorder**, **Inorder**, **Postorder** and **Level Ord
   2. Traverse the right subtree
   3. Visit the root
 
-  ![BST Postorder Traversal](../Images/BST-Postorder-Traversal.png)
+  ![BST Postorder Traversal](/Images/BST-Postorder-Traversal.png)
 
 Notice how, in the previous 3 traversals, the root changes priority.
 
@@ -83,7 +83,7 @@ It starts as *1*st in **Preorder**, then *2*nd in **Inorder** and *3*rd in **Pos
   3. Continue to the lower one
   4. Repeat from step 2
 
-  ![BST Level Order Traversal](../Images/BST-Level-Order-Traversal.png)
+  ![BST Level Order Traversal](/Images/BST-Level-Order-Traversal.png)
 
 #### Invert a BST
 
@@ -100,7 +100,7 @@ To achieve this, we simply have to do
     parent.Left = temp;
 for every '*Parent*' node of the ***Binary Search Tree***.
 
-![Inverted Binary Search Tree](../Images/Inverted-Binary-Search-Tree.png)
+![Inverted Binary Search Tree](/Images/Inverted-Binary-Search-Tree.png)
 
 ### AVL Tree
 
@@ -144,7 +144,7 @@ The rebalancing is performed differently:
 - **Right Left** => `X` is rebalanced with a double rotation `rotate_RightLeft`
 - **Left Right** => `X` is rebalanced with a double rotation `rotate_LeftRight`
 
-![AVL Tree](../Images/AVL-Tree.png)
+![AVL Tree](/Images/AVL-Tree.png)
 
 ### Singly Linked List
 
@@ -154,7 +154,7 @@ The list has a '*Head*' node that serves as its first of the chain.
 
 Each node has a value and a pointer "pointing" to the next node.
 
-![Singly Linked List](../Images/Singly-Linked-List.png)
+![Singly Linked List](/Images/Singly-Linked-List.png)
 
 ### Doubly Linked List
 
@@ -166,7 +166,7 @@ The list itself, instead of a reference to the '*Head*' node, also has one for t
 
 This type of ***Linked List*** can be traversed either starting from the '*Head*' or the '*Tail*' node.
 
-![Doubly Linked List](../Images/Doubly-Linked-List.png)
+![Doubly Linked List](/Images/Doubly-Linked-List.png)
 
 ### Circular Linked List
 
@@ -174,7 +174,7 @@ This type of ***Linked List*** can be traversed either starting from the '*Head*
 
 The last node of this ***Linked List*** always points to the '*Head*' creating an endless chain.
 
-![Circular Linked List](../Images/Circular-Linked-List.png)
+![Circular Linked List](/Images/Circular-Linked-List.png)
 
 ### Queue
 
@@ -197,7 +197,7 @@ Operations:
 
   Remove the front element of the queue
 
-![Queue](../Images/Queue.jpg)
+![Queue](/Images/Queue.jpg)
 
 ### Stack
 
@@ -220,7 +220,7 @@ Operations:
 
   Returns true if stack is empty, else false
 
-![Stack](../Images/Stack.png)
+![Stack](/Images/Stack.png)
 
 ## Data Structures - Resources
 

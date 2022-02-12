@@ -15,7 +15,7 @@ As the name implies, it works in a linear manner.
 
 Start from the left-most element of the array and one by one compare each with x.
 
-![Linear Search](../Images/Linear-Search.png)
+![Linear Search](/Images/Linear-Search.png)
 
 #### Binary Search
 
@@ -29,7 +29,7 @@ Basically, using the 2 edges of the array, we compare the middle element with x.
     If (element < x) right = middle - 1
     If (element == x) return element's index
 
-![Binary Search](../Images/Binary-Search.png)
+![Binary Search](/Images/Binary-Search.png)
 
 Notice that after each comparison, we ignore half of the elements we had.
 
@@ -61,7 +61,7 @@ After each jump, we compare the current element with x.
     If (element < x) Jump => (i = i + step)
     If (element == x) return element's index
 
-![Jump Search](../Images/Jump-Search.jpg)
+![Jump Search](/Images/Jump-Search.jpg)
 
 ### Sort Algorithms
 
@@ -71,7 +71,7 @@ Time Complexity: *O(n)*
 
 **Bubble Sort** is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
 
-![Bubble Sort](../Images/Bubble-Sort.png)
+![Bubble Sort](/Images/Bubble-Sort.png)
 
 #### Counting Sort
 
@@ -104,7 +104,7 @@ Basically, we devide the array into 2 subarrays, 1 sorted and 1 unsorted.
 
 Start from the left-most element and with each iteration, the minimum element (considering ascending order) from the unsorted subarray is picked and moved to the sorted subarray.
 
-![Selection Sort](../Images/Selection-Sort.png)
+![Selection Sort](/Images/Selection-Sort.png)
 
 ## Algorithms - Resources
 

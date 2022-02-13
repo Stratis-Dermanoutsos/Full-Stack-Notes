@@ -15,21 +15,21 @@
 
   It responds to the **controller** requests because the **controller** doesn't access the database by itself. The **model** communicates with the database and then gives the needed data to the **controller**.
 
-  <ins>Note</ins>: the **model** never communicates with the **view** directly.
+  > The **model** never communicates with the **view** directly.
 - ***V*iew**
 
   Data representation is done by the **view** component. It actually generates **UI** (**U**ser **I**nterface) for the user. So, at web applications think of the **view** component as the ***HTML*** and ***CSS***.
 
   **Views** are created by the data which is collected by the **model** component. However, the data itself is not fetched directly from the **model** component but through the **controller**.
 
-  <ins>Note</ins>: the **view** only communicates with the **controller**.
+  The **view** only communicates with the **controller**.
 - ***C*ontroller**
 
   The **controller** is the component that enables the interconnection between the **view** and the **model** so it acts as an intermediary.
 
   The **controller** doesn’t have to worry about handling data logic, it just tells the **model** what to do. After receiving data from the **model** it processes it and then it sends all that information to the **view** and explains how to present this data to the user.
 
-  <ins>Note</ins>: **views** and **models** cannot communicate directly.
+  > **views** and **models** cannot communicate directly.
 
 ![MVC architecture](/Images/MVC.png)
 

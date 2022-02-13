@@ -9,13 +9,13 @@
 
 ***Jenkins*** is used by teams of all sizes, for projects in a wide variety of languages and technologies, including ***.NET***, ***Ruby***, ***PHP*** and more, as well as ***Java***.
 
-<ins>Note</ins>: To install and use Jenkins you have to make sure ***Java*** is installed in your system.
+> To install and use Jenkins you have to make sure ***Java*** is installed in your system.
 
 At the heart of the ***Jenkins*** build process are **Build jobs**. Simply put, you can think of a ***Jenkins* build job** as a particular task or step in your build process. This may involve simply *compiling your source code* and *running your unit tests*.
 
 ### Setup Jenkins
 
-<ins>Note</ins>: I use Arch Linux (well, Manjaro) at the time of writing this
+> I use Arch Linux (well, Manjaro) at the time of writing this
 
 - Start ***Jenkins***
 

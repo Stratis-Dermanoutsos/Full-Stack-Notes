@@ -97,7 +97,7 @@ I will take note of the procedure of the course to be able to look back at it fo
 
 #### Step 2: Add an entrypoint script
 
-<ins>Note</ins>: An entrypoint script must exist in our repository so that Docker has something to execute.
+> An entrypoint script must exist in our repository so that Docker has something to execute.
 
 - As a part of this branch and pull request, create a file in the *`action-a`* directory titled *`entrypoint.sh`*
 - Inside the *`entrypoint.sh`*, paste

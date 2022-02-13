@@ -29,7 +29,7 @@
   java helloWorld
   ```
 
-<ins>Note</ins>: To run a program in ***Java***, you must first define the *`main`* function as seen above.
+> To run a program in ***Java***, you must first define the *`main`* function as seen above.
 
 ### Primitive data types
 

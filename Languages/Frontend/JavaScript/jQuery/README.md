@@ -9,35 +9,47 @@
 
 - Download [***jQuery***](https://jquery.com/download/) by running
 
-      npm install jquery
+  ```bash
+  npm install jquery
+  ```
+
   and use by inclusing the '*jquery-\<version>.min.js*' file inside the *\<head>* element.
 
-      <head>
-        <script src="jquery-<version>.min.js"></script>
-      </head>
+  ```html
+  <head>
+    <script src="jquery-<version>.min.js"></script>
+  </head>
+  ```
 
 - ***jQuery*** CDN
 
-      <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/<version>/jquery.min.js"></script>
-      </head>
+  ```html
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/<version>/jquery.min.js"></script>
+  </head>
+  ```
 
 ### Basic syntax
 
-    $(selector).action()
+```javascript
+$(selector).action()
+```
+
 For example,
 
-    $(this).hide()    // hides the current element
-    $("p").hide()     // hides all <p> elements
-    $(".test").hide() // hides all elements with class="test"
-    $("#test").hide() // hides the element with id="test"
+```javascript
+$(this).hide()    // hides the current element
+$("p").hide()     // hides all <p> elements
+$(".test").hide() // hides all elements with class="test"
+$("#test").hide() // hides the element with id="test"
 
-    /* When any button is pressed, all <p> elements will be hidden */
-    $(document).ready(function() {
-      $("button").click(function() {
-        $("p").hide();
-      });
-    });
+/* When any button is pressed, all <p> elements will be hidden */
+$(document).ready(function() {
+  $("button").click(function() {
+    $("p").hide();
+  });
+});
+```
 
 ### Selectors
 
@@ -45,13 +57,21 @@ They work quite like ***CSS***.
 
 - *\<p>* elements
 
-      $("p")
+  ```javascript
+  $("p")
+  ```
+
 - element with *id="test"* (' *#* ')
 
-      $("#test")
+  ```javascript
+  $("#test")
+  ```
+
 - elements with *class="test"* (' *.* ')
 
-      $(".test")
+  ```javascript
+  $(".test")
+  ```
 
 ### Events
 
@@ -64,9 +84,11 @@ They work quite like ***CSS***.
 
 For example, do something when any paragraph (*\<p>*) elementh is clicked
 
-    $("p").click(function(){
-      // action goes here!!
-    });
+```javascript
+$("p").click(function(){
+  // action goes here!!
+});
+```
 
 ## jQuery - Resources
 

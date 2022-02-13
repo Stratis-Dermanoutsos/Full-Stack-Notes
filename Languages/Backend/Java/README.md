@@ -9,17 +9,25 @@
 
 - Create a `helloWorld.java` file
 
-      class HelloWorld {
-        public static void main(String[] args) {
-          System.out.println("Hello world!");
-        }
-      }
+  ```java
+  class HelloWorld {
+    public static void main(String[] args) {
+      System.out.println("Hello world!");
+    }
+  }
+  ```
+
 - Compile
 
-      javac helloWorld.java
+  ```bash
+  javac helloWorld.java
+  ```
+
 - Run
 
-      java helloWorld
+  ```bash
+  java helloWorld
+  ```
 
 <ins>Note</ins>: To run a program in ***Java***, you must first define the *`main`* function as seen above.
 
@@ -62,31 +70,41 @@ In ***Java***, there are exactly 8 primitive data types.
 
 #### Syntax
 
-    # one parameter
-    parameter -> expression
+```java
+// one parameter
+parameter -> expression
 
-    # more than 1 parameters
-    (parameter1, parameter2) -> expression
+// more than 1 parameters
+(parameter1, parameter2) -> expression
+```
+
 Expressions must immediately return a value. Thus, they are limited. To enable the lambda expression to run more commands/statements etc, do this:
 
-    (parameter1, parameter2) -> { code block }
+```java
+(parameter1, parameter2) -> { code block }
+```
 
 #### Example use cases
 
 - Print all elements of an array
 
-      array.forEach( (element) -> { System.out.println(element); } );
+  ```java
+  array.forEach( (element) -> { System.out.println(element); } );
+  ```
+
 - Run math operations
 
-      int operate(int a, int b, MathOperation mathOperation) {
-        return mathOperation.operation(a, b);
-      }
-      .
-      .
-      .
-        MathOperation addition = (int a, int b) -> a + b;
+  ```java
+  int operate(int a, int b, MathOperation mathOperation) {
+    return mathOperation.operation(a, b);
+  }
+  .
+  .
+  .
+  MathOperation addition = (int a, int b) -> a + b;
 
-        int result = operate(10, 5, addition); // 15
+  int result = operate(10, 5, addition); // 15
+  ```
 
 ## Java - Resources
 

@@ -86,20 +86,54 @@ Each ***API*** response consists of:
 
   Use the **dotnet CLI** (at the time of writing, I am using ***dotnet 3.1 LTS***) to create a ***ASP .NET* Core** Web *API***
 
-      dotnet new webapi
+  ```bash
+  dotnet new webapi
+  ```
+
   Run with
 
-      dotnet run
+  ```bash
+  dotnet run
+  ```
+
   and, inside your browser, visit [localhost/WeatherForecast](https://localhost:5001/WeatherForecast).
   You should see text similar to
 
-      [
-        {"date":"2021-08-26T20:37:19.0099349+03:00","temperatureC":8,"temperatureF":46,"summary":"Warm"},
-        {"date":"2021-08-27T20:37:19.0102424+03:00","temperatureC":13,"temperatureF":55,"summary":"Scorching"},
-        {"date":"2021-08-28T20:37:19.0102465+03:00","temperatureC":23,"temperatureF":73,"summary":"Balmy"},
-        {"date":"2021-08-29T20:37:19.0102471+03:00","temperatureC":-8,"temperatureF":18,"summary":"Scorching"},
-        {"date":"2021-08-30T20:37:19.0102476+03:00","temperatureC":-3,"temperatureF":27,"summary":"Bracing"}
-      ]
+  ```json
+  [
+    {
+      "date":"2021-08-26T20:37:19.0099349+03:00",
+      "temperatureC":8,
+      "temperatureF":46,
+      "summary":"Warm"
+    },
+    {
+      "date":"2021-08-27T20:37:19.0102424+03:00",
+      "temperatureC":13,
+      "temperatureF":55,
+      "summary":"Scorching"
+    },
+    {
+      "date":"2021-08-28T20:37:19.0102465+03:00",
+      "temperatureC":23,
+      "temperatureF":73,
+      "summary":"Balmy"
+    },
+    {
+      "date":"2021-08-29T20:37:19.0102471+03:00",
+      "temperatureC":-8,
+      "temperatureF":18,
+      "summary":"Scorching"
+    },
+    {
+      "date":"2021-08-30T20:37:19.0102476+03:00",
+      "temperatureC":-3,
+      "temperatureF":27,
+      "summary":"Bracing"
+    }
+  ]
+  ```
+
   This is our data provided by the API.
 
   In the template's code you can notice 2 files:
@@ -135,10 +169,12 @@ Each ***API*** response consists of:
 
   A simple example of getting data in *JSON* format
 
-      const action = async () => {
-        const response = await fetch('<URI>');
-        const data = await response.json(); //extract JSON from the HTTP response
-      }
+  ```javascript
+  const action = async () => {
+    const response = await fetch('<URI>');
+    const data = await response.json(); //extract JSON from the HTTP response
+  }
+  ```
 
 ## API - Resources
 

@@ -25,9 +25,11 @@ Time Complexity: *O(log n)*
 
 Basically, using the 2 edges of the array, we compare the middle element with x.
 
-    If (element > x) left = middle + 1
-    If (element < x) right = middle - 1
-    If (element == x) return element's index
+```javascript
+if (element > x) left = middle + 1
+if (element < x) right = middle - 1
+if (element == x) return element's index
+```
 
 ![Binary Search](/Images/Binary-Search.png)
 
@@ -57,9 +59,11 @@ Then, we **Linear Search** backwards from there until we find the element or we 
 
 After each jump, we compare the current element with x.
 
-    If (element > x) LinearSearch()
-    If (element < x) Jump => (i = i + step)
-    If (element == x) return element's index
+```javascript
+if (element > x) LinearSearch()
+if (element < x) Jump => (i = i + step)
+if (element == x) return element's index
+```
 
 ![Jump Search](/Images/Jump-Search.jpg)
 
@@ -81,7 +85,10 @@ Time Complexity: *O(n+k)* where n is the number of elements in input array and k
 
 For examle, take the array
 
-    [1, 4, 1, 2, 7, 5, 2]
+```python
+[1, 4, 1, 2, 7, 5, 2]
+```
+
 So, we make an array to count our elements
 | index | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 | ----- | - | - | - | - | - | - | - | - |
@@ -89,12 +96,17 @@ So, we make an array to count our elements
 
 or
 
-    [0, 2, 2, 0, 1, 0, 1]
+```python
+[0, 2, 2, 0, 1, 0, 1]
+```
+
 as we have x0 0s, x2 1s and so on.
 
 The result would be
 
-    [1, 1, 2, 2, 4, 5, 7]
+```python
+[1, 1, 2, 2, 4, 5, 7]
+```
 
 #### Selection Sort
 

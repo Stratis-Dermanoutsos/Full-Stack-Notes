@@ -17,7 +17,10 @@ Properties:
 - There must be no duplicate nodes
 - A ***Binary Search Tree*** with height *H* may have *N* nodes where
 
-      H ≤ N ≤ 2ᴴ - 1
+  ```markdown
+  H ≤ N ≤ 2ᴴ - 1
+  ```
+
 - **Inorder** traversal of ***Binary Search Tree*** always produces sorted output
 - We can construct a ***Binary Search Tree*** with only **Preorder** or **Postorder** or **Level Order** traversal
 - We can always get **Inorder** traversal by sorting another given traversal
@@ -94,17 +97,20 @@ The goal is simple:
 
 To achieve this, we simply have to do
 
-    // C# code
-    Node temp = parent.Right;
-    parent.Right = parent.Left;
-    parent.Left = temp;
+```c#
+// C# code
+Node temp = parent.Right;
+parent.Right = parent.Left;
+parent.Left = temp;
+```
+
 for every '*Parent*' node of the ***Binary Search Tree***.
 
 ![Inverted Binary Search Tree](/Images/Inverted-Binary-Search-Tree.png)
 
 ### AVL Tree
 
-An ***Adelson-Velsky and Landis Tree***, or ***AVL Tree*** for short, is a <ins>self-balancing</ins> ***Binary Search Tree***.
+An ***Adelson-Velsky and Landis Tree***, or ***AVL Tree*** for short, is a *self-balancing* ***Binary Search Tree***.
 
 Since this is true, it can be traversed in the same way as a ***BST***.
 
@@ -114,7 +120,9 @@ This is achieved through certain rotations that keep the ***AVL Tree*** balanced
 
 In general, in a **Binary Tree**, the **Balance Factor** of a node `X` is defined to be the height difference of the 2 child sub-trees.
 
-    BF(X) = Height(LeftSubtree(X)) - Height(RightSubtree(X))
+```c#
+BF(X) = Height(LeftSubtree(X)) - Height(RightSubtree(X))
+```
 
 If every node `X`'s **Balance Factor** is -1, 0, or 1 (`BF(X)∈{-1,0,1},∀ X`) then our tree is defined as ***AVL Tree***.
 

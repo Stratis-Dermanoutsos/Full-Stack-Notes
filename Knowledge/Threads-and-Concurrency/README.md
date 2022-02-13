@@ -11,9 +11,14 @@ A ***thread*** is a program that runs in the same **address space** with other *
 
 Example for the use of ***threads***:
 
-    Let's say we have a text editor.
-    Had we used only 1 thread, it would be impossible to take input from the keyboard as the editor auto-saves our changes.
-    Just using independent processes would not solve this issue as each process would belong to a different address space.
+```text
+Let's say we have a text editor.
+
+Had we used only 1 thread, it would be impossible to take input from the keyboard as the editor auto-saves our changes.
+
+Just using independent processes would not solve this issue as each process would belong to a different address space.
+```
+
 Thankfully, ***C#*** is said to have excellent multithreading capabilities.
 
 ## Process Management - Resources

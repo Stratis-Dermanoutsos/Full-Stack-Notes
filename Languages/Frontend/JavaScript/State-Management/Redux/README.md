@@ -90,7 +90,7 @@ The values to be stored in it are completely up to the developer and they can be
 
 A convenient ***Redux*** file tree setup is
 
-```json
+```bash
 redux/
 |- actions/
 |  |- actions.js

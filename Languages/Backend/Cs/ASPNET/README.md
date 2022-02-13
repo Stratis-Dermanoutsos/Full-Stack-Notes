@@ -13,52 +13,90 @@ Well, by default, when we will focus on ***ASP .NET* Core**.
 
 - List your dotnet SDKs
 
-      dotnet --list-sdks
+  ```bash
+  dotnet --list-sdks
+  ```
+
 - Create project
 
-      dotnet new <projectType>
+  ```bash
+  dotnet new <projectType>
+  ```
+
 - Add package reference to your project
 
-      dotnet add package <package>
+  ```bash
+  dotnet add package <package>
+  ```
+
 - Remove package
 
-      dotnet remove package <package>
+  ```bash
+  dotnet remove package <package>
+  ```
+
 - Restore dependencies
 
-      dotnet restore
+  ```bash
+  dotnet restore
+  ```
+
 - Build and run project
 
-      dotnet run
+  ```bash
+  dotnet run
+  ```
+
   This command, depending on the type of project, requires the respective *runtime* program.
 
-      dotnet --list-runtimes
+  ```bash
+  dotnet --list-runtimes
+  ```
+
   to view your currently installed *runtimes*.
 - For more
 
-      dotnet -h
+  ```bash
+  dotnet -h
+  ```
+
 - Choose version of ***.NET***
 
   Before you run the
 
-      dotnet new ...
+  ```bash
+  dotnet new ...
+  ```
+
   command, you can specify the version of **dotnet** to use by:
 
   - Create a folder to be the root of your project, where you are going to run the above command
   - While in that folder, run
 
-        dotnet new globaljson
+    ```bash
+    dotnet new globaljson
+    ```
+
   - Run
 
-        dotnet --list-sdks
+    ```bash
+    dotnet --list-sdks
+    ```
+
     to see the downloaded versions in your system
   - Replace the value of *"version"* inside the *global.json* file with EXACTLY the one you want to use
   - Run
 
-        dotnet --version
+    ```bash
+    dotnet --version
+    ```
+
     to make sure the change has been applied
   - Run
 
-        dotnet new ...
+    ```bash
+    dotnet new ...
+    ```
 
 ### ASP .NET Razor Pages
 
@@ -73,11 +111,13 @@ Everything that can be done with ***MVC*** can also be done with ***Razor Pages*
 
 Create and run your first ***ASP .NET Razor Pages*** project:
 
-    # create the project
-    dotnet new webapp
+```bash
+# create the project
+dotnet new webapp
 
-    # run the project
-    dotnet run
+# run the project
+dotnet run
+```
 
 What the default generated project contains:
 
@@ -115,106 +155,117 @@ What the default generated project contains:
 
 - Add this to the **Pages/Shared/_Layout.cshtml** file, after the other navbar links
 
-      <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-page="/CarList/Index">Cars</a>
-      </li>
+  ```html
+  <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-page="/CarList/Index">Cars</a>
+  </li>
+  ```
+
 - Create a **CarList** directory inside the **Pages** one and now we'll make the following files there:
   - **Index.cshtml**
 
-        @page
-        @model AspnetExample.Pages.CarList.IndexModel
+    ```html
+    @page
+    @model AspnetExample.Pages.CarList.IndexModel
 
-        <form method="post">
-          <table class="table table-striped border">
-            @* Add the table head *@
-            <tr class="table-secondary">
-              <th>
-                <label asp-for="Cars.FirstOrDefault().LicensePlate"></label>
-              </th>
-              <th>
-                <label asp-for="Cars.FirstOrDefault().Make"></label>
-              </th>
-              <th>
-                <label asp-for="Cars.FirstOrDefault().Model"></label>
-              </th>
-              <th></th>
-            </tr>
-            @* Display our cars *@
-            @foreach (var car in Model.Cars) {
-              <tr>
-                <td>
-                  @Html.DisplayFor(model => car.LicensePlate)
-                </td>
-                <td>
-                  @Html.DisplayFor(model => car.Make)
-                </td>
-                <td>
-                  @Html.DisplayFor(model => car.Model)
-                </td>
-                <td>
-                  <button asp-page-handler="Delete" asp-route-id="@car.LicensePlate" onclick="return confirm('Are you sure you want to delete car: `@car.Make`?')" class="btn btn-danger btn-sm">Delete</button>
-                  @* Go to the Edit page, passing Car's LicensePlate as parameter *@
-                  <a asp-page="Edit" asp-route-id="@car.LicensePlate" class="btn btn-success btn-sm text-white">Edit</a>
-                </td>
-              </tr>
-            }
-          </table>
-        </form>
+    <form method="post">
+      <table class="table table-striped border">
+        @* Add the table head *@
+        <tr class="table-secondary">
+          <th>
+            <label asp-for="Cars.FirstOrDefault().LicensePlate"></label>
+          </th>
+          <th>
+            <label asp-for="Cars.FirstOrDefault().Make"></label>
+          </th>
+          <th>
+            <label asp-for="Cars.FirstOrDefault().Model"></label>
+          </th>
+          <th></th>
+        </tr>
+        @* Display our cars *@
+        @foreach (var car in Model.Cars) {
+          <tr>
+            <td>
+              @Html.DisplayFor(model => car.LicensePlate)
+            </td>
+            <td>
+              @Html.DisplayFor(model => car.Make)
+            </td>
+            <td>
+              @Html.DisplayFor(model => car.Model)
+            </td>
+            <td>
+              <button asp-page-handler="Delete" asp-route-id="@car.LicensePlate" onclick="return confirm('Are you sure you want to delete car: `@car.Make`?')" class="btn btn-danger btn-sm">Delete</button>
+              @* Go to the Edit page, passing Car's LicensePlate as parameter *@
+              <a asp-page="Edit" asp-route-id="@car.LicensePlate" class="btn btn-success btn-sm text-white">Edit</a>
+            </td>
+          </tr>
+        }
+      </table>
+    </form>
+    ```
+
   - **Index.cshtml.cs**
 
-        using System;
-        using System.Collections.Generic;
-        using System.Linq;
-        using System.Threading.Tasks;
-        using Microsoft.AspNetCore.Mvc;
-        using Microsoft.AspNetCore.Mvc.RazorPages;
-        using Microsoft.EntityFrameworkCore;
-        using AspnetExample.Model;
+    ```c#
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.RazorPages;
+    using Microsoft.EntityFrameworkCore;
+    using AspnetExample.Model;
 
-        namespace AspnetExample.Pages.CarList
+    namespace AspnetExample.Pages.CarList
+    {
+      public class IndexModel : PageModel
+      {
+        private readonly ApplicationDbContext _db;
+
+        // We get the database context using Dependency Injection
+        public IndexModel(ApplicationDbContext db)
         {
-          public class IndexModel : PageModel
-          {
-            private readonly ApplicationDbContext _db;
-
-            // We get the database context using Dependency Injection
-            public IndexModel(ApplicationDbContext db)
-            {
-              _db = db;
-            }
-
-            public IEnumerable<Car> Cars { get; set; }
-
-            public async Task OnGet()
-            {
-              Cars = await _db.Car.ToListAsync();
-            }
-
-            public async Task<IActionResult> OnPostDelete(int licensePlate)
-            {
-              var car = await _db.Car.FindAsync(licensePlate);
-
-              if (car == null)
-                return NotFound();
-
-              _db.Car.Remove(car);
-              await _db.SaveChangesAsync();
-
-              return RedirectToPage("Index");
-            }
-          }
+          _db = db;
         }
+
+        public IEnumerable<Car> Cars { get; set; }
+
+        public async Task OnGet()
+        {
+          Cars = await _db.Car.ToListAsync();
+        }
+
+        public async Task<IActionResult> OnPostDelete(int licensePlate)
+        {
+          var car = await _db.Car.FindAsync(licensePlate);
+
+          if (car == null)
+            return NotFound();
+
+          _db.Car.Remove(car);
+          await _db.SaveChangesAsync();
+
+          return RedirectToPage("Index");
+        }
+      }
+    }
+    ```
+
   With the logic existing above, it is easy to write **Razor Pages** to *Create* and *Edit* cars in the database
 
 ### ASP .NET MVC
 
 Create and run your first ***ASP .NET MVC*** project:
 
-    # create the project
-    dotnet new mvc
+```bash
+# create the project
+dotnet new mvc
 
-    # run the project
-    dotnet run
+# run the project
+dotnet run
+```
 
 What the default generated project contains:
 
@@ -235,9 +286,12 @@ More specifics:
 
 - Routes that are handled by ***C*ontrollers** are called actions, and are represented by methods in the ***C*ontroller** class. For example, the **HomeController** includes three action methods (**Index**, **About**, and **Contact**) which are mapped by ***ASP .NET* Core** to these route URLs:
 
-      localhost:5000/Home->          Index()
-      localhost:5000/Home/About->    About()
-      localhost:5000/Home/Contact -> Contact()
+  ```c#
+  |- localhost:5000/Home->          Index()
+  |- localhost:5000/Home/About->    About()
+  |- localhost:5000/Home/Contact -> Contact()
+  ```
+
 - ***V*iews** in ***ASP .NET* Core** are built using the Razor templating language, which combines ***HTML*** and ***C#***.
 
   Most view code is just ***HTML***, with the occasional ***C#*** statement added in to pull data out of the ***V*iew *M*odel** and turn it into text or ***HTML***.
@@ -247,66 +301,77 @@ More specifics:
 
   It can be found at
 
-      Views/Shared/_Layout.cshtml
+  ```bash
+  |- Views/Shared/_Layout.cshtml
+  ```
+
 - As mentioned above, to edit the ***CSS*** or anything *static*, you must go to
 
-      wwwroot/css/site.css
+  ```bash
+  |- wwwroot/css/site.css
+  ```
 
 #### Create simple Model, View and Controller to display Cars (see [Entity Framework](#entity-framework) for Model)
 
 - Add this to the **Views/Shared/_Layout.cshtml** file, after the other navbar links
 
-      <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Cars" asp-action="Index">Car List</a>
-      </li>
+  ```html
+  <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Cars" asp-action="Index">Car List</a>
+  </li>
+  ```
+
 - Create a **CarsController.cs** with the following code
 
-      using System;
-      using System.Collections.Generic;
-      using System.Linq;
-      using System.Threading.Tasks;
-      using Microsoft.AspNetCore.Mvc;
-      using Microsoft.EntityFrameworkCore;
-      using AspnetExample.Models;
+  ```c#
+  using System;
+  using System.Collections.Generic;
+  using System.Linq;
+  using System.Threading.Tasks;
+  using Microsoft.AspNetCore.Mvc;
+  using Microsoft.EntityFrameworkCore;
+  using AspnetExample.Models;
 
-      namespace AspnetExample.Controllers
+  namespace AspnetExample.Controllers
+  {
+    public class CarsController : Controller
+    {
+      private readonly ApplicationDbContext _db;
+
+      [BindProperty]
+      public Car Car { get; set; }
+
+      public CarsController(ApplicationDbContext db)
       {
-        public class CarsController : Controller
-        {
-          private readonly ApplicationDbContext _db;
-
-          [BindProperty]
-          public Car Car { get; set; }
-
-          public CarsController(ApplicationDbContext db)
-          {
-            _db = db;
-          }
-
-          public IActionResult Index()
-          {
-            return View();
-          }
-
-          [HttpGet]
-          public async Task<IActionResult> GetAll()
-          {
-            return Json(new { data = await _db.Cars.ToListAsync() });
-          }
-
-          [HttpDelete]
-          public async Task<IActionResult> Delete(int licensePlate)
-          {
-            var carFromDb = await _db.Books.FirstOrDefaultAsync(u => u.LicensePlate == licensePlate);
-            if (carFromDb == null)
-              return Json(new { success = false, message = "Error while Deleting" });
-
-            _db.Cars.Remove(carFromDb);
-            await _db.SaveChangesAsync();
-            return Json(new { success = true, message = "Delete successful" });
-          }
-        }
+        _db = db;
       }
+
+      public IActionResult Index()
+      {
+        return View();
+      }
+
+      [HttpGet]
+      public async Task<IActionResult> GetAll()
+      {
+        return Json(new { data = await _db.Cars.ToListAsync() });
+      }
+
+      [HttpDelete]
+      public async Task<IActionResult> Delete(int licensePlate)
+      {
+        var carFromDb = await _db.Books.FirstOrDefaultAsync(u => u.LicensePlate == licensePlate);
+        if (carFromDb == null)
+          return Json(new { success = false, message = "Error while Deleting" });
+
+        _db.Cars.Remove(carFromDb);
+        await _db.SaveChangesAsync();
+        return Json(new { success = true, message = "Delete successful" });
+      }
+    }
+  }
+  ```
+
 - Create a **Cars** directory inside the **Views** one and now we'll make the following files there:
 
 ### ASP .NET Web API
@@ -315,11 +380,13 @@ Web ***API*** (***A*pplication *P*rogramming *I*nterface**) is a set of subrouti
 
 Create and run your first ***ASP .NET API*** project:
 
-    # create the project
-    dotnet new webapi
+```bash
+# create the project
+dotnet new webapi
 
-    # run the project
-    dotnet run
+# run the project
+dotnet run
+```
 
 What the default generated project contains:
 
@@ -333,14 +400,29 @@ What the default generated project contains:
 
   This ***C*ontroller** is responsible for generating data based on our ***M*odel** and returning it in *JSON* every time we visit the link below .
 
-Now, if you visit
-
-    https://localhost:5001/weatherforecast
-you'll be presented with data in *JSON* format.
+Now, if you visit [https://localhost:5001/weatherforecast](https://localhost:5001/weatherforecast), you'll be presented with data in *JSON* format.
 
 For example,
 
-    [{"date":"2021-09-03T11:58:42.4461568+03:00","temperatureC":13,"temperatureF":55,"summary":"Cool"},{"date":"2021-09-04T11:58:42.4466036+03:00","temperatureC":-7,"temperatureF":20,"summary":"Balmy"},{"date":"2021-09-05T11:58:42.4466101+03:00","temperatureC":31,"temperatureF":87,"summary":"Hot"},{"date":"2021-09-06T11:58:42.4466109+03:00","temperatureC":-3,"temperatureF":27,"summary":"Warm"},{"date":"2021-09-07T11:58:42.4466115+03:00","temperatureC":15,"temperatureF":58,"summary":"Hot"}]
+```json
+[
+  {
+    "date":"2021-09-03T11:58:42.4461568+03:00","temperatureC":13,"temperatureF":55,"summary":"Cool"
+  },
+  {
+    "date":"2021-09-04T11:58:42.4466036+03:00","temperatureC":-7,"temperatureF":20,"summary":"Balmy"
+  },
+  {
+    "date":"2021-09-05T11:58:42.4466101+03:00","temperatureC":31,"temperatureF":87,"summary":"Hot"
+  },
+  {
+    "date":"2021-09-06T11:58:42.4466109+03:00","temperatureC":-3,"temperatureF":27,"summary":"Warm"
+  },
+  {
+    "date":"2021-09-07T11:58:42.4466115+03:00","temperatureC":15,"temperatureF":58,"summary":"Hot"
+  }
+]
+```
 
 ### Important terms
 
@@ -365,10 +447,12 @@ In fact, ***ASP .NET* Core** is designed to support **Dependency injection**.
 
   It all happens in the ConfigureServices method.
 
-      public void ConfigureServices(IServiceCollection services)
-      {
-        //Here goes the configuration
-      }
+  ```c#
+  public void ConfigureServices(IServiceCollection services)
+  {
+    //Here goes the configuration
+  }
+  ```
 
 #### Entity Framework
 
@@ -377,83 +461,117 @@ In fact, ***ASP .NET* Core** is designed to support **Dependency injection**.
 To use **Entity Framework Core**, 3 NuGet packages are needed:
 
 - Microsoft.EntityFrameworkCore
-- Microsoft.EntityFrameworkCore.\<SQLtool>
+- Microsoft.EntityFrameworkCore.*\<SQLtool>*
 - Microsoft.EntityFrameworkCore.Tools
 
 To install the **CLI** tool
 
-    dotnet tool install --global dotnet-ef
+```bash
+dotnet tool install --global dotnet-ef
+```
+
 To update it
 
-    dotnet tool update --global dotnet-ef
+```bash
+dotnet tool update --global dotnet-ef
+```
+
 To use it on a project
 
-    dotnet add package Microsoft.EntityFrameworkCore.Design
+```bash
+dotnet add package Microsoft.EntityFrameworkCore.Design
+```
+
 Verify installation
 
-    dotnet ef
+```bash
+dotnet ef
+```
+
 Example of adding a database (***SQLite*** for the sake of ease)
 
 - Install the necessary tools
 
-      dotnet tool install --global dotnet-ef
-      dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+  ```bash
+  dotnet tool install --global dotnet-ef
+
+  dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+  ```
+
 - Create a *\<file>.db* database using ***SQLite***
 - Go to the project's *appsettings.json* file and add
 
-      "ConnectionStrings": {
-        "DefaultConnection" : "Data Source=<file>.db;"
-      }
+  ```json
+  "ConnectionStrings": {
+    "DefaultConnection" : "Data Source=<file>.db;"
+  }
+  ```
+
 - Create a class inside the ***M*odels** folder
 
   We'll name it **Car** for this example
 
-      using System.ComponentModel.DataAnnotations;
+  ```c#
+  using System.ComponentModel.DataAnnotations;
 
-      namespace AspnetExample.Models
-      {
-        public class Car
-        {
-          [Key] // Automatically set the primary key
-          public int LicensePlate { get; set; }
+  namespace AspnetExample.Models
+  {
+    public class Car
+    {
+      [Key] // Set as primary key
+      public int LicensePlate { get; set; }
 
-          [Required] // Cannot be null
-          public string Make { get; set; }
+      [Required] // Cannot be null
+      public string Make { get; set; }
 
-          public string Model { get; set; }
-        }
-      }
+      public string Model { get; set; }
+    }
+  }
+  ```
+
 - Create the *ApplicationDbContext* class inside the ***M*odels** folder
 
   The file should look like this
 
-      using Microsoft.EntityFrameworkCore;
+  ```c#
+  using Microsoft.EntityFrameworkCore;
 
-      namespace AspnetExample.Models
+  namespace AspnetExample.Models
+  {
+    public class ApplicationDbContext : DbContext
+    {
+      // Empty constructor but the parameter is needed for Dependency Injection
+      public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
       {
-        public class ApplicationDbContext : DbContext
-        {
-          // Empty constructor but the parameter is needed for Dependency Injection
-          public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-          {
 
-          }
-
-          // Entry used to add data to the database
-          public DbSet<Car> Car { get; set; }
-        }
       }
+
+      // Entry used to add data to the database
+      public DbSet<Car> Car { get; set; }
+    }
+  }
+  ```
+
 - Go to **Startup.cs** inside the *ConfigureServices* method and add
 
-      services.AddDbContext<ApplicationDbContext>(option=> option.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+  ```c#
+  services.AddDbContext<ApplicationDbContext>(option=> option.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+  ```
+
 - Run
 
-      dotnet add package Microsoft.EntityFrameworkCore.Design
-      dotnet ef migrations add AddCarToDb
+  ```bash
+  dotnet add package Microsoft.EntityFrameworkCore.Design
+
+  dotnet ef migrations add AddCarToDb
+  ```
+
   Notice that, now, there is a **\<numbers>_AddCarToDb.cs** file in the **Migrations** folder.
 - Update the database and schema by running
 
-      dotnet ef database update
+  ```bash
+  dotnet ef database update
+  ```
 
 #### Tag Helpers
 
@@ -463,30 +581,46 @@ For example, *asp-for*
 
 Let's say we have this ***C#*** class:
 
-    public class Movie
-    {
-      public int ID { get; set; }
-      public string Title { get; set; }
-      public DateTime ReleaseDate { get; set; }
-      public string Genre { get; set; }
-      public decimal Price { get; set; }
-    }
+```c#
+public class Movie
+{
+  public int ID { get; set; }
+  public string Title { get; set; }
+  public DateTime ReleaseDate { get; set; }
+  public string Genre { get; set; }
+  public decimal Price { get; set; }
+}
+```
+
 ***Razor*** markup to access it in the page:
 
-    <label asp-for="Movie.Title"></label> # .cshtml
+```html
+<label asp-for="Movie.Title"></label> // .cshtml
+```
+
 which generates
 
-    <label for="Movie_Title"></label>     # .html
+```html
+<label for="Movie_Title"></label>     <!-- .html -->
+```
+
 **Tag Helper** VS **HTML Helper**
 
-    @* HTML helper *@
-    @Html.DisplayFor(model => model.Cars.FirstOrDefault().Make)
+```c#
+@* HTML helper *@
+@Html.DisplayFor(model => model.Cars.FirstOrDefault().Make)
+```
 
-    @* Tag helper *@
-    <label asp-for="Cars.FirstOrDefault().Make"></label>
+```html
+@* Tag helper *@
+<label asp-for="Cars.FirstOrDefault().Make"></label>
+```
+
 To make an \<a> element that redirects to the Index page using *asp-page*
 
-    <a asp-page="/Index">Index</a>
+  ```html
+  <a asp-page="/Index">Index</a>
+  ```
 
 ## ASP .NET - Resources
 

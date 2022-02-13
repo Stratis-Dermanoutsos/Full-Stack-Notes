@@ -109,21 +109,27 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-      Expires: <http-date>
+  ```javascript
+  Expires: <http-date>
 
-      // Example
-      Expires: Wed, 21 Oct 2015 07:28:00 GMT
+  // Example
+  Expires: Wed, 21 Oct 2015 07:28:00 GMT
+  ```
+
 - **Cache-Control**
 
   It's a modern replacement for the **Expires** header. It is used for modern ***cache*** policy specification.
 
   Syntax:
 
-      Cache-Control: <option>, <option>, ...
+  ```javascript
+  Cache-Control: <option>, <option>, ...
 
-      // Examples
-      Cache-Control: no-store
-      Cache-Control: public, max-age=604800
+  // Examples
+  Cache-Control: no-store
+  Cache-Control: public, max-age=604800
+  ```
+
   Some of the options you can use to dictate your content’s ***caching*** policy are:
   - `no-cache`
   - `no-store`
@@ -140,12 +146,15 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-      ETag: W/"<etag_value>"
-      ETag: "<etag_value>"
+  ```javascript
+  ETag: W/"<etag_value>"
+  ETag: "<etag_value>"
 
-      // Examples
-      ETag: W/"0815"
-      ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+  // Examples
+  ETag: W/"0815"
+  ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+  ```
+
   `W/`: (case-sensitive, optional) indicates that a weak validator is used. Weak **etags** are easy to generate, but are far less useful for comparisons.
 
   `"<etag_value>"`: Entity tag uniquely representing the requested resource. They are a string of ASCII characters placed between double quotes.
@@ -155,10 +164,13 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-      Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+  ```javascript
+  Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
-      // Example
-      Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+  // Example
+  Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+  ```
+
   `<day-name>`: One of *Mon*, *Tue*, *Wed*, *Thu*, *Fri*, *Sat*, or *Sun* (case-sensitive).
 
   `<day>`: 2 digit day number, e.g. *04* or *23*.
@@ -180,7 +192,10 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-      Content-Length: <length>
+  ```javascript
+  Content-Length: <length>
+  ```
+
   `<length>`: The length in decimal number of octets.
 - **Accept-Encoding**
 
@@ -188,12 +203,15 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-      Accept-Encoding: <algorithm>;q=<value>
+  ```javascript
+  Accept-Encoding: <algorithm>;q=<value>
 
-      // Examples
-      Accept-Encoding: gzip
-      Accept-Encoding: gzip, compress, br
-      Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
+  // Examples
+  Accept-Encoding: gzip
+  Accept-Encoding: gzip, compress, br
+  Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
+  ```
+
   Possibles algorithms:
   - `gzip`: A compression format using the *Lempel-Ziv coding (LZ77)*, with a 32-bit CRC.
   - `compress`: A compression format using the *Lempel-Ziv-Welch (LZW)* algorithm.
@@ -209,11 +227,14 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-      Vary: *
-      Vary: <header-name>, <header-name>, ...
+  ```javascript
+  Vary: *
+  Vary: <header-name>, <header-name>, ...
 
-      // Example
-      Vary: User-Agent
+  // Example
+  Vary: User-Agent
+  ```
+
   `*`: Each request for a URL is supposed to be treated as a unique and uncacheable request.
 
   `<header-name>`: A comma-separated list of header names to take into account when deciding whether or not a cached response can be used.

@@ -9,48 +9,89 @@
 
 - Initialize a repository
 
-      git init
+  ```bash
+  git init
+  ```
+
 - Clone a remote repository
 
-      git clone <remoteUrl>
+  ```bash
+  git clone <remoteUrl>
+  ```
+
 - Stage files for commit
 
-      git add <relativePathToFile> <relativePathToDirectory>
+  ```bash
+  git add <relativePathToFile> <relativePathToDirectory>
+  ```
+
 - Commit files
 
-      git commit -m "Line 1 description" -m "Line 2 description"
+  ```bash
+  git commit -m "Line 1 description" -m "Line 2 description"
+  ```
+
 - Add a remote repository
 
-      git remote add <remoteName> <remoteUrl>
+  ```bash
+  git remote add <remoteName> <remoteUrl>
+  ```
+
 - Fetch remote changes
 
-      git fetch <remoteName>
+  ```bash
+  git fetch <remoteName>
+  ```
+
 - Fetch and merges remote changes
 
-      git pull <remoteName> <remoteBranch>
+  ```bash
+  git pull <remoteName> <remoteBranch>
+  ```
+
 - Reset your local branch
 
-      git reset [--hard]
+  ```bash
+  git reset [--hard]
+  ```
+
 - Create a new local branch
 
-      git checkout -b <newBranch/Name>
-      # or
-      git switch -c <newBranch/Name>
+  ```bash
+  git checkout -b <newBranch/Name>
+  # or
+  git switch -c <newBranch/Name>
+  ```
+
 - Push a local branch to a remote repository
 
-      git push # current branch
-      git push -u <remoteName> <branchName> # any branch
-      git push --force # overwrite all changes
+  ```bash
+  git push # current branch
+
+  git push -u <remoteName> <branchName> # any branch
+
+  git push --force # overwrite all changes
+  ```
+
 - Stash your uncommitted changes
 
-      git stash [pop|drop]
+  ```bash
+  git stash [pop|drop]
+  ```
+
 - Rename a branch
 
-      git branch -m <oldBranchName> <newBranchName> # local
-      git branch -m <remoteName> :<oldBranchName> <newBranchName> # remote
+  ```bash
+  git branch -m <oldBranchName> <newBranchName> # local
+
+  git branch -m <remoteName> :<oldBranchName> <newBranchName> # remote
+  ```
+
 - Show a commit log
 
-      git log
+  ```bash
+  git log
+  ```
 
 ## Git - Resources
 

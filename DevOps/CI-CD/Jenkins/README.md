@@ -19,10 +19,16 @@ At the heart of the ***Jenkins*** build process are **Build jobs**. Simply put, 
 
 - Start ***Jenkins***
 
-      sudo systemctl start jenkins
+  ```bash
+  sudo systemctl start jenkins
+  ```
+
 - Check application status
 
-      systemctl status jenkins
+  ```bash
+  systemctl status jenkins
+  ```
+
 - Go to [*localhost:8090*](http://localhost:8090) and follow the steps
 
 ## Jenkins - Resources

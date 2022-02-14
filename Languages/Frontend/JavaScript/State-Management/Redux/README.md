@@ -128,7 +128,11 @@ src/
 |  ...
 ```
 
-#### src/app/store.js
+#### src/
+
+##### app/
+
+###### store.js
 
 ```javascript
 import { configureStore } from '@reduxjs/toolkit';
@@ -146,7 +150,9 @@ export const store = configureStore({
 });
 ```
 
-#### src/slices/todosSlice.js
+##### slices/
+
+###### todosSlice.js
 
 ```javascript
 import { createSlice } from '@reduxjs/toolkit';
@@ -185,7 +191,9 @@ export const selectTodos = (state) => state.todos.value;
 export default todosSlice.reducer;
 ```
 
-#### src/components/Todos.jsx
+##### components/
+
+###### Todos.jsx
 
 ```javascript
 import React, { useState } from 'react';
@@ -225,7 +233,7 @@ export const Todos = () => {
 };
 ```
 
-#### src/App.js
+##### App.js
 
 ```javascript
 import React from 'react';

@@ -271,6 +271,44 @@ import logo from './images/logo.png';
   <img src={logo} alt="logo" />
 ```
 
+### Import styles from CSS
+
+- The CSS
+
+  ```css
+  .button {
+    border: 2px solid;
+    color: white;
+    background-color: red;
+    transition: all 0.15s;
+  }
+
+  .button:hover,
+  .button:focus {
+    border: 2px solid blue;
+  }
+
+  .button:active {
+    background-color: green;
+  }
+  ```
+
+- The Component
+
+  ```javascript
+  import styles from 'stylesheet.css';
+
+  export const Cmp = () => {
+    return (
+      <div>
+        {/* Both have the same result */}
+        <button className={styles.button}></button>
+        <button className='button'></button>
+      </div>
+    );
+  }
+  ```
+
 ### Make your life easier
 
 #### Object of React Components
@@ -329,9 +367,7 @@ It will look something like this:
 {
   "compilerOptions": {
     "baseUrl": "src",
-    .
-    .
-    .
+    ...
   }
 }
 ```

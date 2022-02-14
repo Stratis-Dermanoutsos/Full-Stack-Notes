@@ -169,7 +169,7 @@ export const todosSlice = createSlice({
   reducers: {
     add: (state, action) => {
       /* Redux Toolkit allows us to write "mutating" logic in reducers.
-       * It doesn't actually mutate the state but produces a brand new  immutable state based off those changes.
+       * It doesn't actually mutate the state but produces a brand new immutable state based off those changes.
        */
       state.value.push({
         id: Math.random(),

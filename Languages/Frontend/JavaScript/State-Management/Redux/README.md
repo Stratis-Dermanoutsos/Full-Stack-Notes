@@ -51,7 +51,7 @@ The above **action** can be written as
 
 ```javascript
 function addNote(title, content) {
-    return { type: ADD_NOTE, title: title, content: content };
+  return { type: ADD_NOTE, title: title, content: content };
 }
 ```
 
@@ -69,7 +69,7 @@ The **reducer** function takes two parameters:
 It returns the new app state.
 
 ```javascript
-    (previousState, action) => newState
+(previousState, action) => newState
 ```
 
 To deal with **reducer** complexity, we chunk them down in multiple, simpler **reducers** and later, we combine them with a ***Redux*** helper function called `combineReducers`.
@@ -90,7 +90,7 @@ The values to be stored in it are completely up to the developer and they can be
 
 A convenient ***Redux*** file tree setup is
 
-```bash
+```text
 redux/
 |- actions/
 |  |- actions.js
@@ -100,8 +100,149 @@ redux/
 |  |- store.js
 ```
 
+or, my personal choice,
+
+```text
+src/
+|- app/
+|  |- store.js
+|- slices/
+|  |- ...
+|- components/
+|  ...
+```
+
+### Simple todo project template
+
+The template we'll use is the following (JavaScript)
+
+```text
+src/
+|- app/
+|  |- store.js
+|- slices/
+|  |- todosSlice.js
+|- components/
+|  |- Todos.jsx
+|- App.js
+|  ...
+```
+
+#### src/app/store.js
+
+```javascript
+import { configureStore } from '@reduxjs/toolkit';
+import todosReducer from '../slices/todosSlice';
+
+export const store = configureStore({
+  reducer: {
+    todos: todosReducer,
+    /* more reducers, if needed
+     * eg. 
+     * names: namesReducer,
+     * etc
+     */
+  },
+});
+```
+
+#### src/slices/todosSlice.js
+
+```javascript
+import { createSlice } from '@reduxjs/toolkit';
+
+// The initialState variable is pretty much self explanatory
+const initialState = {
+  value: []
+};
+
+export const todosSlice = createSlice({
+  name: 'todos',
+  initialState,
+  // The `reducers` field lets us define reducers and generate associated actions
+  reducers: {
+    add: (state, action) => {
+      /* Redux Toolkit allows us to write "mutating" logic in reducers.
+       * It doesn't actually mutate the state but produces a brand new  immutable state based off those changes.
+       */
+      state.value.push({
+        id: Math.random(),
+        text: action.payload,
+        completed: false
+      });
+    },
+    remove: (state, action) => {
+      state.value = state.value.filter(todo => todo.id !== action.payload);
+    }
+  }
+});
+
+export const { add, remove } = todosSlice.actions;
+
+// The function below is called a selector and allows us to select a value from the state.
+export const selectTodos = (state) => state.todos.value;
+
+export default todosSlice.reducer;
+```
+
+#### src/components/Todos.jsx
+
+```javascript
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  add,
+  remove,
+  selectTodos
+} from './slices/todosSlice';
+
+export const Todos = () => {
+  /*
+   * We set the state of our todos using the useSelector hook and the selector variable from our todosSlice.
+   * Also, we declare dispatch, a hook to access the redux dispatch function.
+   */
+  const todos = useSelector(selectTodos);
+  const dispatch = useDispatch();
+
+  // Local state, does not need to be in store as it's only used here.
+  const [text, setText] = useState('This is a todo');
+
+  return (
+    <div>
+      <ul>
+        {/* We render our list, each item with its text, id and a remove button */}
+        {/* Notice how we dispatch the remove reducer passing the item's id to the action's payload */}
+        {todos.map(todo => (
+          <li key={todo.id}>{todo.text} <button onClick={(e) => dispatch(remove(todo.id))}>X</button></li>
+        ))}
+      </ul>
+      {/* Pretty simple input that binds to our state text */}
+      <input type='text' value={text} onChange={(e) => setText(e.target.value)} />
+      {/* A button to dispatch the add reducer */}
+      <button onClick={() => dispatch(add(text))}>Add</button>
+    </div>
+  );
+};
+```
+
+#### src/App.js
+
+```javascript
+import React from 'react';
+import { Todos } from './components/Todos';
+
+function App() {
+  return (
+    <Todos />
+  );
+}
+
+export default App;
+```
+
 ## Redux - Resources
 
+- [Redux Essentials](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
 - [Redux documentation](https://redux.js.org/introduction/getting-started)
 - [Redux CDN](https://cdnjs.com/libraries/redux)
 - [Redux repository](https://github.com/reduxjs/redux)

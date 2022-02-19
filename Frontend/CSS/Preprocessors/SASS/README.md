@@ -10,7 +10,7 @@
 ### Variables
 
 ```scss
-$red = hsl(0, 100%, 50%);
+$red: hsl(0, 100%, 50%);
 ```
 
 ### Nesting
@@ -132,7 +132,7 @@ $sizes: 40px, 50px, 80px;
 
 ```scss
 @function sum($numbers) {
-  $sum = 0;
+  $sum: 0;
 
   @each $number in $numbers {
     $sum: $sum + $number;

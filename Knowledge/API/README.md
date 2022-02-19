@@ -186,5 +186,6 @@ Each ***API*** response consists of:
 - [Authentication and Authorization by devoteam](https://nl.devoteam.com/expert-view/authentication-and-authorization-to-secure-apis/)
 - [Make secure .NET Microservices and Web Applications](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/secure-net-microservices-web-applications/)
 - [Five tips for building a standout API, tweet by RapidAPI](https://twitter.com/Rapid_API/status/1462752410103910407)
+- [Make your API secure, tweet by RapidAPI](https://twitter.com/Rapid_API/status/1488221552562872331)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#api)

@@ -67,6 +67,60 @@ return (
 );
 ```
 
+### Components
+
+**Components** is the heart of ***React***. Their job is only 1: Break UIs into small chunks.
+
+They can be either a function or an **ES6** class.
+
+#### Function components
+
+```javascript
+const ListItem = ({text}) => {
+  return <li>{text}</li>;
+}
+```
+
+How to use?
+
+```javascript
+<ul>
+  <ListItem text={'This is a Component Instance'}></ListItem>
+  <ListItem text={'This is another Component Instance'}/>
+</ul>
+```
+
+#### Class components
+
+```javascript
+class ListItem extends React.Component {
+  render() {
+    return <li>{this.props.children}</li>;
+  }
+}
+```
+
+How to use?
+
+```javascript
+<ul>
+  <ListItem>This is a Component Instance</ListItem>
+  <ListItem>This is another Component Instance</ListItem>
+</ul>
+```
+
+#### Component Instance
+
+```javascript
+<ListItem>This is a Component Instance</ListItem>
+```
+
+#### Element
+
+```javascript
+React.createElement(ListItem, {children: 'This is an Element'})
+```
+
 ### Hooks
 
 UI components are often dynamic.
@@ -79,7 +133,7 @@ Without them, it is easy, and sometimes even necessary, to wrap components insid
 
 Basically, hooks are functions that generally start with the word '*use*'.
 
-<ins>Basic rule</ins>: ***Only call them at the top level of a function***!
+> ***Only call them at the top level of a function***!
 
 - ***useState()***
 

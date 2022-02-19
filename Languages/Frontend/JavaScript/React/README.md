@@ -375,6 +375,7 @@ It will look something like this:
 ## React - Resources
 
 - [Fireship video (explanation)](https://youtu.be/Tn6-PIqc4UM)
+- [Beginner's Tutorial by freeCodeCamp.org (2022)](https://youtu.be/bMknfKXIFA8)
 - [Web Dev Simplified video (introduction)](https://youtu.be/hQAHSlTtcmY)
 - [Fireship video (hooks)](https://youtu.be/TNhaISOUy6Q)
 - [Routing in React](https://reactrouter.com/web/guides/quick-start)

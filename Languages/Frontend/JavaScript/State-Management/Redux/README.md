@@ -86,6 +86,34 @@ It is possible to create multiple **stores**, this is against the pattern that *
 
 The values to be stored in it are completely up to the developer and they can be nested as much as needed.
 
+### Store Provider
+
+It is VERY important to give a provider to the App so it knows where the state is being stored.
+
+This is quite simple and can be achieved by encapsulating the `<App />` component instance inside the Provider like so:
+
+- Go to *index.(js|tsx)*
+- Include the store and the Provider
+
+  ```javascript
+  import { store } from 'app/store';
+  import { Provider } from 'react-redux';
+  ```
+
+- Change
+
+  ```javascript
+  <App />
+  ```
+
+  to
+
+  ```javascript
+  <Provider store={store}>
+    <App />
+  </Provider>
+  ```
+
 ### Setup example
 
 A convenient ***Redux*** file tree setup is

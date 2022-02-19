@@ -386,9 +386,11 @@ It will look something like this:
   - [Ant Design](https://ant.design)
   - [Semantic UI](https://semantic-ui.com)
   - [Material-UI](https://mui.com)
+  - [Mantine](https://mantine.dev)
   - [NextUI](https://nextui.org)
   - [React-Bootstrap](https://react-bootstrap.github.io)
   - [Atomize](https://atomizecode.com)
   - [Blueprint](https://blueprintjs.com)
+  - [Slate](https://github.com/ianstormtaylor/slate)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#react)

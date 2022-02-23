@@ -9,7 +9,7 @@ Well, by default, when we will focus on ***ASP .NET* Core**.
 
 ### dotnet CLI
 
-<ins>This section can be skipped if you don't use the Terminal.</ins>
+> This section can be skipped if you don't use the Terminal.
 
 - List your dotnet SDKs
 
@@ -641,6 +641,7 @@ To make an \<a> element that redirects to the Index page using *asp-page*
   - [Claims documentation](https://docs.microsoft.com/en-us/dotnet/api/system.security.claims)
   - [JetBrains on Entity Framework](https://www.jetbrains.com/dotnet/guide/tutorials/basics/entity-framework-core/)
   - [ASP.NET Core - Authentication & Authorization video tutorial by Raw Coding](https://www.youtube.com/playlist?list=PLOeFnOV9YBa7dnrjpOG6lMpcyd7Wn7E8V)
+  - [Dependency Injection for Absolute Beginners with C# and .NET](https://youtu.be/tTJetZj3vg0)
   - [Simple Login guide by c-sharpcorner](https://www.c-sharpcorner.com/article/asp-net-core-razor-pages-simple-login-using-entity-framework-database-first-app/)
 - **dotnet**
   - [dotnet SDK documentation](https://docs.microsoft.com/en-us/dotnet/core/sdk)

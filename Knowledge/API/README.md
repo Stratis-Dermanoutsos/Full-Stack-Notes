@@ -182,6 +182,7 @@ Each ***API*** response consists of:
 - [Fireship video](https://youtu.be/-MTSQjw5DrM)
 - [RapidAPI](https://docs.rapidapi.com)
 - [Nick Chapsas video (.NET Minimal API)](https://youtu.be/eRJFNGIsJEo)
+- [Nick Chapsas video (A new way to build CLEAN and FAST APIs in .NET (6 & 7))](https://youtu.be/z32_7KgCr6c)
 - [Authentication and Authorization, tweet by RapidAPI](https://twitter.com/Rapid_API/status/1463190771448885255)
 - [Authentication and Authorization by devoteam](https://nl.devoteam.com/expert-view/authentication-and-authorization-to-secure-apis/)
 - [Make secure .NET Microservices and Web Applications](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/secure-net-microservices-web-applications/)

@@ -643,6 +643,7 @@ To make an \<a> element that redirects to the Index page using *asp-page*
   - [ASP.NET Core - Authentication & Authorization video tutorial by Raw Coding](https://www.youtube.com/playlist?list=PLOeFnOV9YBa7dnrjpOG6lMpcyd7Wn7E8V)
   - [Dependency Injection for Absolute Beginners with C# and .NET](https://youtu.be/tTJetZj3vg0)
   - [Simple Login guide by c-sharpcorner](https://www.c-sharpcorner.com/article/asp-net-core-razor-pages-simple-login-using-entity-framework-database-first-app/)
+  - [PostgreSQL with EF Core](https://www.npgsql.org/efcore/index.html)
 - **dotnet**
   - [dotnet SDK documentation](https://docs.microsoft.com/en-us/dotnet/core/sdk)
   - [dotnet CLI documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/)

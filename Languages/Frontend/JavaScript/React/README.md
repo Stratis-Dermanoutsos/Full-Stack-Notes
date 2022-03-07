@@ -433,7 +433,7 @@ It will look something like this:
 - [Web Dev Simplified video (introduction)](https://youtu.be/hQAHSlTtcmY)
 - [Fireship video (hooks)](https://youtu.be/TNhaISOUy6Q)
 - [How I structure my react components by Rakesh Potnuru](https://dev.to/itsrakesh/how-i-structure-my-react-components-aef)
-- [Routing in React](https://reactrouter.com/web/guides/quick-start)
+- [Routing in React](https://reactrouter.com/docs/en/v6)
 - [URL parameters and query strings in React](https://betterprogramming.pub/using-url-parameters-and-query-strings-with-react-router-fffdcea7a8e9)
 - [React with TypeScript Cheatsheet](https://blog.bitsrc.io/react-with-typescript-cheatsheet-9dd891dc5bfe)
 - [React anti-patterns by Fireship](https://youtu.be/b0IZo2Aho9Y)

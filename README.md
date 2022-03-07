@@ -1,10 +1,43 @@
 # Full-Stack Notes
 
+![Money CLI](https://img.shields.io/badge/notes-Full_Stack-blueviolet)
+[![GitHub license](https://img.shields.io/github/license/Stratis-Dermanoutsos/Full-Stack-Notes.svg)](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/main/LICENSE)
+
+[![GitHub watchers](https://img.shields.io/github/watchers/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/watchers/)
+[![GitHub stars](https://img.shields.io/github/stars/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/stargazers/)
+
 This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer.
 
 As you can see, the [Tech Stack section](#tech-stack) includes many different technologies. However, I have included notes and resources for only those I have personally worked with and learnt myself.
 
 Everyone who reads this is welcome to and should choose their own tools/technologies to master.
+
+## Table of Contents
+
+- [Tech stack](#tech-stack)
+  - [Frontend technologies](#frontend-technologies)
+  - [Programming languages](#programming-languages)
+    - [Backend](#backend)
+    - [Frontend](#frontend)
+  - [Databases](#databases)
+  - [Tools](#tools)
+    - Git
+    - NPM
+    - Webpack
+  - [DevOps](#devops)
+    - CI-CD
+  - [Knowledge](#knowledge)
+    - Algorithms
+    - Data Structures
+    - API
+    - Architectures
+    - Process management && Threads & Concurrency
+    - Reverse and Forward proxy
+    - Load Balancer
+    - Caching Server
+    - Firewall
+- [Project ideas](#project-ideas)
+- [License](#license)
 
 ## TECH STACK
 
@@ -72,12 +105,6 @@ Everyone who reads this is welcome to and should choose their own tools/technolo
 - [x] [***CI/CD***](./DevOps/CI-CD/#ci-cd)
   - [x] [***Github Actions***](./DevOps/CI-CD/Github-Actions/#github-actions)
   - [x] [***Jenkins***](./DevOps/CI-CD/Jenkins/#jenkins)
-
-### Cloud
-
-- [ ] ***Github Pages***
-- [ ] ***AWS***
-- [ ] ***Azure***
 
 ### Knowledge
 
@@ -148,10 +175,8 @@ Everyone who reads this is welcome to and should choose their own tools/technolo
   - Survey form
   - Todo list
 
-## GOAL
+## LICENSE
 
-There is no real goal to this. As a developer, there is nothing better than constant acquisition of knowledge.
-
-In my personal, biased opinion, the only goal for a developer should be to acquire the **knowledge**, **skills** and **tools** to build any ***application*** / ***project*** / ***tool*** they can think of.
+Full-Stack-Notes is licensed under [MIT License](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/main/LICENSE).
 
 [⬆ JUMP TO TOP](#full-stack-notes)

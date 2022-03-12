@@ -450,5 +450,6 @@ It will look something like this:
   - [React-Bootstrap](https://react-bootstrap.github.io)
   - [Semantic UI](https://semantic-ui.com)
   - [Slate](https://github.com/ianstormtaylor/slate)
+  - [Victory](https://formidable.com/open-source/victory/docs)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#react)

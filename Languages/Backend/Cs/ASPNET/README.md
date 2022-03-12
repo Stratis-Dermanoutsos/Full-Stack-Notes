@@ -638,6 +638,7 @@ To make an \<a> element that redirects to the Index page using *asp-page*
 - Specifics
   - [Tag Helpers documentation](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/)
   - [Entity Framework Core documentation](https://docs.microsoft.com/en-us/ef/core/)
+  - [Entity Framework in Console](https://www.entityframeworktutorial.net/efcore/entity-framework-core-console-application.aspx)
   - [Claims documentation](https://docs.microsoft.com/en-us/dotnet/api/system.security.claims)
   - [JetBrains on Entity Framework](https://www.jetbrains.com/dotnet/guide/tutorials/basics/entity-framework-core/)
   - [ASP.NET Core - Authentication & Authorization video tutorial by Raw Coding](https://www.youtube.com/playlist?list=PLOeFnOV9YBa7dnrjpOG6lMpcyd7Wn7E8V)

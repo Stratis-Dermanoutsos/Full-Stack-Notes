@@ -5,12 +5,17 @@
 
 [![GitHub watchers](https://img.shields.io/github/watchers/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/watchers/)
 [![GitHub stars](https://img.shields.io/github/stars/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/stargazers/)
+[![GitHub stars](https://img.shields.io/github/issues/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Issues&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/issues/)
 
 This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer.
 
 As you can see, the [Tech Stack section](#tech-stack) includes many different technologies. However, I have included notes and resources for only those I have personally worked with and learnt myself.
 
 Everyone who reads this is welcome to and should choose their own tools/technologies to master.
+
+To see what new *notes*/*resources* will be added, go to [issues](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/issues/).
+
+> Feel free to create an issue and mention anything you think a **Full-Stack** developer needs to know about.
 
 ## Table of Contents
 

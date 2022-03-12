@@ -5,7 +5,7 @@
 
 [![GitHub watchers](https://img.shields.io/github/watchers/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/watchers/)
 [![GitHub stars](https://img.shields.io/github/stars/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/stargazers/)
-[![GitHub stars](https://img.shields.io/github/issues/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Issues&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/issues/)
+[![GitHub issues](https://img.shields.io/github/issues/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Issues&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/issues/)
 
 This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer.
 

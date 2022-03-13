@@ -2,10 +2,10 @@
 
 ![Money CLI](https://img.shields.io/badge/notes-Full_Stack-blueviolet)
 [![GitHub license](https://img.shields.io/github/license/Stratis-Dermanoutsos/Full-Stack-Notes.svg)](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/Stratis-Dermanoutsos/Full-Stack-Notes.svg)](https://GitHub.com/Stratis-Dermanoutsos/Full-Stack-Notes/issues/)
 
 [![GitHub watchers](https://img.shields.io/github/watchers/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/watchers/)
 [![GitHub stars](https://img.shields.io/github/stars/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/stargazers/)
-[![GitHub issues](https://img.shields.io/github/issues/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Issues&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/issues/)
 
 This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer.
 

@@ -118,7 +118,7 @@ This is code block
 
 To create this, you need to take 2 steps:
 
-- Create a code block with *mermaid* as the landuage.
+- Create a code block with *mermaid* as the language.
 - Paste the following as content
 
   ```text

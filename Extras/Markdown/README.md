@@ -106,9 +106,33 @@ This is code block
 >
 > This is a blockquote BTW.
 
+### Diagrams
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
+
+To create this, you need to take 2 steps:
+
+- Create a code block with *mermaid* as the landuage.
+- Paste the following as content
+
+  ```text
+    graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+  ```
+
 ## Markdown - Resources
 
 - [Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 - [README.so](https://readme.so/editor)
+- [Include diagrams in your Markdown files with Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#markdown)

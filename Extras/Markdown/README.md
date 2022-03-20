@@ -23,6 +23,89 @@ Markdown exists to make this process very easy and quick.
 - Notes
 - ...and many more
 
+### Headings
+
+```markdown
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+```
+
+### Text
+
+```markdown
+*italic text*
+**bold text**
+***bold & italic text***
+~~Strikethrough text~~
+```
+
+### Blockquotes
+
+```markdown
+> This is a blokquote
+```
+
+### Horizontal rule
+
+```markdown
+---
+```
+
+### Lists
+
+```markdown
+- First element of unordered list
+- Second element of unordered list
+
+1. First element of ordered list
+2. Second element of ordered list
+
+- [x] First element of task list
+- [ ] Second element of task list
+```
+
+### Link
+
+```markdown
+[text](URL)
+```
+
+### Image
+
+```markdown
+![alt](URL)
+```
+
+### Table
+
+```markdown
+| Aligned left | Aligned center | Aligned Right |
+| :-- | :-: | --: |
+| R1-C1 | R1-C2 | ... |
+| R2-C1 | R2-C2 | ... |
+| R3-C1 | R3-C2 | ... |
+```
+
+### Code
+
+```markdown
+`This is inline code`
+```
+
+\`\`\`language
+
+This is code block
+
+\`\`\`
+
+> All of the above examples are writen in code blocks.
+>
+> This is a blockquote BTW.
+
 ## Markdown - Resources
 
 - [Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/)

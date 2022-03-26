@@ -247,13 +247,35 @@ img:hover {
 
 #### Center anything
 
-```css
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-```
+- Flexbox
+
+  ```css
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ```
+
+- Position
+
+  ```css
+  .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  ```
+
+- Grid
+
+  ```css
+  .center {
+    display: grid;
+    place-items: center;
+  }
+  ```
 
 #### Smooth scrolling
 

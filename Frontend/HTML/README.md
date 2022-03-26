@@ -69,6 +69,15 @@ A Semantic element clearly describes its meaning to both the browser and the dev
   ```
 
   This can be very useful to prevent your brand's name from being translated to something else.
+- **mobile header color** meta tag
+
+  ```html
+  <!-- <meta name="theme-color" content="color" /> -->
+
+  <meta name="theme-color" content="#323232" />
+  ```
+
+  Now, the background color of the browser will be changed to the one we set, on mobile devices.
 
 ### Custom HTML element
 

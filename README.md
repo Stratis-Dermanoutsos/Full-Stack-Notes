@@ -146,9 +146,13 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
   - Calculator
   - Integrations with any 3rd party APIs
     - Chatbot
+    - Crypto News
+    - Email Validator
     - Food Recipes
+    - Grammar Check
     - Jokes/Quote generator
     - Movies/series library
+    - Song Lyrics finder
     - Spell checker
     - Travel application
   - Markdown editor

@@ -55,81 +55,6 @@
   'b' > 'ä' // false
   ```
 
-### Useful code snippets
-
-- Remove duplicate values from array
-
-  ```javascript
-  const arr = [ 1, 2, 3, 2, 4, 4, 1, 5, 6 ];
-  const uniqueArr = [...new Set(arr)]; // = [ 1, 2, 3, 4, 5, 6 ]
-  ```
-
-- Filter out falsy values
-
-  ```javascript
-  const arr = [ 1, null, undefined, 0, 2, "", 4 ];
-  const nonFalsy = array.filter(Boolean); // = [ 1, 2, 4 ]
-  ```
-
-- Swap two variables with array destructuring
-
-  ```javascript
-  let a = 6;
-  let b = 9;
-
-  [ a, b ] = [ b, a ];
-  ```
-
-- Destructure function parameters, making code more readable
-
-  ```javascript
-  // DON'T DO THIS
-  const myFunction = (one, two, three) => {
-    // code
-  };
-
-  myFunction(1, 2, 3);
-
-  // DO THIS
-  const myFunction = ({one, two, three}) => {
-    // code
-  };
-
-  myFunction({
-    one: 1,
-    two: 2,
-    three: 3
-  });
-  ```
-
-- Short circuit Evaluation
-  - *AND*
-
-    ```javascript
-    if (condition)
-      doAction();
-
-    // is equal to
-    condition && doAction();
-    ```
-
-  - *OR*
-
-    ```javascript
-    if (!condition)
-      doAction();
-
-    // is equal to
-    condition || doAction();
-    ```
-
-- Convert result of division to integer
-
-  ```javascript
-  const a = 23 / 10     // = 2.3
-  const b = 23 / 10 | 0 // = 2
-  ```
-
 ### Asynchronous code
 
 There are 2 main ways:
@@ -215,6 +140,81 @@ const myFunction = (argument = required('argument')) => {
 ```
 
 Now, when anyone calls `myFunction` without assigning a value to the `param` argument, it throws an error.
+
+### Useful code snippets
+
+- Remove duplicate values from array
+
+  ```javascript
+  const arr = [ 1, 2, 3, 2, 4, 4, 1, 5, 6 ];
+  const uniqueArr = [...new Set(arr)]; // = [ 1, 2, 3, 4, 5, 6 ]
+  ```
+
+- Filter out falsy values
+
+  ```javascript
+  const arr = [ 1, null, undefined, 0, 2, "", 4 ];
+  const nonFalsy = array.filter(Boolean); // = [ 1, 2, 4 ]
+  ```
+
+- Swap two variables with array destructuring
+
+  ```javascript
+  let a = 6;
+  let b = 9;
+
+  [ a, b ] = [ b, a ];
+  ```
+
+- Destructure function parameters, making code more readable
+
+  ```javascript
+  // DON'T DO THIS
+  const myFunction = (one, two, three) => {
+    // code
+  };
+
+  myFunction(1, 2, 3);
+
+  // DO THIS
+  const myFunction = ({one, two, three}) => {
+    // code
+  };
+
+  myFunction({
+    one: 1,
+    two: 2,
+    three: 3
+  });
+  ```
+
+- Short circuit Evaluation
+  - *AND*
+
+    ```javascript
+    if (condition)
+      doAction();
+
+    // is equal to
+    condition && doAction();
+    ```
+
+  - *OR*
+
+    ```javascript
+    if (!condition)
+      doAction();
+
+    // is equal to
+    condition || doAction();
+    ```
+
+- Convert result of division to integer
+
+  ```javascript
+  const a = 23 / 10     // = 2.3
+  const b = 23 / 10 | 0 // = 2
+  ```
 
 ### C# vs JavaScript
 

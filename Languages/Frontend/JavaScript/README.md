@@ -141,6 +141,81 @@ const myFunction = (argument = required('argument')) => {
 
 Now, when anyone calls `myFunction` without assigning a value to the `param` argument, it throws an error.
 
+### Console API
+
+There are many ways to output something using the [console API](https://developer.mozilla.org/en-US/docs/Web/API/console).
+
+- Normal log
+
+  ```javascript
+  console.log('This is a log.');
+  ```
+
+- Error message
+
+  ```javascript
+  console.error('This is an error.');
+  ```
+
+- Warning message
+
+  ```javascript
+  console.warn('This is a warning.');
+  ```
+
+- Measure time
+
+  ```javascript
+  console.time();    // Start the timer
+  console.timeLog(); // Output time passed so far
+  console.timeEnd(); // Output time passed and end the timer
+  ```
+
+- Table
+
+  Let's say we have an array of objects
+
+  ```javascript
+  const people = [
+    {
+      firstName: 'Pete',
+      lastName: 'Frank'
+    },
+    {
+      firstName: 'Stratis',
+      lastName: 'Derm'
+    },
+    {
+      firstName: 'Third',
+      lastName: 'Person'
+    }
+  ];
+  ```
+
+  To output this in a tabular form
+
+  ```javascript
+  console.table(people);
+  ```
+
+- Trace
+
+  Use this to see how the output was reached
+
+  ```javascript
+  const outputSomething = () => {
+    console.trace('Hi!');
+  };
+
+  outputSomething();
+  ```
+
+- Better object output
+
+  ```javascript
+  console.dir(obj);
+  ```
+
 ### Useful code snippets
 
 - Remove duplicate values from array

@@ -70,6 +70,46 @@ A Semantic element clearly describes its meaning to both the browser and the dev
 
   This can be very useful to prevent your brand's name from being translated to something else.
 
+### Custom HTML element
+
+You can actually create and use your own custom elements in HTML.
+
+- Declare the element using ***JavaScript***
+
+  ```javascript
+  class CustomElement extends HTMLElement {
+    connectedCallback() {
+      this.innerHTML = 'This is a custom element.';
+    }
+  }
+
+  customElements.define('custom-element', CustomElement);
+  ```
+
+- Use it in your ***HTML***
+
+  ```html
+  <custom-element />
+  ```
+
+Full example:
+
+```html
+<body>
+  <script>
+    class CustomElement extends HTMLElement {
+      connectedCallback() {
+        this.innerHTML = 'This is a custom element.';
+      }
+    }
+
+    customElements.define('custom-element', CustomElement);
+  </script>
+
+  <custom-element />
+</body>
+```
+
 ## HTML - Resources
 
 - [HTML in 100 seconds by Fireship](https://youtu.be/ok-plXXHlWw)

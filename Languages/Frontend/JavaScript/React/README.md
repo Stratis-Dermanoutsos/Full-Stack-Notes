@@ -313,6 +313,22 @@ Basically, hooks are functions that generally start with the word '*use*'.
   }, [count]);
   ```
 
+- ***useId()***
+
+  It is a new hook introduced with [React 18](https://reactjs.org/blog/2022/03/29/react-v18.html) and it is used for generating unique IDs on both the client and server.
+
+  ```javascript
+  function Checkbox() {
+    const id = useId();
+    return (
+      <>
+        <label htmlFor={id}>Do you like React?</label>
+        <input type="checkbox" name="react" id={id} />
+      </>
+    );
+  }
+  ```
+
 There are more hooks, but I kept it simple and focused to the common ones.
 
 ### Images
@@ -424,6 +440,18 @@ It will look something like this:
     ...
   }
 }
+```
+
+#### Suspend Layout
+
+The new `<Suspense>` tag enables you to render another component while your data is being fetched, without the need of a ternary operator (`? :`) or anything like that.
+
+```javascript
+<Suspense fallback={<h1>Loading...</h1>}>
+  <div>
+    {data.map(...)}
+  </div>
+</Suspense>
 ```
 
 ## React - Resources

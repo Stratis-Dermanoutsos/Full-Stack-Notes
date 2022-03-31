@@ -122,5 +122,6 @@ Start from the left-most element and with each iteration, the minimum element (c
 
 - [GeeksForGeeks](https://www.geeksforgeeks.org/fundamentals-of-algorithms/)
 - [my GitHub repository](https://github.com/Stratis-Dermanoutsos/Algorithms-C-Sharp/)
+- [The Algorithms](https://github.com/TheAlgorithms)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#algorithms)

@@ -473,6 +473,7 @@ The new `<Suspense>` tag enables you to render another component while your data
   - [Atomize](https://atomizecode.com)
   - [Blueprint](https://blueprintjs.com)
   - [Elementz](https://elementz.style)
+  - [Headless UI](https://headlessui.dev)
   - [Mantine](https://mantine.dev)
   - [Material-UI](https://mui.com)
   - [NextUI](https://nextui.org)
@@ -480,6 +481,7 @@ The new `<Suspense>` tag enables you to render another component while your data
   - [React Flow](https://reactflow.dev/docs/)
   - [Semantic UI](https://semantic-ui.com)
   - [Slate](https://github.com/ianstormtaylor/slate)
+  - [VechaiUI](https://www.vechaiui.com)
   - [Victory](https://formidable.com/open-source/victory/docs)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#react)

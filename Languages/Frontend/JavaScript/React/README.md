@@ -479,6 +479,7 @@ The new `<Suspense>` tag enables you to render another component while your data
   - [NextUI](https://nextui.org)
   - [React-Bootstrap](https://react-bootstrap.github.io)
   - [React Flow](https://reactflow.dev/docs/)
+  - [React Toolbox](http://react-toolbox.io/)
   - [Semantic UI](https://semantic-ui.com)
   - [Slate](https://github.com/ianstormtaylor/slate)
   - [VechaiUI](https://www.vechaiui.com)

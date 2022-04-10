@@ -316,5 +316,10 @@ There are many ways to output something using the [console API](https://develope
 - [clean-code-javascript repository](https://github.com/ryanmcdermott/clean-code-javascript)
 - [w3schools](https://www.w3schools.com/js/default.asp)
 - [Environment Variables in VanillaJS by freeCodeCamp](https://www.freecodecamp.org/news/how-to-use-environment-variables-in-vanillajs/)
+- Useful libraries
+  - [D3.js - Data-Driven Documents](https://d3js.org/)
+  - [fullPage.js - Create Beautiful Fullscreen Scrolling Websites](https://alvarotrigo.com/fullPage/)
+  - [Masonry - Cascading grid layout library](<https://masonry.desandro.com/>)
+  - [Moment.js - Manipulate display dates and times in JavaScript](https://momentjs.com/)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#javascript)

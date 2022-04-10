@@ -291,6 +291,20 @@ There are many ways to output something using the [console API](https://develope
   const b = 23 / 10 | 0 // = 2
   ```
 
+- Optional chaining
+
+  ```javascript
+  const person = {
+    name: 'Stratis',
+    pet: {
+      name: 'Leo'
+    }
+  }
+
+  console.log(person.pet?.name); // Leo
+  console.log(person.pet?.age);  // undefined
+  ```
+
 ### C# vs JavaScript
 
 |  | C#      | JavaScript |

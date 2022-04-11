@@ -46,6 +46,11 @@ Steps to do dark mode right:
 
 ## Design - Resources
 
+- [Design Principles](https://principles.design)
+- [Collect UI - Daily inspiration](https://collectui.com)
+- [Daily Landing Page inspirations](https://landingpage.fyi)
+- [Palitra App - The easiest way to find a color palette!](https://palitra.app)
+- [lookup design - Find Design Examples](https://lookup.design)
 - [UI/UX design tools, tweet by @asiedu_dev](https://twitter.com/asiedu_dev/status/1465576339176493056)
 - [Helpful Figma plugins](https://www.instagram.com/p/CWOQi0hPv9o/)
 - [Font flipper](https://fontflipper.com/)

@@ -137,5 +137,6 @@ Full example:
 - [w3schools](https://www.w3schools.com/html/default.asp)
 - [Form and Validations](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
 - [Web Dev Simplified video (forms)](https://youtu.be/fNcJuPIZ2WE)
+- [How to turn HTML webpage into an Image?](https://dev.to/jasmin/how-to-turn-html-webpage-into-an-image-n1c)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#html)

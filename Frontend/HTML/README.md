@@ -119,6 +119,18 @@ Full example:
 </body>
 ```
 
+### Easy footer example
+
+```html
+<footer style="color:rgba(255,255,255,0.3); display:flex; justify-content:space-between; padding:16px;">
+  ©
+  <script>
+    document.write(new Date().getFullYear());
+  </script>
+  , Stratis Dermanoutsos
+</footer>
+```
+
 ## HTML - Resources
 
 - [HTML in 100 seconds by Fireship](https://youtu.be/ok-plXXHlWw)

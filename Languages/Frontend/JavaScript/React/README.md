@@ -468,6 +468,7 @@ The new `<Suspense>` tag enables you to render another component while your data
 - [*useful-custom-react-hooks* repository by Web Dev Simplified](https://github.com/WebDevSimplified/useful-custom-react-hooks)
 - [Deploy React to Netlify](https://javascript.plainenglish.io/react-crash-course-deploying-to-netlify-80cee518a3cc)
 - [Tailwind CSS with React](https://youtu.be/pfaSUYaSgRo)
+- [React Query](https://react-query.tanstack.com)
 - Best Component Libraries for React
   - [Ant Design](https://ant.design)
   - [Atomize](https://atomizecode.com)
@@ -482,6 +483,7 @@ The new `<Suspense>` tag enables you to render another component while your data
   - [React Toolbox](http://react-toolbox.io/)
   - [Semantic UI](https://semantic-ui.com)
   - [Slate](https://github.com/ianstormtaylor/slate)
+  - [Spectacle](https://formidable.com/open-source/spectacle/)
   - [VechaiUI](https://www.vechaiui.com)
   - [Victory](https://formidable.com/open-source/victory/docs)
 

@@ -64,17 +64,22 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
 
 #### Frontend
 
+- [ ] ***CoffeeScript***
 - [x] [***JavaScript***](./Languages/Frontend/JavaScript/#javascript)
   - [ ] ***Angular***
   - [x] [***Ext***](./Languages/Frontend/JavaScript/Ext/#ext)
   - [x] [***jQuery***](./Languages/Frontend/JavaScript/jQuery/#jquery)
   - [x] [***React***](./Languages/Frontend/JavaScript/React/#react)
+  - [ ] ***Solid***
   - [ ] ***Svelte***
   - [ ] ***Vue***
   - State management
+    - [ ] ***BitAboutState***
     - [ ] ***MobX***
     - [ ] ***Recoil***
     - [x] [***Redux***](./Languages/Frontend/JavaScript/State-Management/Redux/#redux)
+    - [ ] ***zustand***
+- [ ] ***ReScript***
 - [x] [***TypeScript***](./Languages/Frontend/TypeScript/#typescript)
 
 ### Databases
@@ -91,6 +96,7 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
 - [x] [***Git***](./Tools/Git/#git)
 - [x] [***NPM***](./Tools/NPM/#npm)
 - [x] [***Webpack***](./Tools/Webpack/#webpack)
+- [ ] ***Vite***
 
 ### [DevOps](./DevOps/#devops)
 
@@ -122,6 +128,7 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
   - [x] Queue
   - [ ] Priority Queue
   - [x] Stack
+- [ ] ***Design Patterns***
 - [x] [***API***](./Knowledge/API/#api)
 - [ ] Architectures
   - [x] [***MVC***](./Knowledge/Architectures/MVC/#mvc)

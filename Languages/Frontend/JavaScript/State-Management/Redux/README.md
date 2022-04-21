@@ -278,6 +278,7 @@ export default App;
 
 ## Redux - Resources
 
+- [Redux in 100 seconds (by Fireship)](https://youtu.be/_shA5Xwe8_4)
 - [Redux Essentials](https://redux.js.org/tutorials/essentials/part-1-overview-concepts)
 - [Redux documentation](https://redux.js.org/introduction/getting-started)
 - [Redux CDN](https://cdnjs.com/libraries/redux)

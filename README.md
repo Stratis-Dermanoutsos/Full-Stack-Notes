@@ -69,6 +69,7 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
   - [ ] ***Angular***
   - [x] [***Ext***](./Languages/Frontend/JavaScript/Ext/#ext)
   - [x] [***jQuery***](./Languages/Frontend/JavaScript/jQuery/#jquery)
+  - [ ] ***Lit***
   - [x] [***React***](./Languages/Frontend/JavaScript/React/#react)
   - [ ] ***Solid***
   - [ ] ***Svelte***

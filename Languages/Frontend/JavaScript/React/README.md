@@ -458,6 +458,7 @@ The new `<Suspense>` tag enables you to render another component while your data
 
 - [Fireship video (explanation)](https://youtu.be/Tn6-PIqc4UM)
 - [Beginner's Tutorial by freeCodeCamp.org (2022)](https://youtu.be/bMknfKXIFA8)
+- [React Hooks Fundamentals from freeCodeCamp.org](https://www.freecodecamp.org/news/react-hooks-fundamentals/)
 - [Web Dev Simplified video (introduction)](https://youtu.be/hQAHSlTtcmY)
 - [Fireship video (hooks)](https://youtu.be/TNhaISOUy6Q)
 - [How I structure my react components by Rakesh Potnuru](https://dev.to/itsrakesh/how-i-structure-my-react-components-aef)

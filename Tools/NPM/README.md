@@ -92,5 +92,7 @@ To install ***NPM***, simply install [***Node.js***](https://nodejs.org).
 ## NPM - Resources
 
 - [NPM documentation](https://docs.npmjs.com)
+- [create-react-app (cra) documentation](https://create-react-app.dev/docs/getting-started/)
+- [Create your own create-react-app (cra) template by ihaback](https://dev.to/ihaback/create-your-own-create-react-app-template-46ll)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#npm)

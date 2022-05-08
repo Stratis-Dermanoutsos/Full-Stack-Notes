@@ -134,5 +134,6 @@ To create this, you need to take 2 steps:
 - [Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 - [README.so](https://readme.so/editor)
 - [Include diagrams in your Markdown files with Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/)
+- [Mermaid cheatsheet](https://jojozhuang.github.io/tutorial/mermaid-cheat-sheet/)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#markdown)

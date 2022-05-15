@@ -132,6 +132,7 @@ To create this, you need to take 2 steps:
 ## Markdown - Resources
 
 - [Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/)
+- [Markdoc](https://markdoc.io)
 - [README.so](https://readme.so/editor)
 - [Include diagrams in your Markdown files with Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/)
 - [Mermaid cheatsheet](https://jojozhuang.github.io/tutorial/mermaid-cheat-sheet/)

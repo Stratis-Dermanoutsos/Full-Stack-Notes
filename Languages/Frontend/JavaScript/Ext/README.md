@@ -9,19 +9,13 @@
 
 #### With NPM
 
-1. Download Ext JS
-
-   ```bash
-   npm install -g @sencha/ext-gen
-   ```
-
-2. Gerenate your first project
+1. Gerenate your first project
 
    ```bash
    ext-gen app -a
    ```
 
-3. Run the app
+2. Run the app
 
    ```bash
    cd ./my-app
@@ -71,6 +65,7 @@ There are 2 main types of builds.
 
 ## Ext - Resources
 
+- [Getting Started with npm](https://docs.sencha.com/extjs/7.5.1/guides/getting_started/getting_started_with_npm.html)
 - [Documentation](https://docs.sencha.com/extjs/7.4.0/index.html)
 - [Ext JS Kitchen Sink](https://examples.sencha.com/extjs/7.4.0/examples/kitchensink/#all)
 - [ExtJS-Tutorial](https://www.extjs-tutorial.com/extjs/Introduction)

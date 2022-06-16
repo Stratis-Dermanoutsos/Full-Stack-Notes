@@ -24,7 +24,7 @@ For test,
   npm init -y
   ```
 
-  to create a ***package.json*** file
+  to create a **package.json** file
 - Install a module for testing
 
   ```bash
@@ -66,7 +66,7 @@ If you open ***index.html*** with a browser and head to the console, you'll noti
   ```
 
   to install ***Webpack***
-- Open the ***package.json*** file and paste
+- Open the **package.json** file and paste
 
   ```json
   "build": "webpack"
@@ -227,7 +227,7 @@ npm install --save-dev css-loader style-loader sass-loader sass
   },
   ```
 
-- Open the ***package.json*** file and paste
+- Open the **package.json** file and paste
 
   ```json
   "dev": "webpack serve"

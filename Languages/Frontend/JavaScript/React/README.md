@@ -454,6 +454,55 @@ The new `<Suspense>` tag enables you to render another component while your data
 </Suspense>
 ```
 
+### Deploy to production
+
+#### Apache
+
+To deploy a ***React*** project to apache, there are several steps that must be taken. These steps with ensure that the endpoint will work for all routes and apache won't throw 404s for not finding a directory.
+
+1. Go to your **package.json** and paste the following:
+
+   ```json
+   "homepage": ".",
+   ```
+
+2. Inside the `<head>` tag of your **index.html** file, paste:
+
+   ```html
+   <script type="text/javascript"> document.write("<base href='//" + document.location.host + "/' />"); </script>
+   ```
+
+   Note that, after the `document.location.host`, you may need to paste the name of the directory your application will be deployed in. This is a necessity if your server handles multiple endpoints.
+
+   To do that:
+
+   ```html
+   <script type="text/javascript"> document.write("<base href='//" + document.location.host + "/{path}/' />"); </script>
+   ```
+
+   and replace the `{path}` with the directory's path.
+
+3. Inside the **App.js** or **index.js**, depending on where you've declared the `<BrowserRouter>`, you'll have to provide the `{path}` you set in the previous step as `basename`.
+
+   To do that, change `<BrowserRouter>` into `<BrowserRouter basename='{path}'>` replacing it like before.
+
+4. Inside the project's **public/** directory, create a file called **.htaccess** and paste:
+
+   ```text
+   Options -MultiViews
+   RewriteEngine On
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteRule ^ index.html [QSA,L]
+   ```
+
+5. Build & deploy
+
+   ```sh
+   npm run build
+   ```
+
+   and paste the generated files inside your Apache directory.
+
 ## React - Resources
 
 - [Fireship video (explanation)](https://youtu.be/Tn6-PIqc4UM)

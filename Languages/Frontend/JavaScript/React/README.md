@@ -516,7 +516,7 @@ To deploy a ***React*** project to apache, there are several steps that must be 
 - [React with TypeScript Cheatsheet](https://blog.bitsrc.io/react-with-typescript-cheatsheet-9dd891dc5bfe)
 - [React anti-patterns by Fireship](https://youtu.be/b0IZo2Aho9Y)
 - [*useful-custom-react-hooks* repository by Web Dev Simplified](https://github.com/WebDevSimplified/useful-custom-react-hooks)
-- [Deploy React to Netlify](https://javascript.plainenglish.io/react-crash-course-deploying-to-netlify-80cee518a3cc)
+- [Deploy React](https://create-react-app.dev/docs/deployment/)
 - [Tailwind CSS with React](https://youtu.be/pfaSUYaSgRo)
 - [React Query](https://react-query.tanstack.com)
 - Best Component Libraries for React

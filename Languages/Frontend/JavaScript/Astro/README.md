@@ -78,7 +78,7 @@ import Test from 'src/components/test.astro'
 
 #### Static routing
 
-Each and all files with the extensions `.astro` and `.md` in the `src/pages` directory automatically become pages on your website.
+All ***Astro*** (`*.astro`) and ***Markdown*** (`*.md`) files in the `src/pages` directory automatically become pages on your website.
 
 For example,
 
@@ -107,7 +107,7 @@ For example,
 
 ```astro
 ---
-<!-- This is a block used to declare attributes -->
+# This is a block used to declare attributes
 title: Hello, World
 ---
 

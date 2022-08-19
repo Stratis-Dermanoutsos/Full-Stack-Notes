@@ -35,24 +35,24 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
 
 ### Frontend technologies
 
-- [x] [***HTML***](./Frontend/HTML/#html)
-- [x] [***CSS***](./Frontend/CSS/#css)
+- [x] [***HTML***](./Frontend/HTML/README.md#html)
+- [x] [***CSS***](./Frontend/CSS/README.md#css)
   - Frameworks
-    - [x] [***Bootstrap***](./Frontend/CSS/Frameworks/Bootstrap/#bootstrap)
-    - [x] [***Tailwind CSS***](./Frontend/CSS/Frameworks/Tailwind-CSS/#tailwind-css)
+    - [x] [***Bootstrap***](./Frontend/CSS/Frameworks/Bootstrap/README.md#bootstrap)
+    - [x] [***Tailwind CSS***](./Frontend/CSS/Frameworks/Tailwind-CSS/README.md#tailwind-css)
   - Preprocessors
-    - [x] [***SASS***](./Frontend/CSS/Preprocessors/SASS/#sass)
+    - [x] [***SASS***](./Frontend/CSS/Preprocessors/SASS/README.md#sass)
     - [ ] ***LESS***
     - [ ] ***Stylus***
-- [***Design***](./Frontend/Design/#design)
+- [***Design***](./Frontend/Design/README.md#design)
 
 ### Programming languages
 
 #### Backend
 
-- [x] [***C#***](./Languages/Backend/Cs/#c)
-  - [x] [***ASP.NET***](./Languages/Backend/Cs/ASPNET/#asp-net)
-- [x] [***Java***](./Languages/Backend/Java/#java)
+- [x] [***C#***](./Languages/Backend/Cs/README.md#c)
+  - [x] [***ASP.NET***](./Languages/Backend/Cs/ASPNET/README.md#asp-net)
+- [x] [***Java***](./Languages/Backend/Java/README.md#java)
   - [ ] ***Spring Boot***
 - [ ] ***PHP***
   - [ ] ***Laravel***
@@ -65,13 +65,13 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
 #### Frontend
 
 - [ ] ***CoffeeScript***
-- [x] [***JavaScript***](./Languages/Frontend/JavaScript/#javascript)
+- [x] [***JavaScript***](./Languages/Frontend/JavaScript/README.md#javascript)
   - [ ] ***Angular***
-  - [x] [***Ext***](./Languages/Frontend/JavaScript/Ext/#ext)
-  - [x] [***jQuery***](./Languages/Frontend/JavaScript/jQuery/#jquery)
   - [x] [***Astro***](./Languages/Frontend/JavaScript/Astro/README.md#astro)
+  - [x] [***Ext***](./Languages/Frontend/JavaScript/Ext/README.md#ext)
+  - [x] [***jQuery***](./Languages/Frontend/JavaScript/jQuery/README.md#jquery)
   - [ ] ***Lit***
-  - [x] [***React***](./Languages/Frontend/JavaScript/React/#react)
+  - [x] [***React***](./Languages/Frontend/JavaScript/React/README.md#react)
   - [ ] ***Solid***
   - [ ] ***Svelte***
   - [ ] ***Vue***
@@ -79,36 +79,36 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
     - [ ] ***BitAboutState***
     - [ ] ***MobX***
     - [ ] ***Recoil***
-    - [x] [***Redux***](./Languages/Frontend/JavaScript/State-Management/Redux/#redux)
+    - [x] [***Redux***](./Languages/Frontend/JavaScript/State-Management/Redux/README.md#redux)
     - [ ] ***zustand***
 - [ ] ***ReScript***
-- [x] [***TypeScript***](./Languages/Frontend/TypeScript/#typescript)
+- [x] [***TypeScript***](./Languages/Frontend/TypeScript/README.md#typescript)
 
 ### Databases
 
-- [x] [***SQL***](./Databases/#databases)
+- [x] [***SQL***](./Databases/README.md#databases)
   - [x] ***MySQL***
   - [x] ***PostgreSQL***
   - [x] ***SQLite***
-- [x] [***NoSQL***](./Databases/#databases)
+- [x] [***NoSQL***](./Databases/README.md#databases)
   - [x] ***MongoDB***
 
 ### Tools
 
-- [x] [***Git***](./Tools/Git/#git)
-- [x] [***NPM***](./Tools/NPM/#npm)
-- [x] [***Webpack***](./Tools/Webpack/#webpack)
+- [x] [***Git***](./Tools/Git/README.md#git)
+- [x] [***NPM***](./Tools/NPM/README.md#npm)
+- [x] [***Webpack***](./Tools/Webpack/README.md#webpack)
 - [ ] ***Vite***
 
-### [DevOps](./DevOps/#devops)
+### [DevOps](./DevOps/README.md#devops)
 
-- [x] [***CI/CD***](./DevOps/CI-CD/#ci-cd)
-  - [x] [***Github Actions***](./DevOps/CI-CD/Github-Actions/#github-actions)
-  - [x] [***Jenkins***](./DevOps/CI-CD/Jenkins/#jenkins)
+- [x] [***CI/CD***](./DevOps/CI-CD/README.md#ci-cd)
+  - [x] [***Github Actions***](./DevOps/CI-CD/Github-Actions/README.md#github-actions)
+  - [x] [***Jenkins***](./DevOps/CI-CD/Jenkins/README.md#jenkins)
 
 ### Knowledge
 
-- [ ] [***Algorithms***](./Knowledge/Algorithms/#algorithms)
+- [ ] [***Algorithms***](./Knowledge/Algorithms/README.md#algorithms)
   - [x] Search
     - [x] Linear
     - [x] Binary
@@ -120,7 +120,7 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
     - [x] Selection
     - [ ] Merge
     - [ ] Quick
-- [ ] [***Data Structures***](./Knowledge/Data-Structures/#data-structures)
+- [ ] [***Data Structures***](./Knowledge/Data-Structures/README.md#data-structures)
   - [x] Binary Search Tree
   - [ ] Heap
   - [x] AVL Tree
@@ -131,19 +131,19 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
   - [ ] Priority Queue
   - [x] Stack
 - [ ] ***Design Patterns***
-- [x] [***API***](./Knowledge/API/#api)
+- [x] [***API***](./Knowledge/API/README.md#api)
 - [ ] Architectures
-  - [x] [***MVC***](./Knowledge/Architectures/MVC/#mvc)
+  - [x] [***MVC***](./Knowledge/Architectures/MVC/README.md#mvc)
   - [ ] ***MVVM***
-- [x] [***Process management && Threads & Concurrency***](./Knowledge/Threads-and-Concurrency/#threads--concurrency)
-- [x] [***Reverse and Forward proxy***](./Knowledge/Concepts/#proxy)
-- [x] [***Load Balancer***](./Knowledge/Concepts/#load-balancer)
-- [x] [***Caching Server***](./Knowledge/Concepts/#caching-server)
-- [x] [***Firewall***](./Knowledge/Concepts/#firewall)
+- [x] [***Process management && Threads & Concurrency***](./Knowledge/Threads-and-Concurrency/README.md#threads--concurrency)
+- [x] [***Reverse and Forward proxy***](./Knowledge/Concepts/README.md#proxy)
+- [x] [***Load Balancer***](./Knowledge/Concepts/README.md#load-balancer)
+- [x] [***Caching Server***](./Knowledge/Concepts/README.md#caching-server)
+- [x] [***Firewall***](./Knowledge/Concepts/README.md#firewall)
 
 #### Extras
 
-- [x] [***Markdown***](./Extras/Markdown/#markdown)
+- [x] [***Markdown***](./Extras/Markdown/README.md#markdown)
 
 ## PROJECT IDEAS
 

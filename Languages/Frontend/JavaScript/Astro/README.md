@@ -207,3 +207,5 @@ There are 2 ways to add a UI Framework (Eg. ***React***) to your ***Astro*** pro
 
 - [Astro documentation](https://docs.astro.build)
 - [Astro in 100 Seconds by Fireship](https://youtu.be/dsTXcSeAZq8)
+
+[HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#astro)

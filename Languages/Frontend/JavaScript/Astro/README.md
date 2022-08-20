@@ -118,7 +118,7 @@ This is your first markdown page. It probably isn't styled much, although `Markd
 
 will be automatically translated to ***HTML***.
 
-### Style your components / pages
+### Styling
 
 To style any component, simply use the `<style></style>` tag as you would in any ***HTML*** file.
 

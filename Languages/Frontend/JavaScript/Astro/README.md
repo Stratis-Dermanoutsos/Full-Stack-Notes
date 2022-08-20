@@ -164,9 +164,38 @@ Eg.
 
 ### Add a framework to your page
 
-<!-- TODO -->
+There are 2 ways to add a UI Framework (Eg. ***React***) to your ***Astro*** project:
 
-### Types of rendering
+- Manually
+
+  To do this manually, there are 2 steps to follow.
+
+  1. Install the framework's dependencies:
+
+     ```sh
+     npm install --save-dev @astrojs/react react react-dom
+     ```
+
+  2. Add the framework to the `astro.config.mjs` file, as shown:
+
+     ```mjs
+     import { defineConfig } from 'astro/config';
+
+     import react from "@astrojs/react"; //! Important
+
+     // <https://astro.build/config>
+     export default defineConfig({
+       integrations: [react()] //! Important
+     });
+     ```
+
+- Using the automated tool
+
+  ```sh
+  npx astro add react
+  ```
+
+### Hydration
 
 <!-- TODO -->
 

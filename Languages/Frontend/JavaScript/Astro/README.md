@@ -95,7 +95,7 @@ src/pages/about/me.astro     -> mysite.com/about/me
 src/pages/posts/1.md         -> mysite.com/posts/1
 ```
 
-#### Dynamic routing
+<!-- #### Dynamic routing -->
 
 <!-- TODO -->
 
@@ -239,7 +239,7 @@ There are 2 ways to add a UI Framework (Eg. ***React***) to your ***Astro*** pro
   npx astro add react
   ```
 
-### Hydration
+<!-- ### Hydration -->
 
 <!-- TODO -->
 

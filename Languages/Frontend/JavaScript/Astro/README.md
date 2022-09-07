@@ -120,7 +120,47 @@ will be automatically translated to ***HTML***.
 
 ### Layouts
 
-<!-- TODO -->
+Layouts are basically components with a more specific usage. They exist to re-use basic page styling for your page.
+
+For example, create a `TestLayout.astro` file with the following content:
+
+```astro
+---
+const { title } = Astro.props;
+---
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{title}</title>
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
+```
+
+Notice the `<slot />` component. This is used to specify where the children of the layout will go.
+
+Now, to use the layout, pretend it's just a component.
+
+For example, in `index.astro`, we'll write the following:
+
+```astro
+---
+import TestLayout from '../layouts/TestLayout.astro'
+const title = "This is a title"
+---
+<TestLayout title={title}>
+    <div>
+        <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+        <p>Hey, I'm using a layout!</p>
+    </div>
+    <h1>This is an H1 component</h1>
+</TestLayout>
+```
+
+What this does is it uses all the code of the layout we created earlier and replaces the `<slot />` component with all the new code that exists between the `<TestLayout>...</TestLayout>` tags.
 
 ### Styling
 
@@ -208,5 +248,6 @@ There are 2 ways to add a UI Framework (Eg. ***React***) to your ***Astro*** pro
 - [Astro documentation](https://docs.astro.build)
 - [Astro in 100 Seconds by Fireship](https://youtu.be/dsTXcSeAZq8)
 - [Create template layouts by Kevin Powell](https://youtu.be/o7iQAF2EvUU)
+- [Astro crash course by Little Sticks](https://youtube.com/playlist?list=PLtLXFsdHI8JSX0qJsHfMDSTR3taqvXa5S)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#astro)

@@ -95,10 +95,6 @@ src/pages/about/me.astro     -> mysite.com/about/me
 src/pages/posts/1.md         -> mysite.com/posts/1
 ```
 
-<!-- #### Dynamic routing -->
-
-<!-- TODO -->
-
 #### Markdown pages
 
 ***Astro*** treats **`.md`** files as pages, as long as they're located inside the `src/pages/` directory.
@@ -239,9 +235,43 @@ There are 2 ways to add a UI Framework (Eg. ***React***) to your ***Astro*** pro
   npx astro add react
   ```
 
-<!-- ### Hydration -->
+### Hydration
 
-<!-- TODO -->
+A framework component can be made interactive (hydrated) using one of the `client:*` directives.
+
+- This component's ***JS*** will begin importing when the page loads.
+
+  ```astro
+  <InteractiveComponent client:load />
+  ```
+
+- This component's ***JS*** will be imported once the page is done with its initial load.
+
+  ```astro
+  <InteractiveComponent client:idle />
+  ```
+
+- This component's ***JS*** will not be imported until the user scrolls down enough for component to be visible on the page.
+
+  ```astro
+  <InteractiveComponent client:visible />
+  ```
+
+- The component's ***JavaScript*** will be hydrated once a certain ***CSS*** media query is met.
+
+  ```astro
+  <InteractiveComponent client:media="(max-width: 50em)" />
+  ```
+
+- This skips ***HTML*** server-rendering, and renders only on the client. It hydrates the component immediately on page load.
+
+  ```astro
+  <SomeReactComponent client:only="react" />
+  <SomePreactComponent client:only="preact" />
+  <SomeSvelteComponent client:only="svelte" />
+  ```
+
+  > You must pass the component’s correct framework as a value!
 
 ## Astro - Resources
 

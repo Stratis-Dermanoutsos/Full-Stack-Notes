@@ -24,6 +24,7 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
   - [Programming languages](#programming-languages)
     - [Backend](#backend)
     - [Frontend](#frontend)
+  - [Mobile](#mobile)
   - [Databases](#databases)
   - [Tools](#tools)
   - [DevOps](#devops)
@@ -83,6 +84,10 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
     - [ ] ***zustand***
 - [ ] ***ReScript***
 - [x] [***TypeScript***](./Languages/Frontend/TypeScript/README.md#typescript)
+
+### Mobile
+
+- [x] [***React Native***](./Mobile/ReactNative/README.md#react-native) ([***JavaScript***](./Languages/Frontend/JavaScript/README.md#javascript))
 
 ### Databases
 

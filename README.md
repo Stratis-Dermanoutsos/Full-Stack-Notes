@@ -97,6 +97,8 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
   - [x] ***SQLite***
 - [x] [***NoSQL***](./Databases/README.md#databases)
   - [x] ***MongoDB***
+- [ ] ***NewSQL***
+  - [ ] ***SurrealDB***
 
 ### Tools
 

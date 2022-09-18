@@ -115,7 +115,6 @@ const styles = StyleSheet.create({
 - [Setting up the development environment (docs)](https://reactnative.dev/docs/environment-setup)
 - [Core Components (docs)](https://reactnative.dev/docs/components-and-apis)
 - [React Native in 100 Seconds by Fireship](https://youtu.be/gvkqT_Uoahw)
-- Components libraries:
-  - [NativeBase](https://github.com/GeekyAnts/NativeBase)
+- [Components libraries for expo apps (list)](https://docs.expo.dev/guides/userinterface/)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#react-native)

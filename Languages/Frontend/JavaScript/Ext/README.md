@@ -41,7 +41,7 @@ All `Ext JS`'s core components and their attributes/methods/events can all be fo
 
 To use a component, you need to use either its class name (the string value, first argument of the `define` method) or its `alias` attribute.
 
-Notice how the above button we created has an alias equal to `widget.customButton`.
+> Notice how the above button we created has an alias equal to `widget.customButton`.
 
 To use it, simply put it in the items of another class or a container using the `xtype` attribute. For example:
 

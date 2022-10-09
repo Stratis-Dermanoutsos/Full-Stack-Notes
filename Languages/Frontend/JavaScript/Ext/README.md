@@ -83,6 +83,80 @@ Ext.define('myApp.view.main.panels.RandomPanel', {
 });
 ```
 
+### Store
+
+A `store` is a client side cache of records (instances of a `Model` class). It basically holds instances of a `Model` class.
+
+Let's say we define a store of Users.
+
+```js
+Ext.define('MyApp.store.Users', {
+    extend: 'Ext.data.Store',
+    alias: 'store.users',
+    model: 'MyApp.model.User',
+    data : [
+        { firstName: 'Seth', age: 34 },
+        { firstName: 'Scott', age: 72 },
+        { firstName: 'Gary', age: 19 },
+        { firstName: 'Capybara', age: 208 }
+    ]
+});
+```
+
+What we did, is create a store that holds 4 instances/objects of the User `model`.
+
+> The model can be defined as such:
+>
+> ```js
+> Ext.define('MyApp.model.User', {
+>     extend: 'Ext.data.Model',
+>     fields: [
+>         { name: 'name',  type: 'string' },
+>         { name: 'age',   type: 'int' }
+>     ]
+> });
+> ```
+
+To display the data in a `dataview` or a `grid`, simply add a property `store: users` in the component's attributes.
+
+#### Store inheritance
+
+We can have a store inherit another store. This can be done with the `type` attribute.
+
+```js
+{
+    xtype: 'grid'
+    store: {
+        type: 'users'
+    }
+}
+```
+
+The above `grid`'s store may have data similar to the original store's definition but its store is a completely different instance and changes in one store do not apply to the other.
+
+#### Global stores
+
+To make a store global is a very quick process:
+
+1. Go to your `Application.js` file and, inside the class definition, add the following:
+
+   ``` js
+   stores: [
+       'MyApp.store.Users'
+   ]
+   ```
+
+2. In your store, provide a `storeId` attribute, usually the same as the `alias`.
+
+   ```js
+   Ext.define('MyApp.store.Users', {
+       extend: 'Ext.data.Store',
+       alias: 'store.users',
+       storeId: 'users',
+       ...
+   });
+   ```
+
 ### Install and create your first app
 
 #### With NPM

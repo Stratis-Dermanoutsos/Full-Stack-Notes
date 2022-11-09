@@ -557,6 +557,14 @@ Example of adding a database (***SQLite*** for the sake of ease)
   ```c#
   services.AddDbContext<ApplicationDbContext>(option=> option.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
   ```
+  
+  or, if top level statements,
+  
+  ```c#
+  var builder = WebApplication.CreateBuilder(args);
+  ...
+  builder.Services.AddDbContext<ApplicationDbContext>(options => option.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+  ```
 
 - Run
 

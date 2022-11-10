@@ -112,7 +112,7 @@ Expressions must immediately return a value. Thus, they are limited. To enable t
 
 The main problem with the `InputStream` class is that an instance can only be used once in its lifecycle.
 
-An common solution to this is by converting the InputStream to a byte array, then iterate over the array as many time as you need.
+A common solution to this is by converting the InputStream to a byte array, then iterate over the array as many time as you need.
 
 For a quick snippet, use the following class:
 

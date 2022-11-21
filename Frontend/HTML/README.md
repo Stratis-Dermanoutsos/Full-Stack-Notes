@@ -62,9 +62,9 @@ A Semantic element clearly describes its meaning to both the browser and the dev
 - **no translate** attribute
 
   ```html
-  translate="no"
+  <!-- translate="no" -->
 
-  //Example
+  <!-- Example -->
   <p translate="no">Company</p>
   ```
 

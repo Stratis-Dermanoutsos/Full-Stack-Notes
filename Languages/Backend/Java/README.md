@@ -106,6 +106,56 @@ Expressions must immediately return a value. Thus, they are limited. To enable t
   int result = operate(10, 5, addition); // 15
   ```
 
+### Useful code snippets
+
+#### Recyclable InputStream
+
+The main problem with the `InputStream` class is that an instance can only be used once in its lifecycle.
+
+A common solution to this is to convert the InputStream to a byte array, then iterate over that array as many times as you need.
+
+For a quick snippet, use the following class:
+
+```java
+import com.google.common.io.ByteStreams;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
+public class RecyclableInputSteam {
+
+    private byte[] bytes;
+
+    public RecyclableInputSteam(InputStream inputStream) {
+        try {
+            this.bytes = ByteStreams.toByteArray(inputStream);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public RecyclableInputSteam(byte[] bytes) {
+        this.bytes = bytes;
+    }
+
+    public byte[] getBytes() {
+        return this.bytes;
+    }
+
+    public InputStream getInputStream() {
+        return new ByteArrayInputStream(this.bytes);
+    }
+}
+```
+
+Usage:
+
+```java
+InputStream inputStream = ... // The one we're interested in
+RecyclableInputSteam recyclableInputSteam = new RecyclableInputSteam(inputStream);
+
+recyclableInputSteam.getInputStream(); // Get a new InputStream with the same content
+```
+
 ## Java - Resources
 
 - [Java in 100 Seconds by Fireship](https://youtu.be/l9AzO1FMgM8)

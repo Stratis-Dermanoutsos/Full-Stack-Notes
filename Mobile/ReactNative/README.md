@@ -116,5 +116,7 @@ const styles = StyleSheet.create({
 - [Core Components (docs)](https://reactnative.dev/docs/components-and-apis)
 - [React Native in 100 Seconds by Fireship](https://youtu.be/gvkqT_Uoahw)
 - [Components libraries for expo apps (list)](https://docs.expo.dev/guides/userinterface/)
+- [Change your app's name](https://stackoverflow.com/questions/34794679/change-app-name-in-react-native)
+- [Change your app's icon](https://aboutreact.com/react-native-change-app-icon/)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#react-native)

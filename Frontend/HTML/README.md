@@ -57,6 +57,52 @@ A Semantic element clearly describes its meaning to both the browser and the dev
 
 ![HTML Semantic](/Images/HTML-Semantic.gif)
 
+### SEO
+
+**SEO**, or **Search Engine Optimization**, is the practice of optimizing a website to improve its visibility and ranking on search engines like Google. By properly implementing **SEO** techniques in your ***HTML***, you can improve the chances of your website ranking higher on search engine results pages, which can lead to more traffic and potential customers for your business.
+
+#### Key Elements of HTML SEO
+
+1. *Page Title*: The page title is the title that appears on the search engine results page. It should be descriptive and concise, and should accurately reflect the content of the page. It should also include primary keywords.
+
+   ```html
+   <title>Page Title - Primary Keywords</title>
+   ```
+
+2. *Meta Description*: The meta description is a brief summary of the page content that appears below the page title on the search engine results page. It should be concise and compelling, and should include primary keywords.
+
+   ```html
+   <meta name="description" content="Brief summary of page content - Primary Keywords">
+   ```
+
+3. *Headings*: Headings, or "*H*" tags, are used to structure the content on a page and make it easier for search engines to understand the hierarchy of the information. Properly using headings can also help improve the visibility of your page on search engine results pages.
+
+   ```html
+   <h1>Main Heading</h1>
+   <h2>Subheading</h2>
+   <h3>Sub-subheading</h3>
+   ```
+
+4. *Alt Text*: Alt text, or "*alternative text*", is used to describe images on a page. It is important to include alt text for images, as search engines cannot see images and rely on the alt text to understand the content of the image.
+
+   ```html
+   <img src="image.jpg" alt="Description of image">
+   ```
+
+5. *URLs*: URLs, or "*uniform resource locators*", are the web addresses of pages on your site. URLs should be descriptive and include primary keywords.
+
+   ```html
+   <a href="https://www.example.com/page-title-primary-keywords">Link Text</a>
+   ```
+
+#### Tips for Improving HTML SEO
+
+1. Use keyword-rich page titles, meta descriptions, and URLs.
+2. Use headings to structure the content on your page and include keywords in your headings.
+3. Use alt text to describe images on your page.
+4. Use external and internal links to improve the visibility of your page on search engines.
+5. Use social media to promote your website and improve its visibility on search engines.
+
 ### Useful tags/attributes
 
 - **no translate** attribute
@@ -138,5 +184,6 @@ Full example:
 - [Form and Validations](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
 - [Web Dev Simplified video (forms)](https://youtu.be/fNcJuPIZ2WE)
 - [How to turn HTML webpage into an Image?](https://dev.to/jasmin/how-to-turn-html-webpage-into-an-image-n1c)
+- [The 10 Most Important HTML Tags You Need to Know for SEO](https://www.greengeeks.com/blog/html-tags-for-seo/)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#html)

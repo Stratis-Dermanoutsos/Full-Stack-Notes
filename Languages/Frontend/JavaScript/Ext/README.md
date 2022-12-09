@@ -206,14 +206,20 @@ To make a store global is a very quick process:
 
 There are 2 main types of builds.
 
+- `development` which builds the app for the developer to run.
+
+  > This build includes non-minified code and detailed error messages.
 - `production` which is the obvious choice for a complete app, ready to be deployed.
 
-  > This build does not have any debugging potential
+  > This build does not have any debugging potential as it includes minified code for optimized performance.
 - `testing` which is a more dev friendly option.
 
   This is mostly used when the development is in the very late stages and the app can only be tested after being built and deployed.
 
-  > Great for debugging as errors are understandable
+  > This build includes non-minified code and detailed error messages.
+- `universal`. This is a bit complicated.
+
+  > In universal mode, an Ext JS application includes both minified and non-minified code, as well as detailed error messages.
 
 ## Ext - Resources
 

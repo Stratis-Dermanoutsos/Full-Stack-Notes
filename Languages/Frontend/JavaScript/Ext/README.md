@@ -208,6 +208,40 @@ const store = Ext.create('Ext.data.Store', {
   ]);
   ```
 
+#### Filtering
+
+Same with sorting, to filter a store's data, you can either declare it with the `filters` property or call the `filter` method.
+
+- Property
+
+  ```js
+  const store = Ext.create('Ext.data.Store', {
+      fields: ['name', 'age'],
+      data: [
+          {name: 'Alice', age: 25},
+          {name: 'Bob', age: 30},
+          {name: 'Charlie', age: 20}
+      ],
+      filters: [
+          { property: 'name', value: 'Charlie' },
+          { property: 'age', value: 25, operator: '>' }
+      ]
+  });
+  ```
+
+- Method
+
+  ```js
+  //filter by a single field
+  store.filter('age', 25);
+
+  // filtering by multiple fields
+  store.filter([
+      { property: 'name', value: 'Charlie' },
+      { property: 'age', value: 25, operator: '>' }
+  ]);
+  ```
+
 #### Global stores
 
 To make a store global is a very quick process:

@@ -107,7 +107,7 @@ Ext.define('myApp.view.main.panels.RandomPanel', {
 
 ### Stores
 
-A `store` is a client side cache of records (instances of a `Model` class). It basically holds instances of a `Model` class.
+A `store` is a client-side collection of records (instances of a `Model` class). It basically holds instances of a `Model` class.
 
 Let's say we define a store of Users.
 
@@ -143,18 +143,23 @@ To display the data in a `dataview` or a `grid`, simply add a property `store: u
 
 #### Store inheritance
 
-We can have a store inherit another store. This can be done with the `type` attribute.
+We can have a store inherit another store. This can be done with the `type` and `source` properties.
 
 ```js
-{
-    xtype: 'grid'
-    store: {
-        type: 'users'
-    }
-}
+// Using the "type" property
+Ext.define('MyApp.store.MyStore', {
+    extend: 'Ext.data.Store',
+    type: 'store'
+});
+// Using the "source" property
+Ext.define('MyApp.store.MyStore', {
+    extend: 'Ext.data.Store',
+    source: 'store'
+});
 ```
 
-The above `grid`'s store may have data similar to the original store's definition but its store is a completely different instance and changes in one store do not apply to the other.
+- `type` is used when the new store inherits the parent store's properties but the data icluded, although identical, are different instances and, as such, will create duplicates.
+- `source` is used when the new store inherits the parent store's data. `Source` is typically used when we want to filter or sort data without editing the parent store.
 
 #### Global stores
 

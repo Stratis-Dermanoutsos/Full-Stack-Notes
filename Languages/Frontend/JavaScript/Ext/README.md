@@ -161,6 +161,53 @@ Ext.define('MyApp.store.MyStore', {
 - `type` is used when the new store inherits the parent store's properties but the data icluded, although identical, are different instances and, as such, will create duplicates.
 - `source` is used when the new store inherits the parent store's data. `Source` is typically used when we want to filter or sort data without editing the parent store.
 
+#### Sorting
+
+To sort a store's data, you can either declare it with the `sorters` property or call the `sort` method.
+
+Let's say we have the following store:
+
+```js
+const store = Ext.create('Ext.data.Store', {
+    fields: ['name', 'age'],
+    data: [
+        {name: 'Alice', age: 25},
+        {name: 'Bob', age: 30},
+        {name: 'Charlie', age: 20}
+    ]
+});
+```
+
+- Property
+
+  ```js
+  const store = Ext.create('Ext.data.Store', {
+      fields: ['name', 'age'],
+      data: [
+          {name: 'Alice', age: 25},
+          {name: 'Bob', age: 30},
+          {name: 'Charlie', age: 20}
+      ],
+      sorters: [
+          { property: 'name', direction: 'ASC' },
+          { property: 'age', direction: 'DESC' }
+      ]
+  });
+  ```
+
+- Method
+
+  ```js
+  //sort by a single field
+  store.sort('age', 'DESC');
+
+  // sorting by multiple fields
+  store.sort([
+      { property: 'name', direction: 'ASC' },
+      { property: 'age', direction: 'DESC' }
+  ]);
+  ```
+
 #### Global stores
 
 To make a store global is a very quick process:

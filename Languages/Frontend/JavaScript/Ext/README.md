@@ -83,7 +83,29 @@ Ext.define('myApp.view.main.panels.RandomPanel', {
 });
 ```
 
-### Store
+### Toolkits
+
+***Sencha Ext JS*** offers three different toolkits, each of which is designed to support a specific type of application development:
+
+- **Classic**: The **Classic** toolkit is ***Ext JS***'s original toolkit, and is designed for building traditional, "*desktop-style*" web applications.
+
+  ```cmd
+  sencha generate app -ext -classic MyAppName ./MyAppPath
+  ```
+
+- **Modern**: The **Modern** toolkit is a newer addition to ***Ext JS***, and is designed for building modern, "*mobile-first*" web applications.
+
+  ```cmd
+  sencha generate app -ext -modern MyAppName ./MyAppPath
+  ```
+
+- **Universal**: The **Universal** toolkit is a combination of the **Classic** and **Modern** toolkits, and is designed to support applications that need to run on both desktop and mobile devices.
+
+  ```cmd
+  sencha generate app -ext MyAppName ./MyAppPath
+  ```
+
+### Stores
 
 A `store` is a client side cache of records (instances of a `Model` class). It basically holds instances of a `Model` class.
 

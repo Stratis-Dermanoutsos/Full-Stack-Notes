@@ -105,6 +105,103 @@ Ext.define('myApp.view.main.panels.RandomPanel', {
   sencha generate app -ext MyAppName ./MyAppPath
   ```
 
+### Layouts
+
+There are several layouts that a container in ***Ext JS*** can use.
+
+To declare which one will be chosen, we use the `layout` property.
+
+```js
+Ext.create('Ext.container.Container', {
+    layout: ...
+});
+```
+
+#### Available layouts
+
+- `border`
+
+  This is a multi-pane, application-oriented UI layout style that supports multiple nested panels, automatic bars between regions and built-in expanding and collapsing of regions.
+
+  ```js
+  Ext.create('Ext.container.Container', {
+      layout: 'border',
+      ...
+  });
+  ```
+
+  This layout's children must declare a specific region to reside in.
+
+  Such regions are:
+  - `center`
+  - `east`
+  - `north`
+  - `south`
+  - `west`
+- `card`
+
+  This layout manages multiple child Components, each fitted to the Container, where only a single child Component can be visible at any given time.
+
+  ```js
+  const p = Ext.create('Ext.container.Container', {
+      layout: 'card',
+      ...
+  });
+
+  // Show the 2nd item (index of 1)
+  p..getLayout().setActiveItem(1);
+  ```
+
+- `fit`
+
+  This is a base class for layouts that contain a single item that automatically expands to fill the layout's container.
+
+  ```js
+  Ext.create('Ext.container.Container', {
+      layout: 'fit',
+      ...
+  });
+  ```
+
+- `hbox`
+
+  A layout that arranges items horizontally across a `Ext.container.Container`.
+
+  ```js
+  Ext.create('Ext.container.Container', {
+      layout: 'hbox',
+      ...
+  });
+  ```
+
+  It is basically the same as using the following ***CSS*** in an ***HTML***'s div:
+
+  ```css
+  .container {
+      display: flex;
+  }
+  ```
+
+- `vbox`
+
+  A layout that arranges items vertically across a `Ext.container.Container`.
+
+  ```js
+  Ext.create('Ext.container.Container', {
+      layout: 'vbox',
+      ...
+  });
+  ```
+
+  It is basically the same as using the following ***CSS*** in an ***HTML***'s div:
+
+  ```css
+  .container {
+      display: flex;
+      flex-direction: column;
+  }
+  ```
+
 ### Stores
 
 A `store` is a client-side collection of records (instances of a `Model` class). It basically holds instances of a `Model` class.

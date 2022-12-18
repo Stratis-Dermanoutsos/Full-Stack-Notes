@@ -490,6 +490,194 @@ Eg.
 sencha generate app -ext -s ./templates/some-template myApp ./myApp
 ```
 
+### Packages
+
+#### Create a package
+
+```bash
+sencha generate package <PACKAGE_NAME>
+```
+
+Eg.
+
+```bash
+sencha generate package CustomComponents
+```
+
+Inside `{workspace}/packages/local/` you will find a folder with the package name you set earlier.
+
+#### package.json
+
+This is an example of a `package.json` file's content. It may vary from app to app but this is how I fill them:
+
+```json
+{
+    "name": "CustomComponents",
+    "sencha": {
+        "framework": "ext",
+        "namespace": "CustomComponents",
+        "type": "code",
+        "toolkit": "",
+        "creator": "Stratis",
+        "summary": "Stratis' custom components.",
+        "detailedDescription": "Custom fields, components and overrides for my apps.",
+        "version": "1.0.0",
+        "compatVersion": "1.0.0",
+        "format": "1",
+        "slicer": {
+            "js": [
+                {
+                    "path": "${package.dir}/sass/example/custom.js",
+                    "isWidgetManifest": true
+                }
+            ]
+        },
+        "output": "${package.dir}/build",
+        "local": false,
+        "sass": {
+            "namespace": "CustomComponents",
+            "etc": [
+                "${package.dir}/sass/etc/all.scss",
+                "${package.dir}/${toolkit.name}/sass/etc/all.scss"
+            ],
+            "var": [
+                "${package.dir}/sass/var",
+                "${package.dir}/${toolkit.name}/sass/var"
+            ],
+            "src": [
+                "${package.dir}/sass/src",
+                "${package.dir}/${toolkit.name}/sass/src"
+            ]
+        },
+        "classpath": [
+            "${package.dir}/src",
+            "${package.dir}/${toolkit.name}/src"
+        ],
+        "overrides": [
+            "${package.dir}/overrides",
+            "${package.dir}/${toolkit.name}/overrides"
+        ],
+        "example": {
+            "path": [
+                "${package.dir}/examples"
+            ]
+        },
+        "requires": [],
+        "resource": { //! Required so that resources are not copied to each build profile (classic, modern etc)
+            "paths": ""
+        },
+        "resources": [ //! Required so that resources are added to app/resources
+            {
+                "path": "${package.dir}/resources",
+                "output": "shared"
+            }
+        ]
+    }
+}
+```
+
+#### Initialize a repository
+
+```bash
+sencha package repo init -name <YOUR_NAME> -email <YOUR_EMAIL>
+```
+
+Eg.
+
+```bash
+sencha package repo init -name "Stratis" -email "stratis.dermanoutsos@gmail.com"
+```
+
+> This must be run inside the package's directory.
+>
+> This is used to sign the package as yours, in case you want to publish it.
+
+#### Build a package
+
+1. Generate the `*.pkg` file.
+
+   ```bash
+   sencha package build
+   ```
+
+   > This must be run inside the package's directory.
+2. Add the built package to the *local* repository.
+
+   ```bash
+   sencha package add <PATH_TO_THE_pkg_FILE>
+   ```
+
+   > Usually, it's located in `{workspace}/build/{packageName}/`.
+
+#### Make a package remote
+
+1. Find the `pkgs` directory in your *local* machine.
+
+   > Usual path for Windows: `C:\Users\USER\bin\Sencha\Cmd\repo\pkgs\`.
+2. Copy the version of the package you built.
+   Inside the `pkgs` directory, the paths work this way: `pkgs/{packageName}/{version}/`.
+
+   Copy the version directory. (eg. `1.0.0/`)
+
+   > We only copy the version directory to not lose any other version of any other package.
+   >
+   > If the package does not exist in the *remote* machine, copy all of the `{packageName}/`.
+3. Paste it inside the `{packageName}/` directory in the *remote* machine.
+   > Eg. `http://{path}/cmd/packages/{packageName}/`.
+4. Be sure to update `catalog.json` so that it references the latest version.
+   > There is 1 `catalog.json` for the `packages/` folder and 1 for each `{packageName}/` folder.
+   >
+   > Both must be updated.
+
+#### Use remote package
+
+1. Add your *remote* repository your sencha's list.
+
+   ```bash
+   sencha package repo add <REPOSITORY_NAME> <REPOSITORY_PATH>
+   ```
+
+   Eg.
+
+   ```bash
+   sencha package repo add StratisPackages http://{path}/cmd/packages/
+   ```
+
+   > This can be run anywhere. The list is global
+2. Add the package's name in the *`requires`* of `app.json`.
+
+   Eg.
+
+   ```json
+   "requires": [
+       "CustomComponents"
+   ],
+   ```
+
+   To use a specific version, add a `@` followed by the version. ([More here](https://docs.sencha.com/cmd/guides/cmd_packages/cmd_packages.html#cmd_packages-_-cmd_packages_-_version_management))
+
+   ```json
+   "requires": [
+       "CustomComponents@1.0.1"
+   ],
+   ```
+
+3. Sync the repository.
+
+   ```bash
+   sencha repo sync
+   ```
+
+4. Refresh package list.
+
+   ```bash
+   sencha app refresh -packages
+   ```
+
+   > **IMPORTANT**: Make sure you do not have a local copy of the package.
+   >
+   > If there isn't one already, in the app's workspace directory, inside `packages/` folder, a new folder called `remote/` has been created with the packages you use.
+
 ## Ext - Resources
 
 - [Getting Started with npm](https://docs.sencha.com/extjs/7.5.1/guides/getting_started/getting_started_with_npm.html)
@@ -497,5 +685,8 @@ sencha generate app -ext -s ./templates/some-template myApp ./myApp
 - [app.json file explanation](https://docs.sencha.com/cmd/guides/app_json.html)
 - [Ext JS Kitchen Sink](https://examples.sencha.com/extjs/7.4.0/examples/kitchensink/#all)
 - [ExtJS-Tutorial](https://www.extjs-tutorial.com/extjs/Introduction)
+- [Use and host your own remote Ext JS packages](https://www.enovision.net/use-and-host-your-own-ext-js-remote-packages)
+- [Sencha Cmd Packages](https://docs.sencha.com/cmd/guides/cmd_packages/cmd_packages.html)
+- [Creating Sencha Cmd Packages](https://docs.sencha.com/cmd/guides/cmd_packages/cmd_creating_packages.html)
 
 [HOME](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes#full-stack-notes) or [⬆ Back to top](#ext)

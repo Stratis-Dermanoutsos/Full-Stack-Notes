@@ -426,6 +426,70 @@ There are 2 main types of builds.
 
   > In universal mode, an Ext JS application includes both minified and non-minified code, as well as detailed error messages.
 
+### Templates
+
+Templates are used to create a project will default code, functions, methods, imports etc already setup for you on project creation.
+
+You can also create your own templates to use.
+
+#### Turning app into template
+
+1. Supposedly your project is called ***`ProjectTemplate`***.
+
+   Find and replace all references of ***`ProjectTemplate`*** to ***`{appName}`***.
+2. Delete all ***`(classic|modern)(-(el_GR|en|...)).json(p)`*** files.
+
+   > These are the build files that are created on running the app.
+3. Add the ***`.tpl`*** extension to:
+   - ***`app.json`***
+   - ***`build.xml`***
+   - ***`index.html`***
+4. Add the ***`.tpl.default`*** extention to all other files except for ***`*.json`*** and ***`*.scss`*** ones.
+5. "*Escape*" all dot characters (`.`) that are inside curly brackets (`{}`) in ***`app.json.tpl`***.
+
+   For example, change
+
+   ```json
+   "{toolkit.name}"
+   ```
+
+   to
+
+   ```json
+   "{toolkit\.name}"
+   ```
+
+   > To make your life easier, search for regex `\{(\w+\.\w+)+\}`.
+6. Change values inside curly brackets (`{}`) so that they get compiled correctly.
+
+   > Basically, when building an app using a template, the program assumes that whatever is in curly brackets (`{}`) is a variable to be changed. So, if you want to keep the curly brackets (`{}`) and the value inside, you must change the format so it understand it's here to stay.
+
+   Instead of
+
+   ```javascript
+   bind: '{binding}'
+   ```
+
+   we want
+
+   ```javascript
+   bind: '{["\{binding\}"]}'
+   ```
+
+   > DO NOT attempt this for `{appName}` that was mentioned earlier!
+
+#### Create app using template
+
+```bash
+sencha generate app -ext -s <PATH_TO_TEMPLATE> <APP_NAME> <PATH_TO_CREATE_APP>
+```
+
+Eg.
+
+```bash
+sencha generate app -ext -s ./templates/some-template myApp ./myApp
+```
+
 ## Ext - Resources
 
 - [Getting Started with npm](https://docs.sencha.com/extjs/7.5.1/guides/getting_started/getting_started_with_npm.html)

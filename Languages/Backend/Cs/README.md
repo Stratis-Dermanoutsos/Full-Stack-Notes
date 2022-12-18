@@ -43,6 +43,39 @@ static void Main()
 }
 ```
 
+### Null-Coalescing Operator
+
+The `??` operator will return the value of its left-hand operand if it is not *null*. Else, it returns the right one.
+
+```c#
+int? value1 = null;
+int value2 = 32;
+
+int? value3 = value1 ?? value2; // = 32
+```
+
+```c#
+int value1 = 1;
+int value2 = 32;
+
+int value3 = value1 ?? value2; // = 1
+```
+
+This operator can also be used in assignments. By using `??=` to assign a value, the compiler first checks if the variable you're trying to assign is *null* first. Only if it is will the value be assigned to it.
+
+```c#
+int? x = null;
+Console.WriteLine(x); // null
+
+x ??= 32;
+Console.WriteLine(x); // 32
+
+x ??= 1;
+Console.WriteLine(x); // 32
+```
+
+So, *1* was not assigned to `x` as it was not *null*. It already had a value equal to *32*.
+
 ## C# - Resources
 
 - [C# in 100 Seconds by Fireship](https://youtu.be/ravLFzIguCM)

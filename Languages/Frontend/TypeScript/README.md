@@ -151,6 +151,67 @@ let myVar: any;
 
 are equal in ***TypeScript***.
 
+#### Unknown
+
+In ***TypeScript***, the `unknown` type works similarly to `any` but not quite the same.
+
+```typescript
+let varAny: any = 10;
+let varUnknown: unknown =  10;
+
+let s1: string = varAny; // works fine
+let s2: string = varUnknown; // error
+let s3: string = varUnknown as string; // works fine
+```
+
+In the above example, assigning the value of `varUnknown: unknown` to a variable without *explicit assertion* throws an error. This happens cause the compiler has no idea what the variable's type is.
+
+For the same reason, we cannot call any methods of the `unknown` variable.
+
+```typescript
+varAny.method(); // works fine
+varUnknown.method(); // error
+```
+
+However, it is possible, again, with *explicit assertion*.
+
+```typescript
+interface someInterface {
+  method(): void;
+};
+
+(varUnknown as someInterface).method(); // works fine
+```
+
+> Why use `unknown` at all?
+>
+> Well, it is very useful in situations that you don't know what the type of an object is going to be and you have to check before you use it. It is stricter than `any` and less risky.
+
+Example:
+
+```typescript
+interface someInterface {
+  myProp: number;
+};
+
+function myFunc(param: unknown): param is someInterface {
+  if (param !== null && typeof param === 'object')
+    return 'myProp' in param;
+
+  return false;
+}
+
+let var1: number = 3;
+let var2: someInterface = {
+  myProp: 3
+};
+
+console.log(myFunc(var1)); // = false
+console.log(myFunc(var2)); // = true
+```
+
+The above example accepts an `unknown` parameter and returns *`true`* if it contains a property named `myProp`. Else, it returns *`false`*.
+
 ### Interfaces
 
 ```typescript

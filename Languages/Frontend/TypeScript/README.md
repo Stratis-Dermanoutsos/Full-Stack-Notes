@@ -129,24 +129,24 @@ class C {
 
 ```typescript
 // JavaScript
-let var = 3;
+let myVar = 3;
 
 // TypeScript
-let var = 3;         // It automatically is declared as 'number'
-let var: any = 3;    // Can be any type and even change between them
-let var: number = 3; // We manually declare it as 'number'
+let myVar = 3;         // It automatically is declared as 'number'
+let myVar: any = 3;    // Can be any type and even change between them
+let myVar: number = 3; // We manually declare it as 'number'
 ```
 
 Notice how
 
 ```typescript
-let var;
+let myVar;
 ```
 
 and
 
 ```typescript
-let var: any;
+let myVar: any;
 ```
 
 are equal in ***TypeScript***.

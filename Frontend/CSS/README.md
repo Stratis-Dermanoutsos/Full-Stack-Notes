@@ -227,6 +227,26 @@ There are some basic steps to follow in order to make a website resposive.
 
   If the '*width*' property is set to a percentage and the '*height*' is set to '*auto*', the image will be responsive.
 
+### Viewport Units
+
+**Viewport units** are size measuring units oftenly used in responsive design.
+They’re truly “*responsive length units*” in the sense that their value changes every time the browser resizes.
+
+These include:
+
+- Viewport Height (`vh`)
+
+  > This unit is based on the height of the viewport. A value of *1vh* is equal to *1%* of the viewport's height.
+- Viewport Width (`vw`)
+
+  > This unit is based on the width of the viewport. A value of *1vw* is equal to *1%* of the viewport's width.
+- Viewport Maximum (`vmax`)
+
+  > This unit is based on the **larger dimension of the viewport**. If the viewport's height is larger than the width, the value of *1vmax* will be equal to *1%* of viewport's height. Similarly, if the viewport's width is larger than the height, the value of *1vmax* will be equal to *1%* of hte viewport's width.
+- Viewport Minimum (`vmin`)
+
+  > This unit is based on the s**maller dimension of the viewport**. If the viewport's height is smaller than the width, the value of *1vmin* will be equal to *1%* of the viewport's height. Similarly, if the viewport's width is smaller than the height, the value of *1vmin* will be equal to *1%* of the viewport's width.
+
 ### Code snippets
 
 #### Custom cursor

@@ -305,6 +305,19 @@ html {
 }
 ```
 
+#### Comment regions
+
+```css
+/*#region Name_of_Region */
+.my-class {
+  ...
+}
+...
+/*#endregion */
+```
+
+> Very useful in collapsing large groups of code.
+
 ## CSS - Resources
 
 - [CSS in 100 Seconds by Fireship](https://youtu.be/OEV8gMkCHXQ)

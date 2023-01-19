@@ -270,7 +270,7 @@ img:hover {
 - Flexbox
 
   ```css
-  .center {
+  .container-of-center {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -291,7 +291,7 @@ img:hover {
 - Grid
 
   ```css
-  .center {
+  .container-of-center {
     display: grid;
     place-items: center;
   }

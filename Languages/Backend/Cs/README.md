@@ -76,6 +76,31 @@ Console.WriteLine(x); // 32
 
 So, *1* was not assigned to `x` as it was not *null*. It already had a value equal to *32*.
 
+### Generics
+
+Generics in ***C\#*** allow for the creation of classes and methods that can work with multiple types of data, rather than being limited to a specific data type. When a class or method is defined as generic, placeholders (also known as type parameters) are used to represent the types of data that the class or method will work with.
+
+This allows for flexibility and reusability in your code, as the same class or method can be used with different data types without the need for multiple copies of the code.
+
+#### Generic classes
+
+For an example of generics in a class, you can think of the `List` data structure. In ***C\#***, this data structure is made to work will all objects, no matter what their type is.
+
+To achieve that, it is defined as follows:
+
+```c#
+class List<T>
+{
+    // class implementation here
+}
+```
+
+To instantiate a list of integers, for example, you will replace the `T` placeholder with the `int` data type.
+
+```c#
+List<int> listOfIntegers = new List<int>();
+```
+
 ## C# - Resources
 
 - [C# in 100 Seconds by Fireship](https://youtu.be/ravLFzIguCM)

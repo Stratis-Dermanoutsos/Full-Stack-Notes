@@ -454,6 +454,42 @@ The new `<Suspense>` tag enables you to render another component while your data
 </Suspense>
 ```
 
+#### Avoid inline function calls
+
+Let's say you need a button that writes `"Hello world!"` in the console.
+
+You could do it in an inline style:
+
+```jsx
+import React from 'react';
+
+const MyComponent = () => {
+  return <Button onClick={() => console.log('Hello world!')}>Click me</Button>;
+}
+
+export default MyComponent;
+```
+
+or by using a predefined method:
+
+```js
+import React from 'react';
+
+const MyComponent = () => {
+  const handleClick = () => {
+    console.log('Hello world!');
+  };
+
+  return <Button onClick={handleClick}>Click me</Button>;
+}
+
+export default MyComponent;
+```
+
+While the inline method can be useful in reducing the lines of code in your file, it greatly reduces readability and makes your program difficult to maintain if used frequently.
+
+By defining a method before using it in your ***JSX***, you can write longer functions and still keep them readable.
+
 ### Deploy to production
 
 #### Apache

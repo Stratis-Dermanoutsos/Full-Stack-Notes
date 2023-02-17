@@ -1,3 +1,5 @@
 Format/
 TODO.md
 .DS_Store
+node_modules/
+.astro/

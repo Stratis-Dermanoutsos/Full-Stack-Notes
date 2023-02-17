@@ -7,7 +7,7 @@
 [![GitHub watchers](https://img.shields.io/github/watchers/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/watchers/)
 [![GitHub stars](https://img.shields.io/github/stars/stratis-dermanoutsos/Full-Stack-Notes.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/stratis-dermanoutsos/Full-Stack-Notes/stargazers/)
 
-This is a repository holding information and resources for everyone interested in becoming a Full-Stack Web Developer.
+This is a repository holding information and resources for everyone interested in becoming a Full-Stack Software Engineer.
 
 This documentation page was created using [@withastro/astro](https://github.com/withastro/astro).
 

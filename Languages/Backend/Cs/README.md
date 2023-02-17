@@ -101,6 +101,81 @@ To instantiate a list of integers, for example, you will replace the `T` placeho
 List<int> listOfIntegers = new List<int>();
 ```
 
+#### Generic methods
+
+There are several things worth mentioning about **Generic methods** in ***C\#***:
+
+1. **Generic methods** allow you to define a method that can work with different types of data. You can specify the data type when you call the method.
+
+   For example, consider the following method.
+
+   ```c#
+   public void MyMethod<T>(T data)
+   {
+       Console.WriteLine($"Data type: {typeof(T)}, Data value: {data}");
+   }
+   ```
+
+   When you call it, the output of the program heavily relies on the type of the parameter provided.
+
+   ```c#
+   MyMethod<string>("hello"); // output: Data type: System.String, Data value: hello
+   MyMethod<int>(42);         // output: Data type: System.Int32, Data value: 42
+   MyMethod<bool>(true);      // output: Data type: System.Boolean, Data value: True
+   ```
+
+2. You can define a **generic method** using the `<T>` syntax, where `T` is a type parameter that represents the type of data you want to work with.
+
+   Modifying the above method, we get:
+
+   ```c#
+   public void MyMethod<T>(T data) where T : IComparable
+   {
+       Console.WriteLine($"Data type: {typeof(T)}, Data value: {data}");
+   }
+   ```
+
+   Now, with the same input, we get similar but not the same results.
+
+   ```c#
+   MyMethod<string>("hello"); // output: Data type: System.String, Data value: hello
+   MyMethod<int>(42);         // output: Data type: System.Int32, Data value: 42
+   MyMethod<bool>(true);      // This will not compile
+   ```
+
+   The call using a `Boolean` parameter will not compile as this type does not inherit from the `IComparable` interface.
+
+3. When calling a **generic method**, you can either *specify the type parameter explicitly* (e.g. `MyMethod<int>(5)`) or *let the compiler infer the type parameter based on the arguments* you pass to the method (e.g. `MyMethod(5)`).
+
+   As you've noticed by now in the above examples, we explicitly specify the type of each parameter.
+
+   However, if we just used the following, we'd get the exact same results as the compiler is smart enough to get the type itself from the parameter provided.
+
+   ```c#
+   MyMethod("hello"); // T is string
+   MyMethod(42);      // T is int
+   MyMethod(true);    // T is bool
+   ```
+
+4. **Generic methods** can be used to create extension methods that work with any type that meets certain criteria, such as implementing a specific interface.
+
+   ```c#
+   public static class MyExtensions
+   {
+       public static bool IsEqualTo<T>(this T value1, T value2) where T : IComparable
+       {
+           return value1.CompareTo(value2) == 0;
+       }
+   }
+   ```
+
+   Now, we can use this method to compare any `value1` that implements the interface `IComparable` to any `value2` of the same type.
+
+   ```c#
+   bool result1 = 42.IsEqualTo(42);           // returns true
+   bool result2 = "hello".IsEqualTo("world"); // returns false
+   ```
+
 ## C# - Resources
 
 - [C# in 100 Seconds by Fireship](https://youtu.be/ravLFzIguCM)

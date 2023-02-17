@@ -1,6 +1,6 @@
 # Full-Stack Notes
 
-![Money CLI](https://img.shields.io/badge/notes-Full_Stack-blueviolet)
+![Full Stack Notes](https://img.shields.io/badge/notes-Full_Stack-blueviolet)
 [![GitHub license](https://img.shields.io/github/license/Stratis-Dermanoutsos/Full-Stack-Notes.svg)](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/Stratis-Dermanoutsos/Full-Stack-Notes.svg)](https://GitHub.com/Stratis-Dermanoutsos/Full-Stack-Notes/issues/)
 

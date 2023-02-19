@@ -41,10 +41,10 @@ export const SIDEBAR: Sidebar = {
 		'General': [
 			{ text: 'General', link: 'en/general' },
 			{ text: 'Algorithms', link: 'en/general/algorithms' },
-			{ text: 'Architectures', link: 'en/general/architecture' },
 			{ text: 'APIs', link: 'en/general/api' },
 			{ text: 'Data Structures', link: 'en/general/data-structures' },
-			{ text: 'Design Patterns', link: 'en/general/design-patterns' }
+			{ text: 'Design Patterns', link: 'en/general/design-patterns' },
+			{ text: 'Project Architectures', link: 'en/general/architecture' }
 		],
 		'Languages': [
 			{ text: 'Languages', link: 'en/languages' },

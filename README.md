@@ -20,7 +20,7 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
 - [Project ideas](#project-ideas)
 - [License](#license)
 
-## PROJECT IDEAS
+## Project Ideas
 
 - Frontend pages
   - Landing page
@@ -59,7 +59,7 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
   - Survey form
   - Todo list
 
-## LICENSE
+## License
 
 Full-Stack-Notes is licensed under [MIT License](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/main/LICENSE).
 

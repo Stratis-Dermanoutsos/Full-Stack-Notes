@@ -7,7 +7,7 @@ Other than languages and tools, there are some general concepts that all softwar
 
 These concepts but be viewed as ways to solve things in the most efficient way possible.
 
-## LIST
+## List
 
 - #### [Algorithms](./general/algorithms)
 - #### [APIs](./general/api)

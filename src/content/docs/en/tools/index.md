@@ -3,7 +3,7 @@ title: "Extras and tools"
 description: "This section contains notes on multiple tools and other extra information that can prove useful to developers."
 ---
 
-## LIST
+## List
 
 - #### [Design](./tools/design)
 - #### [Git](./tools/git)

@@ -1,19 +1,17 @@
 ---
-import AvatarList from './AvatarList.astro';
 type Props = {
-	path: string;
 };
-const { path } = Astro.props;
 ---
 
 <footer>
-	<AvatarList path={path} />
+	<p translate='no'>©{new Date().getFullYear()} Stratis Dermanoutsos</p>
 </footer>
 
 <style>
 	footer {
 		margin-top: auto;
-		padding: 2rem;
+		padding: 1rem;
+		text-align: center;
 		border-top: 3px solid var(--theme-divider);
 	}
 </style>

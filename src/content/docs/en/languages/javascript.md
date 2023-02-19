@@ -3,12 +3,7 @@ title: "JavaScript"
 description: "This section contains notes on the JavaScript programming language."
 ---
 
-- #### [Notes](#notes)
-- #### [Resources](#resources)
-
-## Notes
-
-### Unique traits
+## Unique traits
 
 - ***obj.propKey = value*** and ***obj['propKey'] = value*** are equal
 - if ***1 = 0001***, then ***~1 = 1110***
@@ -43,7 +38,7 @@ description: "This section contains notes on the JavaScript programming language
   const secondToLast = arr.at(-2); // const lastItem = arr[arr.length - 2];
   ```
 
-### Comparing strings
+## Comparing strings
 
 - is case-sensitive
 
@@ -58,7 +53,7 @@ description: "This section contains notes on the JavaScript programming language
   'b' > 'ä' // false
   ```
 
-### Asynchronous code
+## Asynchronous code
 
 There are 2 main ways:
 
@@ -128,7 +123,7 @@ const greeting = new Promise((resolve, reject) => {
     });
   ```
 
-### Required arguments
+## Required arguments
 
 Make a function that, when assigned to a parameter, throws an error saying it is required.
 
@@ -144,7 +139,7 @@ const myFunction = (argument = required('argument')) => {
 
 Now, when anyone calls `myFunction` without assigning a value to the `param` argument, it throws an error.
 
-### Console API
+## Console API
 
 There are many ways to output something using the [console API](https://developer.mozilla.org/en-US/docs/Web/API/console).
 
@@ -219,96 +214,97 @@ There are many ways to output something using the [console API](https://develope
   console.dir(obj);
   ```
 
-### Useful code snippets
+## Useful code snippets
 
-- Remove duplicate values from array
+### Remove duplicate values from array
+
+```javascript
+const arr = [ 1, 2, 3, 2, 4, 4, 1, 5, 6 ];
+const uniqueArr = [...new Set(arr)]; // = [ 1, 2, 3, 4, 5, 6 ]
+```
+
+### Filter out falsy values
+
+```javascript
+const arr = [ 1, null, undefined, 0, 2, "", 4 ];
+const nonFalsy = array.filter(Boolean); // = [ 1, 2, 4 ]
+```
+
+### Swap two variables with array destructuring
+
+```javascript
+let a = 6;
+let b = 9;
+
+[ a, b ] = [ b, a ];
+```
+
+### Destructure function parameters, making code more readable
+
+```javascript
+// DON'T DO THIS
+const myFunction = (one, two, three) => {
+  // code
+};
+
+myFunction(1, 2, 3);
+
+// DO THIS
+const myFunction = ({one, two, three}) => {
+  // code
+};
+
+myFunction({
+  one: 1,
+  two: 2,
+  three: 3
+});
+```
+
+### Short circuit Evaluation
+
+- *AND*
 
   ```javascript
-  const arr = [ 1, 2, 3, 2, 4, 4, 1, 5, 6 ];
-  const uniqueArr = [...new Set(arr)]; // = [ 1, 2, 3, 4, 5, 6 ]
+  if (condition)
+    doAction();
+
+  // is equal to
+  condition && doAction();
   ```
 
-- Filter out falsy values
+- *OR*
 
   ```javascript
-  const arr = [ 1, null, undefined, 0, 2, "", 4 ];
-  const nonFalsy = array.filter(Boolean); // = [ 1, 2, 4 ]
+  if (!condition)
+    doAction();
+
+  // is equal to
+  condition || doAction();
   ```
 
-- Swap two variables with array destructuring
+### Convert result of division to integer
 
-  ```javascript
-  let a = 6;
-  let b = 9;
+```javascript
+const a = 23 / 10     // = 2.3
+const b = 23 / 10 | 0 // = 2
+```
 
-  [ a, b ] = [ b, a ];
-  ```
+### Optional chaining
 
-- Destructure function parameters, making code more readable
-
-  ```javascript
-  // DON'T DO THIS
-  const myFunction = (one, two, three) => {
-    // code
-  };
-
-  myFunction(1, 2, 3);
-
-  // DO THIS
-  const myFunction = ({one, two, three}) => {
-    // code
-  };
-
-  myFunction({
-    one: 1,
-    two: 2,
-    three: 3
-  });
-  ```
-
-- Short circuit Evaluation
-  - *AND*
-
-    ```javascript
-    if (condition)
-      doAction();
-
-    // is equal to
-    condition && doAction();
-    ```
-
-  - *OR*
-
-    ```javascript
-    if (!condition)
-      doAction();
-
-    // is equal to
-    condition || doAction();
-    ```
-
-- Convert result of division to integer
-
-  ```javascript
-  const a = 23 / 10     // = 2.3
-  const b = 23 / 10 | 0 // = 2
-  ```
-
-- Optional chaining
-
-  ```javascript
-  const person = {
-    name: 'Stratis',
-    pet: {
-      name: 'Leo'
-    }
+```javascript
+const person = {
+  name: 'Stratis',
+  pet: {
+    name: 'Leo'
   }
+}
 
-  console.log(person.pet?.name); // Leo
-  console.log(person.pet?.age);  // undefined
-  ```
+console.log(person.pet?.name); // Leo
+console.log(person.pet?.age);  // undefined
+```
 
-### C# vs JavaScript
+## C# vs JavaScript
 
 |  | C#      | JavaScript |
 | ----------- | ----------- | ----------- |

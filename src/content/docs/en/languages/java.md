@@ -3,12 +3,7 @@ title: "Java"
 description: "This section contains notes on the Java programming language."
 ---
 
-- #### [Notes](#notes)
-- #### [Resources](#resources)
-
-## Notes
-
-### Simple Hello World program
+## Simple Hello World program
 
 - Create a `helloWorld.java` file
 
@@ -34,7 +29,7 @@ description: "This section contains notes on the Java programming language."
 
 > To run a program in ***Java***, you must first define the *`main`* function as seen above.
 
-### Primitive data types
+## Primitive data types
 
 In ***Java***, there are exactly 8 primitive data types.
 
@@ -49,7 +44,7 @@ In ***Java***, there are exactly 8 primitive data types.
 | float | 0.0 | 32 | max 7 decimal places |
 | double | 0.0 | 64 | max 16 decimal places |
 
-### Access modifiers
+## Access modifiers
 
 | Access modifier | within class | within package | outside package by subclass only | outside package |
 | --- | --- | --- | --- | --- |
@@ -58,7 +53,7 @@ In ***Java***, there are exactly 8 primitive data types.
 | Protected | Yes | Yes | Yes | No |
 | Public | Yes | Yes | Yes | Yes |
 
-### Non-Access Modifiers
+## Non-Access Modifiers
 
 | Modifier | Description |
 | --- | --- |
@@ -69,9 +64,9 @@ In ***Java***, there are exactly 8 primitive data types.
 | synchronized | Methods can only be accessed by one thread at a time. |
 | volatile | The value of an attribute is always read from the "main memory". |
 
-### Lambda Expressions
+## Lambda Expressions
 
-#### Syntax
+### Syntax
 
 ```java
 // one parameter
@@ -87,7 +82,7 @@ Expressions must immediately return a value. Thus, they are limited. To enable t
 (parameter1, parameter2) -> { code block }
 ```
 
-#### Example use cases
+### Example use cases
 
 - Print all elements of an array
 
@@ -109,9 +104,9 @@ Expressions must immediately return a value. Thus, they are limited. To enable t
   int result = operate(10, 5, addition); // 15
   ```
 
-### Useful code snippets
+## Useful code snippets
 
-#### Recyclable InputStream
+### Recyclable InputStream
 
 The main problem with the `InputStream` class is that an instance can only be used once in its lifecycle.
 

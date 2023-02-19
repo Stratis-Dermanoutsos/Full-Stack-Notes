@@ -3,11 +3,6 @@ title: "TypeScript"
 description: "This section contains notes on the TypeScript programming language."
 ---
 
-- #### [Notes](#notes)
-- #### [Resources](#resources)
-
-## Notes
-
 ***TypeScript*** is basically a superset of ***JavaScript***.
 
 This means that
@@ -19,9 +14,9 @@ However, ***TypeScript*** works more like a compiled language. In other words, y
 
 In fact, the way a program written in ***TypeScript*** works is through compilation to vanilla ***JavaScript*** using *tsc*. (***TypeScript*** *Compiler*)
 
-### Classes - OOP
+## Classes - OOP
 
-#### Declaration
+### Declaration
 
 ```typescript
 class Point {
@@ -30,13 +25,13 @@ class Point {
 }
 ```
 
-#### Instantiation
+### Instantiation
 
 ```typescript
 const pt = new Point();
 ```
 
-#### Value assignment
+### Value assignment
 
 ```typescript
 // outside of class
@@ -48,7 +43,7 @@ pt.x = "3"; // error
 this.x = 0;
 ```
 
-#### Constructor
+### Constructor
 
 ```typescript
 class Point {
@@ -72,7 +67,7 @@ class Point {
 }
 ```
 
-#### readonly
+### readonly
 
 Readonly fields are only assignable on declaration or inside the constructor.
 
@@ -93,7 +88,7 @@ const p = new Person();
 p.name = "Strat"; // error
 ```
 
-#### Inheritage
+### Inheritage
 
 Just as in ***JavaScript***, if you have a base class, you’ll need to call `super();` in your constructor body *BEFORE* using any `this.` members.
 
@@ -110,7 +105,7 @@ class Derived extends Base {
 }
 ```
 
-#### Getters / Setters
+### Getters / Setters
 
 ```typescript
 class C {
@@ -128,7 +123,7 @@ class C {
 }
 ```
 
-### Variables
+## Variables
 
 ```typescript
 // JavaScript
@@ -154,7 +149,7 @@ let myVar: any;
 
 are equal in ***TypeScript***.
 
-#### Unknown
+### Unknown
 
 In ***TypeScript***, the `unknown` type works similarly to `any` but not quite the same.
 
@@ -215,7 +210,7 @@ console.log(myFunc(var2)); // = true
 
 The above example accepts an `unknown` parameter and returns *`true`* if it contains a property named `myProp`. Else, it returns *`false`*.
 
-### Interfaces
+## Interfaces
 
 ```typescript
 interface Car {
@@ -238,7 +233,7 @@ const accent: Car = {
 }
 ```
 
-### Arrays
+## Arrays
 
 ```typescript
 const arr: string[] = [];
@@ -258,7 +253,7 @@ arr.push('idk, it\'s just a string'); // OK
 arr.push(1);                         // OK
 ```
 
-### Tuples
+## Tuples
 
 ```typescript
 // Declare a tuple type
@@ -269,7 +264,7 @@ x = ["hello", 10]; // OK
 x = [10, "hello"]; // Error
 ```
 
-### Generics
+## Generics
 
 ```typescript
 class Item<T> {
@@ -280,9 +275,9 @@ let x: Item<number>;
 let y = new Item(3);
 ```
 
-### Snippets
+## Snippets
 
-#### Objects as Maps
+### Objects as Maps
 
 ```typescript
 interface Object {

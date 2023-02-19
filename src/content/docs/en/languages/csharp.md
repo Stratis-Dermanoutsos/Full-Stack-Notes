@@ -3,12 +3,7 @@ title: "C#"
 description: "This section contains notes on the C# programming language."
 ---
 
-- #### [Notes](#notes)
-- #### [Resources](#resources)
-
-## Notes
-
-### Extension methods
+## Extension methods
 
 **Extension methods** are defined as `static` methods but are called by using instance method syntax. Their first parameter specifies which type the method operates on.
 
@@ -46,7 +41,7 @@ static void Main()
 }
 ```
 
-### Null-Coalescing Operator
+## Null-Coalescing Operator
 
 The `??` operator will return the value of its left-hand operand if it is not *null*. Else, it returns the right one.
 
@@ -79,13 +74,13 @@ Console.WriteLine(x); // 32
 
 So, *1* was not assigned to `x` as it was not *null*. It already had a value equal to *32*.
 
-### Generics
+## Generics
 
 Generics in ***C\#*** allow for the creation of classes and methods that can work with multiple types of data, rather than being limited to a specific data type. When a class or method is defined as generic, placeholders (also known as type parameters) are used to represent the types of data that the class or method will work with.
 
 This allows for flexibility and reusability in your code, as the same class or method can be used with different data types without the need for multiple copies of the code.
 
-#### Generic classes
+### Generic classes
 
 For an example of generics in a class, you can think of the `List` data structure. In ***C\#***, this data structure is made to work will all objects, no matter what their type is.
 
@@ -104,7 +99,7 @@ To instantiate a list of integers, for example, you will replace the `T` placeho
 List<int> listOfIntegers = new List<int>();
 ```
 
-#### Generic methods
+### Generic methods
 
 There are several things worth mentioning about **Generic methods** in ***C\#***:
 

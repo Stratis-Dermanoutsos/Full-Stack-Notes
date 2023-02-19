@@ -95,15 +95,14 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'SwiftUI (Swift)', link: 'en/mobile/frameworks/swiftui' },
 			{ text: 'Xamarin (C#)', link: 'en/mobile/frameworks/xamarin' }
 		],
-		'Extras': [
-			{ text: 'Extras', link: 'en/extras' },
-			{ text: 'Design', link: 'en/extras/design' },
-			{ text: 'Git', link: 'en/extras/git' },
-			{ text: 'Markdown', link: 'en/extras/markdown' },
-			{ text: 'NPM', link: 'en/extras/npm' },
-			{ text: 'NuGet', link: 'en/extras/nuget' },
-			{ text: 'Vite', link: 'en/extras/vite' },
-			{ text: 'Webpack', link: 'en/extras/webpack' }
+		'Tools': [
+			{ text: 'Tools', link: 'en/tools' },
+			{ text: 'Design', link: 'en/tools/design' },
+			{ text: 'Git', link: 'en/tools/git' },
+			{ text: 'Markdown', link: 'en/tools/markdown' },
+			{ text: 'Module bundlers', link: 'en/tools/module-bundlers' },
+			{ text: 'NPM', link: 'en/tools/npm' },
+			{ text: 'NuGet', link: 'en/tools/nuget' }
 		]
 	},
 };

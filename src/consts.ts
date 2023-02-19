@@ -44,7 +44,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'APIs', link: 'en/general/api' },
 			{ text: 'Data Structures', link: 'en/general/data-structures' },
 			{ text: 'Design Patterns', link: 'en/general/design-patterns' },
-			{ text: 'Project Architectures', link: 'en/general/architecture' }
+			{ text: 'Project Architectures', link: 'en/general/project-architectures' }
 		],
 		'Languages': [
 			{ text: 'Languages', link: 'en/languages' },

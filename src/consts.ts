@@ -60,6 +60,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Backend Frameworks', link: 'en/backend/frameworks' },
 			{ text: 'ASP.NET Core (C#)', link: 'en/backend/frameworks/aspnet-core' },
 			{ text: 'Entity Framework (C#)', link: 'en/backend/frameworks/entity-framework' },
+			{ text: 'Express (JavaScript)', link: 'en/backend/frameworks/express' },
 			{ text: 'Ruby on Rails (Ruby)', link: 'en/backend/frameworks/ruby-on-rails' },
 			{ text: 'Spring (Java)', link: 'en/backend/frameworks/spring' },
 		],
@@ -77,6 +78,10 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Svelte (JavaScript)', link: 'en/frontend/frameworks/svelte' },
 			{ text: 'Tailwind (CSS)', link: 'en/frontend/frameworks/tailwind' },
 			{ text: 'Vue (JavaScript)', link: 'en/frontend/frameworks/vue' }
+		],
+		'Frontend Meta-Frameworks': [
+			{ text: 'Frontend Meta-Frameworks', link: 'en/frontend/frameworks/meta' },
+			{ text: 'Next (React)', link: 'en/frontend/frameworks/meta/next' }
 		],
 		'Frontend Libraries': [
 			{ text: 'Frontend Libraries', link: 'en/frontend/libraries' },

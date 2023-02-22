@@ -118,6 +118,11 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'NPM', link: 'en/tools/npm' },
 			{ text: 'NuGet', link: 'en/tools/nuget' }
 		],
+		'DevOps': [
+			{ text: 'DevOps', link: 'en/devops' },
+			{ text: 'Jenkins', link: 'en/devops/jenkins' },
+			{ text: 'GitHub Actions', link: 'en/devops/github-actions' },
+		],
 		'Concepts': [
 			{ text: 'Concepts', link: 'en/concepts' },
 			{ text: 'Design', link: 'en/concepts/design' },

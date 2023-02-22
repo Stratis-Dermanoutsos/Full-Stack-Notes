@@ -35,6 +35,7 @@ In ***Java***, there are exactly 8 primitive data types.
 
 | TYPE| DEFAULT | SIZE (in bits) | RANGE OF VALUES |
 | --- | --- | --- | --- |
+|  |  |  |  |
 | boolean | false | 1 | true, false |
 | char | \u0000 | 16 | [0, 255] ASCII |
 | byte | 0 | 8 | [-128, 127] |
@@ -48,6 +49,7 @@ In ***Java***, there are exactly 8 primitive data types.
 
 | Access modifier | within class | within package | outside package by subclass only | outside package |
 | --- | --- | --- | --- | --- |
+|  |  |  |  |  |
 | Private | Yes | No | No | No |
 | Default | Yes | Yes | No | No |
 | Protected | Yes | Yes | Yes | No |
@@ -57,6 +59,7 @@ In ***Java***, there are exactly 8 primitive data types.
 
 | Modifier | Description |
 | --- | --- |
+|  |  |
 | final | Classes cannot be inherited. Attributes and methods cannot be modified. |
 | abstract | To access an abstract class, it must be inherited from another class. Abstract methods are declared without a body. The body is provided by the subclass. |
 | static | Attributes and methods are the same for all instances of the class. |

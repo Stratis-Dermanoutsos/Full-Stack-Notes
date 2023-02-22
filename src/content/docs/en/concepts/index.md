@@ -5,4 +5,8 @@ description: "This section contains notes on multiple concepts and other informa
 
 ## List
 
-- #### [Design](./tools/design)
+- #### [Design](./concepts/design)
+- #### [Proxy](./concepts/proxy)
+- #### [Load Balancer](./concepts/load-balancer)
+- #### [Caching Server](./concepts/caching-server)
+- #### [Firewall](./concepts/firewall)

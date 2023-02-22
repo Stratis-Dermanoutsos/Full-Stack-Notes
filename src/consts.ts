@@ -120,7 +120,11 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Concepts': [
 			{ text: 'Concepts', link: 'en/concepts' },
-			{ text: 'Design', link: 'en/concepts/design' }
+			{ text: 'Design', link: 'en/concepts/design' },
+			{ text: 'Proxy', link: 'en/concepts/proxy' },
+			{ text: 'Load Balancer', link: 'en/concepts/load-balancer' },
+			{ text: 'Caching Server', link: 'en/concepts/caching-server' },
+			{ text: 'Firewall', link: 'en/concepts/firewall' }
 		]
 	},
 };

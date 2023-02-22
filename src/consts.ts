@@ -99,6 +99,12 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'SwiftUI (Swift)', link: 'en/frameworks/mobile/swiftui' },
 			{ text: 'Xamarin (C#)', link: 'en/frameworks/mobile/xamarin' }
 		],
+		'Databases': [
+			{ text: 'Databases', link: 'en/databases' },
+			{ text: 'SQL', link: 'en/databases/sql' },
+			{ text: 'NoSQL', link: 'en/databases/nosql' },
+			{ text: 'NewSQL', link: 'en/databases/newsql' },
+		],
 		'CSS Preprocessors': [
 			{ text: 'CSS Preprocessors', link: 'en/languages/frontend/css/preprocessors' },
 			{ text: 'SASS', link: 'en/languages/frontend/css/preprocessors/sass' },

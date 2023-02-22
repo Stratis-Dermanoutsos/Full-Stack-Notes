@@ -66,8 +66,8 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Frontend Languages': [
 			{ text: 'Frontend Languages', link: 'en/languages/frontend' },
-			{ text: 'CSS', link: 'en/languages/frontend/css' },
-			{ text: 'HTML', link: 'en/languages/frontend/html' }
+			{ text: 'HTML', link: 'en/languages/frontend/html' },
+			{ text: 'CSS', link: 'en/languages/frontend/css' }
 		],
 		'Frontend Frameworks': [
 			{ text: 'Frontend Frameworks', link: 'en/frameworks/frontend' },

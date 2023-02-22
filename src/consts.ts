@@ -106,12 +106,15 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Tools': [
 			{ text: 'Tools', link: 'en/tools' },
-			{ text: 'Design', link: 'en/tools/design' },
 			{ text: 'Git', link: 'en/tools/git' },
 			{ text: 'Markdown', link: 'en/tools/markdown' },
 			{ text: 'Module bundlers', link: 'en/tools/module-bundlers' },
 			{ text: 'NPM', link: 'en/tools/npm' },
 			{ text: 'NuGet', link: 'en/tools/nuget' }
+		],
+		'Concepts': [
+			{ text: 'Concepts', link: 'en/concepts' },
+			{ text: 'Design', link: 'en/concepts/design' }
 		]
 	},
 };

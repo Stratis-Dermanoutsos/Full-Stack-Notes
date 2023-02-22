@@ -57,48 +57,51 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'TypeScript', link: 'en/languages/typescript' },
 		],
 		'Backend Frameworks': [
-			{ text: 'Backend Frameworks', link: 'en/backend/frameworks' },
-			{ text: 'ASP.NET Core (C#)', link: 'en/backend/frameworks/aspnet-core' },
-			{ text: 'Entity Framework (C#)', link: 'en/backend/frameworks/entity-framework' },
-			{ text: 'Express (JavaScript)', link: 'en/backend/frameworks/express' },
-			{ text: 'Ruby on Rails (Ruby)', link: 'en/backend/frameworks/ruby-on-rails' },
-			{ text: 'Spring (Java)', link: 'en/backend/frameworks/spring' },
+			{ text: 'Backend Frameworks', link: 'en/frameworks/backend' },
+			{ text: 'ASP.NET Core (C#)', link: 'en/frameworks/backend/aspnet-core' },
+			{ text: 'Entity Framework (C#)', link: 'en/frameworks/backend/entity-framework' },
+			{ text: 'Express (JavaScript)', link: 'en/frameworks/backend/express' },
+			{ text: 'Ruby on Rails (Ruby)', link: 'en/frameworks/backend/ruby-on-rails' },
+			{ text: 'Spring (Java)', link: 'en/frameworks/backend/spring' },
 		],
 		'Frontend Languages': [
-			{ text: 'Frontend Languages', link: 'en/frontend/languages' },
-			{ text: 'CSS', link: 'en/frontend/languages/css' },
-			{ text: 'SCSS', link: 'en/frontend/languages/scss' },
-			{ text: 'HTML', link: 'en/frontend/languages/html' }
+			{ text: 'Frontend Languages', link: 'en/languages/frontend' },
+			{ text: 'CSS', link: 'en/languages/frontend/css' },
+			{ text: 'HTML', link: 'en/languages/frontend/html' }
 		],
 		'Frontend Frameworks': [
-			{ text: 'Frontend Frameworks', link: 'en/frontend/frameworks' },
-			{ text: 'Astro (JavaScript)', link: 'en/frontend/frameworks/astro' },
-			{ text: 'Bootstrap (CSS)', link: 'en/frontend/frameworks/bootstrap' },
-			{ text: 'Ext (JavaScript)', link: 'en/frontend/frameworks/ext' },
-			{ text: 'Svelte (JavaScript)', link: 'en/frontend/frameworks/svelte' },
-			{ text: 'Tailwind (CSS)', link: 'en/frontend/frameworks/tailwind' },
-			{ text: 'Vue (JavaScript)', link: 'en/frontend/frameworks/vue' }
+			{ text: 'Frontend Frameworks', link: 'en/frameworks/frontend' },
+			{ text: 'Astro (JavaScript)', link: 'en/frameworks/frontend/astro' },
+			{ text: 'Bootstrap (CSS)', link: 'en/frameworks/frontend/bootstrap' },
+			{ text: 'Ext (JavaScript)', link: 'en/frameworks/frontend/ext' },
+			{ text: 'Svelte (JavaScript)', link: 'en/frameworks/frontend/svelte' },
+			{ text: 'Tailwind (CSS)', link: 'en/frameworks/frontend/tailwind' },
+			{ text: 'Vue (JavaScript)', link: 'en/frameworks/frontend/vue' }
 		],
 		'Frontend Meta-Frameworks': [
-			{ text: 'Frontend Meta-Frameworks', link: 'en/frontend/frameworks/meta' },
-			{ text: 'Next (React)', link: 'en/frontend/frameworks/meta/next' }
+			{ text: 'Frontend Meta-Frameworks', link: 'en/frameworks/frontend/meta' },
+			{ text: 'Next (React)', link: 'en/frameworks/frontend/meta/next' }
 		],
 		'Frontend Libraries': [
-			{ text: 'Frontend Libraries', link: 'en/frontend/libraries' },
-			{ text: 'Axios (JavaScript)', link: 'en/frontend/libraries/axios' },
-			{ text: 'jQuery (JavaScript)', link: 'en/frontend/libraries/jquery' },
-			{ text: 'Preact (JavaScript)', link: 'en/frontend/frameworks/preact' },
-			{ text: 'React (JavaScript)', link: 'en/frontend/frameworks/react' },
-			{ text: 'React Query (JavaScript)', link: 'en/frontend/libraries/react-query' },
-			{ text: 'Redux (JavaScript)', link: 'en/frontend/libraries/redux' }
+			{ text: 'Frontend Libraries', link: 'en/libraries/frontend' },
+			{ text: 'Axios (JavaScript)', link: 'en/libraries/frontend/axios' },
+			{ text: 'jQuery (JavaScript)', link: 'en/libraries/frontend/jquery' },
+			{ text: 'Preact (JavaScript)', link: 'en/libraries/frontend/preact' },
+			{ text: 'React (JavaScript)', link: 'en/libraries/frontend/react' },
+			{ text: 'React Query (JavaScript)', link: 'en/libraries/frontend/react-query' },
+			{ text: 'Redux (JavaScript)', link: 'en/libraries/frontend/redux' }
 		],
 		'Mobile Frameworks': [
-			{ text: 'Mobile Frameworks', link: 'en/mobile/frameworks' },
-			{ text: 'Flutter (Dart)', link: 'en/mobile/frameworks/flutter' },
-			{ text: 'MAUI (C#)', link: 'en/mobile/frameworks/maui' },
-			{ text: 'React Native (JavaScript)', link: 'en/mobile/frameworks/react-native' },
-			{ text: 'SwiftUI (Swift)', link: 'en/mobile/frameworks/swiftui' },
-			{ text: 'Xamarin (C#)', link: 'en/mobile/frameworks/xamarin' }
+			{ text: 'Mobile Frameworks', link: 'en/frameworks/mobile' },
+			{ text: 'Flutter (Dart)', link: 'en/frameworks/mobile/flutter' },
+			{ text: 'MAUI (C#)', link: 'en/frameworks/mobile/maui' },
+			{ text: 'React Native (JavaScript)', link: 'en/frameworks/mobile/react-native' },
+			{ text: 'SwiftUI (Swift)', link: 'en/frameworks/mobile/swiftui' },
+			{ text: 'Xamarin (C#)', link: 'en/frameworks/mobile/xamarin' }
+		],
+		'CSS Preprocessors': [
+			{ text: 'CSS Preprocessors', link: 'en/languages/frontend/css/preprocessors' },
+			{ text: 'SCSS', link: 'en/languages/frontend/css/preprocessors/scss' }
 		],
 		'Tools': [
 			{ text: 'Tools', link: 'en/tools' },

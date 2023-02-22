@@ -318,7 +318,7 @@ html {
 
 > Very useful in collapsing large groups of code.
 
-## CSS - Resources
+## Resources
 
 - [CSS in 100 Seconds by Fireship](https://youtu.be/OEV8gMkCHXQ)
 - [w3schools](https://www.w3schools.com/css/default.asp)

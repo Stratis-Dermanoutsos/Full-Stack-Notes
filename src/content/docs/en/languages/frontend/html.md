@@ -177,7 +177,7 @@ Full example:
 </footer>
 ```
 
-## HTML - Resources
+## Resources
 
 - [HTML in 100 seconds by Fireship](https://youtu.be/ok-plXXHlWw)
 - [w3schools](https://www.w3schools.com/html/default.asp)

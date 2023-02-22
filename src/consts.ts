@@ -101,6 +101,7 @@ export const SIDEBAR: Sidebar = {
 		],
 		'CSS Preprocessors': [
 			{ text: 'CSS Preprocessors', link: 'en/languages/frontend/css/preprocessors' },
+			{ text: 'SASS', link: 'en/languages/frontend/css/preprocessors/sass' },
 			{ text: 'SCSS', link: 'en/languages/frontend/css/preprocessors/scss' }
 		],
 		'Tools': [

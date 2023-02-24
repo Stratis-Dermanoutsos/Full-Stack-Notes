@@ -304,9 +304,9 @@ console.log(person.pet?.name); // Leo
 console.log(person.pet?.age);  // undefined
 ```
 
-## C# vs JavaScript
+## C\# vs JavaScript
 
-|  | C#      | JavaScript |
+|  | C\#      | JavaScript |
 | ----------- | ----------- | ----------- |
 | types | int, float, double, char, bool, ... | let, var, const |
 | methods | \<access> \<type> \<name>(\<type> x)  | function \<name>(x) |

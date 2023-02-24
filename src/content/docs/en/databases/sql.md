@@ -133,12 +133,12 @@ As the name implies, **relational** ***databases*** have related data. In other 
 - MySQL
   - [MySQL documentation](https://dev.mysql.com/doc/)
   - [MySQL cheat sheet](http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm)
-  - [C# and MySQL (ZetCode)](https://zetcode.com/csharp/mysql/)
+  - [C\# and MySQL (ZetCode)](https://zetcode.com/csharp/mysql/)
 - SQLite
   - [SQLite documentation](https://www.sqlite.org/docs.html)
   - [SQLite cheat sheet](https://www.sqlitetutorial.net/sqlite-cheat-sheet/)
-  - [C# and SQLite (ZetCode)](https://zetcode.com/csharp/sqlite/)
+  - [C\# and SQLite (ZetCode)](https://zetcode.com/csharp/sqlite/)
 - PostgreSQL
   - [PostgreSQL documentation](https://www.postgresql.org/docs/)
   - [PostgreSQL cheat sheet](https://postgrescheatsheet.com)
-  - [C# and PostgreSQL (ZetCode)](https://zetcode.com/csharp/postgresql/)
+  - [C\# and PostgreSQL (ZetCode)](https://zetcode.com/csharp/postgresql/)

@@ -48,7 +48,7 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Languages': [
 			{ text: 'Languages', link: 'en/languages' },
-			{ text: 'C#', link: 'en/languages/csharp' },
+			{ text: 'C\#', link: 'en/languages/csharp' },
 			{ text: 'Dart', link: 'en/languages/dart' },
 			{ text: 'Java', link: 'en/languages/java' },
 			{ text: 'JavaScript', link: 'en/languages/javascript' },
@@ -56,48 +56,40 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Swift', link: 'en/languages/swift' },
 			{ text: 'TypeScript', link: 'en/languages/typescript' },
 		],
-		'Backend Frameworks': [
-			{ text: 'Backend Frameworks', link: 'en/frameworks/backend' },
-			{ text: 'ASP.NET Core (C#)', link: 'en/frameworks/backend/aspnet-core' },
-			{ text: 'Entity Framework (C#)', link: 'en/frameworks/backend/entity-framework' },
-			{ text: 'Express (JavaScript)', link: 'en/frameworks/backend/express' },
-			{ text: 'Ruby on Rails (Ruby)', link: 'en/frameworks/backend/ruby-on-rails' },
-			{ text: 'Spring (Java)', link: 'en/frameworks/backend/spring' },
+		'Frameworks': [
+			{ text: 'Frameworks', link: 'en/frameworks' },
+			{ text: '.NET (C\#)', link: 'en/frameworks/dotnet' },
+			{ text: 'ASP.NET (C\#)', link: 'en/frameworks/aspnet' },
+			{ text: 'Astro (JavaScript)', link: 'en/frameworks/astro' },
+			{ text: 'Bootstrap (CSS)', link: 'en/frameworks/bootstrap' },
+			{ text: 'Entity Framework (C\#)', link: 'en/frameworks/entity-framework' },
+			{ text: 'Express (JavaScript)', link: 'en/frameworks/express' },
+			{ text: 'Ext (JavaScript)', link: 'en/frameworks/ext' },
+			{ text: 'Flutter (Dart)', link: 'en/frameworks/flutter' },
+			{ text: 'MAUI (C\#)', link: 'en/frameworks/maui' },
+			{ text: 'Next (React)', link: 'en/frameworks/next' },
+			{ text: 'React Native (JavaScript)', link: 'en/frameworks/react-native' },
+			{ text: 'Ruby on Rails (Ruby)', link: 'en/frameworks/ruby-on-rails' },
+			{ text: 'Spring (Java)', link: 'en/frameworks/spring' },
+			{ text: 'SwiftUI (Swift)', link: 'en/frameworks/swiftui' },
+			{ text: 'Svelte (JavaScript)', link: 'en/frameworks/svelte' },
+			{ text: 'Tailwind (CSS)', link: 'en/frameworks/tailwind' },
+			{ text: 'Vue (JavaScript)', link: 'en/frameworks/vue' },
+			{ text: 'Xamarin (C\#)', link: 'en/frameworks/xamarin' }
 		],
 		'Frontend Languages': [
 			{ text: 'Frontend Languages', link: 'en/languages/frontend' },
 			{ text: 'HTML', link: 'en/languages/frontend/html' },
 			{ text: 'CSS', link: 'en/languages/frontend/css' }
 		],
-		'Frontend Frameworks': [
-			{ text: 'Frontend Frameworks', link: 'en/frameworks/frontend' },
-			{ text: 'Astro (JavaScript)', link: 'en/frameworks/frontend/astro' },
-			{ text: 'Bootstrap (CSS)', link: 'en/frameworks/frontend/bootstrap' },
-			{ text: 'Ext (JavaScript)', link: 'en/frameworks/frontend/ext' },
-			{ text: 'Svelte (JavaScript)', link: 'en/frameworks/frontend/svelte' },
-			{ text: 'Tailwind (CSS)', link: 'en/frameworks/frontend/tailwind' },
-			{ text: 'Vue (JavaScript)', link: 'en/frameworks/frontend/vue' }
-		],
-		'Frontend Meta-Frameworks': [
-			{ text: 'Frontend Meta-Frameworks', link: 'en/frameworks/frontend/meta' },
-			{ text: 'Next (React)', link: 'en/frameworks/frontend/meta/next' }
-		],
-		'Frontend Libraries': [
-			{ text: 'Frontend Libraries', link: 'en/libraries/frontend' },
-			{ text: 'Axios (JavaScript)', link: 'en/libraries/frontend/axios' },
-			{ text: 'jQuery (JavaScript)', link: 'en/libraries/frontend/jquery' },
-			{ text: 'Preact (JavaScript)', link: 'en/libraries/frontend/preact' },
-			{ text: 'React (JavaScript)', link: 'en/libraries/frontend/react' },
-			{ text: 'React Query (JavaScript)', link: 'en/libraries/frontend/react-query' },
-			{ text: 'Redux (JavaScript)', link: 'en/libraries/frontend/redux' }
-		],
-		'Mobile Frameworks': [
-			{ text: 'Mobile Frameworks', link: 'en/frameworks/mobile' },
-			{ text: 'Flutter (Dart)', link: 'en/frameworks/mobile/flutter' },
-			{ text: 'MAUI (C#)', link: 'en/frameworks/mobile/maui' },
-			{ text: 'React Native (JavaScript)', link: 'en/frameworks/mobile/react-native' },
-			{ text: 'SwiftUI (Swift)', link: 'en/frameworks/mobile/swiftui' },
-			{ text: 'Xamarin (C#)', link: 'en/frameworks/mobile/xamarin' }
+		'Libraries': [
+			{ text: 'Libraries', link: 'en/libraries' },
+			{ text: 'Axios (JavaScript)', link: 'en/libraries/axios' },
+			{ text: 'jQuery (JavaScript)', link: 'en/libraries/jquery' },
+			{ text: 'Preact (JavaScript)', link: 'en/libraries/preact' },
+			{ text: 'React (JavaScript)', link: 'en/libraries/react' },
+			{ text: 'React Query (JavaScript)', link: 'en/libraries/react-query' },
+			{ text: 'Redux (JavaScript)', link: 'en/libraries/redux' }
 		],
 		'Databases': [
 			{ text: 'Databases', link: 'en/databases' },

@@ -96,5 +96,5 @@ Basic commands:
   - [MongoDB documentation](https://docs.mongodb.com)
   - [MongoDB Cheat Sheet](https://www.mongodb.com/developer/quickstart/cheat-sheet/)
   - [Simplilearn video (tutorial)](https://youtu.be/lBBtq3Oawqw)
-  - [C# and MongoDB (Official)](https://www.mongodb.com/blog/post/quick-start-c-sharp-and-mongodb-starting-and-setup)
-  - [C# and MongoDB (ZetCode)](https://zetcode.com/csharp/mongodb/)
+  - [C\# and MongoDB (Official)](https://www.mongodb.com/blog/post/quick-start-c-sharp-and-mongodb-starting-and-setup)
+  - [C\# and MongoDB (ZetCode)](https://zetcode.com/csharp/mongodb/)

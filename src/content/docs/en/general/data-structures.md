@@ -95,7 +95,7 @@ The goal is simple:
 
 To achieve this, we simply have to do
 
-```c#
+```csharp
 // C# code
 Node temp = parent.Right;
 parent.Right = parent.Left;
@@ -118,7 +118,7 @@ This is achieved through certain rotations that keep the ***AVL Tree*** balanced
 
 In general, in a **Binary Tree**, the **Balance Factor** of a node `X` is defined to be the height difference of the 2 child sub-trees.
 
-```c#
+```csharp
 BF(X) = Height(LeftSubtree(X)) - Height(RightSubtree(X))
 ```
 

@@ -80,7 +80,7 @@ As a request-response protocol, ***HTTP*** gives users a way to interact with we
 
 ## Pactical API
 
-- Create an ***API*** (***C#***)
+- Create an ***API*** (***C\#***)
 
   Use the **dotnet CLI** (at the time of writing, I am using ***dotnet 3.1 LTS***) to create a ***ASP .NET* Core** Web *API***
 

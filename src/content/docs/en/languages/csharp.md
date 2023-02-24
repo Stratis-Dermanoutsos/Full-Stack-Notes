@@ -15,7 +15,7 @@ They're basically a way to extend a class' functionality.
 
 For example, let's say we want to add a `NotEquals` method for the `String` data type. Now, `String` is a `sealed` class which means that it cannot be inherited so we need to use an `Extensions Method` to add any functionality to it.
 
-```c#
+```csharp
 public static class StringExtensions
 {
     public static bool NotEquals(this string str1, string str2)
@@ -27,7 +27,7 @@ public static class StringExtensions
 
 To call this method now, there are 2 simple ways.
 
-```c#
+```csharp
 static void Main()
 {
     string test1 = "This is a test";
@@ -45,14 +45,14 @@ static void Main()
 
 The `??` operator will return the value of its left-hand operand if it is not *null*. Else, it returns the right one.
 
-```c#
+```csharp
 int? value1 = null;
 int value2 = 32;
 
 int? value3 = value1 ?? value2; // = 32
 ```
 
-```c#
+```csharp
 int value1 = 1;
 int value2 = 32;
 
@@ -61,7 +61,7 @@ int value3 = value1 ?? value2; // = 1
 
 This operator can also be used in assignments. By using `??=` to assign a value, the compiler first checks if the variable you're trying to assign is *null* first. Only if it is will the value be assigned to it.
 
-```c#
+```csharp
 int? x = null;
 Console.WriteLine(x); // null
 
@@ -86,7 +86,7 @@ For an example of generics in a class, you can think of the `List` data structur
 
 To achieve that, it is defined as follows:
 
-```c#
+```csharp
 class List<T>
 {
     // class implementation here
@@ -95,7 +95,7 @@ class List<T>
 
 To instantiate a list of integers, for example, you will replace the `T` placeholder with the `int` data type.
 
-```c#
+```csharp
 List<int> listOfIntegers = new List<int>();
 ```
 
@@ -107,7 +107,7 @@ There are several things worth mentioning about **Generic methods** in ***C\#***
 
    For example, consider the following method.
 
-   ```c#
+   ```csharp
    public void MyMethod<T>(T data)
    {
        Console.WriteLine($"Data type: {typeof(T)}, Data value: {data}");
@@ -116,7 +116,7 @@ There are several things worth mentioning about **Generic methods** in ***C\#***
 
    When you call it, the output of the program heavily relies on the type of the parameter provided.
 
-   ```c#
+   ```csharp
    MyMethod<string>("hello"); // output: Data type: System.String, Data value: hello
    MyMethod<int>(42);         // output: Data type: System.Int32, Data value: 42
    MyMethod<bool>(true);      // output: Data type: System.Boolean, Data value: True
@@ -126,7 +126,7 @@ There are several things worth mentioning about **Generic methods** in ***C\#***
 
    Modifying the above method, we get:
 
-   ```c#
+   ```csharp
    public void MyMethod<T>(T data) where T : IComparable
    {
        Console.WriteLine($"Data type: {typeof(T)}, Data value: {data}");
@@ -135,7 +135,7 @@ There are several things worth mentioning about **Generic methods** in ***C\#***
 
    Now, with the same input, we get similar but not the same results.
 
-   ```c#
+   ```csharp
    MyMethod<string>("hello"); // output: Data type: System.String, Data value: hello
    MyMethod<int>(42);         // output: Data type: System.Int32, Data value: 42
    MyMethod<bool>(true);      // This will not compile
@@ -149,7 +149,7 @@ There are several things worth mentioning about **Generic methods** in ***C\#***
 
    However, if we just used the following, we'd get the exact same results as the compiler is smart enough to get the type itself from the parameter provided.
 
-   ```c#
+   ```csharp
    MyMethod("hello"); // T is string
    MyMethod(42);      // T is int
    MyMethod(true);    // T is bool
@@ -157,7 +157,7 @@ There are several things worth mentioning about **Generic methods** in ***C\#***
 
 4. **Generic methods** can be used to create extension methods that work with any type that meets certain criteria, such as implementing a specific interface.
 
-   ```c#
+   ```csharp
    public static class MyExtensions
    {
        public static bool IsEqualTo<T>(this T value1, T value2) where T : IComparable
@@ -169,7 +169,7 @@ There are several things worth mentioning about **Generic methods** in ***C\#***
 
    Now, we can use this method to compare any `value1` that implements the interface `IComparable` to any `value2` of the same type.
 
-   ```c#
+   ```csharp
    bool result1 = 42.IsEqualTo(42);           // returns true
    bool result2 = "hello".IsEqualTo("world"); // returns false
    ```

@@ -80,7 +80,7 @@ All ***Astro*** (`*.astro`) and ***Markdown*** (`*.md`) files in the `src/pages`
 
 For example,
 
-```text
+```
 # Example: Static routes
 
 src/pages/index.astro        -> mysite.com/
@@ -216,7 +216,7 @@ There are 2 ways to add a UI Framework (Eg. ***React***) to your ***Astro*** pro
 
   2. Add the framework to the `astro.config.mjs` file, as shown:
 
-     ```mjs
+     ```js
      import { defineConfig } from 'astro/config';
 
      import react from "@astrojs/react"; //! Important

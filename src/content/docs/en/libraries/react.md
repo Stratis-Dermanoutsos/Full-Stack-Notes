@@ -489,7 +489,7 @@ To deploy a ***React*** project to apache, there are several steps that must be 
    To do that, change `<BrowserRouter>` into `<BrowserRouter basename='{path}'>` replacing it like before.
 4. Inside the project's **public/** directory, create a file called **.htaccess** and paste:
 
-   ```text
+   ```
    Options -MultiViews
    RewriteEngine On
    RewriteCond %{REQUEST_FILENAME} !-f

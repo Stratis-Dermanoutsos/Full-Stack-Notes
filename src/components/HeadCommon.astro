@@ -1,6 +1,12 @@
 ---
 import '../styles/theme.css';
 import '../styles/index.css';
+
+type Props = {
+	faviconHref: string;
+};
+
+const { faviconHref } = Astro.props as Props;
 ---
 
 <!-- Global Metadata -->
@@ -8,7 +14,7 @@ import '../styles/index.css';
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href={faviconHref} />
 
 <link rel="sitemap" href="/sitemap.xml" />
 

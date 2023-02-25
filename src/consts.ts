@@ -2,6 +2,7 @@ export const SITE = {
 	title: 'Stratis\' Notes',
 	description: 'Stratis\' notes on Full-Stack software engineering.',
 	defaultLanguage: 'en-us',
+	appIcon: '../../Images/Full_Stack_Notes_icon.svg'
 } as const;
 
 export const OPEN_GRAPH = {

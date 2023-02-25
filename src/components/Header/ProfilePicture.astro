@@ -1,27 +1,15 @@
 ---
 type Props = {
 	size: number;
+    iconHTML: string;
 };
-const { size } = Astro.props;
+const { size, iconHTML } = Astro.props;
 ---
 
-<style lang="scss">
-    img {
-        border-color: var(--theme-accent);
-        border-radius: 100%;
-        border-style: solid;
-        border-width: 0px;
-        transition: all 0.2s ease-out;
-
-        &:hover {
-            border-width: 2px;
+<svg width={size} height={size} set:html={iconHTML}>
+    <style>
+        path, rect {
+            fill: var(--theme-text);
         }
-    }
-</style>
-
-<img
-    alt="Stratis Dermanoutsos profile picture"
-    src="https://github.com/Stratis-Dermanoutsos.png"
-    width={size}
-    height={size}
->
+    </style>
+</svg>

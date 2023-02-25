@@ -9,9 +9,10 @@ import Search from './Search';
 
 type Props = {
 	currentPage: string;
+	iconHTML: string;
 };
 
-const { currentPage } = Astro.props;
+const { currentPage, iconHTML } = Astro.props;
 const lang = getLanguageFromURL(currentPage);
 ---
 
@@ -23,7 +24,7 @@ const lang = getLanguageFromURL(currentPage);
 		</div>
 		<div class="logo flex">
 			<a href="/">
-				<ProfilePicture size={40} />
+				<ProfilePicture size={40} iconHTML={iconHTML} />
 				<h1>{SITE.title ?? 'Documentation'}</h1>
 			</a>
 		</div>

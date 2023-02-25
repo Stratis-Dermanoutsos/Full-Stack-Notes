@@ -277,5 +277,6 @@ A framework component can be made interactive (hydrated) using one of the `clien
 - [Astro in 100 Seconds by Fireship](https://youtu.be/dsTXcSeAZq8)
 - [Create template layouts by Kevin Powell](https://youtu.be/o7iQAF2EvUU)
 - [Astro crash course by Little Sticks](https://youtube.com/playlist?list=PLtLXFsdHI8JSX0qJsHfMDSTR3taqvXa5S)
+- [Using SVGs as Astro components](https://ellodave.dev/blog/article/using-svgs-as-astro-components-and-inline-css/)
 - Best Libraries for Astro
   - [Astro-Bootstrap](https://www.npmjs.com/package/astro-bootstrap)

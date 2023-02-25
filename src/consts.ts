@@ -56,6 +56,20 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Swift', link: 'en/languages/swift' },
 			{ text: 'TypeScript', link: 'en/languages/typescript' },
 		],
+		'Frontend Languages': [
+			{ text: 'Frontend Languages', link: 'en/languages/frontend' },
+			{ text: 'HTML', link: 'en/languages/frontend/html' },
+			{ text: 'CSS', link: 'en/languages/frontend/css' }
+		],
+		'Libraries': [
+			{ text: 'Libraries', link: 'en/libraries' },
+			{ text: 'Axios (JavaScript)', link: 'en/libraries/axios' },
+			{ text: 'jQuery (JavaScript)', link: 'en/libraries/jquery' },
+			{ text: 'Preact (JavaScript)', link: 'en/libraries/preact' },
+			{ text: 'React (JavaScript)', link: 'en/libraries/react' },
+			{ text: 'React Query (JavaScript)', link: 'en/libraries/react-query' },
+			{ text: 'Redux (JavaScript)', link: 'en/libraries/redux' }
+		],
 		'Frameworks': [
 			{ text: 'Frameworks', link: 'en/frameworks' },
 			{ text: '.NET (C\#)', link: 'en/frameworks/dotnet' },
@@ -76,20 +90,6 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Tailwind (CSS)', link: 'en/frameworks/tailwind' },
 			{ text: 'Vue (JavaScript)', link: 'en/frameworks/vue' },
 			{ text: 'Xamarin (C\#)', link: 'en/frameworks/xamarin' }
-		],
-		'Frontend Languages': [
-			{ text: 'Frontend Languages', link: 'en/languages/frontend' },
-			{ text: 'HTML', link: 'en/languages/frontend/html' },
-			{ text: 'CSS', link: 'en/languages/frontend/css' }
-		],
-		'Libraries': [
-			{ text: 'Libraries', link: 'en/libraries' },
-			{ text: 'Axios (JavaScript)', link: 'en/libraries/axios' },
-			{ text: 'jQuery (JavaScript)', link: 'en/libraries/jquery' },
-			{ text: 'Preact (JavaScript)', link: 'en/libraries/preact' },
-			{ text: 'React (JavaScript)', link: 'en/libraries/react' },
-			{ text: 'React Query (JavaScript)', link: 'en/libraries/react-query' },
-			{ text: 'Redux (JavaScript)', link: 'en/libraries/redux' }
 		],
 		'Databases': [
 			{ text: 'Databases', link: 'en/databases' },

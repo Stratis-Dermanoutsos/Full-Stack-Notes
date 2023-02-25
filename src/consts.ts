@@ -1,5 +1,5 @@
 export const SITE = {
-	title: 'Full-Stack Notes',
+	title: 'Stratis\' Notes',
 	description: 'Stratis\' notes on Full-Stack software engineering.',
 	defaultLanguage: 'en-us',
 } as const;

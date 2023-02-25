@@ -67,7 +67,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'jQuery (JavaScript)', link: 'en/libraries/jquery' },
 			{ text: 'Preact (JavaScript)', link: 'en/libraries/preact' },
 			{ text: 'React (JavaScript)', link: 'en/libraries/react' },
-			{ text: 'React Query (JavaScript)', link: 'en/libraries/react-query' },
+			{ text: 'React Query (React)', link: 'en/libraries/react-query' },
 			{ text: 'Redux (JavaScript)', link: 'en/libraries/redux' }
 		],
 		'Frameworks': [

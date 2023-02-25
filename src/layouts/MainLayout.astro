@@ -9,7 +9,6 @@ import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro';
 import RightSidebar from '../components/RightSidebar/RightSidebar.astro';
 import Footer from '../components/Footer/Footer.astro';
 import { GITHUB_EDIT_URL, SITE } from '../consts';
-import appIcon from '/public/icon.svg?raw'; // TODO: Remove this
 
 type Props = CollectionEntry<'docs'>['data'] & {
 	headings: MarkdownHeading[];
@@ -20,7 +19,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPage = Astro.url.pathname;
 const currentFile = `src/content/docs${currentPage.replace(/\/$/, '')}.md`;
 const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
-// const { default: appIcon } = await import(SITE.appIcon); // TODO: Use this
+const appIcon = await fetch(SITE.appIcon).then(res => res.text());
 ---
 
 <html dir={data.dir} lang={data.lang} class="initial">

@@ -1,4 +1,4 @@
-# Full-Stack Notes
+# <img width="24" height="24" src="https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/main/Images/Full_Stack_Notes_icon.svg?raw=true" /> Full-Stack Notes
 
 ![Full Stack Notes](https://img.shields.io/badge/notes-Full_Stack-blueviolet)
 [![GitHub license](https://img.shields.io/github/license/Stratis-Dermanoutsos/Full-Stack-Notes.svg)](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/main/LICENSE)

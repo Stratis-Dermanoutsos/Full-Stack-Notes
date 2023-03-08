@@ -98,6 +98,7 @@ It provides a programming model and a runtime environment for building and deplo
 
 ## Resources
 
+- [.NET Framework vs .NET Core vs .NET vs .NET Standard vs C#](https://youtu.be/4olO9UjRiww)
 - [Tutorial: Create a .NET class library](https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio-code)
 - [Create and publish a NuGet package with the dotnet CLI](https://github.com/NuGet/docs.microsoft.com-nuget/blob/main/docs/quickstart/create-and-publish-a-package-using-the-dotnet-cli.md)
 - [Tutorial: Create a .NET tool using the .NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools-how-to-create)

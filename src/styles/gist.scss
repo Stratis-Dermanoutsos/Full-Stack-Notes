@@ -1,8 +1,27 @@
 .gist {
     position: relative;
 
-    table, tbody, tr, td {
-        background-color: white;
+    .gist-meta {
+        background-color: var(--gist-meta-background-color) !important;
+            color: var(--gist-copy-button-color) !important;
+
+        a {
+            color: var(--gist-copy-button-color) !important;
+        }
+    }
+
+    .gist-file {
+        border: 1px solid var(--gist-border-color) !important;
+    }
+
+    .gist-data, .gist-file {
+        border-bottom: 1px solid var(--gist-border-color) !important;
+    }
+
+    .gist-data {
+        table, tbody, tr, td {
+            background-color: var(--gist-data-background-color) !important;
+        }
     }
 
     button {
@@ -14,6 +33,7 @@
         cursor: pointer;
         font-size: 12px;
         font-weight: bold;
+        outline: none;
         padding: 8px;
         position: absolute;
         right: 8px;
@@ -27,7 +47,7 @@
         }
 
         &:hover {
-            border-color: #E2E5E9;
+            border-color: var(--gist-copy-button-color);
         }
     }
 
@@ -36,7 +56,14 @@
             background-color: rgba(black, .3);
 
             path {
-                fill: #E2E5E9;
+                fill: var(--gist-copy-button-color);
+            }
+
+            &:focus {
+                path {
+                    fill: var(--gist-copy-highlight-color) !important;
+                    border-color: var(--gist-copy-highlight-color);
+                }
             }
         }
     }

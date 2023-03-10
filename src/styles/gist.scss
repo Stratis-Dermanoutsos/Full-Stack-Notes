@@ -1,5 +1,43 @@
 .gist {
+    position: relative;
+
     table, tbody, tr, td {
         background-color: white;
+    }
+
+    button {
+        background-color: transparent;
+        border-color: transparent;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 2px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 8px;
+        position: absolute;
+        right: 8px;
+        text-decoration: none;
+        top: 8px;
+        transition: all .2s ease-in-out;
+
+        path {
+            fill: transparent;
+            transition: all .2s ease-in-out;
+        }
+
+        &:hover {
+            border-color: #E2E5E9;
+        }
+    }
+
+    &:hover {
+        button {
+            background-color: rgba(black, .3);
+
+            path {
+                fill: #E2E5E9;
+            }
+        }
     }
 }

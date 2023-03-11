@@ -10,30 +10,32 @@ const { gistCode, fileName } = Astro.props as Props;
 
 const gistUrl = `https://gist.github.com/Stratis-Dermanoutsos/${gistCode}.js?file=${fileName}`;
 const rawUrl = `https://gist.githubusercontent.com/Stratis-Dermanoutsos/${gistCode}/raw/${fileName}`;
-
-let code: String;
-await fetch(rawUrl)
-    .then(res => res.text())
-    .then(text => { code = text });
+// TODO: Move this to main branch
+const copyIconUrl = 'https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/70-move-code-blocks-to-gists/Images/Copy_Button_icon.svg?raw=true';
 
 const id = `${fileName.replace(/\.\w+$/, '')}-${uuidv4()}`;
+const code = await fetch(rawUrl).then(res => res.text());
+const copyIconSvg = await fetch(copyIconUrl).then(res => res.text());
 ---
 
 <div id={id}>
     <script src={gistUrl} />
-    <script define:vars={{ id, code }}>
+    <script define:vars={{ id, code, copyIconSvg }}>
         //* Get the gist element
         const gist = document.getElementById(id).getElementsByClassName('gist')[0];
 
-        //* Add a button
+        //* Create the button
         const button = document.createElement('button');
-        button.innerHTML = '<svg fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">' +
-                            '<path fill="#fff" fill-rule="evenodd" d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>' +
-                            '</svg>';
+        button.innerHTML = copyIconSvg;
         button.addEventListener('click',
             e => navigator.clipboard.writeText(code));
 
         //* Add the button to the gist
         gist.appendChild(button);
-    </script>   
+    </script>
+    <span class="gist-disclaimer">This component was made by
+        <a href="https://github.com/Stratis-Dermanoutsos" target="_blank">Stratis Dermanoutsos</a>.
+        The code can be found
+        <a href="https://gist.github.com/Stratis-Dermanoutsos/abe2f9f8b3f952233dcea7916946886d" target="_blank">here</a>.
+    </span>
 </div>

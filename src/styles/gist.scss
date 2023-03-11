@@ -12,6 +12,7 @@
 
     .gist-file {
         border: 1px solid var(--gist-border-color) !important;
+        margin-bottom: 0 !important;
     }
 
     .gist-data, .gist-file {
@@ -66,5 +67,10 @@
                 }
             }
         }
+    }
+
+    .gist-disclaimer {
+        font-size: .7rem;
+        margin: .5rem .7rem;
     }
 }

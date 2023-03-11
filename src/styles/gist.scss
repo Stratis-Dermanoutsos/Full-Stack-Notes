@@ -26,10 +26,10 @@
     }
 
     .blob-code-inner {
-        color: var(--theme-text) !important;
+        color: var(--gist-data-color) !important;
 
         .pl-kos, .pl-smi {
-            color: var(--theme-text);
+            color: var(--gist-data-color);
         }
     }
 

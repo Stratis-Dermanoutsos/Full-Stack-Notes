@@ -82,6 +82,7 @@
 	/* Gist blocks */
 	--gist-border-color: var(--theme-divider);
 	--gist-data-background-color: #E1E5E9;
+	--gist-data-color: var(--theme-text);
 	--gist-meta-background-color: #F7F7F7;
 	--gist-meta-color: rgba(black, .65);
 	--gist-copy-button-background-color: var(--gist-meta-background-color);
@@ -130,6 +131,7 @@ body {
 	/* Gist blocks */
 	--gist-border-color: var(--theme-divider);
 	--gist-data-background-color: #0E1117;
+	--gist-data-color: var(--theme-text);
 	--gist-meta-background-color: #22272D;
 	--gist-meta-color: #8e9194;
 	--gist-copy-button-background-color: var(--gist-meta-background-color);

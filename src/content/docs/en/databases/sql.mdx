@@ -3,6 +3,8 @@ title: "SQL"
 description: "This section contains notes on SQL databases."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 The ***databases*** that use the ***SQL*** syntax are called ***Relational databases***.
 Popular examples are:
 
@@ -24,71 +26,39 @@ What is ***SQL***?
 
 - ### Select
 
-  ```sql
-  SELECT * FROM table1;
-  SELECT column1 FROM table1;
-  SELECT column1, column2 FROM table1;
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sql-select.sql" />
 
 - ### Update
 
-  ```sql
-  UPDATE table1
-  SET column1 = value1, column2 = value2, ...
-  WHERE condition;
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sql-update.sql" />
 
 - ### Delete
 
-  ```sql
-  DELETE FROM table1 WHERE condition;
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sql-delete.sql" />
 
 - ### Insert
 
-  ```sql
-  -- specific columns
-  INSERT INTO table1 (column1, column2, column3, ...)
-  VALUES (value1, value2, value3, ...);
-
-  -- all columns
-  INSERT INTO table1
-  VALUES (value1, value2, value3, ...);
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sql-insert.sql" />
 
 - ### Create database
 
-  ```sql
-  CREATE DATABASE database1;
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sql-db-create.sql" />
 
 - ### Drop database
 
-  ```sql
-  DROP DATABASE database1;
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sql-db-drop.sql" />
 
 - ### Create table
 
-  ```sql
-  CREATE TABLE table1;
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sql-table-create.sql" />
 
 - ### Alter table
 
-  ```sql
-  ALTER TABLE table1
-  ADD column1 datatype;
-
-  ALTER TABLE table1
-  DROP COLUMN column1;
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sql-table-alter.sql" />
 
 - ### Drop table
 
-  ```sql
-  DROP TABLE table1;
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sql-table-drop.sql" />
 
 ## SQL JOIN
 
@@ -111,21 +81,11 @@ As the name implies, **relational** ***databases*** have related data. In other 
 
 - Functional index
 
-  ```sql
-  SELECT * FROM user_table WHERE LOWER(email) = 'example@gmail.com';
-
-  -- PostgreSQL
-  CREATE INDEX email_lower ON user_table (LOWER(email));
-
-  -- MySQL
-  CREATE INDEX email_lower ON user_table ((LOWER(email)));
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sql-func-index.sql" />
 
   Now, the same expression will be
 
-  ```sql
-  SELECT * FROM user_table WHERE email_lower = 'example@gmail.com';
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sql-func-index-demo.sql" />
 
 ## Resources
 

@@ -38,21 +38,26 @@
         border-color: transparent;
         border-radius: 5px;
         border-style: solid;
-        border-width: 2px;
+        border-width: 1px;
         cursor: pointer;
-        font-size: 12px;
+        font-size: .75rem;
         font-weight: bold;
         outline: none;
-        padding: 8px;
+        padding: .5rem;
         position: absolute;
-        right: 8px;
+        right: .75rem;
         text-decoration: none;
-        top: 8px;
+        top: .75rem;
         transition: all .2s ease-in-out;
 
-        path {
-            fill: transparent;
-            transition: all .2s ease-in-out;
+        svg {
+            height: 1rem;
+            width: 1rem;
+
+            path {
+                fill: transparent;
+                transition: all .2s ease-in-out;
+            }
         }
 
         &:hover {
@@ -62,16 +67,17 @@
 
     &:hover {
         button {
-            background-color: rgba(black, .3);
+            background-color: var(--gist-copy-button-background-color);
 
             path {
                 fill: var(--gist-copy-button-color);
             }
 
             &:focus {
+                border-color: var(--gist-copy-highlight-color);
+
                 path {
                     fill: var(--gist-copy-highlight-color) !important;
-                    border-color: var(--gist-copy-highlight-color);
                 }
             }
         }

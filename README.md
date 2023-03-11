@@ -62,5 +62,3 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
 ## License
 
 Full-Stack-Notes is licensed under [MIT License](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/main/LICENSE).
-
-[⬆ JUMP TO TOP](#full-stack-notes)

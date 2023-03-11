@@ -1,0 +1,39 @@
+---
+title: "Bootstrap"
+description: "This section contains notes on the Bootstrap framework."
+---
+
+import Gist from '/src/components/General/Gist.astro'
+
+***Bootstrap*** is a popular front-end ***CSS*** framework developed by **Twitter**.
+It provides a set of pre-written ***CSS*** and ***JavaScript*** files that developers can use to build responsive, mobile-first web applications quickly and easily.
+
+To use ***Bootstrap***, visit the [official documentation](https://getbootstrap.com/docs/5.2/getting-started/download/).
+
+> Note that ***Bootstrap*** requires ***HTML5*** doctype to work.
+
+***Bootstrap*** is developed mobile first, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using ***CSS*** media queries. To ensure proper rendering and touch zooming for all devices, add the responsive viewport meta tag to your *\<head>*.
+
+Basically, ***Bootstrap*** uses pre-defined classes that you asign to each element from within your ***HTML*** code. In this aspect, it is similar to ***Tailwind CSS*** but their use cases may differ.
+
+## Spacing between columns
+
+- No offset
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="bootstrap-spacing-no-offset.html" />
+
+- Offset
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="bootstrap-spacing-offset.html" />
+
+- Nesting
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="bootstrap-spacing-nesting.html" />
+
+![Bootstrap column spacing](https://raw.githubusercontent.com/Stratis-Dermanoutsos/Full-Stack-Notes/main/Images/Bootstrap-Column-Spacing.png)
+
+## Resources
+
+- [Bootstrap documentation](https://getbootstrap.com/docs/)
+- [react-bootstrap documentation](https://react-bootstrap.github.io/getting-started/introduction/)
+- [Use Bootstrap with React](https://www.creative-tim.com/blog/web-design/how-to-use-bootstrap-with-reactjs/)

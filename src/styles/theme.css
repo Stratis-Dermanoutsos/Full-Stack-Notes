@@ -129,8 +129,8 @@ body {
 
 	/* Gist blocks */
 	--gist-border-color: var(--theme-divider);
-	--gist-data-background-color: #485871;
-	--gist-meta-background-color: #0E1117;
+	--gist-data-background-color: #0E1117;
+	--gist-meta-background-color: #181b21;
 	--gist-meta-color: #8e9194;
 	--gist-copy-button-background-color: #F7F7F7;
 	--gist-copy-button-color: var(--theme-text);

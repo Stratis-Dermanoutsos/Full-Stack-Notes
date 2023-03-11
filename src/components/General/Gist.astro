@@ -18,6 +18,13 @@ const code = await fetch(rawUrl).then(res => res.text());
 const copyIconSvg = await fetch(copyIconUrl).then(res => res.text());
 ---
 
+<style>
+    .gist-disclaimer {
+        font-size: .7rem;
+        margin: .5rem .7rem;
+    }
+</style>
+
 <div id={id}>
     <script src={gistUrl} />
     <script define:vars={{ id, code, copyIconSvg }}>

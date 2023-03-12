@@ -1,0 +1,78 @@
+---
+title: "SCSS"
+description: "This section contains notes on SCSS, a CSS preprocessor."
+---
+
+import Gist from '/src/components/General/Gist.astro'
+
+***SCSS*** means ***S*assy *CSS***
+
+## Variables
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-variables.scss" />
+
+## Nesting
+
+- CSS
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-nesting.css" />
+
+- SCSS
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-nesting.scss" />
+
+or for ***pseudo classes*** and ***pseudo elements***
+
+- CSS
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-nesting-pseudo-classes.css" />
+
+- SCSS
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-nesting-pseudo-classes.scss" />
+
+## Mixins
+
+- CSS
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-mixins.css" />
+
+- SCSS
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-mixins.scss" />
+
+They can also take arguments
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-mixins-argument.scss" />
+
+## if-else statements
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-if-else.scss" />
+
+## foreach loops
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-foreach.scss" />
+
+## functions
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-function.scss" />
+
+## Extras
+
+- Color adjustments
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-color-adjustment.scss" />
+
+- Inline SVG color through variable
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-svg-color.scss" />
+
+  Why this is useful? Cause sometimes ***SVG***s will be needed inside your ***SCSS*** and this is the easiest and most efficient way to change their color.
+  Notice the use of function. Mozilla does not support ***HEX*** values so we convert the value to ***RGB***.
+- Convert *px* to *em* values
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="scss-px-to-em.scss" />
+
+## Resources
+
+- [Fireship video](https://youtu.be/akDIJa0AP5c)

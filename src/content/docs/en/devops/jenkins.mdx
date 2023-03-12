@@ -3,6 +3,8 @@ title: "Jenkins"
 description: "This section contains notes on Jenkins."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ***Jenkins*** is an open source ***Continuous Integration*** tool written in ***Java***.
 
 ***Jenkins*** is used by teams of all sizes, for projects in a wide variety of languages and technologies, including ***.NET***, ***Ruby***, ***PHP*** and more, as well as ***Java***.
@@ -17,15 +19,11 @@ description: "This section contains notes on Jenkins."
 
 - Start ***Jenkins***
 
-  ```bash
-  sudo systemctl start jenkins
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="jenkins-start.sh" />
 
 - Check application status
 
-  ```bash
-  systemctl status jenkins
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="jenkins-status.sh" />
 
 - Go to [*localhost:8090*](http://localhost:8090) and follow the steps
 

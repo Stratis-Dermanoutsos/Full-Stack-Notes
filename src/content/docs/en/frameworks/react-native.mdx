@@ -3,34 +3,15 @@ title: "React Native"
 description: "This section contains notes on the React Native mobile framework."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ***React Native*** is a ***JavaScript*** framework that uses ***React*** to build **native** applications for iOS and Android or web applications, all with 1 code base.
 
 While it shares the **JSX** syntax with ***React***, the components and overall logic used are quite different.
 
 ## Basic App.js template
 
-```javascript
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app! Hehe</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f00',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-native-basic-app.js" />
 
 > The above `App.js` was generated using **Expo**.
 
@@ -52,28 +33,11 @@ Instead, styles are defined using `StyleSheet.create()` method which accepts a *
 
 E.g.:
 
-```js
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f00',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  container2: {
-    ...
-  },
-  ...
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-native-styles.js" />
 
 This specific `container` styling is then called using the following format:
 
-```js
-<View style={styles.container}>
-  ...
-</View>
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-native-view.js" />
 
 ## Platform
 
@@ -83,29 +47,7 @@ For that, we use the `Platform` module.
 
 Code example:
 
-```javascript
-import { Platform, StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      {Platform.OS === 'android' &&
-      <Text>This text only shows on Android.</Text>}
-      {Platform.OS === 'ios' &&
-      <Text>This text only shows on iOS.</Text>}
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-native-platform.js" />
 
 ## Resources
 

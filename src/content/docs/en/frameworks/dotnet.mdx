@@ -3,6 +3,8 @@ title: ".NET"
 description: "This section contains notes on the .NET framework."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ***.NET*** is a software framework developed by Microsoft that is used to build and run applications on Windows operating systems.
 It provides a programming model and a runtime environment for building and deploying software applications.
 
@@ -12,52 +14,36 @@ It provides a programming model and a runtime environment for building and deplo
 
 - List your dotnet SDKs
 
-  ```bash
-  dotnet --list-sdks
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-sdks-list.sh" />
 
 - Create project
 
-  ```bash
-  dotnet new <projectType>
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-new.sh" />
 
 - Add package reference to your project
 
-  ```bash
-  dotnet add package <package>
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-package-add.sh" />
 
 - Remove package
 
-  ```bash
-  dotnet remove package <package>
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-package-remove.sh" />
 
 - Restore dependencies
 
-  ```bash
-  dotnet restore
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-restore.sh" />
 
 - Build and run project
 
-  ```bash
-  dotnet run
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-run.sh" />
 
   This command, depending on the type of project, requires the respective *runtime* program.
 
-  ```bash
-  dotnet --list-runtimes
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-runtimes-list.sh" />
 
   to view your currently installed *runtimes*.
 - For more
 
-  ```bash
-  dotnet -h
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-help.sh" />
 
 - Choose version of ***.NET***
 
@@ -71,23 +57,17 @@ It provides a programming model and a runtime environment for building and deplo
   - Create a folder to be the root of your project, where you are going to run the above command
   - While in that folder, run
 
-    ```bash
-    dotnet new globaljson
-    ```
+    <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-new-globaljson.sh" />
 
   - Run
 
-    ```bash
-    dotnet --list-sdks
-    ```
+    <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-sdks-list.sh" />
 
     to see the downloaded versions in your system
   - Replace the value of *"version"* inside the *global.json* file with EXACTLY the one you want to use
   - Run
 
-    ```bash
-    dotnet --version
-    ```
+    <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-version.sh" />
 
     to make sure the change has been applied
   - Run

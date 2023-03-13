@@ -18,6 +18,7 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
 > Feel free to create an issue and mention anything you think a **Full-Stack** developer needs to know about.
 
 - [Project ideas](#project-ideas)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Project Ideas
@@ -58,6 +59,12 @@ To see what new *notes*/*resources* will be added, go to [issues](https://GitHub
   - Notes management
   - Survey form
   - Todo list
+
+## Contributing
+
+For anyone interested in contributing, this is repository serves the purpose of holding my own personal notes so PRs are probably not going to be merged.
+
+However, if you'd like to share study material and other sources with me, you are more than welcome to do so. For those who do, there will be a `Contributors` section in the landing page of the docs with a list of references to all the people's profiles.
 
 ## License
 

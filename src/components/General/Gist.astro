@@ -27,6 +27,11 @@ const copyIconSvg = await fetch(copyIconUrl).then(res => res.text());
 
 <div id={id}>
     <script src={gistUrl} />
+    <span class="gist-disclaimer">This component was made by
+        <a href="https://github.com/Stratis-Dermanoutsos" target="_blank">Stratis Dermanoutsos</a>.
+        The code can be found
+        <a href="https://gist.github.com/Stratis-Dermanoutsos/abe2f9f8b3f952233dcea7916946886d" target="_blank">here</a>.
+    </span>
     <script define:vars={{ id, code, copyIconSvg }}>
         //* Get the gist element
         const gist = document.getElementById(id).getElementsByClassName('gist')[0];
@@ -40,9 +45,4 @@ const copyIconSvg = await fetch(copyIconUrl).then(res => res.text());
         //* Add the button to the gist
         gist.appendChild(button);
     </script>
-    <span class="gist-disclaimer">This component was made by
-        <a href="https://github.com/Stratis-Dermanoutsos" target="_blank">Stratis Dermanoutsos</a>.
-        The code can be found
-        <a href="https://gist.github.com/Stratis-Dermanoutsos/abe2f9f8b3f952233dcea7916946886d" target="_blank">here</a>.
-    </span>
 </div>

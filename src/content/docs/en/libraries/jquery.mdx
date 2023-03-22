@@ -3,13 +3,13 @@ title: "jQuery"
 description: "This section contains notes on the jQuery library."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ## Add jQuery to Your Web Pages
 
 - ### Download [***jQuery***](https://jquery.com/download/)
 
-  ```bash
-  npm install jquery
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="jquery-install.sh" />
 
   Use by including the '*jquery-\<version>.min.js*' file inside the *\<head>* element.
 
@@ -29,24 +29,11 @@ description: "This section contains notes on the jQuery library."
 
 ## Basic syntax
 
-```javascript
-$(selector).action()
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="jquery-basic-syntax.js" />
 
 For example,
 
-```javascript
-$(this).hide()    // hides the current element
-$("p").hide()     // hides all <p> elements
-$(".test").hide() // hides all elements with class="test"
-$("#test").hide() // hides the element with id="test"
-/* When any button is pressed, all <p> elements will be hidden */
-$(document).ready(function() {
-  $("button").click(function() {
-    $("p").hide();
-  });
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="jquery-selectors.js" />
 
 ## Selectors
 
@@ -81,11 +68,7 @@ They work quite like ***CSS***.
 
 For example, do something when any paragraph (*\<p>*) elementh is clicked
 
-```javascript
-$("p").click(function(){
-  // action goes here!!
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="jquery-events.js" />
 
 ## Resources
 

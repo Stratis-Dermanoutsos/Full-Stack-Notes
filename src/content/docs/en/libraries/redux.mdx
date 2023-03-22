@@ -3,6 +3,8 @@ title: "Redux"
 description: "This section contains notes on the Redux library."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ***Redux*** is a ***JavaScript*** library for managing the state of your application.
 
 Big applications have big application states and managing them gets more and more inconvenient as your app grows. This is where state management libraries like ***Redux*** come in.
@@ -11,12 +13,7 @@ Big applications have big application states and managing them gets more and mor
 
 To create a `react-redux` project:
 
-```bash
-# Redux + JavaScript template
-npx create-react-app my-app --template redux
-# Redux + TypeScript template
-npx create-react-app my-app --template redux-typescript
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-init.sh" />
 
 ***Redux*** has 3 main parts:
 
@@ -34,9 +31,7 @@ We just send (dispatch) them to τhe **store** instance whenever we want to upda
 
 Example **action**:
 
-```javascript
-{ type: ADD_NOTE, title: 'Some Title', content: 'This is an action object' }
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-action.js" />
 
 This **action** in activated when the user clicks the "*Add Note*" button and informs the **store** that we want to add a new Note.
 
@@ -46,11 +41,7 @@ They are functions that generate and return plain ***JavaScript*** objects.
 
 The above **action** can be written as
 
-```javascript
-function addNote(title, content) {
-  return { type: ADD_NOTE, title: title, content: content };
-}
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-action-creators.js" />
 
 ## Reducers
 
@@ -65,9 +56,7 @@ The **reducer** function takes two parameters:
 
 It returns the new app state.
 
-```javascript
-(previousState, action) => newState
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-reducer.js" />
 
 To deal with **reducer** complexity, we chunk them down in multiple, simpler **reducers** and later, we combine them with a ***Redux*** helper function called `combineReducers`.
 
@@ -92,10 +81,7 @@ This is quite simple and can be achieved by encapsulating the `<App />` componen
 - Go to *index.(js|tsx)*
 - Include the store and the Provider
 
-  ```javascript
-  import { store } from 'app/store';
-  import { Provider } from 'react-redux';
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-store-provider-import.js" />
 
 - Change
 
@@ -105,11 +91,7 @@ This is quite simple and can be achieved by encapsulating the `<App />` componen
 
   to
 
-  ```javascript
-  <Provider store={store}>
-    <App />
-  </Provider>
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-store-provider.jsx" />
 
 ## Setup example
 
@@ -159,108 +141,23 @@ src/
 
 ##### store.js
 
-```javascript
-import { configureStore } from '@reduxjs/toolkit';
-import todosReducer from '../slices/todosSlice';
-export const store = configureStore({
-  reducer: {
-    todos: todosReducer,
-    /* more reducers, if needed
-     * eg. 
-     * names: namesReducer,
-     * etc
-     */
-  },
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-store.js" />
 
 #### slices/
 
 ##### todosSlice.js
 
-```javascript
-import { createSlice } from '@reduxjs/toolkit';
-// The initialState variable is pretty much self explanatory
-const initialState = {
-  value: []
-};
-export const todosSlice = createSlice({
-  name: 'todos',
-  initialState,
-  // The `reducers` field lets us define reducers and generate associated actions
-  reducers: {
-    add: (state, action) => {
-      /* Redux Toolkit allows us to write "mutating" logic in reducers.
-       * It doesn't actually mutate the state but produces a brand new immutable state based off those changes.
-       */
-      state.value.push({
-        id: Math.random(),
-        text: action.payload,
-        completed: false
-      });
-    },
-    remove: (state, action) => {
-      state.value = state.value.filter(todo => todo.id !== action.payload);
-    }
-  }
-});
-export const { add, remove } = todosSlice.actions;
-// The function below is called a selector and allows us to select a value from the state.
-export const selectTodos = (state) => state.todos.value;
-export default todosSlice.reducer;
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-todosSlice.js" />
 
 #### components/
 
 ##### Todos.jsx
 
-```javascript
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  add,
-  remove,
-  selectTodos
-} from './slices/todosSlice';
-export const Todos = () => {
-  /*
-   * We set the state of our todos using the useSelector hook and the selector variable from our todosSlice.
-   * Also, we declare dispatch, a hook to access the redux dispatch function.
-   */
-  const todos = useSelector(selectTodos);
-  const dispatch = useDispatch();
-  // Local state, does not need to be in store as it's only used here.
-  const [text, setText] = useState('This is a todo');
-  return (
-    <div>
-      <ul>
-        {/* We render our list, each item with its text, id and a remove button */}
-        {/* Notice how we dispatch the remove reducer passing the item's id to the action's payload */}
-        {todos.map(todo => (
-          <li key={todo.id}>{todo.text} <button onClick={(e) => dispatch(remove(todo.id))}>X</button></li>
-        ))}
-      </ul>
-      {/* Pretty simple input that binds to our state text */}
-      <input type='text' value={text} onChange={(e) => setText(e.target.value)} />
-      {/* A button to dispatch the add reducer */}
-      <button onClick={() => dispatch(add(text))}>Add</button>
-    </div>
-  );
-};
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-Todos.jsx" />
 
 #### App.js
 
-```javascript
-import React from 'react';
-import { Todos } from './components/Todos';
-function App() {
-  return (
-    <Todos />
-  );
-}
-export default App;
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-App.js" />
 
 ## Resources
 

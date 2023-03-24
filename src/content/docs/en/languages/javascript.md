@@ -5,9 +5,9 @@ description: "This section contains notes on the JavaScript programming language
 
 ## Unique traits
 
-- ***obj.propKey = value*** and ***obj['propKey'] = value*** are equal
-- if ***1 = 0001***, then ***~1 = 1110***
-- ***'abc'.charAt(1)*** and  ***'abc'[1]*** are equal, tho some older browsers don't support the latter
+- `obj.propKey = value` and `obj['propKey'] = value` are equal
+- if `1 = 0001`, then `~1 = 1110`
+- `'abc'.charAt(1)` and  `'abc'[1]` are equal, tho some older browsers don't support the latter
 - Numeric Separators are useful to make large numbers more readable
 
   ```javascript

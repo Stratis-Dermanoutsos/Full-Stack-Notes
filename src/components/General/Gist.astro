@@ -10,8 +10,7 @@ const { gistCode, fileName } = Astro.props as Props;
 
 const gistUrl = `https://gist.github.com/Stratis-Dermanoutsos/${gistCode}.js?file=${fileName}`;
 const rawUrl = `https://gist.githubusercontent.com/Stratis-Dermanoutsos/${gistCode}/raw/${fileName}`;
-// TODO: Move this to main branch
-const copyIconUrl = 'https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/70-move-code-blocks-to-gists/Images/Copy_Button_icon.svg?raw=true';
+const copyIconUrl = 'https://raw.githubusercontent.com/Stratis-Dermanoutsos/Full-Stack-Notes/main/Images/Copy_Button_icon.svg';
 
 const id = `${fileName.replace(/\.\w+$/, '')}-${uuidv4()}`;
 const code = await fetch(rawUrl).then(res => res.text());

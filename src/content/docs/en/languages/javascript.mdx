@@ -1,0 +1,176 @@
+---
+title: "JavaScript"
+description: "This section contains notes on the JavaScript programming language."
+---
+
+import Gist from '/src/components/General/Gist.astro'
+
+## Unique traits
+
+- `obj.propKey = value` and `obj['propKey'] = value` are equal
+- if `1 = 0001`, then `~1 = 1110`
+- `'abc'.charAt(1)` and  `'abc'[1]` are equal, tho some older browsers don't support the latter
+- Numeric Separators are useful to make large numbers more readable
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-vars.js" />
+
+- Logical OR can be used for falsy values
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-logical-or.js" />
+
+- Nullish Coalescing
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-nullish-coalescing.js" />
+
+  Falsy values are kept.
+- Grab last item of an array
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-array-items.js" />
+
+## Comparing strings
+
+- is case-sensitive
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-comparing-strings-case.js" />
+
+- doesn't handle umlauts and accents well
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-comparing-strings-accents.js" />
+
+## Asynchronous code
+
+There are 2 main ways:
+
+- `async / await`
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-async-await.js" />
+
+- `then`
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-then.js" />
+
+Generally it is best to use error handling for both cases.
+
+For the sake of this example, we'll take a simple promise
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-promise.js" />
+
+- `async / await`, with `try / catch / finally`
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-async-try.js" />
+
+- `then / catch`
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-then-try.js" />
+
+## Required arguments
+
+Make a function that, when assigned to a parameter, throws an error saying it is required.
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-recommended-args.js" />
+
+Now, when anyone calls `myFunction` without assigning a value to the `param` argument, it throws an error.
+
+## Console API
+
+There are many ways to output something using the [console API](https://developer.mozilla.org/en-US/docs/Web/API/console).
+
+- Normal log
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-csl.js" />
+
+- Error message
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-cse.js" />
+
+- Warning message
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-csw.js" />
+
+- Measure time
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-cs-time.js" />
+
+- Table
+
+  Let's say we have an array of objects
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-cst.js" />
+
+- Trace
+
+  Use this to see how the output was reached
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-cs-trace.js" />
+
+- Better object output
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-csd.js" />
+
+## Useful code snippets
+
+### Remove duplicate values from array
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-remove-duplicates.js" />
+
+### Filter out falsy values
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-filter-falsy.js" />
+
+### Swap two variables with array destructuring
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-multiple-vars.js" />
+
+### Destructure function parameters, making code more readable
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-readable-args.js" />
+
+### Short circuit Evaluation
+
+- *AND*
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-short-and.js" />
+
+- *OR*
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-short-or.js" />
+
+### Convert result of division to integer
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-div-to-int.js" />
+
+### Optional chaining
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-optional-chaining.js" />
+
+## C\# vs JavaScript
+
+|  | C\#| JavaScript |
+| --- | --- | --- |
+| types | `int, float, double, char, bool, ...` | `let, var, const` |
+| methods | `<access> <type> <name>(<type> x)`  | `function <name>(x)` |
+| named parameters | `fun(x=4)` | `fun({ x: 4 })` |
+| print | `System.Console.WriteLine(str)` | `console.log(str)` |
+| str -> num | `int.Parse(str)` | `+str (or parseInt(str))` |
+| num -> str | `num.ToString()` | `num.toString()` |
+| exceptions | `try {} catch(Exception) {}` | `try {} catch(exception) {}` |
+| closures | `return delegate() { return val;};` | `return function() { return val;}` |
+| foreach | `foreach (int elem in arr) {}` | `for (var elem in arr) {}` |
+| using | `using (obj) {}` | `with (obj) {}` |
+| class | `class Dog { string name; public Dog(string x) { this.name = x; } }` | `function Dog(x) { this.name = x; }` |
+| inheritance | `class Subclass : Baseclass` | `var subclass = { [[Prototype]]: baseclass }` |
+| accessors | `<type> X { get {return x;} set {x = value;} }` | `get X() { return x; }, set X(value) { x = value; }` |
+| regular expressions | `Regex reg = new Regex(@"^\w")` | `/^\w/` |
+
+## Resources
+
+- [Speaking JavaScript book](http://speakingjs.com)
+- [clean-code-javascript repository](https://github.com/ryanmcdermott/clean-code-javascript)
+- [w3schools](https://www.w3schools.com/js/default.asp)
+- [Environment Variables in VanillaJS by freeCodeCamp](https://www.freecodecamp.org/news/how-to-use-environment-variables-in-vanillajs/)
+- [Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- Useful libraries
+  - [D3.js - Data-Driven Documents](https://d3js.org/)
+  - [fullPage.js - Create Beautiful Fullscreen Scrolling Websites](https://alvarotrigo.com/fullPage/)
+  - [Masonry - Cascading grid layout library](https://masonry.desandro.com/)
+  - [Moment.js - Manipulate display dates and times in JavaScript](https://momentjs.com/)

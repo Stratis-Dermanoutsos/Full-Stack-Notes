@@ -1,0 +1,90 @@
+.gist {
+    margin-top: .5rem;
+    position: relative;
+
+    .gist-meta {
+        background-color: var(--gist-meta-background-color) !important;
+            color: var(--gist-copy-button-color) !important;
+
+        a {
+            color: var(--gist-copy-button-color) !important;
+        }
+    }
+
+    .gist-file {
+        border: 1px solid var(--gist-border-color) !important;
+        margin-bottom: 0 !important;
+    }
+
+    .gist-data, .gist-file {
+        border-bottom: 1px solid var(--gist-border-color) !important;
+    }
+
+    .gist-data {
+        table, tbody, tr, td {
+            background-color: var(--gist-data-background-color) !important;
+        }
+    }
+
+    .blob-code-inner {
+        color: var(--gist-data-color) !important;
+
+        .pl-kos, .pl-smi {
+            color: var(--gist-data-color);
+        }
+
+        .pl-s, .pl-pds {
+            color: #005cc5;
+        }
+    }
+
+    button {
+        background-color: transparent;
+        border-color: transparent;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        cursor: pointer;
+        font-size: .75rem;
+        font-weight: bold;
+        outline: none;
+        padding: .5rem;
+        position: absolute;
+        right: .75rem;
+        text-decoration: none;
+        top: .75rem;
+        transition: all .2s ease-in-out;
+
+        svg {
+            height: 1rem;
+            width: 1rem;
+
+            path {
+                fill: transparent;
+                transition: all .2s ease-in-out;
+            }
+        }
+
+        &:hover {
+            border-color: var(--gist-copy-button-color);
+        }
+    }
+
+    &:hover {
+        button {
+            background-color: var(--gist-copy-button-background-color);
+
+            path {
+                fill: var(--gist-copy-button-color);
+            }
+
+            &:focus {
+                border-color: var(--gist-copy-highlight-color);
+
+                path {
+                    fill: var(--gist-copy-highlight-color) !important;
+                }
+            }
+        }
+    }
+}

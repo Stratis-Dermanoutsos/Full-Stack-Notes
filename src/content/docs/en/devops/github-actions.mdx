@@ -3,6 +3,8 @@ title: "GitHub Actions"
 description: "This section contains notes on GitHub Actions."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ## Types of Actions
 
 Actions come in two types:
@@ -20,21 +22,21 @@ Inside a workflow file, several declarations take place.
 
 - Name
 
-  ```json
+  ```
   name: workflow_name
   ```
 
   This name appears on any pull request or in the Actions tab. The name is especially useful when there are multiple workflows in your repository.
 - Event
 
-  ```json
+  ```
   on: event
   ```
 
   It indicates that your workflow will execute anytime the specified event is triggered.
   For example,
 
-  ```json
+  ```
   on: push
   ```
 
@@ -46,55 +48,55 @@ Inside a workflow file, several declarations take place.
   An action block can contain:
   - Jobs
 
-    ```json
+    ```
     jobs:
     ```
 
     It is the base component of a workflow run.
   - Build
 
-    ```json
+    ```
     build:
     ```
 
     It's the identifier we're attaching to this job.
   - Name
 
-    ```json
+    ```
     name: action_name
     ```
 
     It's the name of the job, this is displayed on GitHub when the workflow is running.
   - Runs On
 
-    ```json
+    ```
     runs-on: ubuntu-latest
     ```
 
     Defines the type of machine to run the job on. The machine can be either a GitHub-hosted runner or a self-hosted runner.
   - Steps
 
-    ```json
+    ```
     steps:
     ```
 
     A linear sequence of operations that make up a job.
   - Uses
 
-    ```json
+    ```
     uses: actions/checkout@v1
     ```
 
     Uses a community action called checkout to allow the workflow to access the contents of the repository.
 
-    ```json
+    ```
     uses: ./dir
     ```
 
     Provides the relative path to the action in the *`dir`* directory of the repository.
   - Input variables
 
-    ```json
+    ```
     with:
       VARIABLE_1: "value"
       VARIABLE_2: "val"
@@ -114,12 +116,7 @@ I will take note of the procedure of the course to be able to look back at it fo
   - In the *`action-a`* directory, create a file titled *`Dockerfile`*
 - Inside the *`Dockerfile`*, paste
 
-  ```json
-  FROM debian:9.5-slim
-  ADD entrypoint.sh /entrypoint.sh
-  RUN chmod +x /entrypoint.sh
-  ENTRYPOINT ["/entrypoint.sh"]
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="gh-actions-Dockerfile" />
 
 - Commit your file
 - Open a pull request with your new branch against main
@@ -131,10 +128,7 @@ I will take note of the procedure of the course to be able to look back at it fo
 - As a part of this branch and pull request, create a file in the *`action-a`* directory titled *`entrypoint.sh`*
 - Inside the *`entrypoint.sh`*, paste
 
-  ```json
-  #!/bin/sh -l
-  sh -c "echo Hello world my name is $INPUT_MY_NAME"
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="gh-actions-entrypoint.sh" />
 
   In this file, all we're doing is outputting a "Hello world" message using an environment variable called **MY_NAME**.
 - Stage and commit the changes
@@ -145,22 +139,7 @@ I will take note of the procedure of the course to be able to look back at it fo
 - As a part of this branch and pull request, create a file titled *`action-a/action.yml`*
 - Inside it, paste
 
-  ```json
-  name: "Hello Actions"
-  description: "Greet someone"
-  author: "octocat@github.com"
-  inputs:
-  MY_NAME:
-    description: "Who to greet"
-    required: true
-    default: "World"
-  runs:
-  using: "docker"
-  image: "Dockerfile"
-  branding:
-  icon: "mic"
-  color: "purple"
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="gh-actions-action.yml" />
 
 - Stage and commit the changes
 - Push the changes to GitHub
@@ -170,7 +149,7 @@ I will take note of the procedure of the course to be able to look back at it fo
 - Create a file titled *`.github/workflows/main.yml`*
 - Inside the file, paste
 
-  ```json
+  ```
   name: A workflow for my Hello World file
   on: push
   ```
@@ -182,17 +161,7 @@ I will take note of the procedure of the course to be able to look back at it fo
 
 - As a part of this branch and pull request, edit *`.github/workflows/main.yml`* to append the following content:
 
-  ```json
-  jobs:
-    build:
-      name: Hello world action
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v1
-        - uses: ./action-a
-          with:
-            MY_NAME: "Mona"
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="gh-actions-main.yml" />
 
 - Stage and commit the changes
 - Push the changes to GitHub
@@ -202,7 +171,7 @@ I will take note of the procedure of the course to be able to look back at it fo
 - Go to the repository on ***GitHub***
 - Navigate to
 
-  ```json
+  ```
   Actions -> 'Added action to run' -> 'Hello world action' -> 'Run /./action-a'
   ```
 

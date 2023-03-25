@@ -1,0 +1,128 @@
+---
+title: "TypeScript"
+description: "This section contains notes on the TypeScript programming language."
+---
+
+import Gist from '/src/components/General/Gist.astro'
+
+***TypeScript*** is basically a superset of ***JavaScript***.
+
+This means that
+
+- ***JavaScript*** code works in ***TypeScript***
+- if you know ***JavaScript***, ***TypeScript*** is not that difficult to learn
+
+However, ***TypeScript*** works more like a compiled language. In other words, you have to solve errors before your program is able to run/execute.
+
+In fact, the way a program written in ***TypeScript*** works is through compilation to vanilla ***JavaScript*** using *tsc*. (***TypeScript*** *Compiler*)
+
+## Classes - OOP
+
+### Declaration
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-declaration.ts" />
+
+### Instantiation
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-instantiation.ts" />
+
+### Value assignment
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-values.ts" />
+
+### Constructor
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-constructor.ts" />
+
+### readonly
+
+Readonly fields are only assignable on declaration or inside the constructor.
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-readonly.ts" />
+
+### Inheritage
+
+Just as in ***JavaScript***, if you have a base class, you’ll need to call `super();` in your constructor body *BEFORE* using any `this.` members.
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-inheritage.ts" />
+
+### Getters / Setters
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-get-set.ts" />
+
+## Variables
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-variables.ts" />
+
+Notice how
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-variables-implicit.ts" />
+
+and
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-variables-explicit.ts" />
+
+are equal in ***TypeScript***.
+
+### Unknown
+
+In ***TypeScript***, the `unknown` type works similarly to `any` but not quite the same.
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-unkown.ts" />
+
+In the above example, assigning the value of `varUnknown: unknown` to a variable without *explicit assertion* throws an error. This happens cause the compiler has no idea what the variable's type is.
+
+For the same reason, we cannot call any methods of the `unknown` variable.
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-unkown-method.ts" />
+
+However, it is possible, again, with *explicit assertion*.
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-unkown-explicit-assertion.ts" />
+
+> Why use `unknown` at all?
+>
+> Well, it is very useful in situations that you don't know what the type of an object is going to be and you have to check before you use it. It is stricter than `any` and less risky.
+
+Example:
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-unkown-interface.ts" />
+
+The above example accepts an `unknown` parameter and returns *`true`* if it contains a property named `myProp`. Else, it returns *`false`*.
+
+## Interfaces
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-interfaces.ts" />
+
+## Arrays
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-arrays.ts" />
+
+but
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-arrays-typed.ts" />
+
+## Tuples
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-tuples.ts" />
+
+## Generics
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-generics.ts" />
+
+## Snippets
+
+### Objects as Maps
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-objects-as-maps.ts" />
+
+Now you can use *arbitrary strings* to look up a value.
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-arbitrary-strings.ts" />
+
+## Resources
+
+- [TypeScript documentation](https://www.typescriptlang.org/docs/)
+- [Book by basarat](https://basarat.gitbook.io/typescript/)
+- [Fireship video (explanation)](https://youtu.be/zQnBQ4tB3ZA)
+- [Fireship video (introduction)](https://youtu.be/ahCwqrYpIuM)

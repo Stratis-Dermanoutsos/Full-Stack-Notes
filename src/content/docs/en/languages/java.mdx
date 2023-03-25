@@ -3,29 +3,21 @@ title: "Java"
 description: "This section contains notes on the Java programming language."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ## Simple Hello World program
 
 - Create a `helloWorld.java` file
 
-  ```java
-  class HelloWorld {
-    public static void main(String[] args) {
-      System.out.println("Hello world!");
-    }
-  }
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="java-hello-world.java" />
 
 - Compile
 
-  ```bash
-  javac helloWorld.java
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="java-compile.sh" />
 
 - Run
 
-  ```bash
-  java helloWorld
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="java-run.sh" />
 
 > To run a program in ***Java***, you must first define the *`main`* function as seen above.
 
@@ -71,41 +63,21 @@ In ***Java***, there are exactly 8 primitive data types.
 
 ### Syntax
 
-```java
-// one parameter
-parameter -> expression
-
-// more than 1 parameters
-(parameter1, parameter2) -> expression
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="java-lambda-syntax-1.java" />
 
 Expressions must immediately return a value. Thus, they are limited. To enable the lambda expression to run more commands/statements etc, do this:
 
-```java
-(parameter1, parameter2) -> { code block }
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="java-lambda-syntax-2.java" />
 
 ### Example use cases
 
 - Print all elements of an array
 
-  ```java
-  array.forEach( (element) -> { System.out.println(element); } );
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="java-lambda-print-all.java" />
 
 - Run math operations
 
-  ```java
-  int operate(int a, int b, MathOperation mathOperation) {
-    return mathOperation.operation(a, b);
-  }
-  .
-  .
-  .
-  MathOperation addition = (int a, int b) -> a + b;
-
-  int result = operate(10, 5, addition); // 15
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="java-lambda-math.java" />
 
 ## Useful code snippets
 
@@ -117,45 +89,11 @@ A common solution to this is to convert the InputStream to a byte array, then it
 
 For a quick snippet, use the following class:
 
-```java
-import com.google.common.io.ByteStreams;
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-
-public class RecyclableInputSteam {
-
-    private byte[] bytes;
-
-    public RecyclableInputSteam(InputStream inputStream) {
-        try {
-            this.bytes = ByteStreams.toByteArray(inputStream);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public RecyclableInputSteam(byte[] bytes) {
-        this.bytes = bytes;
-    }
-
-    public byte[] getBytes() {
-        return this.bytes;
-    }
-
-    public InputStream getInputStream() {
-        return new ByteArrayInputStream(this.bytes);
-    }
-}
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="java-recyclable-inputstream.java" />
 
 Usage:
 
-```java
-InputStream inputStream = ... // The one we're interested in
-RecyclableInputSteam recyclableInputSteam = new RecyclableInputSteam(inputStream);
-
-recyclableInputSteam.getInputStream(); // Get a new InputStream with the same content
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="java-recyclable-inputstream-demo.java" />
 
 ## Resources
 

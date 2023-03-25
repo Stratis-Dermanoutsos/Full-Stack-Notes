@@ -3,6 +3,8 @@ title: "Entity Framework"
 description: "This section contains notes on Entity Framework."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ***Entity Framework*** is an object-relational mapping (ORM) framework developed by **Microsoft**. It is a component of the ***.NET*** framework that enables developers to work with relational databases using ***.NET*** objects.
 
 It supports a wide range of database providers, including ***SQL Server***, ***Oracle***, ***MySQL*** and ***PostgreSQL***. It also includes support for advanced features such as *transactions*, *caching*, and *concurrency control*.
@@ -16,27 +18,19 @@ To use ***Entity Framework* Core**, 4 ***NuGet*** packages are needed:
 
 ## The CLI tool
 
-```bash
-dotnet tool install --global dotnet-ef
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-install.sh" />
 
 To update it
 
-```bash
-dotnet tool update --global dotnet-ef
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-update.sh" />
 
 To use it on a project
 
-```bash
-dotnet add package Microsoft.EntityFrameworkCore.Design
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-package-add.sh" />
 
 Verify installation
 
-```bash
-dotnet ef
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef.sh" />
 
 ## Setup
 
@@ -44,84 +38,39 @@ We'll setup an ***SQLite*** database for the sake of an example.
 
 - Install the necessary tools
 
-  ```bash
-  dotnet tool install --global dotnet-ef
-  dotnet add package Microsoft.EntityFrameworkCore.Sqlite
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-sqlite-install.sh" />
 
 - Create a *\<file>.db* database using ***SQLite***
 - Go to the project's *appsettings.json* file and add
 
-  ```json
-  "ConnectionStrings": {
-    "DefaultConnection" : "Data Source=<file>.db;"
-  }
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-connection-string.json" />
 
 - Create a class inside the ***M*odels** folder
   We'll name it **Car** for this example
 
-  ```csharp
-  using System.ComponentModel.DataAnnotations;
-  namespace AspnetExample.Models
-  {
-    public class Car
-    {
-      [Key] // Set as primary key
-      public int LicensePlate { get; set; }
-      [Required] // Cannot be null
-      public string Make { get; set; }
-      public string Model { get; set; }
-    }
-  }
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-model-car.cs" />
 
 - Create the *ApplicationDbContext* class inside the ***M*odels** folder
   The file should look like this
 
-  ```csharp
-  using Microsoft.EntityFrameworkCore;
-  namespace AspnetExample.Models
-  {
-    public class ApplicationDbContext : DbContext
-    {
-      // Empty constructor but the parameter is needed for Dependency Injection
-      public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-      {
-      }
-      // Entry used to add data to the database
-      public DbSet<Car> Car { get; set; }
-    }
-  }
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-context.cs" />
 
 - Go to **Startup.cs** inside the *ConfigureServices* method and add
 
-  ```csharp
-  services.AddDbContext<ApplicationDbContext>(option=> option.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-context-add.cs" />
 
   or, if top level statements,
 
-  ```csharp
-  var builder = WebApplication.CreateBuilder(args);
-  ...
-  builder.Services.AddDbContext<ApplicationDbContext>(options => option.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-context-add-top.cs" />
 
 - Run
 
-  ```bash
-  dotnet add package Microsoft.EntityFrameworkCore.Design
-  dotnet ef migrations add AddCarToDb
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-migration-add.sh" />
 
   Notice that, now, there is a **\<numbers>_AddCarToDb.cs** file in the **Migrations** folder.
 - Update the database and schema by running
 
-  ```bash
-  dotnet ef database update
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-db-update.sh" />
 
 ## Resources
 

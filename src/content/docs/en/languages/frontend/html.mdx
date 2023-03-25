@@ -3,20 +3,22 @@ title: "HTML"
 description: "This section contains notes on HTML."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ***HTML***, or ***H*ypertext *M*arkup *L*anguage**, is the standard markup language used to create web pages. It provides a set of tags and attributes that are used to describe the structure and content of a web page. ***HTML*** is a fundamental building block for web development and is used in conjunction with other web technologies such as ***CSS*** and ***JavaScript***. With ***HTML***, you can create headings, paragraphs, lists, links, images, and much more. It is easy to learn and can be used to create basic websites or complex web applications.
 
 ## Form and Validations
 
 ### Forms
 
-A form in ***HTML5*** is declared with the tag *\<form>* and consists of every element that is found before the closing tag *\</form>*.
+A form in ***HTML5*** is declared with the tag `<form>` and consists of every element that is found before the closing tag `</form>`.
 
-The \<form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.
+The `<form>` element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.
 
-To declare any of these inputs, we use the input element, *\<input>*.
+To declare any of these inputs, we use the input element, `<input>`.
 For the type of the input, we simple declare it inside the tag with the attribute **type**.
 
-For example, *\<input type="text">*.
+For example, `<input type="text">`.
 
 ### Validations
 
@@ -52,8 +54,8 @@ We want to
 
 A Semantic element clearly describes its meaning to both the browser and the developer.
 
-- non-semantic elements: *\<div>*, *\<span>*
-- semantic elements: *\<article>*, *\<footer>*, *\<form>*, *\<header>*, etc
+- non-semantic elements: `<div>`, `<span>`
+- semantic elements: `<article>`, `<footer>`, `<form>`, `<header>`, etc
 
 ![HTML Semantic](https://raw.githubusercontent.com/Stratis-Dermanoutsos/Full-Stack-Notes/main/Images/HTML-Semantic.gif)
 
@@ -65,35 +67,23 @@ A Semantic element clearly describes its meaning to both the browser and the dev
 
 1. *Page Title*: The page title is the title that appears on the search engine results page. It should be descriptive and concise, and should accurately reflect the content of the page. It should also include primary keywords.
 
-   ```html
-   <title>Page Title - Primary Keywords</title>
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="html-title.html" />
 
 2. *Meta Description*: The meta description is a brief summary of the page content that appears below the page title on the search engine results page. It should be concise and compelling, and should include primary keywords.
 
-   ```html
-   <meta name="description" content="Brief summary of page content - Primary Keywords">
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="html-description.html" />
 
 3. *Headings*: Headings, or "*H*" tags, are used to structure the content on a page and make it easier for search engines to understand the hierarchy of the information. Properly using headings can also help improve the visibility of your page on search engine results pages.
 
-   ```html
-   <h1>Main Heading</h1>
-   <h2>Subheading</h2>
-   <h3>Sub-subheading</h3>
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="html-headings.html" />
 
 4. *Alt Text*: Alt text, or "*alternative text*", is used to describe images on a page. It is important to include alt text for images, as search engines cannot see images and rely on the alt text to understand the content of the image.
 
-   ```html
-   <img src="image.jpg" alt="Description of image">
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="html-alt.html" />
 
 5. *URLs*: URLs, or "*uniform resource locators*", are the web addresses of pages on your site. URLs should be descriptive and include primary keywords.
 
-   ```html
-   <a href="https://www.example.com/page-title-primary-keywords">Link Text</a>
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="html-link.html" />
 
 ### Tips for Improving HTML SEO
 
@@ -107,21 +97,12 @@ A Semantic element clearly describes its meaning to both the browser and the dev
 
 - **no translate** attribute
 
-  ```html
-  <!-- translate="no" -->
-
-  <!-- Example -->
-  <p translate="no">Company</p>
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="html-translate-no.html" />
 
   This can be very useful to prevent your brand's name from being translated to something else.
 - **mobile header color** meta tag
 
-  ```html
-  <!-- <meta name="theme-color" content="color" /> -->
-
-  <meta name="theme-color" content="#323232" />
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="html-theme-color.html" />
 
   Now, the background color of the browser will be changed to the one we set, on mobile devices.
 
@@ -131,21 +112,11 @@ You can actually create and use your own custom elements in HTML.
 
 - Declare the element using ***JavaScript***
 
-  ```javascript
-  class CustomElement extends HTMLElement {
-    connectedCallback() {
-      this.innerHTML = 'This is a custom element.';
-    }
-  }
-
-  customElements.define('custom-element', CustomElement);
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="html-custom-component.js" />
 
 - Use it in your ***HTML***
 
-  ```html
-  <custom-element />
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="html-custom-component.html" />
 
 Full example:
 

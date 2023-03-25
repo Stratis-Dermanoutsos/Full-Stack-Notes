@@ -3,6 +3,7 @@ title: "Algorithms"
 description: "This section contains notes on multiple Algorithms."
 ---
 
+import Gist from "/src/components/General/Gist.astro"
 import Todo from "/src/components/General/Todo"
 
 ## Search Algorithms
@@ -25,11 +26,7 @@ Time Complexity: *O(log n)*
 
 Basically, using the 2 edges of the array, we compare the middle element with x.
 
-```javascript
-if (element > x) left = middle + 1
-if (element < x) right = middle - 1
-if (element == x) return element's index
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="algorithm-search-binary" />
 
 ![Binary Search](https://raw.githubusercontent.com/Stratis-Dermanoutsos/Full-Stack-Notes/main/Images/Binary-Search.png)
 
@@ -59,11 +56,7 @@ Then, we **Linear Search** backwards from there until we find the element or we 
 
 After each jump, we compare the current element with x.
 
-```javascript
-if (element > x) LinearSearch()
-if (element < x) Jump => (i = i + step)
-if (element == x) return element's index
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="algorithm-search-jump" />
 
 ![Jump Search](https://raw.githubusercontent.com/Stratis-Dermanoutsos/Full-Stack-Notes/main/Images/Jump-Search.jpg)
 
@@ -85,7 +78,7 @@ Time Complexity: *O(n+k)* where n is the number of elements in input array and k
 
 For examle, take the array
 
-```python
+```
 [1, 4, 1, 2, 7, 5, 2]
 ```
 
@@ -96,7 +89,7 @@ So, we make an array to count our elements
 
 or
 
-```python
+```
 [0, 2, 2, 0, 1, 0, 1]
 ```
 
@@ -104,7 +97,7 @@ as we have x0 0s, x2 1s and so on.
 
 The result would be
 
-```python
+```
 [1, 1, 2, 2, 4, 5, 7]
 ```
 

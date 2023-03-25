@@ -29,7 +29,7 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-  ```json
+  ```
   Expires: <http-date>
   // Example
   Expires: Wed, 21 Oct 2015 07:28:00 GMT
@@ -41,7 +41,7 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-  ```json
+  ```
   Cache-Control: <option>, <option>, ...
   // Examples
   Cache-Control: no-store
@@ -64,7 +64,7 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-  ```json
+  ```
   ETag: W/"<etag_value>"
   ETag: "<etag_value>"
   // Examples
@@ -81,7 +81,7 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-  ```json
+  ```
   Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
   // Example
   Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
@@ -108,7 +108,7 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-  ```json
+  ```
   Content-Length: <length>
   ```
 
@@ -119,7 +119,7 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-  ```json
+  ```
   Accept-Encoding: <algorithm>;q=<value>
   // Examples
   Accept-Encoding: gzip
@@ -142,7 +142,7 @@ The majority of ***caching*** behavior is determined by the ***caching*** policy
 
   Syntax:
 
-  ```json
+  ```
   Vary: *
   Vary: <header-name>, <header-name>, ...
   // Example

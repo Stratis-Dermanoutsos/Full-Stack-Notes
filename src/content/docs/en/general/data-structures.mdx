@@ -3,6 +3,8 @@ title: "Data Structures"
 description: "This section contains notes on multiple Data Structures."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ## Binary Search Tree
 
 ***Binary Search Tree*** is a node-based binary tree data structure.
@@ -15,7 +17,7 @@ Properties:
 - There must be no duplicate nodes
 - A ***Binary Search Tree*** with height *H* may have *N* nodes where
 
-  ```markdown
+  ```
   H ≤ N ≤ 2ᴴ - 1
   ```
 
@@ -95,12 +97,7 @@ The goal is simple:
 
 To achieve this, we simply have to do
 
-```csharp
-// C# code
-Node temp = parent.Right;
-parent.Right = parent.Left;
-parent.Left = temp;
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="data-structures-bst.cs" />
 
 for every '*Parent*' node of the ***Binary Search Tree***.
 
@@ -118,7 +115,7 @@ This is achieved through certain rotations that keep the ***AVL Tree*** balanced
 
 In general, in a **Binary Tree**, the **Balance Factor** of a node `X` is defined to be the height difference of the 2 child sub-trees.
 
-```csharp
+```
 BF(X) = Height(LeftSubtree(X)) - Height(RightSubtree(X))
 ```
 

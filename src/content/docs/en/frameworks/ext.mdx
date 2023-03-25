@@ -3,6 +3,8 @@ title: "Ext JS"
 description: "This section contains notes on the Ext JS framework."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ***Ext JS*** is a ***JavaScript*** framework for building rich, interactive web applications. It provides a set of UI components and tools that allow developers to create modern web applications that look and feel like desktop applications.
 
 ## Components
@@ -13,24 +15,13 @@ Components are the heart of ***Ext JS***. In reality, they are just ***JS*** com
 
 To define/declare a component, you use the `Ext.define` method, as follow:
 
-```js
-Ext.define('CLASS.NAME', {
-    ...object properties
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-define.js" />
 
 A component *MUST* **extend** another component, whether that's an ***Ext*** core component or a custom one.
 
 For example, to define a custom button:
 
-```js
-Ext.define('myApp.view.main.components.CustomButton', {
-    extend: 'Ext.button.Button',
-    alias: 'widget.customButton',
-    text: 'Click me!',
-    ...button properties
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-define-button.js" />
 
 > This button was a component for the *classic* toolkit.
 > In *modern*, it can be found as `Ext.Button`.
@@ -45,18 +36,7 @@ To use a component, you need to use either its class name (the string value, fir
 
 To use it, simply put it in the items of another class or a container using the `xtype` attribute. For example:
 
-```js
-{
-    xtype: 'panel', // meaning Ext's Ext.panel.Panel
-    items: [
-        {
-            xtype: 'customButton',
-            text: 'Changed text',
-            ...other properties
-        }
-   ]
-}
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-components-panel.js" />
 
 > When you use a component, you can add or either overwrite its existing properties as shown above.
 ##### Requires
@@ -65,22 +45,7 @@ To use any component, more often than not, the compiler find it on its own. Howe
 
 For example:
 
-```js
-Ext.define('myApp.view.main.panels.RandomPanel', {
-    extend: 'Ext.panel.Panel', // a panel component
-    alias: 'widget.randomPanel',
-    requires: [
-        'myApp.view.main.components.CustomButton'
-    ],
-    layout: 'fit', // More of this later
-    items: [
-        {
-            xtype: 'customButton',
-            ...button properties
-        }
-    ]
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-requires.js" />
 
 ## Toolkits
 
@@ -88,21 +53,15 @@ Ext.define('myApp.view.main.panels.RandomPanel', {
 
 - **Classic**: The **Classic** toolkit is ***Ext JS***'s original toolkit, and is designed for building traditional, "*desktop-style*" web applications.
 
-  ```cmd
-  sencha generate app -ext -classic MyAppName ./MyAppPath
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-generate-classic.sh" />
 
 - **Modern**: The **Modern** toolkit is a newer addition to ***Ext JS***, and is designed for building modern, "*mobile-first*" web applications.
 
-  ```cmd
-  sencha generate app -ext -modern MyAppName ./MyAppPath
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-generate-modern.sh" />
 
 - **Universal**: The **Universal** toolkit is a combination of the **Classic** and **Modern** toolkits, and is designed to support applications that need to run on both desktop and mobile devices.
 
-  ```cmd
-  sencha generate app -ext MyAppName ./MyAppPath
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-generate-universal.sh" />
 
 ## Layouts
 
@@ -110,11 +69,7 @@ There are several layouts that a container in ***Ext JS*** can use.
 
 To declare which one will be chosen, we use the `layout` property.
 
-```js
-Ext.create('Ext.container.Container', {
-    layout: ...
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts.js" />
 
 ### Available layouts
 
@@ -122,12 +77,7 @@ Ext.create('Ext.container.Container', {
 
   This is a multi-pane, application-oriented UI layout style that supports multiple nested panels, automatic bars between regions and built-in expanding and collapsing of regions.
 
-  ```js
-  Ext.create('Ext.container.Container', {
-      layout: 'border',
-      ...
-  });
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-border.js" />
 
   This layout's children must declare a specific region to reside in.
 
@@ -141,64 +91,33 @@ Ext.create('Ext.container.Container', {
 
   This layout manages multiple child Components, each fitted to the Container, where only a single child Component can be visible at any given time.
 
-  ```js
-  const p = Ext.create('Ext.container.Container', {
-      layout: 'card',
-      ...
-  });
-  // Show the 2nd item (index of 1)
-  p..getLayout().setActiveItem(1);
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-card.js" />
 
 - `fit`
 
   This is a base class for layouts that contain a single item that automatically expands to fill the layout's container.
 
-  ```js
-  Ext.create('Ext.container.Container', {
-      layout: 'fit',
-      ...
-  });
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-fit.js" />
 
 - `hbox`
 
   A layout that arranges items horizontally across a `Ext.container.Container`.
 
-  ```js
-  Ext.create('Ext.container.Container', {
-      layout: 'hbox',
-      ...
-  });
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-hbox.js" />
 
   It is basically the same as using the following ***CSS*** in an ***HTML***'s div:
 
-  ```css
-  .container {
-      display: flex;
-  }
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-hbox.css" />
 
 - `vbox`
 
   A layout that arranges items vertically across a `Ext.container.Container`.
 
-  ```js
-  Ext.create('Ext.container.Container', {
-      layout: 'vbox',
-      ...
-  });
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-vbox.js" />
 
   It is basically the same as using the following ***CSS*** in an ***HTML***'s div:
 
-  ```css
-  .container {
-      display: flex;
-      flex-direction: column;
-  }
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-vbox.css" />
 
 ## Stores
 
@@ -206,33 +125,13 @@ A `store` is a client-side collection of records (instances of a `Model` class).
 
 Let's say we define a store of Users.
 
-```js
-Ext.define('MyApp.store.Users', {
-    extend: 'Ext.data.Store',
-    alias: 'store.users',
-    model: 'MyApp.model.User',
-    data : [
-        { firstName: 'Seth', age: 34 },
-        { firstName: 'Scott', age: 72 },
-        { firstName: 'Gary', age: 19 },
-        { firstName: 'Capybara', age: 208 }
-    ]
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store.js" />
 
 What we did, is create a store that holds 4 instances/objects of the User `model`.
 
 > The model can be defined as such:
 >
-> ```js
-> Ext.define('MyApp.model.User', {
->     extend: 'Ext.data.Model',
->     fields: [
->         { name: 'name',  type: 'string' },
->         { name: 'age',   type: 'int' }
->     ]
-> });
-> ```
+> <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-model.js" />
 
 To display the data in a `dataview` or a `grid`, simply add a property `store: users` in the component's attributes.
 
@@ -240,18 +139,7 @@ To display the data in a `dataview` or a `grid`, simply add a property `store: u
 
 We can have a store inherit another store. This can be done with the `type` and `source` properties.
 
-```js
-// Using the "type" property
-Ext.define('MyApp.store.MyStore', {
-    extend: 'Ext.data.Store',
-    type: 'store'
-});
-// Using the "source" property
-Ext.define('MyApp.store.MyStore', {
-    extend: 'Ext.data.Store',
-    source: 'store'
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-inheritance.js" />
 
 - `type` is used when the new store inherits the parent store's properties but the data icluded, although identical, are different instances and, as such, will create duplicates.
 - `source` is used when the new store inherits the parent store's data. `Source` is typically used when we want to filter or sort data without editing the parent store.
@@ -262,45 +150,15 @@ To sort a store's data, you can either declare it with the `sorters` property or
 
 Let's say we have the following store:
 
-```js
-const store = Ext.create('Ext.data.Store', {
-    fields: ['name', 'age'],
-    data: [
-        {name: 'Alice', age: 25},
-        {name: 'Bob', age: 30},
-        {name: 'Charlie', age: 20}
-    ]
-});
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-sort.js" />
 
 - Property
 
-  ```js
-  const store = Ext.create('Ext.data.Store', {
-      fields: ['name', 'age'],
-      data: [
-          {name: 'Alice', age: 25},
-          {name: 'Bob', age: 30},
-          {name: 'Charlie', age: 20}
-      ],
-      sorters: [
-          { property: 'name', direction: 'ASC' },
-          { property: 'age', direction: 'DESC' }
-      ]
-  });
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-sort-property.js" />
 
 - Method
 
-  ```js
-  //sort by a single field
-  store.sort('age', 'DESC');
-  // sorting by multiple fields
-  store.sort([
-      { property: 'name', direction: 'ASC' },
-      { property: 'age', direction: 'DESC' }
-  ]);
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-sort-method.js" />
 
 ### Filtering
 
@@ -308,32 +166,11 @@ Same with sorting, to filter a store's data, you can either declare it with the 
 
 - Property
 
-  ```js
-  const store = Ext.create('Ext.data.Store', {
-      fields: ['name', 'age'],
-      data: [
-          {name: 'Alice', age: 25},
-          {name: 'Bob', age: 30},
-          {name: 'Charlie', age: 20}
-      ],
-      filters: [
-          { property: 'name', value: 'Charlie' },
-          { property: 'age', value: 25, operator: '>' }
-      ]
-  });
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-filter-property.js" />
 
 - Method
 
-  ```js
-  //filter by a single field
-  store.filter('age', 25);
-  // filtering by multiple fields
-  store.filter([
-      { property: 'name', value: 'Charlie' },
-      { property: 'age', value: 25, operator: '>' }
-  ]);
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-filter-method.js" />
 
 ### Global stores
 
@@ -341,22 +178,11 @@ To make a store global is a very quick process:
 
 1. Go to your `Application.js` file and, inside the class definition, add the following:
 
-   ``` js
-   stores: [
-       'MyApp.store.Users'
-   ]
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-global.js" />
 
 2. In your store, provide a `storeId` attribute, usually the same as the `alias`.
 
-   ```js
-   Ext.define('MyApp.store.Users', {
-       extend: 'Ext.data.Store',
-       alias: 'store.users',
-       storeId: 'users',
-       ...
-   });
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-storeId.js" />
 
 ## Install and create your first app
 
@@ -364,44 +190,31 @@ To make a store global is a very quick process:
 
 1. Gerenate your first project
 
-   ```bash
-   ext-gen app -a
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-npm-gen-app.sh" />
 
 2. Run the app
 
-   ```bash
-   cd ./my-app
-   npm start
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-npm-start.sh" />
 
 ### With CMD
 
 1. Gerenate your first project
 
-   ```bash
-   sencha generate app --ext MyApp ./MyApp
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-generate-universal.sh" />
 
 2. Run the app
 
-   ```bash
-   sencha app watch [classic|modern]
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-app-watch.sh" />
 
 ## Build your App
 
 1. Clean the current build
 
-   ```bash
-   sencha app clean <BUILD_TYPE>
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-app-clean.sh" />
 
 2. Build
 
-   ```bash
-   sencha app build <BUILD_TYPE>
-   ```
+   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-app-build.sh" />
 
 ### Build types
 
@@ -410,14 +223,17 @@ There are 2 main types of builds.
 - `development` which builds the app for the developer to run.
 
   > This build includes non-minified code and detailed error messages.
+
 - `production` which is the obvious choice for a complete app, ready to be deployed.
 
   > This build does not have any debugging potential as it includes minified code for optimized performance.
+
 - `testing` which is a more dev friendly option.
 
   This is mostly used when the development is in the very late stages and the app can only be tested after being built and deployed.
 
   > This build includes non-minified code and detailed error messages.
+
 - `universal`. This is a bit complicated.
 
   > In universal mode, an Ext JS application includes both minified and non-minified code, as well as detailed error messages.
@@ -476,6 +292,7 @@ You can also create your own templates to use.
 
 ### Create app using template
 
+
 ```bash
 sencha generate app -ext -s <PATH_TO_TEMPLATE> <APP_NAME> <PATH_TO_CREATE_APP>
 ```
@@ -506,71 +323,7 @@ Inside `{workspace}/packages/local/` you will find a folder with the package nam
 
 This is an example of a `package.json` file's content. It may vary from app to app but this is how I fill them:
 
-```json
-{
-    "name": "CustomComponents",
-    "sencha": {
-        "framework": "ext",
-        "namespace": "CustomComponents",
-        "type": "code",
-        "toolkit": "",
-        "creator": "Stratis",
-        "summary": "Stratis' custom components.",
-        "detailedDescription": "Custom fields, components and overrides for my apps.",
-        "version": "1.0.0",
-        "compatVersion": "1.0.0",
-        "format": "1",
-        "slicer": {
-            "js": [
-                {
-                    "path": "${package.dir}/sass/example/custom.js",
-                    "isWidgetManifest": true
-                }
-            ]
-        },
-        "output": "${package.dir}/build",
-        "local": false,
-        "sass": {
-            "namespace": "CustomComponents",
-            "etc": [
-                "${package.dir}/sass/etc/all.scss",
-                "${package.dir}/${toolkit.name}/sass/etc/all.scss"
-            ],
-            "var": [
-                "${package.dir}/sass/var",
-                "${package.dir}/${toolkit.name}/sass/var"
-            ],
-            "src": [
-                "${package.dir}/sass/src",
-                "${package.dir}/${toolkit.name}/sass/src"
-            ]
-        },
-        "classpath": [
-            "${package.dir}/src",
-            "${package.dir}/${toolkit.name}/src"
-        ],
-        "overrides": [
-            "${package.dir}/overrides",
-            "${package.dir}/${toolkit.name}/overrides"
-        ],
-        "example": {
-            "path": [
-                "${package.dir}/examples"
-            ]
-        },
-        "requires": [],
-        "resource": { //! Required so that resources are not copied to each build profile (classic, modern etc)
-            "paths": ""
-        },
-        "resources": [ //! Required so that resources are added to app/resources
-            {
-                "path": "${package.dir}/resources",
-                "output": "shared"
-            }
-        ]
-    }
-}
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-package.json" />
 
 ### Initialize a repository
 

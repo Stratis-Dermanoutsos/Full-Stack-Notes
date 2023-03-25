@@ -1,0 +1,48 @@
+---
+import { v4 as uuidv4 } from 'uuid';
+
+type Props = {
+    gistCode: string;
+    fileName: string;
+};
+
+const { gistCode, fileName } = Astro.props as Props;
+
+const gistUrl = `https://gist.github.com/Stratis-Dermanoutsos/${gistCode}.js?file=${fileName}`;
+const rawUrl = `https://gist.githubusercontent.com/Stratis-Dermanoutsos/${gistCode}/raw/${fileName}`;
+// TODO: Move this to main branch
+const copyIconUrl = 'https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/70-move-code-blocks-to-gists/Images/Copy_Button_icon.svg?raw=true';
+
+const id = `${fileName.replace(/\.\w+$/, '')}-${uuidv4()}`;
+const code = await fetch(rawUrl).then(res => res.text());
+const copyIconSvg = await fetch(copyIconUrl).then(res => res.text());
+---
+
+<style>
+    .gist-disclaimer {
+        font-size: .7rem;
+        margin: .5rem .7rem;
+    }
+</style>
+
+<div id={id}>
+    <script src={gistUrl} />
+    <span class="gist-disclaimer">This component was made by
+        <a href="https://github.com/Stratis-Dermanoutsos" target="_blank">Stratis Dermanoutsos</a>.
+        The code can be found
+        <a href="https://gist.github.com/Stratis-Dermanoutsos/abe2f9f8b3f952233dcea7916946886d" target="_blank">here</a>.
+    </span>
+    <script define:vars={{ id, code, copyIconSvg }}>
+        //* Get the gist element
+        const gist = document.getElementById(id).getElementsByClassName('gist')[0];
+
+        //* Create the button
+        const button = document.createElement('button');
+        button.innerHTML = copyIconSvg;
+        button.addEventListener('click',
+            e => navigator.clipboard.writeText(code));
+
+        //* Add the button to the gist
+        gist.appendChild(button);
+    </script>
+</div>

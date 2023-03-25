@@ -3,6 +3,7 @@ title: "Module Bundlers"
 description: "This section contains notes on multiple Module Bundlers."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
 import Todo from "/src/components/General/Todo"
 
 A module bundler is a tool that takes pieces of JavaScript and their dependencies and bundles them into a single file.
@@ -20,16 +21,12 @@ A module bundler, basically, bundles all the assets used together.
 - Create a project and make a file ***index.js*** inside a folder ***src***
 - Open a terminal in that project's folder and type
 
-  ```zsh
-  npm init -y
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-init.sh" />
 
   to create a **package.json** file
 - Install a module for testing
 
-  ```zsh
-  npm i lodash
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-i-lodash.sh" />
 
 - Create a folder ***public*** inside the project's folder and create ***index.html*** file inside this folder and paste
 
@@ -51,33 +48,23 @@ A module bundler, basically, bundles all the assets used together.
 
 - Inside the ***index.js*** file, paste
 
-  ```javascript
-  import { camelCase } from 'lodash';
-
-  console.log(camelCase('hello world'));
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-index.js" />
 
 If you open ***index.html*** with a browser and head to the console, you'll notice an error.
 
 - Open a terminal in the project's folder and type
 
-  ```zsh
-  npm i --save-dev webpack-cli webpack
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-install.sh" />
 
   to install ***Webpack***
 - Open the **package.json** file and paste
 
-  ```json
-  "build": "webpack"
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-package.json" />
 
   inside the "*scripts*" section
 - Open a terminal in the project's folder and type
 
-  ```zsh
-  npm run build
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-run-build.sh" />
 
   to compile our code
 - Now, inside the ***index.html***, change the script src attribute like so
@@ -92,153 +79,77 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
 
 - Create a ***webpack.config.js*** file inside our project's folder and paste
 
-  ```javascript
-  module.exports = {
-    entry: './src/index.js',
-  };
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-webpack.config.js" />
 
   Notice, to include many entry points (this is called **CODE SPLITTING**) you need
 
-  ```javascript
-  module.exports = {
-    entry: {
-      foo: 'foo.js',
-      bar: 'bar.js'
-    },
-  };
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-splitting-webpack.config.js" />
 
   More options, for example, **output**
 
-  ```javascript
-  const path = require('path');
-
-  module.exports = {
-    entry: './src/index.js',
-    output: {
-      filename: 'awesome.js',
-      path: path.resolve(__dirname, 'dist')
-    },
-  };
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-options-webpack.config.js" />
 
 ### Include SASS
 
 - Inside the ***src*** folder, create a file ***style.scss*** and paste your desired or even random ***SCSS*** code
 
-  ```scss
-  $text: orange;
-  $bg: black;
-
-  body {
-    color: $text;
-    background: $bg;
-  }
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack.scss" />
 
 - Include it in the ***index.js*** file
 
-  ```javascript
-  import './style.scss';
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-scss-import.js" />
 
 Now, notice that if you try to build with
 
-```zsh
-npm run build
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-build.sh" />
 
 an error will occure. That's because we do not have a loader for our ***SASS***.
 
 To solve this, simply open a terminal in the project's folder and type
 
-```zsh
-npm install --save-dev css-loader style-loader sass-loader sass
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-sass-install.sh" />
 
 - Include the modules in the ***webpack.config.js*** file, inside the *"module.exports"* section. The end result should look like this
 
-  ```javascript
-  const path = require('path');
-
-  module.exports = {
-    entry: './src/index.js',
-    output: {
-      filename: 'main.js',
-      path: path.resolve(__dirname, 'dist')
-    },
-    module: {
-      rules: [
-        {
-          test: /\.scss$/,
-          use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader'
-          ],
-        },
-      ],
-    },
-  };
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-end-webpack.config.js" />
 
 ### Analyze bundle (using plugins)
 
 - Open a terminal in the project's folder and type
 
-  ```zsh
-  npm install --save-dev webpack-bundle-analyzer
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-analyzer-install.sh" />
 
 - Paste
 
-  ```javascript
-  const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-analyzer-require.js" />
 
   in the ***webpack.config.js*** file, outside of the *"module.exports"* section and
 
-  ```javascript
-  plugins: [
-    new BundleAnalyzerPlugin()
-  ],
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-analyzer-include.js" />
 
   inside the section.
 - When you build, you should see this screen
 
-  ![webpack-bundle-analyzer](/Images/webpack-bundle-analyzer.png)
+  ![webpack-bundle-analyzer](https://raw.githubusercontent.com/Stratis-Dermanoutsos/Full-Stack-Notes/main/Images/webpack-bundle-analyzer.png)
 
 ### Setup local web server
 
 - Open a terminal in the project's folder and type
 
-  ```zsh
-  npm install --save-dev webpack-dev-server
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-local-server-install.sh" />
 
 - In the ***webpack.config.js*** file, outside of the *"module.exports"* section, paste
 
-  ```javascript
-  devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    port: 9000
-  },
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-local-server-webpack.config.js" />
 
 - Open the **package.json** file and paste
 
-  ```json
-  "dev": "webpack serve"
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-local-server-package.json" />
 
   inside the *"scripts"* section
 - Start server by typing
 
-  ```zsh
-  npm run dev
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-local-server-run-dev.sh" />
 
   inside the terminal
 

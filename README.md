@@ -69,5 +69,3 @@ However, if you'd like to share study material and other sources with me, you ar
 ## License
 
 Full-Stack-Notes is licensed under [MIT License](https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/main/LICENSE).
-
-[⬆ JUMP TO TOP](#full-stack-notes)

@@ -3,6 +3,8 @@ title: "Markdown"
 description: "This section contains notes on Markdown."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ***Markdown*** is a lightweight *markup language* for creating formatted text using a plain-text editor.
 
 > Actually, this whole repository is built on ***Markdown***.
@@ -23,90 +25,45 @@ Markdown exists to make this process very easy and quick.
 
 ## Headings
 
-```markdown
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="headings.txt" />
 
 ## Text
 
-```markdown
-*italic text*
-**bold text**
-***bold & italic text***
-~~Strikethrough text~~
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="text.txt" />
 
 ## Blockquotes
 
-```markdown
-> This is a blokquote
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="blockquote.txt" />
 
 ## Horizontal rule
 
-```markdown
----
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="hr.txt" />
 
 ## Lists
 
-```markdown
-- First element of unordered list
-- Second element of unordered list
-
-1. First element of ordered list
-2. Second element of ordered list
-
-- [x] First element of task list
-- [ ] Second element of task list
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="lists.txt" />
 
 ## Link
 
-```markdown
-[text](URL)
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="link.txt" />
 
 ## Image
 
-```markdown
-![alt](URL)
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="image.txt" />
 
 ## Table
 
-```markdown
-| Aligned left | Aligned center | Aligned Right |
-| :-- | :-: | --: |
-| R1-C1 | R1-C2 | ... |
-| R2-C1 | R2-C2 | ... |
-| R3-C1 | R3-C2 | ... |
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="table.txt" />
 
 ## Code
 
 - Inline code
 
-  ```markdown
-  `This is inline code`
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="code-inline.txt" />
 
 - Code block
 
-  ```markdown
-  \```language
-
-  This is code block
-
-  \```
-  ```
-
-  > To create a code block, remove the backslash characters. (**\\**)
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="code-block.txt" />
 
 ## Diagrams
 
@@ -123,13 +80,7 @@ To create this, you need to take 2 steps:
 - Create a code block with *mermaid* as the language.
 - Paste the following as content
 
-  ```markdown
-    graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="mermaid.txt" />
 
 ## Resources
 

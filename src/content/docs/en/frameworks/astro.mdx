@@ -3,15 +3,15 @@ title: "Astro"
 description: "This section contains notes on the Astro framework."
 ---
 
+import Gist from '/src/components/General/Gist.astro'
+
 ***Astro*** is a static site builder that delivers lightning-fast performance by minimizing the ***JavaScript*** code that's being shipped to your browser. While doing that, you are still allowed to use and even combine multiple of the most popular frameworks, like ***React*** and ***Vue***.
 
 ## Installation / Create project
 
 To create a project, simply run the following:
 
-```sh
-npm create astro@latest
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-create.sh" />
 
 Then, simply add the steps that appear in your console.
 
@@ -19,56 +19,25 @@ Then, simply add the steps that appear in your console.
 
 After the project is initialized, run the project:
 
-```sh
-npm run dev
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-run.sh" />
 
 ## Basic structure of a component
 
-```astro
----
-// Component Script ( JavaScript / TypeScript )
-//? The '---' is used to open the JS code block in line 1 and close right after the code.
-const var = 'This is a title';
----
-<!-- Component Template (HTML + JS Expressions) -->
-<h1>{var}</h1>
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-component-basic.astro" />
 
 To use the component, import it in another component or a page:
 
-```astro
----
-import Test from 'src/components/test.astro'
----
-<Test />
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-component-import.astro" />
 
 > For the sake of this example, the component we created above is written in the file `src/components/test.astro`.
 
 To pass props, use ***TypeScript*** types in the component:
 
-```astro
----
-// Component Script ( JavaScript / TypeScript )
-type Props = {
-    text: string
-};
-
-const { text } = Astro.props as Props;
----
-<!-- Component Template (HTML + JS Expressions) -->
-<h1>{text}</h1>
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-component-props.astro" />
 
 Then, you can call it as follows:
 
-```astro
----
-import Test from 'src/components/test.astro'
----
-<Test text='This is a text.' />
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-component-import-props.astro" />
 
 ## Pages and routing
 
@@ -99,16 +68,7 @@ src/pages/posts/1.md         -> mysite.com/posts/1
 
 For example,
 
-```astro
----
-# This is a block used to declare attributes
-title: Hello, World
----
-
-# Markdown page
-
-This is your first markdown page. It probably isn't styled much, although `Markdown` does support **bold** and _italics._
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-pages-markdown.astro" />
 
 will be automatically translated to ***HTML***.
 
@@ -118,21 +78,7 @@ Layouts are basically components with a more specific usage. They exist to re-us
 
 For example, create a `TestLayout.astro` file with the following content:
 
-```astro
----
-const { title } = Astro.props;
----
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>{title}</title>
-    </head>
-    <body>
-        <slot />
-    </body>
-</html>
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-TestLayout.astro" />
 
 Notice the `<slot />` component. This is used to specify where the children of the layout will go.
 
@@ -140,19 +86,7 @@ Now, to use the layout, pretend it's just a component.
 
 For example, in `index.astro`, we'll write the following:
 
-```astro
----
-import TestLayout from '../layouts/TestLayout.astro'
-const title = "This is a title"
----
-<TestLayout title={title}>
-    <div>
-        <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
-        <p>Hey, I'm using a layout!</p>
-    </div>
-    <h1>This is an H1 component</h1>
-</TestLayout>
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-index.astro" />
 
 What this does is it uses all the code of the layout we created earlier and replaces the `<slot />` component with all the new code that exists between the `<TestLayout>...</TestLayout>` tags.
 
@@ -162,25 +96,13 @@ To style any component, simply use the `<style></style>` tag as you would in any
 
 However, it is **IMPORTANT** to notice that ***Astro*** uses styled components, and as such, the styling for each component needs to be declared in the same file.
 
-```html
-<style>
-    h1 {
-        font-size: 2rem;
-    }
-</style>
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-style.html" />
 
 ### Global styles
 
 To add global styles to ***HTML*** elements/classes etc, use the `is:global` selector
 
-```astro
-<style is:global>
-    h1 {
-        color: red;
-    }
-</style>
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-style-global.astro" />
 
 ### Choose CSS preprocessor
 
@@ -188,17 +110,7 @@ Simply, set the `lang` attribute for the `<style></style>` tag.
 
 Eg.
 
-```html
-<style lang="scss">
-    h1 {
-        font-size: 2rem;
-
-        span {
-            font-size: 2.2rem;
-        }
-    }
-</style>
-```
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-style-preprocessor.astro" />
 
 ## Add a framework to your page
 
@@ -210,28 +122,15 @@ There are 2 ways to add a UI Framework (Eg. ***React***) to your ***Astro*** pro
 
   1. Install the framework's dependencies:
 
-     ```sh
-     npm install --save-dev @astrojs/react react react-dom
-     ```
+     <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-framework-deps.sh" />
 
   2. Add the framework to the `astro.config.mjs` file, as shown:
 
-     ```js
-     import { defineConfig } from 'astro/config';
-
-     import react from "@astrojs/react"; //! Important
-
-     // <https://astro.build/config>
-     export default defineConfig({
-       integrations: [react()] //! Important
-     });
-     ```
+     <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-framework-config.mjs" />
 
 - Using the automated tool
 
-  ```sh
-  npx astro add react
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-framework-add.sh" />
 
 ## Hydration
 
@@ -239,35 +138,23 @@ A framework component can be made interactive (hydrated) using one of the `clien
 
 - This component's ***JS*** will begin importing when the page loads.
 
-  ```astro
-  <InteractiveComponent client:load />
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-hydration-load.astro" />
 
 - This component's ***JS*** will be imported once the page is done with its initial load.
 
-  ```astro
-  <InteractiveComponent client:idle />
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-hydration-idle.astro" />
 
 - This component's ***JS*** will not be imported until the user scrolls down enough for component to be visible on the page.
 
-  ```astro
-  <InteractiveComponent client:visible />
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-hydration-visible.astro" />
 
 - The component's ***JavaScript*** will be hydrated once a certain ***CSS*** media query is met.
 
-  ```astro
-  <InteractiveComponent client:media="(max-width: 50em)" />
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-hydration-media.astro" />
 
 - This skips ***HTML*** server-rendering, and renders only on the client. It hydrates the component immediately on page load.
 
-  ```astro
-  <SomeReactComponent client:only="react" />
-  <SomePreactComponent client:only="preact" />
-  <SomeSvelteComponent client:only="svelte" />
-  ```
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-hydration-framework.astro" />
 
   > You must pass the component’s correct framework as a value!
 

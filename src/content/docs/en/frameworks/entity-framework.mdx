@@ -18,19 +18,19 @@ To use ***Entity Framework* Core**, 4 ***NuGet*** packages are needed:
 
 ## The CLI tool
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-install.sh" />
+<Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="install.sh" />
 
 To update it
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-update.sh" />
+<Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="update.sh" />
 
 To use it on a project
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-package-add.sh" />
+<Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="package-add.sh" />
 
 Verify installation
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef.sh" />
+<Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="ef.sh" />
 
 ## Setup
 
@@ -38,39 +38,39 @@ We'll setup an ***SQLite*** database for the sake of an example.
 
 - Install the necessary tools
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-sqlite-install.sh" />
+  <Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="sqlite-install.sh" />
 
 - Create a *\<file>.db* database using ***SQLite***
 - Go to the project's *appsettings.json* file and add
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-connection-string.json" />
+  <Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="connection-string.json" />
 
 - Create a class inside the ***M*odels** folder
   We'll name it **Car** for this example
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-model-car.cs" />
+  <Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="model-car.cs" />
 
 - Create the *ApplicationDbContext* class inside the ***M*odels** folder
   The file should look like this
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-context.cs" />
+  <Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="context.cs" />
 
 - Go to **Startup.cs** inside the *ConfigureServices* method and add
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-context-add.cs" />
+  <Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="context-add.cs" />
 
   or, if top level statements,
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-context-add-top.cs" />
+  <Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="context-add-top.cs" />
 
 - Run
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-migration-add.sh" />
+  <Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="migration-add.sh" />
 
   Notice that, now, there is a **\<numbers>_AddCarToDb.cs** file in the **Migrations** folder.
 - Update the database and schema by running
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="dotnet-ef-db-update.sh" />
+  <Gist gistCode="42cdcb9f3bb024d13ed92df8db3dc9b2" fileName="db-update.sh" />
 
 ## Resources
 

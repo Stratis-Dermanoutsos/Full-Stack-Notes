@@ -20,47 +20,47 @@ In fact, the way a program written in ***TypeScript*** works is through compilat
 
 ### Declaration
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-declaration.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="classes-declaration.ts" />
 
 ### Instantiation
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-instantiation.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="classes-instantiation.ts" />
 
 ### Value assignment
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-values.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="classes-values.ts" />
 
 ### Constructor
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-constructor.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="classes-constructor.ts" />
 
 ### readonly
 
 Readonly fields are only assignable on declaration or inside the constructor.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-readonly.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="classes-readonly.ts" />
 
 ### Inheritage
 
 Just as in ***JavaScript***, if you have a base class, you’ll need to call `super();` in your constructor body *BEFORE* using any `this.` members.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-inheritage.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="classes-inheritage.ts" />
 
 ### Getters / Setters
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-classes-get-set.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="classes-get-set.ts" />
 
 ## Variables
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-variables.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="variables.ts" />
 
 Notice how
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-variables-implicit.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="variables-implicit.ts" />
 
 and
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-variables-explicit.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="variables-explicit.ts" />
 
 are equal in ***TypeScript***.
 
@@ -68,17 +68,17 @@ are equal in ***TypeScript***.
 
 In ***TypeScript***, the `unknown` type works similarly to `any` but not quite the same.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-unkown.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="unkown.ts" />
 
 In the above example, assigning the value of `varUnknown: unknown` to a variable without *explicit assertion* throws an error. This happens cause the compiler has no idea what the variable's type is.
 
 For the same reason, we cannot call any methods of the `unknown` variable.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-unkown-method.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="unkown-method.ts" />
 
 However, it is possible, again, with *explicit assertion*.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-unkown-explicit-assertion.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="unkown-explicit-assertion.ts" />
 
 > Why use `unknown` at all?
 >
@@ -86,39 +86,39 @@ However, it is possible, again, with *explicit assertion*.
 
 Example:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-unkown-interface.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="unkown-interface.ts" />
 
 The above example accepts an `unknown` parameter and returns *`true`* if it contains a property named `myProp`. Else, it returns *`false`*.
 
 ## Interfaces
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-interfaces.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="interfaces.ts" />
 
 ## Arrays
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-arrays.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="arrays.ts" />
 
 but
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-arrays-typed.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="arrays-typed.ts" />
 
 ## Tuples
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-tuples.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="tuples.ts" />
 
 ## Generics
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-generics.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="generics.ts" />
 
 ## Snippets
 
 ### Objects as Maps
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-objects-as-maps.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="objects-as-maps.ts" />
 
 Now you can use *arbitrary strings* to look up a value.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="typescript-arbitrary-strings.ts" />
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="arbitrary-strings.ts" />
 
 ## Resources
 

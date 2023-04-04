@@ -12,30 +12,30 @@ import Gist from '/src/components/General/Gist.astro'
 - `'abc'.charAt(1)` and  `'abc'[1]` are equal, tho some older browsers don't support the latter
 - Numeric Separators are useful to make large numbers more readable
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-vars.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="vars.js" />
 
 - Logical OR can be used for falsy values
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-logical-or.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="logical-or.js" />
 
 - Nullish Coalescing
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-nullish-coalescing.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="nullish-coalescing.js" />
 
   Falsy values are kept.
 - Grab last item of an array
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-array-items.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="array-items.js" />
 
 ## Comparing strings
 
 - is case-sensitive
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-comparing-strings-case.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="comparing-strings-case.js" />
 
 - doesn't handle umlauts and accents well
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-comparing-strings-accents.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="comparing-strings-accents.js" />
 
 ## Asynchronous code
 
@@ -43,31 +43,31 @@ There are 2 main ways:
 
 - `async / await`
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-async-await.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="async-await.js" />
 
 - `then`
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-then.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="then.js" />
 
 Generally it is best to use error handling for both cases.
 
 For the sake of this example, we'll take a simple promise
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-promise.js" />
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="promise.js" />
 
 - `async / await`, with `try / catch / finally`
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-async-try.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="async-try.js" />
 
 - `then / catch`
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-then-try.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="then-try.js" />
 
 ## Required arguments
 
 Make a function that, when assigned to a parameter, throws an error saying it is required.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-recommended-args.js" />
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="recommended-args.js" />
 
 Now, when anyone calls `myFunction` without assigning a value to the `param` argument, it throws an error.
 
@@ -77,71 +77,71 @@ There are many ways to output something using the [console API](https://develope
 
 - Normal log
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-csl.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csl.js" />
 
 - Error message
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-cse.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="cse.js" />
 
 - Warning message
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-csw.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csw.js" />
 
 - Measure time
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-cs-time.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="cs-time.js" />
 
 - Table
 
   Let's say we have an array of objects
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-cst.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="cst.js" />
 
 - Trace
 
   Use this to see how the output was reached
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-cs-trace.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="cs-trace.js" />
 
 - Better object output
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-csd.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csd.js" />
 
 ## Useful code snippets
 
 ### Remove duplicate values from array
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-remove-duplicates.js" />
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="remove-duplicates.js" />
 
 ### Filter out falsy values
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-filter-falsy.js" />
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="filter-falsy.js" />
 
 ### Swap two variables with array destructuring
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-multiple-vars.js" />
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="multiple-vars.js" />
 
 ### Destructure function parameters, making code more readable
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-readable-args.js" />
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="readable-args.js" />
 
 ### Short circuit Evaluation
 
 - *AND*
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-short-and.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="short-and.js" />
 
 - *OR*
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-short-or.js" />
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="short-or.js" />
 
 ### Convert result of division to integer
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-div-to-int.js" />
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="div-to-int.js" />
 
 ### Optional chaining
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="js-optional-chaining.js" />
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="optional-chaining.js" />
 
 ## C\# vs JavaScript
 

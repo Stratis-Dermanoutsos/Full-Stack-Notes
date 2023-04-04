@@ -15,13 +15,13 @@ Components are the heart of ***Ext JS***. In reality, they are just ***JS*** com
 
 To define/declare a component, you use the `Ext.define` method, as follow:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-define.js" />
+<Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="define.js" />
 
 A component *MUST* **extend** another component, whether that's an ***Ext*** core component or a custom one.
 
 For example, to define a custom button:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-define-button.js" />
+<Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="define-button.js" />
 
 > This button was a component for the *classic* toolkit.
 > In *modern*, it can be found as `Ext.Button`.
@@ -36,7 +36,7 @@ To use a component, you need to use either its class name (the string value, fir
 
 To use it, simply put it in the items of another class or a container using the `xtype` attribute. For example:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-components-panel.js" />
+<Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="components-panel.js" />
 
 > When you use a component, you can add or either overwrite its existing properties as shown above.
 ##### Requires
@@ -45,7 +45,7 @@ To use any component, more often than not, the compiler find it on its own. Howe
 
 For example:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-requires.js" />
+<Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="requires.js" />
 
 ## Toolkits
 
@@ -53,15 +53,15 @@ For example:
 
 - **Classic**: The **Classic** toolkit is ***Ext JS***'s original toolkit, and is designed for building traditional, "*desktop-style*" web applications.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-generate-classic.sh" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="sencha-generate-classic.sh" />
 
 - **Modern**: The **Modern** toolkit is a newer addition to ***Ext JS***, and is designed for building modern, "*mobile-first*" web applications.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-generate-modern.sh" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="sencha-generate-modern.sh" />
 
 - **Universal**: The **Universal** toolkit is a combination of the **Classic** and **Modern** toolkits, and is designed to support applications that need to run on both desktop and mobile devices.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-generate-universal.sh" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="sencha-generate-universal.sh" />
 
 ## Layouts
 
@@ -69,7 +69,7 @@ There are several layouts that a container in ***Ext JS*** can use.
 
 To declare which one will be chosen, we use the `layout` property.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts.js" />
+<Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="layouts.js" />
 
 ### Available layouts
 
@@ -77,7 +77,7 @@ To declare which one will be chosen, we use the `layout` property.
 
   This is a multi-pane, application-oriented UI layout style that supports multiple nested panels, automatic bars between regions and built-in expanding and collapsing of regions.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-border.js" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="layouts-border.js" />
 
   This layout's children must declare a specific region to reside in.
 
@@ -91,33 +91,33 @@ To declare which one will be chosen, we use the `layout` property.
 
   This layout manages multiple child Components, each fitted to the Container, where only a single child Component can be visible at any given time.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-card.js" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="layouts-card.js" />
 
 - `fit`
 
   This is a base class for layouts that contain a single item that automatically expands to fill the layout's container.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-fit.js" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="layouts-fit.js" />
 
 - `hbox`
 
   A layout that arranges items horizontally across a `Ext.container.Container`.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-hbox.js" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="layouts-hbox.js" />
 
   It is basically the same as using the following ***CSS*** in an ***HTML***'s div:
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-hbox.css" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="layouts-hbox.css" />
 
 - `vbox`
 
   A layout that arranges items vertically across a `Ext.container.Container`.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-vbox.js" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="layouts-vbox.js" />
 
   It is basically the same as using the following ***CSS*** in an ***HTML***'s div:
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-layouts-vbox.css" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="layouts-vbox.css" />
 
 ## Stores
 
@@ -125,13 +125,13 @@ A `store` is a client-side collection of records (instances of a `Model` class).
 
 Let's say we define a store of Users.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store.js" />
+<Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="store.js" />
 
 What we did, is create a store that holds 4 instances/objects of the User `model`.
 
 > The model can be defined as such:
 >
-> <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-model.js" />
+> <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="store-model.js" />
 
 To display the data in a `dataview` or a `grid`, simply add a property `store: users` in the component's attributes.
 
@@ -139,7 +139,7 @@ To display the data in a `dataview` or a `grid`, simply add a property `store: u
 
 We can have a store inherit another store. This can be done with the `type` and `source` properties.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-inheritance.js" />
+<Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="store-inheritance.js" />
 
 - `type` is used when the new store inherits the parent store's properties but the data icluded, although identical, are different instances and, as such, will create duplicates.
 - `source` is used when the new store inherits the parent store's data. `Source` is typically used when we want to filter or sort data without editing the parent store.
@@ -150,15 +150,15 @@ To sort a store's data, you can either declare it with the `sorters` property or
 
 Let's say we have the following store:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-sort.js" />
+<Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="store-sort.js" />
 
 - Property
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-sort-property.js" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="store-sort-property.js" />
 
 - Method
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-sort-method.js" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="store-sort-method.js" />
 
 ### Filtering
 
@@ -166,11 +166,11 @@ Same with sorting, to filter a store's data, you can either declare it with the 
 
 - Property
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-filter-property.js" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="store-filter-property.js" />
 
 - Method
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-filter-method.js" />
+  <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="store-filter-method.js" />
 
 ### Global stores
 
@@ -178,11 +178,11 @@ To make a store global is a very quick process:
 
 1. Go to your `Application.js` file and, inside the class definition, add the following:
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-store-global.js" />
+   <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="store-global.js" />
 
 2. In your store, provide a `storeId` attribute, usually the same as the `alias`.
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-storeId.js" />
+   <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="storeId.js" />
 
 ## Install and create your first app
 
@@ -190,31 +190,31 @@ To make a store global is a very quick process:
 
 1. Gerenate your first project
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-npm-gen-app.sh" />
+   <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="npm-gen-app.sh" />
 
 2. Run the app
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="ext-npm-start.sh" />
+   <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="npm-start.sh" />
 
 ### With CMD
 
 1. Gerenate your first project
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-generate-universal.sh" />
+   <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="sencha-generate-universal.sh" />
 
 2. Run the app
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-app-watch.sh" />
+   <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="sencha-app-watch.sh" />
 
 ## Build your App
 
 1. Clean the current build
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-app-clean.sh" />
+   <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="sencha-app-clean.sh" />
 
 2. Build
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-app-build.sh" />
+   <Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="sencha-app-build.sh" />
 
 ### Build types
 
@@ -323,7 +323,7 @@ Inside `{workspace}/packages/local/` you will find a folder with the package nam
 
 This is an example of a `package.json` file's content. It may vary from app to app but this is how I fill them:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="sencha-package.json" />
+<Gist gistCode="6d64298a22c2560128119db366b5cbb1" fileName="package.json" />
 
 ### Initialize a repository
 

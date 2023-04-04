@@ -13,7 +13,7 @@ Big applications have big application states and managing them gets more and mor
 
 To create a `react-redux` project:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-init.sh" />
+<Gist gistCode="cb8f2eae341252880e83e5816d235c8d" fileName="init.sh" />
 
 ***Redux*** has 3 main parts:
 
@@ -31,7 +31,7 @@ We just send (dispatch) them to τhe **store** instance whenever we want to upda
 
 Example **action**:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-action.js" />
+<Gist gistCode="cb8f2eae341252880e83e5816d235c8d" fileName="action.js" />
 
 This **action** in activated when the user clicks the "*Add Note*" button and informs the **store** that we want to add a new Note.
 
@@ -41,7 +41,7 @@ They are functions that generate and return plain ***JavaScript*** objects.
 
 The above **action** can be written as
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-action-creators.js" />
+<Gist gistCode="cb8f2eae341252880e83e5816d235c8d" fileName="action-creators.js" />
 
 ## Reducers
 
@@ -56,7 +56,7 @@ The **reducer** function takes two parameters:
 
 It returns the new app state.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-reducer.js" />
+<Gist gistCode="cb8f2eae341252880e83e5816d235c8d" fileName="reducer.js" />
 
 To deal with **reducer** complexity, we chunk them down in multiple, simpler **reducers** and later, we combine them with a ***Redux*** helper function called `combineReducers`.
 
@@ -81,7 +81,7 @@ This is quite simple and can be achieved by encapsulating the `<App />` componen
 - Go to *index.(js|tsx)*
 - Include the store and the Provider
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-store-provider-import.js" />
+  <Gist gistCode="cb8f2eae341252880e83e5816d235c8d" fileName="store-provider-import.js" />
 
 - Change
 
@@ -91,7 +91,7 @@ This is quite simple and can be achieved by encapsulating the `<App />` componen
 
   to
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-store-provider.jsx" />
+  <Gist gistCode="cb8f2eae341252880e83e5816d235c8d" fileName="store-provider.jsx" />
 
 ## Setup example
 
@@ -141,23 +141,23 @@ src/
 
 ##### store.js
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-store.js" />
+<Gist gistCode="cb8f2eae341252880e83e5816d235c8d" fileName="store.js" />
 
 #### slices/
 
 ##### todosSlice.js
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-todosSlice.js" />
+<Gist gistCode="cb8f2eae341252880e83e5816d235c8d" fileName="todosSlice.js" />
 
 #### components/
 
 ##### Todos.jsx
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-Todos.jsx" />
+<Gist gistCode="cb8f2eae341252880e83e5816d235c8d" fileName="Todos.jsx" />
 
 #### App.js
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="redux-App.js" />
+<Gist gistCode="cb8f2eae341252880e83e5816d235c8d" fileName="App.js" />
 
 ## Resources
 

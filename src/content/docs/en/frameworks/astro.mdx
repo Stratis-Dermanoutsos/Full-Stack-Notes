@@ -11,7 +11,7 @@ import Gist from '/src/components/General/Gist.astro'
 
 To create a project, simply run the following:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-create.sh" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="create.sh" />
 
 Then, simply add the steps that appear in your console.
 
@@ -19,25 +19,25 @@ Then, simply add the steps that appear in your console.
 
 After the project is initialized, run the project:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-run.sh" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="run.sh" />
 
 ## Basic structure of a component
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-component-basic.astro" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="component-basic.astro" />
 
 To use the component, import it in another component or a page:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-component-import.astro" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="component-import.astro" />
 
 > For the sake of this example, the component we created above is written in the file `src/components/test.astro`.
 
 To pass props, use ***TypeScript*** types in the component:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-component-props.astro" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="component-props.astro" />
 
 Then, you can call it as follows:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-component-import-props.astro" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="component-import-props.astro" />
 
 ## Pages and routing
 
@@ -68,7 +68,7 @@ src/pages/posts/1.md         -> mysite.com/posts/1
 
 For example,
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-pages-markdown.astro" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="pages-markdown.txt" />
 
 will be automatically translated to ***HTML***.
 
@@ -78,7 +78,7 @@ Layouts are basically components with a more specific usage. They exist to re-us
 
 For example, create a `TestLayout.astro` file with the following content:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-TestLayout.astro" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="TestLayout.astro" />
 
 Notice the `<slot />` component. This is used to specify where the children of the layout will go.
 
@@ -86,7 +86,7 @@ Now, to use the layout, pretend it's just a component.
 
 For example, in `index.astro`, we'll write the following:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-index.astro" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="index.astro" />
 
 What this does is it uses all the code of the layout we created earlier and replaces the `<slot />` component with all the new code that exists between the `<TestLayout>...</TestLayout>` tags.
 
@@ -96,13 +96,13 @@ To style any component, simply use the `<style></style>` tag as you would in any
 
 However, it is **IMPORTANT** to notice that ***Astro*** uses styled components, and as such, the styling for each component needs to be declared in the same file.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-style.html" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="style.astro" />
 
 ### Global styles
 
 To add global styles to ***HTML*** elements/classes etc, use the `is:global` selector
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-style-global.astro" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="style-global.astro" />
 
 ### Choose CSS preprocessor
 
@@ -110,7 +110,7 @@ Simply, set the `lang` attribute for the `<style></style>` tag.
 
 Eg.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-style-preprocessor.astro" />
+<Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="style-preprocessor.astro" />
 
 ## Add a framework to your page
 
@@ -122,15 +122,15 @@ There are 2 ways to add a UI Framework (Eg. ***React***) to your ***Astro*** pro
 
   1. Install the framework's dependencies:
 
-     <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-framework-deps.sh" />
+     <Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="framework-deps.sh" />
 
   2. Add the framework to the `astro.config.mjs` file, as shown:
 
-     <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-framework-config.mjs" />
+     <Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="framework-config.mjs" />
 
 - Using the automated tool
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-framework-add.sh" />
+  <Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="framework-add.sh" />
 
 ## Hydration
 
@@ -138,23 +138,23 @@ A framework component can be made interactive (hydrated) using one of the `clien
 
 - This component's ***JS*** will begin importing when the page loads.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-hydration-load.astro" />
+  <Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="hydration-load.astro" />
 
 - This component's ***JS*** will be imported once the page is done with its initial load.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-hydration-idle.astro" />
+  <Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="hydration-idle.astro" />
 
 - This component's ***JS*** will not be imported until the user scrolls down enough for component to be visible on the page.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-hydration-visible.astro" />
+  <Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="hydration-visible.astro" />
 
 - The component's ***JavaScript*** will be hydrated once a certain ***CSS*** media query is met.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-hydration-media.astro" />
+  <Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="hydration-media.astro" />
 
 - This skips ***HTML*** server-rendering, and renders only on the client. It hydrates the component immediately on page load.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="astro-hydration-framework.astro" />
+  <Gist gistCode="5dc0121f9a2fc04e9a573eb7db0c72e4" fileName="hydration-framework.astro" />
 
   > You must pass the component’s correct framework as a value!
 

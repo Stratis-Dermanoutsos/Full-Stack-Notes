@@ -13,22 +13,22 @@ To install ***NPM***, simply install [***Node.js***](https://nodejs.org).
 
 - without arguments
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="npm-install.sh" />
+  <Gist gistCode="a2c465b453ea83cd91a47162744623ee" fileName="install.sh" />
 
   Running **npm install** without arguments installs modules defined in the dependencies section of the **package.json** file.
 - with arguments
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="npm-install-args.sh" />
+  <Gist gistCode="a2c465b453ea83cd91a47162744623ee" fileName="install-args.sh" />
 
 - Options
   - (with ***--global***)
 
-    <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="npm-install-global.sh" />
+    <Gist gistCode="a2c465b453ea83cd91a47162744623ee" fileName="install-global.sh" />
 
     When run with **--global** or **-g**, **npm install** installs the package globally. This means the package is installed in two places. The first is at the root directory where **package.json** is defined. The second is the global node_modules folder on the user system.
   - (with ***--save***)
 
-    <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="npm-install-save.sh" />
+    <Gist gistCode="a2c465b453ea83cd91a47162744623ee" fileName="install-save.sh" />
 
     When run with **--save**, **npm install** modifies the **package.json** file to include the specified package as a dependency. In this case, the express package will be added as a dependency to **package.json**.
   - (with ***--save-dev***)
@@ -36,29 +36,29 @@ To install ***NPM***, simply install [***Node.js***](https://nodejs.org).
     The **--save-dev** flag specifies that the package should be added to the devDependencies section of the **package.json** rather than the dependencies section.
   - (with ***--production***)
 
-    <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="npm-install-production.sh" />
+    <Gist gistCode="a2c465b453ea83cd91a47162744623ee" fileName="install-production.sh" />
 
     The **--production** flag specifies to exclude devDependencies from the install. This means any dependency listed under the devDependencies section of package.json won't get installed when this flag is present.
 
 ### Uninstall
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="npm-uninstall.sh" />
+<Gist gistCode="a2c465b453ea83cd91a47162744623ee" fileName="uninstall.sh" />
 
 ### List installed packages
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="npm-list.sh" />
+<Gist gistCode="a2c465b453ea83cd91a47162744623ee" fileName="list.sh" />
 
 ### Update (global) packages
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="npm-update-packages.sh" />
+<Gist gistCode="a2c465b453ea83cd91a47162744623ee" fileName="update-packages.sh" />
 
 ### Update ***NPM***
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="npm-update.sh" />
+<Gist gistCode="a2c465b453ea83cd91a47162744623ee" fileName="update.sh" />
 
 ### Fix issues (for example, when you move a project to another machine)
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="npm-fix.sh" />
+<Gist gistCode="a2c465b453ea83cd91a47162744623ee" fileName="fix.sh" />
 
 ## Resources
 

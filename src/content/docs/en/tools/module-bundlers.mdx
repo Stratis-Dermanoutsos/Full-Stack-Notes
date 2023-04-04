@@ -21,12 +21,12 @@ A module bundler, basically, bundles all the assets used together.
 - Create a project and make a file ***index.js*** inside a folder ***src***
 - Open a terminal in that project's folder and type
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-init.sh" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-init.sh" />
 
   to create a **package.json** file
 - Install a module for testing
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-i-lodash.sh" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-i-lodash.sh" />
 
 - Create a folder ***public*** inside the project's folder and create ***index.html*** file inside this folder and paste
 
@@ -48,23 +48,23 @@ A module bundler, basically, bundles all the assets used together.
 
 - Inside the ***index.js*** file, paste
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-index.js" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-index.js" />
 
 If you open ***index.html*** with a browser and head to the console, you'll notice an error.
 
 - Open a terminal in the project's folder and type
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-install.sh" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-install.sh" />
 
   to install ***Webpack***
 - Open the **package.json** file and paste
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-package.json" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-package.json" />
 
   inside the "*scripts*" section
 - Open a terminal in the project's folder and type
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-run-build.sh" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-run-build.sh" />
 
   to compile our code
 - Now, inside the ***index.html***, change the script src attribute like so
@@ -79,53 +79,53 @@ It is very important to know that ***Webpack*** is currently using the **DEFAULT
 
 - Create a ***webpack.config.js*** file inside our project's folder and paste
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-webpack.config.js" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack.config.js" />
 
   Notice, to include many entry points (this is called **CODE SPLITTING**) you need
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-splitting-webpack.config.js" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="splitting-webpack.config.js" />
 
   More options, for example, **output**
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-options-webpack.config.js" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="options-webpack.config.js" />
 
 ### Include SASS
 
 - Inside the ***src*** folder, create a file ***style.scss*** and paste your desired or even random ***SCSS*** code
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack.scss" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack.scss" />
 
 - Include it in the ***index.js*** file
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-scss-import.js" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-scss-import.js" />
 
 Now, notice that if you try to build with
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-build.sh" />
+<Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-run-build.sh" />
 
 an error will occure. That's because we do not have a loader for our ***SASS***.
 
 To solve this, simply open a terminal in the project's folder and type
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-sass-install.sh" />
+<Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-sass-install.sh" />
 
 - Include the modules in the ***webpack.config.js*** file, inside the *"module.exports"* section. The end result should look like this
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-end-webpack.config.js" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="end-webpack.config.js" />
 
 ### Analyze bundle (using plugins)
 
 - Open a terminal in the project's folder and type
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-analyzer-install.sh" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-analyzer-install.sh" />
 
 - Paste
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-analyzer-require.js" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-analyzer-require.js" />
 
   in the ***webpack.config.js*** file, outside of the *"module.exports"* section and
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-analyzer-include.js" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-analyzer-include.js" />
 
   inside the section.
 - When you build, you should see this screen
@@ -136,20 +136,20 @@ To solve this, simply open a terminal in the project's folder and type
 
 - Open a terminal in the project's folder and type
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-local-server-install.sh" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-local-server-install.sh" />
 
 - In the ***webpack.config.js*** file, outside of the *"module.exports"* section, paste
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-local-server-webpack.config.js" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="local-server-webpack.config.js" />
 
 - Open the **package.json** file and paste
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-local-server-package.json" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-local-server-package.json" />
 
   inside the *"scripts"* section
 - Start server by typing
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="webpack-local-server-run-dev.sh" />
+  <Gist gistCode="df44c0ddd2f424a2c8f10c1e4f4498c0" fileName="webpack-local-server-run-dev.sh" />
 
   inside the terminal
 

@@ -17,23 +17,23 @@ They're basically a way to extend a class' functionality.
 
 For example, let's say we want to add a `NotEquals` method for the `String` data type. Now, `String` is a `sealed` class which means that it cannot be inherited so we need to use an `Extensions Method` to add any functionality to it.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-extensions.cs" />
+<Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="extensions.cs" />
 
 To call this method now, there are 2 simple ways.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-extensions-demo.cs" />
+<Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="extensions-demo.cs" />
 
 ## Null-Coalescing Operator
 
 The `??` operator will return the value of its left-hand operand if it is not *null*. Else, it returns the right one.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-null-coalescing-1.cs" />
+<Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="null-coalescing-1.cs" />
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-null-coalescing-2.cs" />
+<Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="null-coalescing-2.cs" />
 
 This operator can also be used in assignments. By using `??=` to assign a value, the compiler first checks if the variable you're trying to assign is *null* first. Only if it is will the value be assigned to it.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-null-coalescing-operator.cs" />
+<Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="null-coalescing-operator.cs" />
 
 So, *1* was not assigned to `x` as it was not *null*. It already had a value equal to *32*.
 
@@ -49,18 +49,11 @@ For an example of generics in a class, you can think of the `List` data structur
 
 To achieve that, it is defined as follows:
 
-```csharp
-class List<T>
-{
-    // class implementation here
-}
-```
+<Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="list-definition.cs" />
 
 To instantiate a list of integers, for example, you will replace the `T` placeholder with the `int` data type.
 
-```csharp
-List<int> listOfIntegers = new List<int>();
-```
+<Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="list-usage.cs" />
 
 ### Generic methods
 
@@ -70,21 +63,21 @@ There are several things worth mentioning about **Generic methods** in ***C\#***
 
    For example, consider the following method.
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-generic-method.cs" />
+   <Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="generic-method.cs" />
 
    When you call it, the output of the program heavily relies on the type of the parameter provided.
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-generic-method-demo.cs" />
+   <Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="generic-method-demo.cs" />
 
 2. You can define a **generic method** using the `<T>` syntax, where `T` is a type parameter that represents the type of data you want to work with.
 
    Modifying the above method, we get:
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-generic-method-typed.cs" />
+   <Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="generic-method-typed.cs" />
 
    Now, with the same input, we get similar but not the same results.
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-generic-method-typed-demo.cs" />
+   <Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="generic-method-typed-demo.cs" />
 
    The call using a `Boolean` parameter will not compile as this type does not inherit from the `IComparable` interface.
 
@@ -94,15 +87,15 @@ There are several things worth mentioning about **Generic methods** in ***C\#***
 
    However, if we just used the following, we'd get the exact same results as the compiler is smart enough to get the type itself from the parameter provided.
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-generic-method-default-type.cs" />
+   <Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="generic-method-default-type.cs" />
 
 4. **Generic methods** can be used to create extension methods that work with any type that meets certain criteria, such as implementing a specific interface.
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-generic-method-typed-extension.cs" />
+   <Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="generic-method-typed-extension.cs" />
 
    Now, we can use this method to compare any `value1` that implements the interface `IComparable` to any `value2` of the same type.
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csharp-generic-method-typed-extension-demo.cs" />
+   <Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="generic-method-typed-extension-demo.cs" />
 
 ## Resources
 

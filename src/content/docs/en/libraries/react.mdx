@@ -7,29 +7,29 @@ import Gist from '/src/components/General/Gist.astro'
 
 ## Install
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-install-cra.sh" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="install-cra.sh" />
 
 ## Create React project
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-cra.sh" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="cra.sh" />
 
 ## Basic Scripts
 
 - Start the development server
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-start.sh" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="start.sh" />
 
 - Bundle the app into static files for production
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-build.sh" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="build.sh" />
 
 - Start the test runner
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-test.sh" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="test.sh" />
 
 - Remove this tool and copy build dependencies, configuration files and scripts into the app directory
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-eject.sh" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="eject.sh" />
 
   Once you run this, there is no turning back!
 
@@ -41,7 +41,7 @@ import Gist from '/src/components/General/Gist.astro'
 
 For example,
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="jsx-basic.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="jsx-basic.jsx" />
 
 ## Components
 
@@ -51,27 +51,27 @@ They can be either a function or an **ES6** class.
 
 ### Function components
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-component-function.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="component-function.jsx" />
 
 How to use?
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-component-function-usage.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="component-function-usage.jsx" />
 
 ### Class components
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-component-class.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="component-class.jsx" />
 
 How to use?
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-component-class-usage.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="component-class-usage.jsx" />
 
 ### Component Instance
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-component-instance.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="component-instance.jsx" />
 
 ### Element
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-element.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="element.jsx" />
 
 ## Hooks
 
@@ -92,7 +92,7 @@ Basically, hooks are functions that generally start with the word '*use*'.
   Its purpose is to handle reactive data. Any data that changes is called *state*.
   So, when there is a change in the *state*, ***React*** re-renders the UI to display those changes.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-useState.jsx" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="useState.jsx" />
 
 - ### ***useEffect()***
 
@@ -100,17 +100,17 @@ Basically, hooks are functions that generally start with the word '*use*'.
 
   The code bellow runs every time a state is changed.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-useEffect.jsx" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="useEffect.jsx" />
 
   Example case
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-useEffect-example.jsx" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="useEffect-example.jsx" />
 
 - ### ***useContext()***
 
   It allows the developer to work with ***React***'s context API. In other words, share data without passing props.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-useContext.jsx" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="useContext.jsx" />
 
   In the code above, when the mood value changes inside parent, it changes in the 'MoodEmoji' component too.
 
@@ -119,19 +119,19 @@ Basically, hooks are functions that generally start with the word '*use*'.
 
   It's used to grab a value that changes but does not re-render the UI.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-useRef.jsx" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="useRef.jsx" />
 
   In the code above, the value of 'count' changes but the displayed value stays the same.
 
   A more common use is to grab ***HTML*** elements from ***JSX***.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-useRef-example.jsx" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="useRef-example.jsx" />
 
 - ### ***useReducer()***
 
   It is basically a different way to manage state
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-useReducer.jsx" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="useReducer.jsx" />
 
 - ### ***useMemo()***
 
@@ -139,29 +139,29 @@ Basically, hooks are functions that generally start with the word '*use*'.
 
   It is only recommended for expensive calculations.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-useMemo.jsx" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="useMemo.jsx" />
 
 - ### ***useId()***
 
   It is a new hook introduced with [React 18](https://reactjs.org/blog/2022/03/29/react-v18.html) and it is used for generating unique IDs on both the client and server.
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-useId.jsx" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="useId.jsx" />
 
 There are more hooks, but I kept it simple and focused to the common ones.
 
 ## Images
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-images.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="images.jsx" />
 
 ## Import styles from CSS
 
 - The CSS
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-css.css" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="css.css" />
 
 - The Component
 
-  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-css.jsx" />
+  <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="css.jsx" />
 
 ## Make your life easier
 
@@ -170,11 +170,11 @@ There are more hooks, but I kept it simple and focused to the common ones.
 This will serve as a simple library of components.
 They can be defined inside a single file, let's say *Timeline.js*.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-object-of-components.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="object-of-components.jsx" />
 
 Now, to call them, simply do
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-object-of-components-example.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="object-of-components-example.jsx" />
 
 ### Short import paths
 
@@ -198,24 +198,24 @@ To achieve this, simple add the following line inside the `compilerOptions` in y
 
 It will look something like this:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-jsconfig.json" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="jsconfig.json" />
 
 ### Suspend Layout
 
 The new `<Suspense>` tag enables you to render another component while your data is being fetched, without the need of a ternary operator (`? :`) or anything like that.
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-suspense.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="suspense.jsx" />
 
 ### Avoid inline function calls
 
 Let's say you need a button that writes `"Hello world!"` in the console.
 You could do it in an inline style:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-inline-functions.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="inline-functions.jsx" />
 
 or by using a predefined method:
 
-<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-predefined-methods.jsx" />
+<Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="predefined-methods.jsx" />
 
 While the inline method can be useful in reducing the lines of code in your file, it greatly reduces readability and makes your program difficult to maintain if used frequently.
 By defining a method before using it in your ***JSX***, you can write longer functions and still keep them readable.
@@ -259,7 +259,7 @@ To deploy a ***React*** project to apache, there are several steps that must be 
 
 5. Build & deploy
 
-   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="react-build.sh" />
+   <Gist gistCode="29c1c476ca5c6eb881e72d557d2ab47b" fileName="build.sh" />
 
    and paste the generated files inside your Apache directory.
 

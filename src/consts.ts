@@ -7,7 +7,7 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'https://github.com/withastro/astro/blob/main/assets/social/banner-minimal.png?raw=true',
+		src: 'https://github.com/Stratis-Dermanoutsos/Full-Stack-Notes/blob/main/Images/Thumbnail.png?raw=true',
 		alt: 'Full-Stack Notes banner',
 	},
 	twitter: 'stratis_derm',

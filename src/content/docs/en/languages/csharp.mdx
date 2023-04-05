@@ -5,6 +5,39 @@ description: "This section contains notes on the C# programming language."
 
 import Gist from '/src/components/General/Gist.astro'
 
+## Record types
+
+Record types are a new type of class in ***C\#*** that are meant to make it easier to create immutable reference types.
+They are immutable by default and are designed to be used as data containers.
+
+### Defining a record type
+
+There are 2 ways to define a record type:
+
+1. Positional parameters
+
+   <Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="record-definition-1.cs" />
+2. Standard property syntax
+
+   <Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="record-definition-2.cs" />
+
+### Comparing records
+
+One of the main benefits of a `record` is the fact that, as it's built for data, it is a very efficient way to compare two objects.
+
+<Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="record-equals.cs" />
+
+The above example outputs `True` as the values of the two objects' attributes are equal.
+
+On the other hand, if we use `class`, the result will be `False` as the two objects are not the same.
+
+<Gist gistCode="8ba8471e203862d9d44130f7e07bfe4e" fileName="class-equals.cs" />
+
+In general,
+
+- For `class` types, two objects are equal if they refer to the same object in memory.
+- For `record` types, two objects are equal if they are of the same type and store the same values.
+
 ## Extension methods
 
 **Extension methods** are defined as `static` methods but are called by using instance method syntax. Their first parameter specifies which type the method operates on.

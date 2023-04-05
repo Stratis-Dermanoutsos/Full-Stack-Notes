@@ -37,7 +37,9 @@ In ***Java***, there are exactly 8 primitive data types.
 | float | 0.0 | 32 | max 7 decimal places |
 | double | 0.0 | 64 | max 16 decimal places |
 
-## Access modifiers
+## Modifiers
+
+### Access modifiers
 
 | Access modifier | within class | within package | outside package by subclass only | outside package |
 | --- | --- | --- | --- | --- |
@@ -47,7 +49,7 @@ In ***Java***, there are exactly 8 primitive data types.
 | Protected | Yes | Yes | Yes | No |
 | Public | Yes | Yes | Yes | Yes |
 
-## Non-Access Modifiers
+### Non-Access Modifiers
 
 | Modifier | Description |
 | --- | --- |
@@ -58,6 +60,29 @@ In ***Java***, there are exactly 8 primitive data types.
 | transient | Attributes and methods are not included when serializing the object. |
 | synchronized | Methods can only be accessed by one thread at a time. |
 | volatile | The value of an attribute is always read from the "main memory". |
+
+## Record types
+
+A record is also a special class type in ***Java***.
+It is intended to be used in places where a class is created only to act as a plain data carrier.
+
+### Defining a record type
+
+***Java*** is simplier that ***C\#*** in the way that it only allows for record definition using positional arguments.
+
+<Gist gistCode="b29f0911f2c60312781eeaffef349d2e" fileName="record-definition.java" />
+
+### Comparing records
+
+The benefit of records over a class is that they are compared based on their values.
+
+<Gist gistCode="b29f0911f2c60312781eeaffef349d2e" fileName="record-equals.java" />
+
+The above example outputs `true` while the following outputs `false`:
+
+<Gist gistCode="b29f0911f2c60312781eeaffef349d2e" fileName="class-equals.java" />
+
+This is because `record` types are compares based on their values, while `class` types are compared based on their references stored in memory.
 
 ## Lambda Expressions
 

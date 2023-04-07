@@ -107,6 +107,25 @@ There are many ways to output something using the [console API](https://develope
 
   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="csd.js" />
 
+## Memoization
+
+Memoization is an optimization technique, to reduce the complexity of the application,
+runtime of the application, and proper utilization of resources (Time and Memory).
+
+What this means? It means that if you have a function that takes a long time to execute,
+you can store the result of the function in a variable and return that variable instead of executing the function again.
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="function-call.js" />
+
+The above code is a simple fibonacci implementation.
+The result is calculated each time the function in called.
+
+<Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="function-call-memoized.js" />
+
+The above code is the same as the previous one, but with memoization.
+As we call it 5 times, the result is calculated only once in the first call
+and then returned from the cache for the rest.
+
 ## Useful code snippets
 
 ### Remove duplicate values from array

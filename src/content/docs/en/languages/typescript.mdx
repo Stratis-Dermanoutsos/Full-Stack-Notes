@@ -122,6 +122,25 @@ For example, you may want a variable to only take values that exist as keys in a
 
 <Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="conditional-types-advanced.ts" />
 
+## Memoization
+
+Memoization is an optimization technique, to reduce the complexity of the application,
+runtime of the application, and proper utilization of resources (Time and Memory).
+
+What this means? It means that if you have a function that takes a long time to execute,
+you can store the result of the function in a variable and return that variable instead of executing the function again.
+
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="function-call.ts" />
+
+The above code is a simple fibonacci implementation.
+The result is calculated each time the function in called.
+
+<Gist gistCode="e6ccee72ff8bd507ad27e2729a068bf9" fileName="function-call-memoized.ts" />
+
+The above code is the same as the previous one, but with memoization.
+As we call it 5 times, the result is calculated only once in the first call
+and then returned from the cache for the rest.
+
 ## Snippets
 
 ### Objects as Maps

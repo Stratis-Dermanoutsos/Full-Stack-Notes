@@ -37,6 +37,25 @@ import Gist from '/src/components/General/Gist.astro'
 
   <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="comparing-strings-accents.js" />
 
+## Object cloning
+
+There are 2 general with which you can clone an object.
+
+- By reference
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="clone-reference.js" />
+
+  > This is not a deep clone.
+  >
+  > Changing any property of the clone will also change the original object.
+- By value
+
+  <Gist gistCode="2b192ecdd9213f18fca22b72c30fab2e" fileName="clone-value.js" />
+
+  > This is considered to be a deep clone.
+  >
+  > It's a completely different object and changing its properties will not affect the original object.
+
 ## Asynchronous code
 
 There are 2 main ways:

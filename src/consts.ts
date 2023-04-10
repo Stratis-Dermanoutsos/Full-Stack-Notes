@@ -24,9 +24,9 @@ export const COMMUNITY_INVITE_URL = `https://github.com/Stratis-Dermanoutsos/Ful
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-	indexName: 'XXXXXXXXXX',
-	appId: 'XXXXXXXXXX',
-	apiKey: 'XXXXXXXXXX',
+	indexName: 'stratisdermanoutsos',
+	appId: '9U3SK1IZKU',
+	apiKey: '129071d718ebc54f0676736cbb86f123',
 };
 
 export type Sidebar = Record<

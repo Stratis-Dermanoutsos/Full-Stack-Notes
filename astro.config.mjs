@@ -20,5 +20,5 @@ export default defineConfig({
       remarkMermaid
     ],
   },
-  site: `https://astro.build`
+  site: `https://notes.stratisdermanoutsos.com`
 });

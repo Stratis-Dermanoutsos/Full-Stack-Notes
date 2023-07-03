@@ -158,6 +158,45 @@ For example,
 
 <Gist gistCode="77ff9b22b09de953446ab8b971064892" fileName="webapi-results.json" />
 
+## Useful features
+
+### Quick Route Short Circuit
+
+In [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), C\# got an amazing new feature.
+
+Let's say we have an API with several endpoints, and we want to add a new one that just returns `"Hello World"`.
+
+We can do this:
+
+<Gist gistCode="77ff9b22b09de953446ab8b971064892" fileName="Program_without_shortcircuit.cs" />
+
+You can notice pretty quickly, that we've added a simple middleware which simply logs the time it took to process the request.
+In a real-world scenario, this could be a lot more complex, and could even be a third-party library that takes up resources from our server.
+
+This new feature allows us to completely bypass all middleware and return a response immediately.
+To use this, simply add `.ShortCircuit();` at the end of your route declaration.
+
+In this case, we get something like this:
+
+<Gist gistCode="77ff9b22b09de953446ab8b971064892" fileName="shortcircuit.cs" />
+
+Now, everytime we call the `/` endpoint, we get a response immediately, without any middleware being called.
+This practice can, depending on the situation, save a lot of resources.
+
+It's also useful when you want to send a quick 404 for frequently called endpoints that don't exist in your API.
+
+<Gist gistCode="77ff9b22b09de953446ab8b971064892" fileName="shortcircuit404.cs" />
+
+By using this, everytime a crawler or a bot tries to access an endpoint that doesn't exist, we can send a quick 404 response without having to go through any of the middleware.
+
+The end result of the above `Program.cs` file is:
+
+<Gist gistCode="77ff9b22b09de953446ab8b971064892" fileName="Program_with_shortcircuit.cs" />
+
+> **Note:** This feature is only available in **.NET 8** and above.
+>
+> **Note:** This feature is **NOT** available in controllers currently and we don't know if it'll ever be.
+
 ## Resources
 
 - [ASP.NET documentation](https://docs.microsoft.com/en-us/aspnet/)

@@ -1,3 +1,4 @@
 # Markdown
 # *.md linguist-detectable=true
 # *.md linguist-documentation=false
+*.mdx linguist-detectable=false

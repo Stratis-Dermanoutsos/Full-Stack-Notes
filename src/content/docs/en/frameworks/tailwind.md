@@ -10,5 +10,4 @@ One of the key benefits of using ***Tailwind CSS*** is its focus on utility clas
 ## Resources
 
 - [Tailwind CSS documentation](https://tailwindcss.com/docs)
-- [Tailwind CSS cheat sheet 1](https://umeshmk.github.io/Tailwindcss-cheatsheet/)
-- [Tailwind CSS cheat sheet 2](https://nerdcave.com/tailwind-cheat-sheet)
+- [10 Tailwind Tricks by Ravi](https://youtu.be/aSlK3GhRuXA)
